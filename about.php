@@ -1,10 +1,7 @@
 <?php head(); ?>
 <div id="primary">
-<h2>About Roy</h2>
-<div class="content">
-<p>Roy Rosenzweig was the Mark and Barbara Fried Chair and founding director of the <a href="http://chnm.gmu.edu">Center for History and New Media</a> at George Mason University in Fairfax, Virginia. He used those positions, and his enthusiasm for new media innovation, to build an inclusive and democratic understanding of the past that blurred the line between popular and academic history.</p>
-<p>A former stickball player from the streets of Queens, Rosenzweig graduated from Columbia College and received his Ph.D. from Harvard University. He was the recipient of a Guggenheim Fellowship and lectured as a Fulbright professor. He also served as vice president for research of the American Historical Association. Roy wrote, co-wrote, or edited a number of award-winning books, including <em>Eight Hours for What we Will</em>; <em>The Park and the People: A History of Central Park</em> (with Elizabeth Blackmar) and <em>The Presence of the Past: Popular Uses of History in American Life</em>. (With David Thelen). Earlier this year, Rosenzweig received the Distinguished Service Award from the Organization of American Historians for significantly enriching the understanding and appreciation of American history. He was committed to making history accessible to all, not just to experts, and he added to his broadly democratic sensibilities a sharp awareness of the depth, complexity and intelligence that underlay ordinary customs and everyday life.</p>
-<p>Rosenzweig helped create the burgeoning field of digital history, serving as lead author and co-creator of the Who Built America? CD-ROMs that launched the field of digital history; that effort earned the James Harvey Robinson Prize of the American Historical Association in recognition of its &#8220;outstanding contribution to the teaching and learning of history.&#8221; He also led the effort to develop one of the most successful online efforts to preserve individual and collective reactions to the 2001 attacks (<a href="http://911digitalarchive.org/">September 11 Digital Archive</a>), which was accessioned into the permanent collection of the Library of Congress in 2003.  In that same year, he was awarded the second Richard W. Lyman Award for the body of his digital history work. The $25,000 prize from the National Humanities Center and The Rockefeller Foundation recognized scholarly achievement of unusual merit and impact and innovative use of information technology in humanistic scholarship and teaching. Rosenzweig was unique among historians in his emphasis on collaboration. He brought people with disparate talents together and helped them achieve more than any them could have working alone.</p>
-	</div>
-	</div>
+<h2>About</h2>
+<p>This is an example of an about page. Please put your content here.</p>
+
+</div>
 <?php foot(); ?>

@@ -11,7 +11,7 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" media="screen" href="<?php css('screen'); ?>" />
 <link rel="stylesheet" media="print" href="<?php css('print'); ?>" />
-<link rel="stylesheet" media="screen" href="<?php layout_css(); ?>" />
+
 <!-- JavaScripts -->
 <?php js('prototype'); ?>
 
@@ -24,15 +24,8 @@
 
 		<div id="header">
 			<h1><a href="<?php echo uri(''); ?>"><?php settings('site_title'); ?></a></h1>
-
 		</div>
 		<div id="content">
-			<div id="primary-nav" >
-			<ul class="navigation">
-			<?php
-				nav(array('About Roy' => uri('about'), 'Browse Contributions' => uri('items/browse'))); ?>
-				
-			<?php nav(array('Contribute a Story or File' => uri('contribution'), 'How to Help' => uri('howtohelp')));
-			?>
+			<ul id="primary-nav" class="navigation">
+			<?php nav(array('About' => uri('about'), 'Browse Contributions' => uri('items/browse'))); ?>
 			</ul>
-			</div>
