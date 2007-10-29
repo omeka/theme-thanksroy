@@ -27,5 +27,6 @@
 		</div>
 		<div id="content">
 			<ul id="primary-nav" class="navigation">
-			<?php nav(array('About' => uri('about'), 'Browse Contributions' => uri('items/browse'))); ?>
+			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'))); ?>
+
 			</ul>

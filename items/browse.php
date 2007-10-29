@@ -2,7 +2,7 @@
 <?php $tag = $_GET['tag']; ?>
 
 	<div id="primary" class="browse">
-		<h1>Browse Contributions</h1>
+		<h1>Browse Items</h1>
 		<ul class="navigation" id="secondary-nav">
 			<?php nav(array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
@@ -24,13 +24,13 @@
 
 				<?php if($item->description): ?>
 				<div class="desc">
-				<?php echo "<p>" . h($item->description) . "</p>"; ?>
+				<?php echo nls2p(h($item->description)); ?>
 				</div>
 				<?php endif; ?>
 				
 				<?php if($text = item_metadata($item,'Text')	): ?>
 				<div class="text">
-				<?php echo nls2p(snippet(item_metadata($item,'Text'),'0','150')); ?>
+				<p><?php echo snippet(item_metadata($item,'Text'),'0','150'); ?></p>
 				</div>
 				<?php endif; ?>
 
@@ -45,7 +45,7 @@
 				<?php endif; ?>
 				</div>
 
-				<?php if($display_content):?>
+				<?php if($display_item):?>
 				<div class="item-content"><?php display_item($item); ?></div>
 				<?php endif; ?>
 

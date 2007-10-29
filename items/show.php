@@ -42,6 +42,9 @@
 			<span>none available</span>
 			<?php endif; ?></dd>
 	<?php endforeach; */?>
+	<?php if($display_item):?>
+	<div class="item-content"><?php display_item($item); ?></div>
+	<?php endif; ?>
 	<?php if(count($item->Tags)): ?>
 	<div class="tags"><p><strong>Tags:</strong> 
 	<?php foreach ($item->Tags as $tag): ?>

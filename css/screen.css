@@ -15,6 +15,7 @@ a:hover {color:#777;}
 a:active {color:#777;}
 
 h3 a {text-decoration:none;}
+
 /* Reusable classes */
 .hide {text-indent: -1000em; width: 0; height: 0; overflow: hidden;}
 
@@ -41,6 +42,8 @@ input.submitinput {margin-top:1em;}
 input#description {width: 378px; height: 312px;}
 
 p, ul {font-size:1.5em; line-height:1.33333em; margin-bottom:1.33333em;}
+	li * {font-size:1em;}
+	
 em {font-style:italic;}
 .field p {margin-bottom:0.5em;}
 
@@ -98,15 +101,19 @@ textarea#rights {float:none; display:none;line-height:1.33333em;width: 512px; bo
 			.pagination .next {border-left:1px solid #ccc; padding-left:1em;}
 			.pagination .previous {border-right:1px solid #ccc; padding-right:1em;}
 	
-		.browse .item {overflow:hidden; border-bottom:1px solid #ccc;margin-bottom:2em;}
+		.browse .item {overflow:hidden; border-bottom:1px solid #ccc;margin-top:2em;}
 		.browse .item-img img {width:100px; height:100px; float:left; display:block; margin-bottom:2em; margin-right:2em; padding:6px; border:1px solid #ccc;}
 		.tags li {display:inline;}
 		
-		#fullsizeimg img {padding:5px; border:1px solid #ccc;}
+		#fullsizeimg img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
 
 		#featured {margin-bottom:2em; overflow:hidden;}
 		#featured img {width: 140px; height:140px; padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
 
+		.items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
+		
+		/* Exhibits browse */
+		#exhibits .exhibit {border-bottom:1px solid #ccc; margin-top:2em;}
 /* == Footer == */
 #footer {clear:both; overflow:hidden; padding-top:2em; margin-top:2em; border-top:1px solid #ccc;width: 818px;}
 	#footer p {float:left; width: 180px;}
