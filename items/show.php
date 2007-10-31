@@ -25,26 +25,25 @@
 	</div>
 
 	<?php if(count($item->Tags)): ?>
-	<div class="tags"><p><strong>Tags:</strong> 
-	<?php foreach ($item->Tags as $tag): ?>
-	<a href="<?php echo uri('items/browse/tag/'.$tag->name); ?>" rel="tag"><?php echo h($tag->name); ?></a>
-	<?php endforeach; ?>
+	<div class="tags">
+		<h3>Tags:</h3>
+		<?php foreach ($item->Tags as $tag): ?>
+			<a href="<?php echo uri('items/browse/tag/'.$tag->name); ?>" rel="tag"><?php echo h($tag->name); ?></a>
+		<?php endforeach; ?>
 	</div>
 	<?php endif;?>
+	
+	
 	<?php if(has_files($item)==null):?>
 		<p>There are no files for this item.</p>
 	<?php else: ?>
-
-		<div id="file-list">
-			<ul>
+		<ul id="filelist">
 		<?php foreach( $item->Files as $key => $file ): ?>
-			<li><?php link_to($file, 'show', h($file->original_filename), array('class'=>'show','title'=>'View File Metadata')); ?>
-			</li>
-
-
+			<li><?php link_to($file, 'show', h($file->original_filename), array('class'=>'show','title'=>'View File Metadata')); ?></li>
 		<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>
+	
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
 		<?php link_to_previous_item($item,'Previous Item'); ?>
