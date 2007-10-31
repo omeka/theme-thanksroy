@@ -3,48 +3,27 @@
 <div id="primary" class="show">
 
 	<h2><?php if($item->title) echo $item->title; else echo 'Untitled'; ?></h2>
+	<ul id="item-metadata">
 	<?php if($item->creator): ?>
-		<h3><?php if(item_metadata($item, 'Posting Consent') == 'Anonymously') echo 'Anonymous'; else echo $item->contributor; ?></h3>
+	<li>Creator: <?php echo $item->creator; ?></li>
 	<?php endif; ?>
-<?php if(has_thumbnail($item)): ?>
-	<div id="fullsizeimg">
-		<?php echo fullsize($item); ?>
-	</div>
-<?php endif; ?>
-<?php $file = $item->Files[0]; ?>
+	<li>Item Type: <?php echo $item->Type->name; ?></li>
+	<li>Date Added: <?php echo date('m.d.Y', strtotime($item->added)); ?></li>
+	<?php if ( $item->Collection->exists() ): ?>
+	<li><?php echo h($item->Collection->name); ?></li>
 
-<?php if($item->Type->name == 'Sound'):?>
-	<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" width="326" height="16">
-		<param name="src" value="/archive/files/<?php echo $file->archive_filename; ?>">
-		<param name="controller" value="true">
-		<param name="autoplay" value="false">
-		<param name="loop" value="false">
-
-		<embed src="/archive/files/<?php echo $file->archive_filename; ?>" scale="tofit" width="326" height="16" controller="true" autoplay="false" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime"></embed>
-		</object>
-		<br />
-<?php endif; ?>
+	<?php endif; ?>
+	</ul>
 	<?php if($item->description): ?>
 	<div id="item-description">
-		<?php if($item->description): echo nls2p($item->description); else: ?>
-		<span>none available</span>
-		<?php endif; ?>
+		<?php echo nls2p($item->description); ?>
 	</div>
 	<?php endif; ?>
-	<?php if($text = item_metadata($item,'Text')	): ?>
-		<div class="desc">
-		<?php echo nls2p(item_metadata($item,'Text')); ?>
-		</div>
-	<?php endif; ?>
-	<?php /*foreach($item->Metatext as $key => $metatext): ?>
-	<dt><?php echo $metatext->Metafield->name; ?></dt>
-	<dd><?php if($metatext->text): echo $metatext->text; else: ?>
-			<span>none available</span>
-			<?php endif; ?></dd>
-	<?php endforeach; */?>
-	<?php if($display_item):?>
-	<div class="item-content"><?php display_item($item); ?></div>
-	<?php endif; ?>
+
+	<div id="item-content">
+	<?php display_item($item); ?>
+	</div>
+
 	<?php if(count($item->Tags)): ?>
 	<div class="tags"><p><strong>Tags:</strong> 
 	<?php foreach ($item->Tags as $tag): ?>
@@ -52,6 +31,20 @@
 	<?php endforeach; ?>
 	</div>
 	<?php endif;?>
+	<?php if(has_files($item)==null):?>
+		<p>There are no files for this item.</p>
+	<?php else: ?>
+
+		<div id="file-list">
+			<ul>
+		<?php foreach( $item->Files as $key => $file ): ?>
+			<li><?php link_to($file, 'show', h($file->original_filename), array('class'=>'show','title'=>'View File Metadata')); ?>
+			</li>
+
+
+		<?php endforeach; ?>
+		</ul>
+	<?php endif; ?>
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
 		<?php link_to_previous_item($item,'Previous Item'); ?>

@@ -49,6 +49,8 @@ em {font-style:italic;}
 
 textarea#rights {float:none; display:none;line-height:1.33333em;width: 512px; border:none; font:1.5em "Times New Roman",Times, serif;height:31em; color:#444;padding:0; margin:0;}
 
+div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
+
 /* Microformats */
 .hTagcloud {margin-top:2em;}
 .hTagcloud ul {list-style:none; margin-left:0; padding-left:0; line-height:1.8em;}
@@ -105,7 +107,7 @@ textarea#rights {float:none; display:none;line-height:1.33333em;width: 512px; bo
 		.browse .item-img img {width:100px; height:100px; float:left; display:block; margin-bottom:2em; margin-right:2em; padding:6px; border:1px solid #ccc;}
 		.tags li {display:inline;}
 		
-		#fullsizeimg img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
+		#item-content img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
 
 		#featured {margin-bottom:2em; overflow:hidden;}
 		#featured img {width: 140px; height:140px; padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
