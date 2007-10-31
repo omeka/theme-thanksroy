@@ -21,7 +21,7 @@
 	<?php endif; ?>
 
 	<div id="item-content">
-	<?php display_item($item); ?>
+	<?php display_file($item); ?>
 	</div>
 
 	<?php if(count($item->Tags)): ?>
@@ -32,17 +32,6 @@
 		<?php endforeach; ?>
 	</div>
 	<?php endif;?>
-	
-	
-	<?php if(has_files($item)==null):?>
-		<p>There are no files for this item.</p>
-	<?php else: ?>
-		<ul id="filelist">
-		<?php foreach( $item->Files as $key => $file ): ?>
-			<li><?php link_to($file, 'show', h($file->original_filename), array('class'=>'show','title'=>'View File Metadata')); ?></li>
-		<?php endforeach; ?>
-		</ul>
-	<?php endif; ?>
 	
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
