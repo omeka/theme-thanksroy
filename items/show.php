@@ -20,8 +20,9 @@
 	</div>
 	<?php endif; ?>
 
-	<div id="item-content">
-	<?php display_file($item); ?>
+	<div id="fullsizeimg">
+		<?php if(fullsize($item)): echo fullsize($item); ?>
+		<?php endif; ?>
 	</div>
 
 	<?php if(count($item->Tags)): ?>
