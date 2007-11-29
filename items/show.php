@@ -9,7 +9,7 @@
 	<?php endif; ?>
 	<li>Item Type: <?php echo $item->Type->name; ?></li>
 	<li>Date Added: <?php echo date('m.d.Y', strtotime($item->added)); ?></li>
-	<?php if ( $item->Collection->exists() ): ?>
+	<?php if ( has_collection($item) ): ?>
 	<li><?php echo h($item->Collection->name); ?></li>
 
 	<?php endif; ?>
