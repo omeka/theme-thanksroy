@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="<?php echo settings('description'); ?>" />
 
+<?php echo auto_discovery_link_tag(); ?>
+
 <!-- Stylesheets -->
 <link rel="stylesheet" media="screen" href="<?php css('screen'); ?>" />
 <link rel="stylesheet" media="print" href="<?php css('print'); ?>" />
@@ -28,5 +30,4 @@
 		<div id="content">
 			<ul id="primary-nav" class="navigation">
 			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'))); ?>
-
 			</ul>
