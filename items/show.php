@@ -20,10 +20,12 @@
 	</div>
 	<?php endif; ?>
 
-	<div id="fullsizeimg">
-		<?php if(fullsize($item)): echo fullsize($item); ?>
-		<?php endif; ?>
+	<div id="itemfiles">
+		<?php //if(fullsize($item)) echo fullsize($item); ?>
+		<?php echo display_files($item->Files); ?>
+		
 	</div>
+	
 
 	<?php if(count($item->Tags)): ?>
 	<div class="tags">
