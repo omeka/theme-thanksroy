@@ -12,7 +12,6 @@
 	});
 //]]>	
 </script>
-<?php common('exhibits-nav'); ?>
 <div id="primary">
 	<?php $exhibits = exhibits(); 
 	if($exhibits):
