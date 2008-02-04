@@ -28,6 +28,10 @@
 			<h1><a href="<?php echo uri(''); ?>"><?php settings('site_title'); ?></a></h1>
 		</div>
 		<div id="content">
-			<ul id="primary-nav" class="navigation">
+			<div id="primary-nav">
+				<h2>Search</h2>
+				<?php echo simple_search(array('id'=>'simple-search','name'=>'simple-search'),uri('items/browse')); ?>
+			<ul class="navigation">
 			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'))); ?>
 			</ul>
+			</div>

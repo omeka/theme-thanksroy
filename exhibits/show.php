@@ -1,5 +1,5 @@
 <?php head(); ?>
-
+<div id="primary">
 	<h2><?php echo $exhibit->title; ?></h2>
 
 <div id="nav-container">
@@ -9,5 +9,5 @@
 
 	<?php echo flash(); ?>
 	<?php render_exhibit_page(); ?>
-		
+</div>	
 <?php foot(); ?>

@@ -84,7 +84,8 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 /* == Content == */
 #content {background:#fff url("../images/horizontal-stripe.gif") top left repeat-x;padding:54px 0 48px 48px; overflow:hidden;}
 	#primary-nav {float:left; width:246px;}
-	#primary-nav {margin:0;font-size:2em; line-height:1em;}
+	#primary-nav form {margin-bottom:2em;}
+	#primary-nav ul {margin:0;font-size:2em; line-height:1em;}
 	#primary-nav li {display:block; width: 246px; margin-bottom:1em;}
 	#primary-nav a {display:block; width: 246px; padding:0;}
 	#primary-nav li.current a, #contribution #primary-nav li.nav-contribute-a-story-or-file a, #Tags #primary-nav li.nav-browse-contributions a, #items #primary-nav li.nav-browse-contributions a {color:#444;border-left:1em solid #444; padding-left:0.25em;}
