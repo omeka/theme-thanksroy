@@ -1,6 +1,6 @@
 <?php head(); ?>
 <div id="primary">
-	<h2><?php echo $exhibit->title; ?></h2>
+	<h2><?php echo h($exhibit->title); ?></h2>
 
 <div id="nav-container">
 	<?php section_nav();?>

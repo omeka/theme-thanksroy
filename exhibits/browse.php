@@ -1,4 +1,4 @@
-<?php head(); ?>
+<?php head(array('title'=>'Browse Exhibits')); ?>
 
 <script type="text/javascript" charset="utf-8">
 //<![CDATA[
@@ -13,15 +13,15 @@
 //]]>	
 </script>
 <div id="primary">
-	<?php $exhibits = exhibits(); 
+	<?php 
 	if($exhibits):
 	?>
-	<h2>Exhibits</h2>
+	<h1>Exhibits</h1>
 <div id="exhibits">
 		
 <?php foreach( $exhibits as $key=>$exhibit ): ?>
 	<div class="exhibit <?php if($key%2==1) echo ' even'; else echo ' odd'; ?>">
-		<h3><?php link_to_exhibit($exhibit); ?></h3>
+		<h2><?php link_to_exhibit($exhibit); ?></h2>
 		<div class="description"><?php echo nls2p($exhibit->description); ?></div>
 		<p class="tags"><?php echo tag_string($exhibit, uri('exhibits/browse/tag/')); ?></p>
 	</div>

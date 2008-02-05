@@ -1,4 +1,4 @@
-<?php head(array('title' => 'Item'))?>
+<?php head(array('title' => h($item->title)))?>
 
 <div id="primary" class="show">
 
@@ -31,14 +31,14 @@
     to display that data on the public theme -->
 
 	    <?php if($item->publisher): ?>
-	        <div id="publisher">
+	        <div id="publisher" class="field">
             <h2>Publisher</h2>
             <div class="field-value"><?php echo h($item->publisher); ?></div> 
             </div>   
 	    <?php endif; ?>
 	
 	    <?php if($item->creator): ?>
-	        <div id="creator">
+	        <div id="creator" class="field">
             <h2>Creator</h2>
             <div class="field-value"><?php echo h($item->creator); ?></div>
             </div>
@@ -46,14 +46,14 @@
 	
 
         <?php if($item->description): ?>
-            <div id="description">
+            <div id="description" class="field">
             <h2>Description</h2>
             <div class="field-value"><?php echo nls2p(h($item->description)); ?></div>
             </div>
         <?php endif; ?>
 	    	    
 	    <?php if($item->relation): ?>
-	        <div id="relation">
+	        <div id="relation" class="field">
             <h2>Relation</h2>
             <div class="field-value"><?php echo h($item->relation); ?></div>
             </div>
@@ -67,21 +67,21 @@
 	    <?php endif; ?>
 	    
 	    <?php if($item->rights): ?>
-	        <div id="rights">
+	        <div id="rights" class="field">
             <h2>Rights</h2>
             <div class="field-value"><?php echo h($item->rights); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->source): ?>
-	        <div id="source">
+	        <div id="source" class="field">
             <h2>Source</h2>
             <div class="field-value"><?php echo h($item->source); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->subject): ?>
-	        <div id="subject">
+	        <div id="subject" class="field">
             <h2>Subject</h2>
             <div class="field-value"><?php echo h($item->subject); ?></div>
             </div>
@@ -95,14 +95,14 @@
 	    <?php endif; ?>
 	    
 	    <?php if($item->format): ?>
-	        <div id="format">
+	        <div id="format" class="field">
             <h2>Format</h2>
             <div class="field-value"><?php echo h($item->format); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->contributor): ?>
-	        <div id="contributor">
+	        <div id="contributor" class="field">
             <h2>Contributor</h2>
             <div class="field-value"><?php echo h($item->contributor); ?></div>
             </div>
@@ -116,21 +116,21 @@
 	    <?php endif; ?>
 	    
 	    <?php if($item->provenance): ?>
-	        <div id="provenance">
+	        <div id="provenance" class="field">
             <h2>Provenance</h2>
             <div class="field-value"><?php echo h($item->provenance); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->date): ?>
-	        <div id="date">
+	        <div id="date" class="field">
             <h2>Provenance</h2>
             <div class="field-value"><?php echo date('m.d.Y', strtotime($item->date)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->temporal_coverage_start): ?>
-	        <div id="temporal-coverage">
+	        <div id="temporal-coverage" class="field">
             <h2>Temporal Coverage</h2>
             <div class="field-value">
                 <?php echo date('m.d.Y', strtotime($item->temporal_coverage_start)); ?> 
@@ -138,13 +138,13 @@
             </div>
 	    <?php endif; ?>
 	    
-	    <div id="date-added">
+	    <div id="date-added" class="field">
         <h2>Date Added</h2>
         <div class="field-value"><?php echo date('m.d.Y', strtotime($item->added)); ?></div>
 	    </div>
 	    
 	    <?php if ( has_collection($item) ): ?>
-    	    <div id="collection">
+    	    <div id="collection" class="field">
             <h2>Collection</h2>
             <div class="field-value"><?php echo h($item->Collection->name); ?></div>
             </div>

@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><?php settings('site_title'); ?></title>
+<title><?php echo settings('site_title'); echo $title ? ' | ' . $title : ''; ?></title>
 
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,13 +25,13 @@
 	<div id="wrap">
 
 		<div id="header">
-			<h1><a href="<?php echo uri(''); ?>"><?php settings('site_title'); ?></a></h1>
+			<h1><a href="<?php echo uri(''); ?>"><?php echo settings('site_title'); ?></a></h1>
 		</div>
 		<div id="content">
 			<div id="primary-nav">
 				<h2>Search</h2>
 				<?php echo simple_search(array('id'=>'simple-search','name'=>'simple-search'),uri('items/browse')); ?>
 			<ul class="navigation">
-			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'))); ?>
+			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'), 'Browse Collections'=>uri('collections/browse'))); ?>
 			</ul>
 			</div>

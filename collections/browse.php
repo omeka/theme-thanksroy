@@ -1,13 +1,26 @@
-<?php head(); ?>
-	<h2>Collections</h2>
+<?php head(array('title'=>'Browse Collections')); ?>
+	<h1>Collections</h2>
 
 		<?php foreach ($collections as $collection ): ?>
 			<div class="collection">
-				<?php $collectors=$collection->Collectors; ?>
-				<h3><a href="<?php echo uri('collections/show/'.$collection->id); ?>"><?php echo $collection->name; ?></a></h3>
-				<p><strong>Collector(s):</strong> <ul><?php foreach($collectors as $collector):?><li><?php echo $collector->name; ?></li><?php endforeach; ?></ul></p>
-				<p><a href="<?php echo uri('items/browse/'); ?>">View the items in <?php echo $collection->name; ?></a></p>
-			</div>
+            	<h2><?php echo link_to_collection($collection); ?></h2>
+	
+            	<div class="field">
+            	<h3>Description</h3>
+            	<div class="field-value"><?php echo nls2p(snippet(h($collection->description), 0, 150)); ?></div>
+	
+            	<div class="field">
+            	<h3>Collector(s)</h3> 
+            	    <div class="field-value">
+            	        <ul><?php foreach($collection->Collectors as $collector):?>
+            	            <li><?php echo h($collector->name); ?></li>
+            	            <?php endforeach; ?>
+            	        </ul>
+            	    </div>
+            	</div>
+	
+            	<p><a href="<?php echo uri('items/browse/', array('collection'=>$collection->id)); ?>">View the items in &quot;<?php echo h($collection->name); ?>&quot;</a></p>
+            </div>
 		<?php endforeach; ?>
 			
 <?php foot(); ?>	
