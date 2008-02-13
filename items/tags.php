@@ -1,7 +1,7 @@
-<?php head(); ?>
+<?php head(array('title'=>'Browse by Tag')); ?>
 <div id="primary">
 <h1>Browse by Tag</h1>
-<ul class="navigation" id="secondary-nav">
+<ul class="navigation item-tags" id="secondary-nav">
 	<?php nav(array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'))); ?>
 </ul>
 

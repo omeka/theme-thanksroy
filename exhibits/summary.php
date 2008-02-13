@@ -1,6 +1,6 @@
-<?php head(); ?>
+<?php head(array('title'=>'Summary of ' . h($exhibit->title))); ?>
 <div id="primary">
-<h2 class="summary"><?php echo h($exhibit->title); ?></h2>
+<h2><?php echo h($exhibit->title); ?></h2>
 <?php section_nav(); ?>
 
 <h3 class="clear">Description</h3>

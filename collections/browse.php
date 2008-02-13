@@ -1,4 +1,5 @@
 <?php head(array('title'=>'Browse Collections')); ?>
+<div id="primary">
 	<h1>Collections</h2>
 
 		<?php foreach ($collections as $collection ): ?>
@@ -22,5 +23,7 @@
             	<p><a href="<?php echo uri('items/browse/', array('collection'=>$collection->id)); ?>">View the items in &quot;<?php echo h($collection->name); ?>&quot;</a></p>
             </div>
 		<?php endforeach; ?>
+
+</div>
 			
 <?php foot(); ?>	

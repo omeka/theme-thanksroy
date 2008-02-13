@@ -1,4 +1,4 @@
-<?php head(); ?>
+<?php head(array('title'=>h($exhibit->title))); ?>
 <div id="primary">
 	<h2><?php echo h($exhibit->title); ?></h2>
 

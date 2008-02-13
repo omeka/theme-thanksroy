@@ -17,6 +17,11 @@
 	if($exhibits):
 	?>
 	<h1>Exhibits</h1>
+	
+	<ul class="navigation" id="secondary-nav">
+	    <?php nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
+    </ul>	
+	
 <div id="exhibits">
 		
 <?php foreach( $exhibits as $key=>$exhibit ): ?>

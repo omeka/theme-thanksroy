@@ -15,7 +15,7 @@
 <link rel="stylesheet" media="print" href="<?php css('print'); ?>" />
 
 <!-- JavaScripts -->
-<?php js('prototype'); ?>
+<?php js('default'); ?>
 
 <!-- Plugin Stuff -->
 <?php plugin_header(); ?>
@@ -32,6 +32,6 @@
 				<h2>Search</h2>
 				<?php echo simple_search(array('id'=>'simple-search','name'=>'simple-search'),uri('items/browse')); ?>
 			<ul class="navigation">
-			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items/browse'), 'Browse Exhibits' => uri('exhibits/browse'), 'Browse Collections'=>uri('collections/browse'))); ?>
+			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
 			</ul>
 			</div>

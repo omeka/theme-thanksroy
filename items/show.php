@@ -1,4 +1,4 @@
-<?php head(array('title' => h($item->title)))?>
+<?php head(array('title' => h($item->title))); ?>
 
 <div id="primary" class="show">
 
