@@ -11,14 +11,14 @@
 <?php echo auto_discovery_link_tag(); ?>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php css('screen'); ?>" />
-<link rel="stylesheet" media="print" href="<?php css('print'); ?>" />
+<link rel="stylesheet" media="screen" href="<?php echo css('screen'); ?>" />
+<link rel="stylesheet" media="print" href="<?php echo css('print'); ?>" />
 
 <!-- JavaScripts -->
-<?php js('default'); ?>
+<?php echo js('default'); ?>
 
 <!-- Plugin Stuff -->
-<?php plugin_header(); ?>
+<?php echo plugin_header(); ?>
 
 </head>
 <body>
@@ -32,6 +32,6 @@
 				<h2>Search</h2>
 				<?php echo simple_search(array('id'=>'simple-search','name'=>'simple-search'),uri('items/browse')); ?>
 			<ul class="navigation">
-			<?php nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
+			<?php echo nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
 			</ul>
 			</div>

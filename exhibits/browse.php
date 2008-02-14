@@ -19,14 +19,14 @@
 	<h1>Exhibits</h1>
 	
 	<ul class="navigation" id="secondary-nav">
-	    <?php nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
+	    <?php echo nav(array('Browse All' => uri('exhibits'), 'Browse by Tag' => uri('exhibits/tags'))); ?>
     </ul>	
 	
 <div id="exhibits">
 		
 <?php foreach( $exhibits as $key=>$exhibit ): ?>
 	<div class="exhibit <?php if($key%2==1) echo ' even'; else echo ' odd'; ?>">
-		<h2><?php link_to_exhibit($exhibit); ?></h2>
+		<h2><?php echo link_to_exhibit($exhibit); ?></h2>
 		<div class="description"><?php echo nls2p($exhibit->description); ?></div>
 		<p class="tags"><?php echo tag_string($exhibit, uri('exhibits/browse/tag/')); ?></p>
 	</div>

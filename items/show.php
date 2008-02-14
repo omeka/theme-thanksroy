@@ -173,10 +173,10 @@
 	
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
-		<?php link_to_previous_item($item,'Previous Item'); ?>
+		<?php echo link_to_previous_item($item,'Previous Item'); ?>
 	</li>
 	<li id="next-item" class="next">
-		<?php link_to_next_item($item,'Next Item'); ?>
+		<?php echo link_to_next_item($item,'Next Item'); ?>
 	</li>
 	</ul>
 </div><!-- end primary -->

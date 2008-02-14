@@ -4,6 +4,6 @@
 <h3>Description</h3>
 <?php echo nls2p($item->description); ?>
 
-<?php// section_nav(); ?>
+<?php// echo section_nav(); ?>
 </div>
 <?php foot(); ?>
