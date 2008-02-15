@@ -6,7 +6,8 @@
     <div id="description" class="field">
     <h2>Description</h2>
     <div class="field-value"><?php echo nls2p(h($collection->description)); ?></div>
-
+    </div>
+    
     <div id="collectors" class="field">
     <h2>Collector(s)</h2> 
         <div class="field-value">

@@ -1,6 +1,6 @@
 <?php head(array('title'=>'Browse Collections')); ?>
 <div id="primary">
-	<h1>Collections</h2>
+	<h1>Collections</h1>
 
 		<?php foreach ($collections as $collection ): ?>
 			<div class="collection">
@@ -9,7 +9,8 @@
             	<div class="field">
             	<h3>Description</h3>
             	<div class="field-value"><?php echo nls2p(snippet(h($collection->description), 0, 150)); ?></div>
-	
+	            </div>
+	            
             	<div class="field">
             	<h3>Collector(s)</h3> 
             	    <div class="field-value">

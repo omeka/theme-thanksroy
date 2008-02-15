@@ -31,8 +31,8 @@
 				<?php endif; ?>
 
 				<?php if(count($item->Tags)): ?>
-				<div class="tags"><p><strong>Tags:</strong> 
-				<?php echo tag_string($item, uri('items/browse/tag/')); ?>
+				<div class="tags"><p><strong>Tags:</strong>
+				<?php echo tag_string($item, uri('items/browse/tag/')); ?></p>
 				</div>
 				<?php endif;?>
 
