@@ -1,4 +1,11 @@
 <?php head(array('title'=>'Browse Items')); ?>
+
+<?php
+if (function_exists('COinSMultiple')):
+    COinSMultiple($items);
+endif;
+?>
+
 	<div id="primary" class="browse">
 		<h1>Browse Items</h1>
 		<ul class="navigation" id="secondary-nav">
