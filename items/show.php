@@ -1,5 +1,12 @@
 <?php head(array('title' => h($item->title))); ?>
 
+
+<?php
+if (function_exists('COinS')):
+    COinS($item);
+endif;
+?>
+
 <div id="primary" class="show">
 
 	<h1><?php if($item->title) echo h($item->title); else echo 'Untitled'; ?></h1>
@@ -179,6 +186,12 @@
 		<?php echo link_to_next_item($item,'Next Item'); ?>
 	</li>
 	</ul>
+	<!--<?php fire_plugin_hook('append_to_item_show', $item); ?>-->
+	<?php
+        if (function_exists('creativeCommonsLicenseItemShow')):
+            creativeCommonsLicenseItemShow($item);
+        endif;
+        ?>
 </div><!-- end primary -->
 
 
