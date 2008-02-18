@@ -110,8 +110,8 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		
 		#item-content img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
 
-		#featured {margin-bottom:2em; overflow:hidden;}
-		#featured img {width: 140px; height:140px; padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
+		#featured-item {margin-bottom:2em; overflow:hidden;}
+		#featured-item img {width: 140px; height:140px; padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
 
 		.items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
 		

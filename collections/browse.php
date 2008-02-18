@@ -21,7 +21,7 @@
             	    </div>
             	</div>
 	
-            	<p><a href="<?php echo uri('items/browse/', array('collection'=>$collection->id)); ?>">View the items in &quot;<?php echo h($collection->name); ?>&quot;</a></p>
+            	<p class="view-items-link"><a href="<?php echo uri('items/browse/', array('collection'=>$collection->id)); ?>">View the items in &quot;<?php echo h($collection->name); ?>&quot;</a></p>
             </div>
 		<?php endforeach; ?>
 

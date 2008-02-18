@@ -1,27 +1,48 @@
 <?php head(); ?>	
 
 	<div id="primary">
-		<div id="featured">
-			<?php $randomItem = random_featured_item();  ?>
+		<!-- Featured Item -->
+		<div id="featured-item">
+			<?php $featuredItem = random_featured_item();  ?>
 			<h2>Featured Item</h2>
-			<?php if(!empty($randomItem)):?>
-			
-			    <h3><?php echo link_to_item($randomItem); ?></h3>
-    			<?php if(has_thumbnail($randomItem)): ?>
-    			    <?php echo link_to_square_thumbnail($randomItem, array('class'=>'image')); ?>
+			<?php if ( $featuredItem ): ?>
+			    <h3><?php echo link_to_item($featuredItem); ?></h3>
+    			<?php if(has_thumbnail($featuredItem)): ?>
+    			    <?php echo link_to_square_thumbnail($featuredItem, array('class'=>'image')); ?>
     			<?php endif; ?>
-    			<p class="item-description"><?php echo h(snippet($randomItem->description, 0, 150)); ?></p>	
-    			<?php else: ?>
-    				<h3>No Featured Items</h3>
-    				<p>You have no featured items. Please make some featured.</p>	
+    			<p class="item-description"><?php echo h(snippet($featuredItem->description, 0, 150)); ?></p>	
+    		<?php else: ?>
+    				<p>You have no featured items. </p>	
     		<?php endif; ?>	
 		</div><!--end featured-item-->	
+		
+		<!-- Featured Collection -->
+		<div id="featured-collection">
+		    <?php $featuredCollection = random_featured_collection(); ?>
+		    <h2>Featured Collection</h2>
+		    <?php if ( $featuredCollection ): ?>
+		        <h3><?php echo link_to_collection($featuredCollection); ?></h3>
+		    <?php else: ?>
+		        <p>You have no featured collections.</p>
+		    <?php endif; ?>
+		</div><!-- end featured collection -->
+		
+		<!-- Featured Exhibit -->
+		<div id="featured-exhibit">
+		    <?php $featuredExhibit = random_featured_exhibit(); ?>
+		    <h2>Featured Exhibit</h2>
+		    <?php if ( $featuredExhibit ): ?>
+		      <h3><?php echo link_to_exhibit($featuredExhibit); ?></h3>
+		    <?php else: ?>
+		        <p>You have no featured exhibits.</p>
+		    <?php endif; ?>
+		</div><!-- end featured exhibit -->
 		
 		<div id="recent-items">
 		<h2>Recently Added</h2>
 			<?php $recent = recent_items(10); ?>
 			<?php if(!empty($recent)): // Loop through the 10 most recently added items ?>
-			<ul id="recent-items-list" class="items-list">
+			<ul class="items-list">
 				<?php foreach( $recent as $item ): ?>
 				<li class="item">
 					<h3><?php echo link_to_item($item); ?></h3>
@@ -36,7 +57,7 @@
 				<p>No recent items available.</p>	
 			<?php endif; ?>
 		</div><!--end recent-items -->		
-		<p><a href="<?php echo uri('items'); ?>">View All Items</a></p>
+		<p class="view-items-link"><a href="<?php echo uri('items'); ?>">View All Items</a></p>
 	</div>
 	
 <?php foot(); ?>

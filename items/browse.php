@@ -5,9 +5,8 @@
 			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
 		<?php echo htmlentities($_GET['tag']);?>
-			<div class="pagination top"><?php echo pagination_links(); ?></div>
-			<?php 
-			foreach($items as $key => $item): ?>
+		<div class="pagination top"><?php echo pagination_links(); ?></div>
+		<?php foreach($items as $key => $item): ?>
 			<div class="item hentry">
 				<div class="item-meta">
 				<h3><?php echo link_to_item($item, 'show', null, array('class'=>'permalink')); ?></h3>
@@ -19,14 +18,14 @@
 				<?php endif; ?>
 
 				<?php if($item->description): ?>
-				<div class="desc">
-				<?php echo nls2p(h($item->description)); ?>
+				<div class="item-description">
+				<?php echo nls2p(h(snippet($item->description, 0, 250))); ?>
 				</div>
 				<?php endif; ?>
 				
 				<?php if($text = item_metadata($item,'Text')): ?>
 				<div class="text">
-				<p><?php echo snippet($text,'0','150'); ?></p>
+				<p><?php echo snippet($text, 0, 250); ?></p>
 				</div>
 				<?php endif; ?>
 
@@ -38,8 +37,8 @@
 
 				</div>
 			</div>
-			<?php endforeach; ?>
-			<div class="pagination bottom"><?php echo pagination_links(); ?></div>
+		<?php endforeach; ?>
+		<div class="pagination bottom"><?php echo pagination_links(); ?></div>
 			
 	</div>
 <?php foot(); ?>
