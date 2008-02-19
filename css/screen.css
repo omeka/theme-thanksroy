@@ -5,8 +5,8 @@
 body {font:62.5% "Times New Roman", Times, serif; color:#444;min-width:940px;}
 
 h1 {margin:0;}
-h1,h2 {font-size:3em; margin-bottom:0.666667em; line-height:1.333333em;}
-h3 {font-size:2em; margin-bottom:1em; line-height:1em;}
+h1 {font-size:3em; margin-bottom:0.666667em; line-height:1.333333em;}
+h2 {font-size:2em; margin-bottom:1em; line-height:1em;}
 
 /* Links */
 a:link {color:#888;}

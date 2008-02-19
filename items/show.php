@@ -22,7 +22,7 @@ endif;
             
             <!-- This loop outputs all of the extended metadata -->
             <?php foreach( $item->TypeMetadata as $field => $text ): ?>
-                <div id="<?php echo text_to_id($field); ?>">
+                <div id="<?php echo text_to_id($field); ?>" class="field">
                     <h2><?php echo h($field); ?></h2>
                     <div class="field-value"><?php echo nls2p(h($text)); ?>
                 </div>
@@ -40,14 +40,14 @@ endif;
 	    <?php if($item->publisher): ?>
 	        <div id="publisher" class="field">
             <h2>Publisher</h2>
-            <div class="field-value"><?php echo h($item->publisher); ?></div> 
+            <div class="field-value"><?php echo nls2p(h($item->publisher)); ?></div> 
             </div>   
 	    <?php endif; ?>
 	
 	    <?php if($item->creator): ?>
 	        <div id="creator" class="field">
             <h2>Creator</h2>
-            <div class="field-value"><?php echo h($item->creator); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->creator)); ?></div>
             </div>
 	    <?php endif; ?>
 	
@@ -62,77 +62,77 @@ endif;
 	    <?php if($item->relation): ?>
 	        <div id="relation" class="field">
             <h2>Relation</h2>
-            <div class="field-value"><?php echo h($item->relation); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->relation)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->spatial_coverage): ?>
-	        <div id="spatial Coverage">
+	        <div id="spatial-coverage" class="field">
             <h2>Spatial Coverage</h2>
-            <div class="field-value"><?php echo h($item->spatial_coverage); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->spatial_coverage)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->rights): ?>
 	        <div id="rights" class="field">
             <h2>Rights</h2>
-            <div class="field-value"><?php echo h($item->rights); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->rights)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->source): ?>
 	        <div id="source" class="field">
             <h2>Source</h2>
-            <div class="field-value"><?php echo h($item->source); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->source)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->subject): ?>
 	        <div id="subject" class="field">
             <h2>Subject</h2>
-            <div class="field-value"><?php echo h($item->subject); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->subject)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->additional_creator): ?>
-	        <div id="additional-creator">
+	        <div id="additional-creator" class="field">
             <h2>Additional Creator</h2>
-            <div class="field-value"><?php echo h($item->additional_creator); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->additional_creator)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->format): ?>
 	        <div id="format" class="field">
             <h2>Format</h2>
-            <div class="field-value"><?php echo h($item->format); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->format)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->contributor): ?>
 	        <div id="contributor" class="field">
             <h2>Contributor</h2>
-            <div class="field-value"><?php echo h($item->contributor); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->contributor)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->rights_holder): ?>
-	        <div id="rights-holder">
+	        <div id="rights-holder" class="field">
             <h2>Rights Holder</h2>
-            <div class="field-value"><?php echo h($item->rights_holder); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->rights_holder)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->provenance): ?>
 	        <div id="provenance" class="field">
             <h2>Provenance</h2>
-            <div class="field-value"><?php echo h($item->provenance); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->provenance)); ?></div>
             </div>
 	    <?php endif; ?>
 	    
 	    <?php if($item->date): ?>
 	        <div id="date" class="field">
             <h2>Provenance</h2>
-            <div class="field-value"><?php echo date('m.d.Y', strtotime($item->date)); ?></div>
+            <div class="field-value"><?php echo nls2p(date('m.d.Y', strtotime($item->date))); ?></div>
             </div>
 	    <?php endif; ?>
 	    
@@ -147,13 +147,13 @@ endif;
 	    
 	    <div id="date-added" class="field">
         <h2>Date Added</h2>
-        <div class="field-value"><?php echo date('m.d.Y', strtotime($item->added)); ?></div>
+        <div class="field-value"><?php echo nls2p(date('m.d.Y', strtotime($item->added))); ?></div>
 	    </div>
 	    
 	    <?php if ( has_collection($item) ): ?>
     	    <div id="collection" class="field">
             <h2>Collection</h2>
-            <div class="field-value"><?php echo h($item->Collection->name); ?></div>
+            <div class="field-value"><?php echo nls2p(h($item->Collection->name)); ?></div>
             </div>
     	<?php endif; ?>
 	
@@ -173,9 +173,9 @@ endif;
 	</div>
 	<?php endif;?>
 	
-	<div id="citation">
+	<div id="citation" class="field">
     	<h2>Citation</h2>
-    	<div id="citation-value"><?php echo $item->getCitation(); ?></div>
+    	<div id="citation-value" class="field-value"><?php echo nls2p($item->getCitation()); ?></div>
 	</div>
 	
 	<ul class="item-pagination navigation">

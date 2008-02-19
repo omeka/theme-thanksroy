@@ -47,7 +47,7 @@
 				<li class="item">
 					<h3><?php echo link_to_item($item); ?></h3>
 				<?php if(!empty($item->description)): ?>
-					<p class="item-description"><?php echo h(snippet($item->description,0,150)); ?></p>
+					<div class="item-description"><?php echo h(snippet($item->description,0,150)); ?></div>
 				<?php endif; ?>			
 				</li>
 				<?php endforeach; ?>
