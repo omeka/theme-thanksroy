@@ -24,16 +24,14 @@ endif;
 				</div>
 				<?php endif; ?>
 
-				<?php if($item->description): ?>
-				<div class="item-description">
-				<?php echo nls2p(h(snippet($item->description, 0, 250))); ?>
-				</div>
-				<?php endif; ?>
-				
 				<?php if($text = item_metadata($item,'Text')): ?>
-				<div class="text">
-				<p><?php echo snippet($text, 0, 250); ?></p>
-				</div>
+	    			<div class="item-description">
+    				<p><?php echo snippet($text,0,250); ?></p>
+    				</div>
+				<?php elseif(!empty($item->description)): ?>
+    				<div class="item-description">
+    				<?php echo nls2p(h(snippet($item->description, 0, 250))); ?>
+    				</div>
 				<?php endif; ?>
 
 				<?php if(count($item->Tags)): ?>

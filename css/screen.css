@@ -96,11 +96,11 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		#secondary-nav li {padding:0.5em 0;}
 		#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
 		#secondary-nav .current a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
-
+		
 		.pagination ul {text-align:right; line-height:1em; padding:0.5em; }
 		.pagination li {display:inline; margin-left:1em; margin-bottom:0; padding:0.5em 0;}
 		.top ul {border:1px solid #ccc; border-width:0 0 1px 0;}
-		.bottom ul {margin-top:-1.3em;margin-bottom:0; }
+		.bottom ul {/*margin-top:-1.3em;*/margin-bottom:0; }
 			.pagination .next {border-left:1px solid #ccc; padding-left:1em;}
 			.pagination .previous {border-right:1px solid #ccc; padding-right:1em;}
 	

@@ -29,9 +29,12 @@
 		</div>
 		<div id="content">
 			<div id="primary-nav">
-				<h2>Search</h2>
-				<?php echo simple_search(array('id'=>'simple-search'),uri('items/browse')); ?>
+				<div id="search-wrap">
+				    <h2>Search</h2>
+				    <?php echo simple_search(array('id'=>'simple-search'),uri('items/browse')); ?>
+    			</div>
+    			
     			<ul class="navigation">
-    			<?php echo nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
+    			    <?php echo nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
     			</ul>
 			</div>

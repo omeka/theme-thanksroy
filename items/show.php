@@ -186,12 +186,6 @@ endif;
 		<?php echo link_to_next_item($item,'Next Item'); ?>
 	</li>
 	</ul>
-	<!--<?php fire_plugin_hook('append_to_item_show', $item); ?>-->
-	<?php
-        if (function_exists('creativeCommonsLicenseItemShow')):
-            creativeCommonsLicenseItemShow($item);
-        endif;
-        ?>
 </div><!-- end primary -->
 
 
