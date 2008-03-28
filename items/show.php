@@ -9,7 +9,7 @@ endif;
 
 <div id="primary" class="show">
 
-	<h1><?php if($item->title) echo h($item->title); else echo 'Untitled'; ?></h1>
+	<h1 class="item-title"><?php if($item->title) echo h($item->title); else echo 'Untitled'; ?></h1>
 	
 <!--  The following is extended metadata that is assigned based on the Type that is assigned to an item -->
 	
@@ -24,7 +24,7 @@ endif;
             <?php foreach( $item->TypeMetadata as $field => $text ): ?>
                 <div id="<?php echo text_to_id($field); ?>" class="field">
                     <h2><?php echo h($field); ?></h2>
-                    <div class="field-value"><?php echo nls2p(h($text)); ?>
+                    <div class="field-value"><?php echo nls2p(h($text)); ?></div>
                 </div>
             <?php endforeach; ?>
             
@@ -153,7 +153,7 @@ endif;
 	    <?php if ( has_collection($item) ): ?>
     	    <div id="collection" class="field">
             <h2>Collection</h2>
-            <div class="field-value"><?php echo nls2p(h($item->Collection->name)); ?></div>
+            <div class="field-value"><p><?php echo link_to_collection($item->Collection); ?></p></div>
             </div>
     	<?php endif; ?>
 	
@@ -167,9 +167,7 @@ endif;
 	<?php if(count($item->Tags)): ?>
 	<div class="tags">
 		<h3>Tags:</h3>
-		<?php foreach ($item->Tags as $tag): ?>
-			<a href="<?php echo uri('items/browse/tag/'.urlencode($tag->name)); ?>" rel="tag"><?php echo h($tag->name); ?></a>
-		<?php endforeach; ?>
+	   <?php echo tag_string($item->Tags, uri('items/browse/tag/'), "\n"); ?>	
 	</div>
 	<?php endif;?>
 	

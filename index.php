@@ -39,7 +39,7 @@
 		</div><!-- end featured exhibit -->
 		
 		<div id="recent-items">
-		<h2>Recently Added</h2>
+		<h2>Recently Added Items</h2>
 			<?php $recent = recent_items(10); ?>
 			<?php if(!empty($recent)): // Loop through the 10 most recently added items ?>
 			<ul class="items-list">
@@ -56,8 +56,23 @@
 				<h3>No Recent Items</h3>
 				<p>No recent items available.</p>	
 			<?php endif; ?>
-		</div><!--end recent-items -->		
+		</div><!--end recent-items -->
+		
 		<p class="view-items-link"><a href="<?php echo uri('items'); ?>">View All Items</a></p>
+			
+		<div id="recent-collections">
+		    <h2>Recent Collections</h2>
+		    <?php $recentCollections = recent_collections(2); ?>
+		    <?php if($recentCollections): ?>
+		        <ul class="collections-list">
+		            <?php foreach( $recentCollections as $collection ): ?>
+		                <li class="collection">
+		                <h3><?php echo link_to_collection($collection); ?></h3>
+		            <?php endforeach; ?>
+		        </ul>
+		    <?php endif; ?>
+		</div><!-- end recent collections -->
+			
 	</div>
 	
 <?php foot(); ?>
