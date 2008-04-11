@@ -131,7 +131,7 @@ endif;
 	    
 	    <?php if($item->date): ?>
 	        <div id="date" class="field">
-            <h2>Provenance</h2>
+            <h2>Date</h2>
             <div class="field-value"><?php echo nls2p(date('m.d.Y', strtotime($item->date))); ?></div>
             </div>
 	    <?php endif; ?>
