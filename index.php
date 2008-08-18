@@ -8,13 +8,7 @@
 		
 		<!-- Featured Collection -->
 		<div id="featured-collection">
-		    <?php $featuredCollection = random_featured_collection(); ?>
-		    <h2>Featured Collection</h2>
-		    <?php if ( $featuredCollection ): ?>
-		        <h3><?php echo link_to_collection($featuredCollection); ?></h3>
-		    <?php else: ?>
-		        <p>You have no featured collections.</p>
-		    <?php endif; ?>
+		    <?php echo display_random_featured_collection(); ?>
 		</div><!-- end featured collection -->
 				
 		<div id="recent-items">
@@ -47,6 +41,7 @@
 		            <?php foreach( $recentCollections as $collection ): ?>
 		                <li class="collection">
 		                <h3><?php echo link_to_collection($collection); ?></h3>
+		                <p class="collection-description"><?php echo h(snippet($collection->description, 0, 150)); ?>
 		            <?php endforeach; ?>
 		        </ul>
 		    <?php endif; ?>
