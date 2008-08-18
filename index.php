@@ -3,17 +3,7 @@
 	<div id="primary">
 		<!-- Featured Item -->
 		<div id="featured-item">
-			<?php $featuredItem = random_featured_item();  ?>
-			<h2>Featured Item</h2>
-			<?php if ( $featuredItem ): ?>
-			    <h3><?php echo link_to_item($featuredItem); ?></h3>
-    			<?php if(has_thumbnail($featuredItem)): ?>
-    			    <?php echo link_to_square_thumbnail($featuredItem, array('class'=>'image')); ?>
-    			<?php endif; ?>
-    			<p class="item-description"><?php echo h(snippet($featuredItem->description, 0, 150)); ?></p>	
-    		<?php else: ?>
-    				<p>You have no featured items. </p>	
-    		<?php endif; ?>	
+			<?php echo display_random_featured_item(); ?>
 		</div><!--end featured-item-->	
 		
 		<!-- Featured Collection -->
@@ -26,31 +16,20 @@
 		        <p>You have no featured collections.</p>
 		    <?php endif; ?>
 		</div><!-- end featured collection -->
-		
-		<!-- Featured Exhibit -->
-		<div id="featured-exhibit">
-		    <?php $featuredExhibit = random_featured_exhibit(); ?>
-		    <h2>Featured Exhibit</h2>
-		    <?php if ( $featuredExhibit ): ?>
-		      <h3><?php echo link_to_exhibit($featuredExhibit); ?></h3>
-		    <?php else: ?>
-		        <p>You have no featured exhibits.</p>
-		    <?php endif; ?>
-		</div><!-- end featured exhibit -->
-		
+				
 		<div id="recent-items">
 		<h2>Recently Added Items</h2>
-			<?php $recent = recent_items(10); ?>
-			<?php if(!empty($recent)): // Loop through the 10 most recently added items ?>
+			<?php set_items_for_loop(recent_items(10)); ?>
+			<?php if (has_items_for_loop()): ?>
 			<ul class="items-list">
-				<?php foreach( $recent as $item ): ?>
+				<?php while (loop_items()): ?>
 				<li class="item">
-					<h3><?php echo link_to_item($item); ?></h3>
-				<?php if(!empty($item->description)): ?>
-					<div class="item-description"><?php echo h(snippet($item->description,0,150)); ?></div>
+					<h3><?php echo link_to_item(); ?></h3>
+				<?php if($desc = item('Description', array('snippet'=>150, 'index'=>0))): ?>
+					<div class="item-description"><?php echo $desc; ?></div>
 				<?php endif; ?>			
 				</li>
-				<?php endforeach; ?>
+				<?php endwhile; ?>
 			</ul>
 			<?php else: ?>
 				<h3>No Recent Items</h3>
