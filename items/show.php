@@ -28,6 +28,15 @@ endif;
 		<?php echo display_files_for_item(); ?>
 	</div>
 	
+	
+	<?php if ( item_belongs_to_collection() ): ?>
+        <div id="collection" class="field">
+            <h2>Collection</h2>
+            <div class="field-value"><p><?php echo link_to_collection($item->Collection); ?></p></div>
+        </div>
+    <?php endif; ?>
+    
+	
 
 	<?php if(count($item->Tags)): ?>
 	<div class="tags">
