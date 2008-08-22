@@ -32,7 +32,7 @@ endif;
 	<?php if ( item_belongs_to_collection() ): ?>
         <div id="collection" class="field">
             <h2>Collection</h2>
-            <div class="field-value"><p><?php echo link_to_collection($item->Collection); ?></p></div>
+            <div class="field-value"><p><?php echo link_to_collection_for_item(); ?></p></div>
         </div>
     <?php endif; ?>
     
@@ -41,7 +41,7 @@ endif;
 	<?php if(count($item->Tags)): ?>
 	<div class="tags">
 		<h3>Tags:</h3>
-	   <?php echo tag_string($item->Tags, uri('items/browse/tag/'), "\n"); ?>	
+	   <?php echo tags_for_item_as_string(); ?>	
 	</div>
 	<?php endif;?>
 	
