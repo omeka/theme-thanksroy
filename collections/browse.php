@@ -2,28 +2,27 @@
 <div id="primary">
 	<h1>Collections</h1>
 
-		<?php foreach ($collections as $collection ): ?>
+		<?php while (loop_collections()): ?>
 			<div class="collection">
-            	<h2><?php echo link_to_collection($collection); ?></h2>
+            	<h2><?php echo link_to_collection(); ?></h2>
 	
             	<div class="field">
             	<h3>Description</h3>
-            	<div class="field-value"><?php echo nls2p(snippet(h($collection->description), 0, 150)); ?></div>
+            	<div class="field-value"><?php echo nls2p(collection('Description', array('snippet'=>150))); ?></div>
 	            </div>
 	            
             	<div class="field">
             	<h3>Collector(s)</h3> 
             	    <div class="field-value">
-            	        <ul><?php foreach($collection->Collectors as $collector):?>
-            	            <li><?php echo h($collector->name); ?></li>
-            	            <?php endforeach; ?>
+            	        <ul>
+            	            <li><?php echo collection('Collectors', array('delimiter'=>'</li><li>')); ?></li>
             	        </ul>
             	    </div>
             	</div>
 	
-            	<p class="view-items-link"><a href="<?php echo uri('items/browse/', array('collection'=>$collection->id)); ?>">View the items in &quot;<?php echo h($collection->name); ?>&quot;</a></p>
+            	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Title'), array('collection' => collection('id'))); ?></p>
             </div>
-		<?php endforeach; ?>
+		<?php endwhile; ?>
 
 </div>
 			
