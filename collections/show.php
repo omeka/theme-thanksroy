@@ -18,7 +18,32 @@
     </div>
 
     <p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Title'), array('collection' => collection('id'))); ?></p>
+    
+    <div id="collection-items">
 
+    <?php while (loop_items_in_collection(5)): ?>
+		<h3><?php echo link_to_item(item('Title'), array('class'=>'permalink')); ?></h3>
+
+		<?php if (item_has_thumbnail()): ?>
+		<div class="item-img">
+			<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Title',0)))); ?>						
+		</div>
+		<?php endif; ?>
+
+		<?php if ($text = item('Text', array('index'=>0,'snippet'=>250))): ?>
+			<div class="item-description">
+			<p><?php echo $text; ?></p>
+			</div>
+		<?php elseif ($description = item('Description', array('index'=>0,'snippet'=>250))): ?>
+			<div class="item-description">
+			<?php echo $description; ?>
+			</div>
+		<?php endif; ?>
+		
+    <?php endwhile; ?>
+
+    </div>
+    
 </div>
 
 <?php foot(); ?>
