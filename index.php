@@ -35,14 +35,13 @@
 			
 		<div id="recent-collections">
 		    <h2>Recent Collections</h2>
-		    <?php $recentCollections = recent_collections(2); ?>
-		    <?php if($recentCollections): ?>
+		    <?php if (has_collections()): ?>
 		        <ul class="collections-list">
-		            <?php foreach( $recentCollections as $collection ): ?>
+		            <?php while (loop_collections(array('recent'=>true), 2)): ?>
 		                <li class="collection">
-		                <h3><?php echo link_to_collection($collection); ?></h3>
-		                <p class="collection-description"><?php echo h(snippet($collection->description, 0, 150)); ?>
-		            <?php endforeach; ?>
+		                <h3><?php echo link_to_collection(); ?></h3>
+		                <p class="collection-description"><?php echo collection('Description', array('snippet'=>150)); ?>
+		            <?php endwhile; ?>
 		        </ul>
 		    <?php endif; ?>
 		</div><!-- end recent collections -->

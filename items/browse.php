@@ -16,7 +16,7 @@ endif;
 		<?php while (loop_items()): ?>
 			<div class="item hentry">
 				<div class="item-meta">
-				<h3><?php echo link_to_item(item('Title'), array('class'=>'permalink')); ?></h3>
+				<h3><?php echo link_to_item(item('Title', 0), array('class'=>'permalink')); ?></h3>
 
 				<?php if (item_has_thumbnail()): ?>
 				<div class="item-img">
