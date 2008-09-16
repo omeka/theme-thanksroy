@@ -1,4 +1,4 @@
-<?php head(array('title' => item('Title', 0))); ?>
+<?php head(array('title' => item('Title'))); ?>
 
 
 <?php
@@ -9,11 +9,12 @@ endif;
 
 <div id="primary" class="show">
 
-    <?php $titles = item('Title'); 
-        $firstTitle = array_shift($titles); ?>
-	<h2 class="item-title"><?php echo $firstTitle; ?></h2>
+    <?php echo link_to_previous_item(); ?>
+    <?php echo link_to_next_item(); ?>
+
+	<h2 class="item-title"><?php echo item('Title'); ?></h2>
 	<ul>
-        <?php foreach ($titles as $title): ?>
+        <?php foreach (item('Title', array('all'=>true)) as $title): ?>
            <li class="item-title">
            <?php echo $title; ?>
            </li>
@@ -41,7 +42,7 @@ endif;
 	<?php if(count($item->Tags)): ?>
 	<div class="tags">
 		<h3>Tags:</h3>
-	   <?php echo tags_for_item_as_string(); ?>	
+	   <?php echo item_tags_as_string(); ?>	
 	</div>
 	<?php endif;?>
 	

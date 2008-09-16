@@ -16,19 +16,19 @@ endif;
 		<?php while (loop_items()): ?>
 			<div class="item hentry">
 				<div class="item-meta">
-				<h3><?php echo link_to_item(item('Title', 0), array('class'=>'permalink')); ?></h3>
+				<h3><?php echo link_to_item(item('Title'), array('class'=>'permalink')); ?></h3>
 
 				<?php if (item_has_thumbnail()): ?>
 				<div class="item-img">
-					<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Title',0)))); ?>						
+					<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Title')))); ?>						
 				</div>
 				<?php endif; ?>
 
-				<?php if ($text = item('Text', array('index'=>0,'snippet'=>250))): ?>
+				<?php if ($text = item('Text', array('snippet'=>250))): ?>
 	    			<div class="item-description">
     				<p><?php echo $text; ?></p>
     				</div>
-				<?php elseif ($description = item('Description', array('index'=>0,'snippet'=>250))): ?>
+				<?php elseif ($description = item('Description', array('snippet'=>250))): ?>
     				<div class="item-description">
     				<?php echo $description; ?>
     				</div>
@@ -39,7 +39,7 @@ endif;
 				<?php echo item_tags_as_string(); ?></p>
 				</div>
 				<?php endif;?>
-
+                
 				</div>
 			</div>
 		<?php endwhile; ?>
