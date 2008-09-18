@@ -8,7 +8,8 @@
 	?>
 	
 	</ul>
-
+    
+    <?php echo plugin_footer(); ?>
 </div><!-- end footer -->
 
 </div><!-- end content -->

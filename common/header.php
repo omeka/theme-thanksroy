@@ -31,7 +31,7 @@
 			<div id="primary-nav">
 				<div id="search-wrap">
 				    <h2>Search</h2>
-				    <?php echo simple_search(array('id'=>'simple-search'),uri('items/browse')); ?>
+				    <?php echo simple_search(); ?>
     			</div>
     			
     			<ul class="navigation">
