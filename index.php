@@ -1,15 +1,13 @@
 <?php head(); ?>	
 
 	<div id="primary">
-		<!-- Featured Item -->
 		<div id="featured-item">
 			<?php echo display_random_featured_item(); ?>
-		</div><!--end featured-item-->	
+		</div>	
 		
-		<!-- Featured Collection -->
 		<div id="featured-collection">
 		    <?php echo display_random_featured_collection(); ?>
-		</div><!-- end featured collection -->
+		</div>
 				
 		<div id="recent-items">
 		<h2>Recently Added Items</h2>
@@ -26,10 +24,9 @@
 				<?php endwhile; ?>
 			</ul>
 			<?php else: ?>
-				<h3>No Recent Items</h3>
 				<p>No recent items available.</p>	
 			<?php endif; ?>
-		</div><!--end recent-items -->
+		</div>
 		
 		<p class="view-items-link"><a href="<?php echo uri('items'); ?>">View All Items</a></p>
 			
@@ -45,7 +42,7 @@
 		            <?php endwhile; ?>
 		        </ul>
 		    <?php endif; ?>
-		</div><!-- end recent collections -->
+		</div>
 			
 	</div>
 	
