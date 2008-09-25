@@ -36,8 +36,9 @@
 		<div id="recent-collections">
 		    <h2>Recent Collections</h2>
 		    <?php if (has_collections()): ?>
+		        <?php set_collections_for_loop(recent_collections(2)); ?>
 		        <ul class="collections-list">
-		            <?php while (loop_collections(array('recent'=>true), 2)): ?>
+		            <?php while (loop_collections()): ?>
 		                <li class="collection">
 		                <h3><?php echo link_to_collection(); ?></h3>
 		                <p class="collection-description"><?php echo collection('Description', array('snippet'=>150)); ?>
