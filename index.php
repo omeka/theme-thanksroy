@@ -41,6 +41,8 @@
 		                <p class="collection-description"><?php echo collection('Description', array('snippet'=>150)); ?>
 		            <?php endwhile; ?>
 		        </ul>
+		    <?php else: ?>
+				<p>No recent collections available.</p>		        
 		    <?php endif; ?>
 		</div>
 			
