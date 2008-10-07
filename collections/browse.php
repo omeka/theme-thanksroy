@@ -20,7 +20,7 @@
             	    </div>
             	</div>
 	
-            	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Title'), array('collection' => collection('id'))); ?></p>
+            	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>
             </div>
 		<?php endwhile; ?>
 

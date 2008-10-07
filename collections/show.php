@@ -1,7 +1,7 @@
-<?php head(array('title'=>collection('Title'))); ?>
+<?php head(array('title'=>collection('Name'))); ?>
 
 <div id="primary" class="show">
-    <h1><?php echo collection('Title'); ?></h1>
+    <h1><?php echo collection('Name'); ?></h1>
 
     <div id="description" class="element">
     <h2>Description</h2>
