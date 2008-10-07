@@ -17,24 +17,24 @@
         </div>
     </div>
 
-    <p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Title'), array('collection' => collection('id'))); ?></p>
+    <p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>
     
     <div id="collection-items">
 
     <?php while (loop_items_in_collection(5)): ?>
-		<h3><?php echo link_to_item(item('Title'), array('class'=>'permalink')); ?></h3>
+		<h3><?php echo link_to_item(item('Dublin Core: Title'), array('class'=>'permalink')); ?></h3>
 
 		<?php if (item_has_thumbnail()): ?>
 		<div class="item-img">
-			<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Title',0)))); ?>						
+			<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Dublin Core: Title')))); ?>						
 		</div>
 		<?php endif; ?>
 
-		<?php if ($text = item('Text', array('index'=>0,'snippet'=>250))): ?>
+		<?php if ($text = item('Item Type Metadata: Text', array('snippet'=>250))): ?>
 			<div class="item-description">
 			<p><?php echo $text; ?></p>
 			</div>
-		<?php elseif ($description = item('Description', array('index'=>0,'snippet'=>250))): ?>
+		<?php elseif ($description = item('Dublin Core: Description', array('snippet'=>250))): ?>
 			<div class="item-description">
 			<?php echo $description; ?>
 			</div>

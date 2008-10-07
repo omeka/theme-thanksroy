@@ -17,7 +17,7 @@
 				<?php while (loop_items()): ?>
 				<li class="item">
 					<h3><?php echo link_to_item(); ?></h3>
-				<?php if($desc = item('Description', array('snippet'=>150, 'index'=>0))): ?>
+				<?php if($desc = item('Dublin Core: Description', array('snippet'=>150))): ?>
 					<div class="item-description"><?php echo $desc; ?></div>
 				<?php endif; ?>			
 				</li>
