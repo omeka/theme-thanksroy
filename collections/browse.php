@@ -21,9 +21,10 @@
             	</div>
 	
             	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>
+            <?php echo plugin_append_to_collections_browse_each(); ?>
             </div>
 		<?php endwhile; ?>
-
+        <?php echo plugin_append_to_collections_browse(); ?>
 </div>
 			
 <?php foot(); ?>	

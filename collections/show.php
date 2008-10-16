@@ -43,7 +43,7 @@
     <?php endwhile; ?>
 
     </div>
-    
+    <?php echo plugin_append_to_collections_show(); ?>
 </div>
 
 <?php foot(); ?>

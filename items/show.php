@@ -9,9 +9,6 @@ endif;
 
 <div id="primary" class="show">
 
-    <?php echo link_to_previous_item(); ?>
-    <?php echo link_to_next_item(); ?>
-
 	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
 	<ul>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
@@ -59,6 +56,8 @@ endif;
 		<?php echo link_to_next_item('Next Item'); ?>
 	</li>
 	</ul>
+	
+	<?php echo plugin_append_to_items_show(); ?>
 </div><!-- end primary -->
 
 

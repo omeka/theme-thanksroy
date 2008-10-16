@@ -39,11 +39,11 @@ endif;
 				<?php echo item_tags_as_string(); ?></p>
 				</div>
 				<?php endif;?>
-                
+                <?php echo plugin_append_to_items_browse_each(); ?>
 				</div>
 			</div>
 		<?php endwhile; ?>
 		<div class="pagination bottom"><?php echo pagination_links(); ?></div>
-			
+		<?php echo plugin_append_to_items_browse(); ?>	
 	</div>
 <?php foot(); ?>
