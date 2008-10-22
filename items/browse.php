@@ -20,7 +20,7 @@ endif;
 
 				<?php if (item_has_thumbnail()): ?>
 				<div class="item-img">
-					<?php echo link_to_item(item_square_thumbnail(array('alt'=>item('Dublin Core', 'Title')))); ?>						
+					<?php echo link_to_item(item_square_thumbnail(array('alt'=>strip_formatting(item('Dublin Core', 'Title'))))); ?>						
 				</div>
 				<?php endif; ?>
 
