@@ -6,14 +6,14 @@
 			<div class="collection">
             	<h2><?php echo link_to_collection(); ?></h2>
 	
-            	<div class="field">
+            	<div class="element">
             	<h3>Description</h3>
-            	<div class="field-value"><?php echo nls2p(collection('Description', array('snippet'=>150))); ?></div>
+            	<div class="element-text"><?php echo nls2p(collection('Description', array('snippet'=>150))); ?></div>
 	            </div>
 	            
-            	<div class="field">
+            	<div class="element">
             	<h3>Collector(s)</h3> 
-            	    <div class="field-value">
+            	    <div class="element-text">
             	        <ul>
             	            <li><?php echo collection('Collectors', array('delimiter'=>'</li><li>')); ?></li>
             	        </ul>
