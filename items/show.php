@@ -1,12 +1,5 @@
 <?php head(array('title' => item('Dublin Core', 'Title'))); ?>
 
-
-<?php
-if (function_exists('COinS')):
-    COinS($item);
-endif;
-?>
-
 <div id="primary" class="show">
 
 	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
