@@ -27,7 +27,9 @@
 		<div id="header">
 			<h1><?php echo link_to_home_page(); ?></h1>
 		</div>
+		
 		<div id="content">
+		    
 			<div id="primary-nav">
 				<div id="search-wrap">
 				    <h2>Search</h2>

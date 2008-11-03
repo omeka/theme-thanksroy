@@ -45,7 +45,7 @@
 		
 		<div class="pagination bottom"><?php echo pagination_links(); ?></div>
 		
-		<?php echo plugin_append_to_items_browse(); ?>	
+		<?php echo plugin_append_to_items_browse(); ?>
 		
 	</div><!-- end primary -->
 	
