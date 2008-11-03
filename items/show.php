@@ -3,6 +3,7 @@
 <div id="primary" class="show">
 
 	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
+	
 	<ul>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
            <li class="item-title">
@@ -11,34 +12,35 @@
         <?php endforeach ?>
 	</ul>
 	
-	<?php echo show_item_metadata(); ?>
-	
-	
+	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
+	<?php echo show_item_metadata(); ?>	
 
-	<div id="itemfiles">
-		<?php echo display_files_for_item(); ?>
+    <!-- The following returns all of the files associated with an item. -->
+	<div id="itemfiles" class="element">
+	    <h3>Files</h3>
+		<div class="element-text"><?php echo display_files_for_item(); ?></div>
 	</div>
 	
-	
+	<!-- If the item belongs to a collection, the following creates a link to that collection. -->
 	<?php if ( item_belongs_to_collection() ): ?>
-        <div id="collection" class="field">
+        <div id="collection" class="element">
             <h2>Collection</h2>
-            <div class="field-value"><p><?php echo link_to_collection_for_item(); ?></p></div>
+            <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
         </div>
     <?php endif; ?>
-    
-	
 
+    <!-- The following prints a list of all tags associated with the item -->
 	<?php if(count($item->Tags)): ?>
-	<div class="tags">
+	<div class="tags" class="element">
 		<h3>Tags:</h3>
-	   <?php echo item_tags_as_string(); ?>	
+	   <div class="element-text"><?php echo item_tags_as_string(); ?></div>	
 	</div>
 	<?php endif;?>
 	
-	<div id="citation" class="field">
+	<!-- The following prints a citation for this item. -->
+	<div id="citation" class="element">
     	<h2>Citation</h2>
-    	<div id="citation-value" class="field-value"><?php echo item_citation(); ?></div>
+    	<div id="citation-text" class="element-value"><?php echo item_citation(); ?></div>
 	</div>
 	
 	<ul class="item-pagination navigation">
@@ -52,6 +54,5 @@
 	
 	<?php echo plugin_append_to_items_show(); ?>
 </div><!-- end primary -->
-
 
 <?php foot(); ?>

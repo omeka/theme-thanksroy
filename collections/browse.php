@@ -4,6 +4,7 @@
 
 		<?php while (loop_collections()): ?>
 			<div class="collection">
+            	
             	<h2><?php echo link_to_collection(); ?></h2>
 	
             	<div class="element">
@@ -21,10 +22,14 @@
             	</div>
 	
             	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>
+            	
             <?php echo plugin_append_to_collections_browse_each(); ?>
-            </div>
+            
+            </div><!-- end class="collection" -->
 		<?php endwhile; ?>
+		
         <?php echo plugin_append_to_collections_browse(); ?>
-</div>
+        
+</div><!-- end primary -->
 			
 <?php foot(); ?>	

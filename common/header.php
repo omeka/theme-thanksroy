@@ -21,7 +21,7 @@
 <?php echo plugin_header(); ?>
 
 </head>
-<body>
+<body<?php echo $bodyid ? ' id="'.$bodyid.'"' : ''; ?><?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>>
 	<div id="wrap">
 
 		<div id="header">
