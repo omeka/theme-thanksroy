@@ -30,7 +30,7 @@
     <?php endif; ?>
 
     <!-- The following prints a list of all tags associated with the item -->
-	<?php if(count($item->Tags)): ?>
+	<?php if (item_has_tags()): ?>
 	<div class="tags" class="element">
 		<h3>Tags:</h3>
 	   <div class="element-text"><?php echo item_tags_as_string(); ?></div>	
