@@ -14,11 +14,11 @@
 	            
             	<div class="element">
             	<h3>Collector(s)</h3> 
+            	 <?php if(collection_has_collectors()): ?>
             	    <div class="element-text">
-            	        <ul>
-            	            <li><?php echo collection('Collectors', array('delimiter'=>'</li><li>')); ?></li>
-            	        </ul>
+                        <p><?php echo collection('Collectors', array('delimiter'=>', ')); ?></p>
             	    </div>
+            	            <?php endif; ?>
             	</div>
 	
             	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>

@@ -53,7 +53,7 @@
 	            
                 <li class="collection">
                     <h3><?php echo link_to_collection(); ?></h3>
-                    <p class="collection-description"><?php echo collection('Description', array('snippet'=>150)); ?>
+                    <p class="collection-description"><?php echo collection('Description', array('snippet'=>150)); ?></p>
                 </li>
 	                    
 	        <?php endwhile; ?>
