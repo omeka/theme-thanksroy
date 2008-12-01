@@ -25,7 +25,7 @@
 	<div id="wrap">
 
 		<div id="header">
-			<h1><?php echo link_to_home_page(); ?></h1>
+			<div id="site-title"><?php echo link_to_home_page(); ?></div>
 		</div>
 		
 		<div id="content">

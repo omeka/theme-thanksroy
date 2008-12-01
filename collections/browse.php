@@ -18,7 +18,7 @@
             	    <div class="element-text">
                         <p><?php echo collection('Collectors', array('delimiter'=>', ')); ?></p>
             	    </div>
-            	            <?php endif; ?>
+            	<?php endif; ?>
             	</div>
 	
             	<p class="view-items-link"><?php echo link_to_browse_items('View the items in' . collection('Name'), array('collection' => collection('id'))); ?></p>
