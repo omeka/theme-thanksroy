@@ -2,7 +2,7 @@
 
 <div id="primary" class="show">
 
-	<h1 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h1>
+	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
 	
 	<ul class="title-list">
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>

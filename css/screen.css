@@ -8,7 +8,6 @@ h1 {margin:0;}
 h1 {font-size:3em; margin-bottom:0.666667em; line-height:1.333333em;}
 h2 {font-size:2em; margin-bottom:.25em; line-height:1em;}
 h3 {font-size:2em; margin-bottom:.25em; line-height:1em;}
-h3 {font-size:2em; margin-bottom:1em; line-height:1em;}
 
 /* Links */
 a:link {color:#888;}
@@ -30,7 +29,6 @@ h3 a {text-decoration:none;}
 .item-pagination li.previous {display:block;float:left; width:48%;}
 .item-pagination li.next {float:right; display:block;width: 48%; text-align:right}
 
-/* Advanced Search */
 textarea {width:378px; height:312px;float:right;}
 legend {display:none;}
 fieldset {display:block; clear:both;}
@@ -91,8 +89,8 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 
 /* == Header == */
 
-#site-title {margin-bottom:0; font-size:4em; margin-left:48px; padding:1em 0;}
-	#site-title a {text-decoration:none;}
+#header h1 {margin-bottom:0; font-size:4em; margin-left:48px; padding:1em 0;}
+	#header h1 a {text-decoration:none;}
 	#header {}
 
 /* == Content == */
