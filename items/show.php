@@ -2,9 +2,10 @@
 
 <div id="primary" class="show">
 
-	<h2 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h2>
+	<h1 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h1>
 	
 	<ul class="title-list">
+	    <h3>All Titles</h3>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
            <li class="item-title">
            <?php echo $title; ?>
@@ -33,7 +34,7 @@
 	<?php if (item_has_tags()): ?>
 	<div class="tags" class="element">
 		<h3>Tags:</h3>
-	   <div class="element-text"><?php echo item_tags_as_string(); ?></div>	
+	    <div class="element-text"><?php echo item_tags_as_string(); ?></div>	
 	</div>
 	<?php endif;?>
 	

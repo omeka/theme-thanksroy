@@ -1,12 +1,12 @@
-<?php head(array('title'=>collection('Name'))); ?>
+<?php head(array('title'=>h($collection->name),'bodyid'=>'collections','bodyclass' => 'show')); ?>
 
 <div id="primary" class="show">
     <h1><?php echo collection('Name'); ?></h1>
 
-    <div id="description" class="element">
+    <div id="collection-description" class="element">
         <h2>Description</h2>
         <div class="element-text"><?php echo nls2p(collection('Description')); ?></div>
-    </div><!-- end description -->
+    </div><!-- end collection-description -->
     
     <div id="collectors" class="element">
         <h2>Collector(s)</h2> 

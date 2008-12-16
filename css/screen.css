@@ -23,7 +23,7 @@ h3 a {text-decoration:none;}
 .navigation {list-style:none; margin: 2em 0 0;}
 	.navigation li {display:inline;}
 	.navigation a {text-decoration:none;}
-	#footer .navigation li, .item-pagination li {font-size:1.5em;}
+	#footer .navigation li {font-size:1.5em;}
 
 .item-pagination {overflow:hidden;width:512px; margin-bottom:1.5em;border-top:1px solid #ccc; padding-top:1.5em;}
 .item-pagination li.previous {display:block;float:left; width:48%;}
@@ -50,6 +50,13 @@ input#description {width: 378px; height: 312px;}
 
 
 p {font-size:1.5em; line-height:1.33333em; margin-bottom:1.33333em;}
+
+ul {list-style:none;font-size:1.5em; line-height:1.33333em;}
+ol {list-style:lower-roman inside;font-size:1.5em; line-height:1.33333em;}
+
+ul.items-list, ul.collections-list, ul.title-list {font-size:1em;}
+
+
 .item-description, .element-text, .element-text-empty {font-size:1.5em; line-height:1.33333em; margin-bottom:1.33333em;}
 .item-description p, .element-text p {font-size:1em; line-height:1.33333em; margin-bottom:1.33333em;}
 
@@ -89,8 +96,8 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 
 /* == Header == */
 
-#header h1 {margin-bottom:0; font-size:4em; margin-left:48px; padding:1em 0;}
-	#header h1 a {text-decoration:none;}
+#header #site-title {margin-bottom:0; font-size:4em; margin-left:48px; padding:1em 0;}
+	#header #site-title a {text-decoration:none;}
 	#header {}
 
 /* == Content == */
@@ -123,11 +130,11 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		.browse .item {overflow:hidden; border-top:1px solid #ccc;padding-top:2em;}
 		.browse .item-img img {width:100px; height:100px; float:left; display:block; margin-bottom:2em; margin-right:2em; padding:6px; border:1px solid #ccc;}
 		.tags li {display:inline;}
-		.tags a {font-size:1.5em; line-height:1.33333em; margin-bottom:1.33333em;}
+		.tags a {}
 		
 		#item-content img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
 
-		#featured-item {margin-bottom:2em; overflow:hidden;}
+		#featured-item {overflow:hidden;}
 		#featured-item img {width: 140px; height:140px; padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
 
 		.items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}

@@ -1,4 +1,4 @@
-<?php head(); ?>	
+<?php head(array('bodyid'=>'home')); ?>
 
 <div id="primary">
     

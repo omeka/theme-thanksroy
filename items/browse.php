@@ -13,6 +13,7 @@
 		<?php while (loop_items()): ?>
 			<div class="item hentry">
 				<div class="item-meta">
+				    
 				<h3><?php echo link_to_item(item('Dublin Core', 'Title'), array('class'=>'permalink')); ?></h3>
 
 				<?php if (item_has_thumbnail()): ?>
@@ -35,7 +36,7 @@
     				<div class="tags"><p><strong>Tags:</strong>
     				<?php echo item_tags_as_string(); ?></p>
     				</div>
-				<?php endif;?>
+				<?php endif; ?>
 				
                 <?php echo plugin_append_to_items_browse_each(); ?>
                 
