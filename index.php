@@ -38,7 +38,7 @@
 			
     		<?php endif; ?>
 		
-    		<p class="view-items-link"><?php echo link_to_browse_items('View All Items'); ?></a></p>
+    		<p class="view-items-link"><?php echo link_to_browse_items('View All Items'); ?></p>
 	
 	</div><!-- end recent-items -->
 		
