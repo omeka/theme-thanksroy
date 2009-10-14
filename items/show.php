@@ -4,8 +4,9 @@
 
 	<h1 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h1>
 	
+	<h3>All Titles</h3>
+    
 	<ul class="title-list">
-	    <h3>All Titles</h3>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
            <li class="item-title">
            <?php echo $title; ?>
