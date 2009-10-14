@@ -106,6 +106,8 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 	#search-wrap a {font-size:1.5em;margin-top:.25em;text-decoration:none;}
 	#search-wrap {margin-bottom:2em;}
 	#submit_search {margin-left:5px;}
+	#submit_search_advanced {margin-top:5px;margin-bottom:5px;}
+	
 	
 	#primary-nav {float:left; width:246px;}
 	#primary-nav ul {margin:0;font-size:2em; line-height:1em;}
