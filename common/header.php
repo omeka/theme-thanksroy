@@ -12,7 +12,6 @@
 
 <!-- Stylesheets -->
 <link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
-<link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
 <style type="text/css" media="screen">
     <?php if($headerBackground = get_theme_option('Header Background')): ?>
     #header {
