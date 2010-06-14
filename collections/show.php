@@ -1,13 +1,16 @@
-<?php head(array('title'=>h($collection->name),'bodyid'=>'collections','bodyclass' => 'show')); ?>
+<?php head(array('title'=>html_entities($collection->name),'bodyid'=>'collections','bodyclass' => 'show')); ?>
 
 <div id="primary" class="show">
     <h1><?php echo collection('Name'); ?></h1>
 
+    <?php if ($description = collection('Description')): ?>
     <div id="collection-description" class="element">
         <h2>Description</h2>
-        <div class="element-text"><?php echo nls2p(collection('Description')); ?></div>
+        <div class="element-text"><?php echo nls2p($description); ?></div>
     </div><!-- end collection-description -->
+    <?php endif; ?>
     
+    <?php if (collection_has_collectors()): ?>
     <div id="collectors" class="element">
         <h2>Collector(s)</h2> 
         <div class="element-text">
@@ -16,8 +19,8 @@
             </ul>
         </div>
     </div><!-- end collectors -->
+    <?php endif; ?>
 
-    <p class="view-items-link"><?php echo link_to_browse_items('View the items in ' . collection('Name'), array('collection' => collection('id'))); ?></p>
     
     <div id="collection-items">
         <?php while (loop_items_in_collection(5)): ?>
@@ -41,6 +44,7 @@
 		    <?php endif; ?>
 		
     <?php endwhile; ?>
+        <p class="view-items-link"><?php echo link_to_browse_items('View all items in ' . collection('Name'), array('collection' => collection('id'))); ?></p>
     </div><!-- end collection-items -->
     
     <?php echo plugin_append_to_collections_show(); ?>
