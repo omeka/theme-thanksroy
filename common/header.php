@@ -13,6 +13,13 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
 <link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
+<style type="text/css" media="screen">
+    <?php if($headerBackground = get_theme_option('Header Background')): ?>
+    #header {
+        background:transparent url('<?php echo WEB_THEME_UPLOADS.DIRECTORY_SEPARATOR.$headerBackground; ?>') top left no-repeat;
+    }
+    <?php endif; ?>
+</style>
 
 <!-- JavaScripts -->
 <?php echo js('default'); ?>
@@ -25,7 +32,7 @@
 	<div id="wrap">
 
 		<div id="header">
-		<div id="site-title"><?php echo link_to_home_page(); ?></div>
+		<div id="site-title"><?php echo link_to_home_page(thanksroy_display_logo()); ?></div>
 		</div>
 		
 		<div id="content">
@@ -38,6 +45,6 @@
     			</div>
     			
     			<ul class="navigation">
-    			    <?php echo public_nav_main(array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'))); ?>
+    			    <?php echo thanksroy_display_navigation(); ?>
     			</ul>
 			</div>
