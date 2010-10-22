@@ -97,24 +97,20 @@ blockquote {margin-left:2.6667em;margin-right:2.6667em;font-style:italic;}
 .item-pagination li.next {float:right; display:block;width: 48%; text-align:right}
 
 /* Forms */
-textarea {width:378px; height:312px;float:right;}
-legend {display:none;}
+legend {font-size:2em;}
 fieldset {display:block; clear:both;}
 label {font-size:1.5em;}
 .label {font-size:1.5em;}
 .inputs {overflow:hidden;zoom:1;}
-.field {border-bottom:1px solid #ccc; padding:0.75em 0; overflow:hidden; width:512px;}
-.field label {float:left; width: 114px;font-weight:normal;clear:left; }
-.field .label {float:left; width: 114px;font-weight:normal;clear:left; }
-.field .textinput, .field select {float:right; width: 378px;background:#fff;}
-.field select {width: 382px;}
-.field input {margin:0;margin-left:16px;}
-input.submitinput {margin-top:1em;}
-.radioinputs {display:block; margin-bottom:0.5em; overflow:hidden;}
-.radioinputs label {display:block; float:left; width: 48%; clear:none;}
-input#description {width: 378px; height: 312px;}
-.search-entry select {margin-bottom:.5em;}
-#primary #submit_search {margin:.5em 0;float:right;}
+#advanced-search-page .field {border-bottom:1px solid #ccc; padding:0.75em 0; overflow:hidden; width:100%;}
+#advanced-search-page .field label {float:left; width: 30%;font-weight:normal;clear:left; }
+#advanced-search-page .field .label {float:left; width: 30%;font-weight:normal;clear:left; }
+#advanced-search-page .field .textinput, .field select {float:right; width: 90%;background:#fff;}
+#advanced-search-page .field select {width: 92%;float:right;}
+#advanced-search-page .field input {width: 70%;float:right;}
+#advanced-search-page .field button {float:right;}
+#advanced-search-page input.submitinput {margin-top:1em;}
+#advanced-search-page #submit_search_advanced {margin:.5em 0;float:right;}
 
 ul.items-list, ul.collections-list, ul.title-list {font-size:1em; list-style:none; margin-left:0;}
 
