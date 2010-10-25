@@ -216,9 +216,9 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		.collection .element {margin-bottom:0;}		
 
 /* == Footer == */
-#footer {clear:both; overflow:hidden; padding-top:2em; margin-top:2em; border-top:1px solid #ccc;}
-	#footer p {float:left; width: 180px;}
-	#footer ul {float:right; width:578px; margin:0 0 0 60px;text-align:right;}
+#footer {clear:both; overflow:hidden; padding-top:48px; margin:48px 48px 0; border-top:1px solid #ccc;}
+	#footer p {float:left; width: 30%;}
+	#footer ul {float:right; width:60%; margin:0 0 0 60px;text-align:right;}
 		#footer ul li {margin-left:12px;}
 		
 /* == Exhibit Builder == */

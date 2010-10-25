@@ -44,6 +44,6 @@
     			</div>
     			
     			<ul class="navigation">
-    			    <?php echo thanksroy_display_navigation(); ?>
+    			    <?php echo thanksroy_public_nav_header(); ?>
     			</ul>
 			</div>

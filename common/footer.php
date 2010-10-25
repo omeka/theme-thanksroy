@@ -1,3 +1,5 @@
+</div><!-- end content -->
+
 <div id="footer">
 	
 	<p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>
@@ -10,8 +12,6 @@
     <?php echo plugin_footer(); ?>
     
 </div><!-- end footer -->
-
-</div><!-- end content -->
 
 </div><!--end wrap-->
 

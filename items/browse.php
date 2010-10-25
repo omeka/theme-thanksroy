@@ -5,7 +5,7 @@
 		<h1>Browse Items (<?php echo total_results(); ?> total)</h1>
 		
 		<ul class="navigation" id="secondary-nav">
-			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
+			<?php echo thanksroy_nav_items(); ?>
 		</ul>
 		
 		<div class="pagination top"><?php echo pagination_links(); ?></div>
