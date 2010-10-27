@@ -223,7 +223,15 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		
 /* == Exhibit Builder == */
 #exhibits .exhibit {border-top:1px solid #ccc; padding-top:2em;}
-.exhibit-section-nav {list-style:square;padding-left:20px;padding-bottom:10px;}
-.exhibit-section-nav li {font-size:1.5em;}
-.exhibit-page-nav {list-style:square;padding-left:40px;padding-bottom:10px;}
-.exhibit-page-nav li {font-size:1.5em;}
+#exhibit #primary h2 {font-weight:normal;margin-top:.5em;}
+.exhibit-section-nav {list-style:none;margin-bottom:1em; border-bottom:1px solid #ccc;margin:0;padding:0.4em 0.5em; font-size:1.5em;}
+.exhibit-section-nav li {padding:0.5em 0;display:inline;}
+.exhibit-section-nav li a {padding:0.5em 1em 0.5em; color:#666;text-decoration:none;}
+.exhibit-section-nav .current a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+
+.exhibit-page-nav {padding:15px 0 15px 40px;margin:0;border-top:1px solid #ccc;}
+.exhibit-page-nav li {font-size:1.1em;display:inline;margin-right:10px;}
+.exhibit-page-nav li a {text-decoration:none;}
+.exhibit-page-nav .current a {color:#333; font-weight:bold;}
+
+#exhibit-page-navigation {clear:both;}

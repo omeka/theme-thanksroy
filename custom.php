@@ -91,7 +91,7 @@ function thanksroy_public_nav_header()
 function thanksroy_nav_items($navArray = array())
 {
     if (!$navArray) {
-        $navArray = array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'));
+        $navArray = array('Browse All' => uri('items/'), 'Browse by Tag' => uri('items/tags'));
     }
     
     // Check to see if the function public_nav_items, introduced in Omeka 1.3, exists.
