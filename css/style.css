@@ -1,7 +1,7 @@
 /* == Reset == */
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
-
+@media screen {
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -192,6 +192,7 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		#secondary-nav li {padding:0.5em 0;}
 		#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
 		#secondary-nav .current a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+		.tags #secondary-nav .nav-browse-all a {border:none;color:#666;font-weight:normal;}
 		
 		.pagination ul {text-align:right; line-height:1em; padding:0.5em; margin-left:0;}
 		.pagination li {display:inline; margin-left:1em; margin-bottom:0; padding:0.5em 0;}
@@ -234,4 +235,55 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 .exhibit-page-nav li a {text-decoration:none;}
 .exhibit-page-nav .current a {color:#333; font-weight:bold;}
 
-#exhibit-page-navigation {clear:both;}
+#exhibit-page-navigation {clear:both;float:right;}
+#exhibit-page-navigation .next-page {margin-left:2em;}
+}/*end @media screen*/
+/* Print Styles */
+@media print {
+body{
+	font:12px Georgia, "Palatino Linotype", "Book Antiqua", "Times New Roman", Times, serif;
+}
+#content{
+	width:100%;
+	margin:0;
+	float:none;
+}
+h1,
+#site-title{
+	font-size:16pt;
+	font-weight:bold;
+}
+h2{
+	font-size:14pt;
+	font-style:italic;
+}
+h3 {
+	font-size:14pt;
+}
+h4 {
+	font-weight:bold;
+}
+h5 {
+	font-weight:bold;
+	font-style:italic;
+	text-transform:uppercase;
+}
+a:link:after {
+	content: " (" attr(href) ") ";
+	font-size:80%;
+}
+#search-container,
+#primary-nav,
+#header-image,
+.navigation,
+.pagination,
+#exhibit-page-navigation,
+.exhibit-section-nav,
+.exhibit-page-nav {
+	display:none;
+}
+blockquote {
+	margin:10pt 0 0 0;
+	font-style:italic;
+}
+}/*end @media print*/

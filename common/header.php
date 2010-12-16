@@ -11,7 +11,7 @@
 <?php echo auto_discovery_link_tag(); ?>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
+<link rel="stylesheet" media="screen" href="<?php echo html_escape(css('style')); ?>" />
 <style type="text/css" media="screen">
     <?php if($headerBackground = get_theme_option('Header Background')): ?>
     #header {
@@ -31,7 +31,7 @@
 	<div id="wrap">
 
 		<div id="header">
-		<div id="site-title"><?php echo link_to_home_page(thanksroy_display_logo()); ?></div>
+		<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
 		</div>
 		
 		<div id="content">
@@ -44,6 +44,6 @@
     			</div>
     			
     			<ul class="navigation">
-    			    <?php echo thanksroy_public_nav_header(); ?>
+    			    <?php echo custom_public_nav_header(); ?>
     			</ul>
 			</div>
