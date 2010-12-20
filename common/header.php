@@ -10,21 +10,26 @@
 
 <?php echo auto_discovery_link_tag(); ?>
 
+<!-- Plugin Stuff -->
+<?php plugin_header(); ?>
+
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(css('style')); ?>" />
+<?php
+queue_css('style');
+display_css(); 
+?>
+
+<?php if($headerBackground = get_theme_option('Header Background')): ?>
+
 <style type="text/css" media="screen">
-    <?php if($headerBackground = get_theme_option('Header Background')): ?>
     #header {
         background:transparent url('<?php echo WEB_THEME_UPLOADS.DIRECTORY_SEPARATOR.$headerBackground; ?>') top left no-repeat;
     }
-    <?php endif; ?>
 </style>
+<?php endif; ?>
 
 <!-- JavaScripts -->
-<?php echo js('default'); ?>
-
-<!-- Plugin Stuff -->
-<?php echo plugin_header(); ?>
+<?php echo display_js(); ?>
 
 </head>
 <body<?php echo isset($bodyid) ? ' id="'.$bodyid.'"' : ''; ?><?php echo isset($bodyclass) ? ' class="'.$bodyclass.'"' : ''; ?>>
