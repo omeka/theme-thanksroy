@@ -156,7 +156,7 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
     #site-title a {text-decoration:none;}
 
 /* == Content == */
-#content {background:#fff url("../images/horizontal-stripe.gif") top left repeat-x;padding:54px 48px 48px; overflow:hidden; zoom:1;}
+#content {background:#fff url("../images/horizontal-stripe.gif") top left repeat-x;padding:54px 48px 0; margin-bottom: 48px; overflow:hidden; zoom:1;}
 	
 	#search-wrap a {font-size:1.5em;margin-top:.25em;text-decoration:none;}
 	#search-wrap {margin-bottom:2em;}
