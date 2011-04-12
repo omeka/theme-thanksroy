@@ -18,16 +18,6 @@
 queue_css('style');
 display_css(); 
 ?>
-
-<?php if($headerBackground = get_theme_option('Header Background')): ?>
-
-<style type="text/css" media="screen">
-    #header {
-        background:transparent url('<?php echo WEB_THEME_UPLOADS.DIRECTORY_SEPARATOR.$headerBackground; ?>') top left no-repeat;
-    }
-</style>
-<?php endif; ?>
-
 <!-- JavaScripts -->
 <?php echo display_js(); ?>
 
