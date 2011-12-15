@@ -12,7 +12,7 @@
 
     <!-- Recent Items -->		
     <div id="recent-items">
-        <h2>Recently Added Items</h2>
+        <h2><?php echo __('Recently Added Items');</h2>
         <?php 
         $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
         set_items_for_loop(recent_items($homepageRecentItems));
@@ -29,9 +29,9 @@
         <?php endwhile; ?>
         </ul>
         <?php else: ?>
-        <p>No recent items available.</p>
+        <p><?php echo __('No recent items available.')</p>
         <?php endif; ?>
-        <p class="view-items-link"><?php echo link_to_browse_items('View All Items'); ?></p>
+        <p class="view-items-link"><?php echo link_to_browse_items(__('View All Items')); ?></p>
     </div><!-- end recent-items -->
 </div><!-- end primary -->
 <div id="secondary">
