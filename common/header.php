@@ -23,23 +23,23 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php plugin_body(); ?>
-	<div id="wrap">
-
-		<div id="header">
-        <?php plugin_page_header(); ?>
-		<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
-		</div>
-		
-		<div id="content">
-		    <?php plugin_page_content(); ?>
-			<div id="primary-nav">
-				<div id="search-wrap">
-				    <h2>Search</h2>
-				    <?php echo simple_search(); ?>
-				    <?php echo link_to_advanced_search(); ?>
+    	<div id="wrap">
+    
+    		<div id="header">
+    		<?php plugin_page_header(); ?>
+    		<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
+    		</div>
+    		
+    		<div id="content">
+    		    <?php plugin_page_content(); ?>
+    			<div id="primary-nav">
+    				<div id="search-wrap">
+    				    <h2>Search</h2>
+    				    <?php echo simple_search(); ?>
+    				    <?php echo link_to_advanced_search(); ?>
+        			</div>
+        			
+        			<ul class="navigation">
+        			    <?php echo custom_public_nav_header(); ?>
+        			</ul>
     			</div>
-    			
-    			<ul class="navigation">
-    			    <?php echo custom_public_nav_header(); ?>
-    			</ul>
-			</div>
