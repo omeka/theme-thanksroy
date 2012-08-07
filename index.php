@@ -22,7 +22,7 @@
         <?php while (loop_items()): ?>
         <li class="item">
             <h3><?php echo link_to_item(); ?></h3>
-            <?php if($itemDescription = item(array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
+            <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
                 <p class="item-description"><?php echo $itemDescription; ?></p>
             <?php endif; ?>						
         </li>
