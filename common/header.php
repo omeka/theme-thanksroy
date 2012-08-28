@@ -39,7 +39,6 @@
     				    <?php echo link_to_advanced_search(); ?>
         			</div>
         			
-        			<ul class="navigation">
-        			    <?php echo custom_public_nav_header(); ?>
-        			</ul>
+        			    <?php echo public_nav_main(); ?>
+
     			</div>
