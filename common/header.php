@@ -11,7 +11,7 @@
     <?php echo auto_discovery_link_tags(); ?>
 
     <!-- Plugin Stuff -->
-    <?php plugin_header(); ?>
+    <?php fire_plugin_hook('public_theme_header'); ?>
 
     <!-- Stylesheets -->
     <?php
@@ -22,16 +22,16 @@
     <?php echo display_js(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <?php plugin_body(); ?>
+    <?php fire_plugin_hook('public_theme_body'); ?>
     	<div id="wrap">
     
     		<div id="header">
-    		<?php plugin_page_header(); ?>
+    		<?php fire_plugin_hook('public_theme_page_header'); ?>
     		<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
     		</div>
     		
     		<div id="content">
-    		    <?php plugin_page_content(); ?>
+    		    <?php fire_plugin_hook('public_theme_page_content'); ?>
     			<div id="primary-nav">
     				<div id="search-wrap">
     				    <h2>Search</h2>
