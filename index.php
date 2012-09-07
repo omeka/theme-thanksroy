@@ -19,14 +19,14 @@
         if (has_items_for_loop()): 
         ?>
         <ul class="items-list">
-        <?php while (loop_items()): ?>
+        <?php foreach (loop('items') as $item): ?>
         <li class="item">
             <h3><?php echo link_to_item(); ?></h3>
             <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
                 <p class="item-description"><?php echo $itemDescription; ?></p>
             <?php endif; ?>						
         </li>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         </ul>
         <?php else: ?>
         <p><?php echo __('No recent items available.'); ?></p>
