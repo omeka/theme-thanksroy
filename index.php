@@ -15,8 +15,8 @@
         <h2><?php echo __('Recently Added Items'); ?></h2>
         <?php 
         $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
-        set_items_for_loop(recent_items($homepageRecentItems));
-        if (has_items_for_loop()): 
+        set_loop_records('items', recent_items($homepageRecentItems));
+        if (has_loop_records('items')): 
         ?>
         <ul class="items-list">
         <?php foreach (loop('items') as $item): ?>
