@@ -35,7 +35,7 @@
     			<div id="primary-nav">
     				<div id="search-wrap">
     				    <h2>Search</h2>
-    				    <?php echo simple_search(); ?>
+    				    <?php echo simple_search_form(); ?>
     				    <?php echo link_to_advanced_search(); ?>
         			</div>
         			
