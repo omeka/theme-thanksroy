@@ -31,7 +31,7 @@
         <?php else: ?>
         <p><?php echo __('No recent items available.'); ?></p>
         <?php endif; ?>
-        <p class="view-items-link"><?php echo link_to_browse_items(__('View All Items')); ?></p>
+        <p class="view-items-link"><?php echo link_to_items_browse(__('View All Items')); ?></p>
     </div><!-- end recent-items -->
 </div><!-- end primary -->
 <div id="secondary">
