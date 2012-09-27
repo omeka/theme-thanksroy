@@ -15,11 +15,11 @@
         <h2><?php echo __('Recently Added Items'); ?></h2>
         <?php 
         $homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
-        set_loop_records('items', get_recent_items($homepageRecentItems));
-        if (has_loop_records('items')): 
+        set_loop_records('item', get_recent_items($homepageRecentItems));
+        if (has_loop_records('item')): 
         ?>
         <ul class="items-list">
-        <?php foreach (loop('items') as $item): ?>
+        <?php foreach(loop('item') as $item): ?>
         <li class="item">
             <h3><?php echo link_to_item(); ?></h3>
             <?php if($itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150))): ?>
@@ -47,4 +47,4 @@
     <?php endif; ?>
     </div><!-- end recent-collections -->
 </div><!-- end secondary -->
-<?php echo foot(); ?>
+<?php foot(); ?>

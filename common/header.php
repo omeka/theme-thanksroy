@@ -16,8 +16,9 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
-    echo head_css(); 
+    echo head_css();
     ?>
+
     <!-- JavaScripts -->
     <?php echo head_js(); ?>
 </head>
@@ -39,6 +40,7 @@
     				    <?php echo link_to_item_search(); ?>
         			</div>
         			
-        			    <?php echo public_nav_main(); ?>
-
+        			<ul class="navigation">
+        			    <?php echo custom_public_nav_header(); ?>
+        			</ul>
     			</div>
