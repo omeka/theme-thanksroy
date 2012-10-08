@@ -57,7 +57,6 @@ table {
 body {
   color: #444;
   font-family: "PT Serif", Times, serif;
-  min-width: 780px;
 }
 
 h1 {
@@ -171,7 +170,392 @@ blockquote {
   overflow: hidden;
 }
 
-/* == Forms == */
+/* == Formalize Styles == */
+/* == http://formalize.me == */
+/* `Widths
+----------------------------------------------------------------------------------------------------*/
+.input_tiny {
+  width: 50px;
+}
+
+.input_small {
+  width: 100px;
+}
+
+.input_medium {
+  width: 150px;
+}
+
+.input_large {
+  width: 200px;
+}
+
+.input_xlarge {
+  width: 250px;
+}
+
+.input_xxlarge {
+  width: 300px;
+}
+
+.input_full {
+  width: 100%;
+}
+
+/*
+  Added via JS to <textarea> and class="input_full".
+  Applies only to IE7. Other browsers don't need it.
+*/
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* `UI Consistency
+----------------------------------------------------------------------------------------------------*/
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  vertical-align: middle;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  vertical-align: top;
+  top: 3px;
+  /* IE8, IE9, IE10 */
+  top: 0\0;
+  /* IE7 */
+  *top: -3px;
+}
+
+/* iPad */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 2px;
+  }
+}
+/* iPhone 3 */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+/* iPhone 4 */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  /* -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%); */
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  font: bold 12px/1.3 "PT Serif", serif;
+  outline: 0;
+  overflow: visible;
+  padding: 3px 10px;
+  /* text-shadow: #fff 0 1px 1px; */
+  width: auto;
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 0px;
+}
+
+button {
+  /* IE7 */
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  outline: 0;
+  padding: 2px 3px;
+  font-size: 13px;
+  /*
+    Leaving out Helvetica Neue, to not throw off size="..."
+    on inputs. Arial is more reliable, on Windows and OS X.
+  */
+  font-family: "PT Serif", serif;
+  height: 1.8em;
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+
+/*
+  Separate rule for Firefox.
+  Separate rule for IE, too.
+  Cannot stack with WebKit's.
+*/
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888;
+}
+
+:invalid {
+  /*
+    Suppress red glow that Firefox
+    adds to form fields by default,
+    even when user is still typing.
+  */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  -moz-box-shadow: #333 0 0 7px;
+  -webkit-box-shadow: #333 0 0 7px;
+  box-shadow: #333 0 0 7px;
+  /* for Opera */
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #888;
+  cursor: default;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    padding: 0;
+  }
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: #fff;
+    font: 11px/1 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    padding: 15px 15px 17px;
+    text-shadow: #000 0 0 1px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666;
+    border: 0;
+  }
+}
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* `IE6
+----------------------------------------------------------------------------------------------------*/
+/*
+  Everything below this line is for IE6.
+  Delete it if you don't support it! :)
+
+  Classes are added dynamically via JS,
+  because IE6 doesn't support attribute
+  selectors: .ie6_button, .ie6_input, etc.
+
+  Note: These style rules are somewhat
+  duplicated because IE6 bombs out when
+  it sees attribute selectors. Example:
+
+  .ie6_button {
+    This works in IE6.
+  }
+
+  .ie6_button,
+  input[type=submit] {
+    This doesn't work.
+  }
+*/
+.ie6_button,
+* html button {
+  background: #dddddd url(../images/button.png) repeat-x;
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  padding: 2px 10px 0px;
+  overflow: visible;
+  width: auto;
+}
+
+* html button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.ie6_input,
+* html textarea,
+* html select {
+  background: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  padding: 2px 3px 1px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  vertical-align: top;
+}
+
+* html select {
+  margin-top: 1px;
+}
+
+.placeholder_text,
+.ie6_input_disabled,
+.ie6_button_disabled {
+  color: #888;
+}
+
+.ie6_input_disabled {
+  background: #eee;
+}
+
+/* Theme-Specific Form Elements */
 legend {
   font-size: 1.25em;
 }
@@ -181,42 +565,93 @@ fieldset {
   clear: both;
 }
 
-label, .label {
-  font-size: 1em;
-}
-
-.inputs {
-  overflow: hidden;
-  zoom: 1;
-}
-
-#advanced-search-page .field {
-  border-bottom: 1px solid #ccc;
-  padding: 0.75em 0;
-  overflow: hidden;
-  width: 100%;
-}
-#advanced-search-page .field button, #advanced-search-page .field select, #advanced-search-page .field input {
-  float: right;
-}
-#advanced-search-page .field input {
-  width: 70%;
-}
-#advanced-search-page .field input.submitinput {
-  margin-top: 1em;
-}
-#advanced-search-page .field label, #advanced-search-page .field .label {
-  width: 30%;
+#advanced-search-form label, #advanced-search-form .label {
   clear: left;
-  float: left;
+  font-size: 1em;
   font-weight: normal;
+  margin: 40px 0 10px 0;
+  display: inline-block;
 }
-#advanced-search-page .field select {
-  width: 92%;
+#advanced-search-form .inputs {
+  clear: both;
 }
-#advanced-search-page .field #submit_search_advanced {
-  float: right;
-  margin: .5em 0;
+#advanced-search-form input, #advanced-search-form select {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+#advanced-search-form input[type=submit], #advanced-search-form button {
+  width: inherit;
+}
+#advanced-search-form #submit_search_advanced {
+  font-size: 1em;
+  margin: 40px 0;
+}
+#advanced-search-form .add_search {
+  margin: 20px 0 0 0;
+}
+#advanced-search-form div:first-of-type label {
+  margin-top: 0;
+}
+@media (min-width: 50em) {
+  #advanced-search-form {
+    margin-bottom: 40px;
+  }
+  #advanced-search-form button, #advanced-search-form input {
+    clear: both;
+    float: right;
+    margin: 10px 2% 10px 0;
+    width: auto;
+  }
+  #advanced-search-form .field {
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+    overflow: auto;
+    padding: 0;
+  }
+  #advanced-search-form .field .add_search {
+    margin: 0 1% 20px 0;
+  }
+  #advanced-search-form .field .inputs {
+    clear: none;
+    float: right;
+    width: 69%;
+    margin: 15px 0 20px 0;
+  }
+  #advanced-search-form .field input {
+    width: 97%;
+    margin: 10px 10px 10px 0;
+  }
+  #advanced-search-form .field input:first-of-type, #advanced-search-form .field input:only-child {
+    margin: 5px 10px 10px 0;
+  }
+  #advanced-search-form .field input.submitinput {
+    margin-top: 1em;
+  }
+  #advanced-search-form .field label, #advanced-search-form .field .label {
+    width: 29%;
+    float: left;
+    margin: 20px 0 0 10px;
+  }
+  #advanced-search-form .field select {
+    width: 97%;
+    float: right;
+    margin: 10px 10px 10px 0;
+  }
+  #advanced-search-form .field select:first-of-type, #advanced-search-form .field select:only-child {
+    margin: 5px 10px 10px 0;
+  }
+  #advanced-search-form .field div.field:last-of-type {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  #advanced-search-form .field div :only-child {
+    margin-bottom: 0;
+  }
+  #advanced-search-form #submit_search_advanced {
+    margin: 20px 1% 20px 0;
+  }
 }
 
 ul.items-list, ul.collections-list, ul.title-list {
@@ -229,10 +664,6 @@ ul.items-list, ul.collections-list, ul.title-list {
   font-size: 1em;
   line-height: 1.33333em;
   margin-bottom: 1.33333em;
-}
-
-.element {
-  margin-bottom: 1.25em;
 }
 
 textarea#rights {
@@ -325,8 +756,8 @@ div.error {
 /* == Susy grid styles == */
 #wrap {
   *zoom: 1;
-  max-width: 79em;
-  _width: 79em;
+  max-width: 34em;
+  _width: 34em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -338,36 +769,43 @@ div.error {
   display: table;
   clear: both;
 }
-
-#primary-nav {
-  width: 24.05063%;
-  float: left;
-  margin-right: 1.26582%;
-  display: inline;
+@media (min-width: 50em) {
+  #wrap {
+    max-width: 79em;
+  }
+}
+#wrap * {
+  box-sizing: border-box;
 }
 
-#primary {
-  width: 62.02532%;
-  float: left;
-  margin-right: 1.26582%;
-  display: inline;
-}
+@media (min-width: 50em) {
+  #primary-nav {
+    width: 24.05063%;
+    float: left;
+    margin-right: 1.26582%;
+  }
 
-#home #primary {
-  width: 36.70886%;
-  float: left;
-  margin-right: 1.26582%;
-  display: inline;
-}
+  #primary {
+    width: 74.68354%;
+    float: right;
+    margin-right: 0;
+    padding-left: 0%;
+  }
 
-#home #secondary {
-  width: 36.70886%;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
-  display: inline;
-}
+  #home #primary {
+    width: 43.03797%;
+    float: left;
+    margin-right: 1.26582%;
+    padding-left: 6.32911%;
+  }
 
+  #home #secondary {
+    width: 30.37975%;
+    float: right;
+    margin-right: 0;
+    padding-left: 0%;
+  }
+}
 /* == Header == */
 header {
   border-bottom: 1px solid #000;
@@ -411,22 +849,48 @@ header:after {
 
 #primary-nav .active {
   font-weight: bold;
+  background-color: #ccc;
+}
+#primary-nav .active a:visited, #primary-nav .active a:link, #primary-nav .active a:hover, #primary-nav .active a:active {
+  color: #333;
+}
+@media (min-width: 50em) {
+  #primary-nav .active {
+    background-color: transparent;
+  }
 }
 #primary-nav ul {
-  margin: 0;
+  margin: 40px 0;
   font-size: 1.25em;
   line-height: 1em;
+  border: solid #ccc;
+  border-width: 0 1px 1px 1px;
+}
+@media (min-width: 50em) {
+  #primary-nav ul {
+    border-width: 0 0 1px 0;
+    margin: 20px 0;
+  }
 }
 #primary-nav li {
   font-size: 1em;
   display: block;
   border-top: 1px solid #ccc;
+  padding: 0 1em;
+}
+@media (min-width: 50em) {
+  #primary-nav li {
+    padding: 0;
+  }
 }
 #primary-nav li a {
   border-bottom: 0;
   display: block;
-  width: 246px;
   padding: 1em 0;
+}
+#primary-nav li a:before {
+  content: "\BB\20";
+  display: inline;
 }
 
 #secondary-nav {
@@ -514,17 +978,21 @@ header:after {
 
 /* == Content == */
 #content {
-  margin-bottom: 48px;
-  overflow: hidden;
   padding: 40px 0;
-  zoom: 1;
 }
 
-#search-wrap {
-  margin-bottom: 2em;
+#simple-search {
+  display: inline-block;
+  margin: 0 10px 10px 0;
 }
+@media (min-width: 50em) {
+  #simple-search {
+    display: block;
+  }
+}
+
 #search-wrap a {
-  font-size: 1.25em;
+  font-size: .875em;
   margin-top: .25em;
   text-decoration: none;
 }
@@ -533,7 +1001,7 @@ header:after {
 }
 
 #submit_search {
-  margin-left: 5px;
+  margin: -1px 0 0 5px;
 }
 
 #submit_search_advanced {
@@ -542,14 +1010,22 @@ header:after {
 }
 
 /* = Page-specific == */
-#items.browse .item-description {
-  margin-bottom: 1.5em;
-  line-height: 1.5em;
+#home #primary div {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+#home #secondary div {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+#collections .element {
+  margin-bottom: 20px;
 }
 
 #collection-items .item {
   border-bottom: 1px solid #ccc;
-  padding: 0.75em 0;
+  padding: 20px 0;
   overflow: hidden;
   width: 100%;
 }
@@ -578,6 +1054,14 @@ header:after {
   border: 1px solid #ccc;
 }
 
+#items {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+#items .element {
+  margin-bottom: 20px;
+}
+
 .tags li {
   display: inline;
 }
@@ -588,18 +1072,15 @@ header:after {
   margin-bottom: 2em;
 }
 
-#featured-item {
-  overflow: hidden;
-}
-
 #featured-item img {
-  width: 140px;
-  height: 140px;
   padding: 8px;
   border: 1px solid #ccc;
   margin-right: 20px;
   margin-bottom: 20px;
   float: left;
+}
+#featured-item h3 {
+  clear: both;
 }
 
 .items-list li {
@@ -616,28 +1097,34 @@ header:after {
   margin-bottom: 0;
 }
 
+.element-div {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 /* == Footer == */
-#footer {
+footer {
   clear: both;
   overflow: hidden;
-  padding-top: 48px;
-  margin: 48px 48px 0;
-  border-top: 1px solid #ccc;
+  padding: 20px;
+  border-top: 1px solid #000;
 }
-
-#footer p {
+footer p {
   float: left;
-  width: 30%;
 }
-
-#footer ul {
+@media (min-width: 50em) {
+  footer p {
+    width: 30%;
+  }
+}
+footer ul {
   float: right;
   width: 60%;
   margin: 0 0 0 60px;
   text-align: right;
 }
-
-#footer ul li {
+footer li {
   margin-left: 12px;
 }
 
