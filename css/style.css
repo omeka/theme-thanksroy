@@ -168,7 +168,7 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 	#primary-nav ul {margin:0;font-size:2em; line-height:1em;}
 	#primary-nav li {display:block; width: 246px; margin-bottom:1em;}
 	#primary-nav a {display:block; width: 246px; padding:0;}
-	#primary-nav li.current a, #contribution #primary-nav li.nav-contribute-a-story-or-file a, #Tags #primary-nav li.nav-browse-contributions a, #items #primary-nav li.nav-browse-contributions a {color:#444;border-left:1em solid #444; padding-left:0.25em;}
+	#primary-nav li.active a, #contribution #primary-nav li.nav-contribute-a-story-or-file a, #Tags #primary-nav li.nav-browse-contributions a, #items #primary-nav li.nav-browse-contributions a {color:#444;border-left:1em solid #444; padding-left:0.25em;}
 	
 	/* 
 	 * Column styles 
@@ -191,7 +191,7 @@ div.error {font-size:1.5em; line-height:1.33333em; margin:1.33333em 0;}
 		#secondary-nav {margin-bottom:1em; border-bottom:1px solid #ccc;margin-bottom:0;padding:0.4em 0.5em; font-size:1.5em; }
 		#secondary-nav li {padding:0.5em 0;}
 		#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
-		#secondary-nav .current a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+		#secondary-nav .active a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
 		.tags #secondary-nav .nav-browse-all a {border:none;color:#666;font-weight:normal;}
 		
 		.pagination ul {text-align:right; line-height:1em; padding:0.5em; margin-left:0;}
