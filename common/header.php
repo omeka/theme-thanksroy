@@ -27,7 +27,7 @@
     
     		<div id="header">
     		<?php fire_plugin_hook('public_theme_page_header'); ?>
-    		<div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
+    		<div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
     		</div>
     		
     		<div id="content">
