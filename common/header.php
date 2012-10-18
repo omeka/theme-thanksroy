@@ -35,7 +35,7 @@
     			<div id="primary-nav">
     				<div id="search-wrap">
     				    <h2>Search</h2>
-    				    <?php echo search_form(array('show_advanced' => false)); ?>
+    				    <?php echo search_form(); ?>
         			</div>
         			
         			    <?php echo public_nav_main(); ?>
