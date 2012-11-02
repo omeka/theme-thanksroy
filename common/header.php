@@ -28,7 +28,7 @@
 
             <header>
                 <?php fire_plugin_hook('public_theme_page_header'); ?>
-                <div id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></div>
+                <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
             </header>
 
 
@@ -38,7 +38,7 @@
                 <nav id="primary-nav">
                     <div id="search-wrap">
                         <h2>Search</h2>
-                        <?php echo simple_search_form(); ?>
+                        <?php echo search_form(); ?>
                         <?php echo link_to_item_search(); ?>
                     </div>
                     <?php echo public_nav_main(); ?>
