@@ -830,14 +830,6 @@ header:after {
 }
 
 /* == Navigation == */
-.navigation {
-  list-style: none;
-  margin: 2em 0 0;
-}
-.navigation li {
-  display: inline;
-}
-
 .top ul {
   border: solid #ccc;
   border-width: 0 0 1px 0;
@@ -960,7 +952,7 @@ header:after {
 
 .item-pagination {
   border-top: 1px solid #ccc;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em 0;
   overflow: hidden;
   padding-top: 1.5em;
 }
@@ -995,9 +987,17 @@ header:after {
   font-size: .875em;
   margin-top: .25em;
   text-decoration: none;
+  display: inline-block;
+  clear: both;
 }
 #search-wrap h2 {
   display: none;
+}
+#search-wrap input[type=text], #search-wrap input[type=submit] {
+  float: left;
+}
+#search-wrap input[type=text] {
+  margin: 0 5px 0 0;
 }
 
 #submit_search {
