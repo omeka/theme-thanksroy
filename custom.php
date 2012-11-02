@@ -6,7 +6,7 @@ function thanksroy_random_featured_item()
     if ($randomFeaturedItems = get_random_featured_items(1)) {
         $randomItem = $randomFeaturedItems[0];
         $itemTitle = metadata($randomItem, array('Dublin Core', 'Title'));
-        if (item_has_thumbnail($randomItem)) {
+        if (metadata($randomItem, 'has thumbnail')) {
             $html .= link_to_item(item_image('square_thumbnail', array(), 0, $randomItem), array('class'=>'image'), 'show', $randomItem);
         }
         $html .= '<h3>' . link_to_item($itemTitle, array(), 'show', $randomItem) . '</h3>';
