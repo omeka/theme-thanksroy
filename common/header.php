@@ -11,7 +11,7 @@
     <?php echo auto_discovery_link_tags(); ?>
 
     <!-- Plugin Stuff -->
-    <?php fire_plugin_hook('public_theme_header'); ?>
+    <?php fire_plugin_hook('public head'); ?>
 
     <!-- Stylesheets -->
     <?php
@@ -26,12 +26,12 @@
     	<div id="wrap">
     
     		<div id="header">
-    		<?php fire_plugin_hook('public_theme_page_header'); ?>
+    		<?php fire_plugin_hook('public_header'); ?>
     		<div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
     		</div>
     		
     		<div id="content">
-    		    <?php fire_plugin_hook('public_theme_page_content'); ?>
+    		    <?php fire_plugin_hook('public_content_top'); ?>
     			<div id="primary-nav">
     				<div id="search-wrap">
     				    <h2>Search</h2>
