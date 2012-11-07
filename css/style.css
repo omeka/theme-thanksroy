@@ -1,8 +1,10 @@
+/* == Variables == */
+/* == Mixins == */
 /* == Reset == */
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, legend, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -21,6 +23,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
   line-height: 1;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 1.5em;
 }
 
 blockquote, q {
@@ -57,6 +62,7 @@ table {
 body {
   color: #444;
   font-family: "PT Serif", Times, serif;
+  word-break: break-word;
 }
 
 h1 {
@@ -64,31 +70,31 @@ h1 {
 }
 
 h1 {
-  font-size: 2em;
-  line-height: 1.333333em;
+  font-size: 32px;
+  line-height: 48px;
   margin-bottom: 0.666667em;
 }
 
 h2 {
-  font-size: 1.5em;
-  line-height: 1.25em;
+  font-size: 24px;
+  line-height: 36px;
   margin-bottom: .75em;
 }
 
-h3 {
-  font-size: 1.25em;
-  line-height: 1.375em;
+h3, legend {
+  font-size: 20px;
+  line-height: 30px;
   margin-bottom: .25em;
 }
 
 h4 {
-  font-size: 1.125em;
-  line-height: 1.5em;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 h5, h6 {
-  font-size: 1em;
-  line-height: 1.3333em;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 h6 {
@@ -99,6 +105,7 @@ h6 {
 a {
   border-bottom: 1px dotted;
   text-decoration: none;
+  overflow: auto;
 }
 a:link {
   color: #888;
@@ -112,10 +119,14 @@ a:hover {
 a:active {
   color: #777;
 }
+a img {
+  border-bottom: 0;
+  vertical-align: bottom;
+}
 
 p, ul, ol, dl {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 1.5em;
 }
 
@@ -124,8 +135,8 @@ ol, ul {
 }
 
 ul ul, ul ol, ol ul, ol ol {
-  font-size: 1em;
-  margin-bottom: 0;
+  font-size: 16px;
+  margin: 0;
 }
 
 dt {
@@ -141,7 +152,7 @@ table {
   width: 100%;
   border: 1px solid #ccc;
   border-width: 1px 1px 0 0;
-  font-size: 1em;
+  font-size: 16px;
   margin-bottom: 1.3333em;
 }
 
@@ -239,6 +250,7 @@ input[type="checkbox"] {
   top: 0\0;
   /* IE7 */
   *top: -3px;
+  margin-right: 10px;
 }
 
 /* iPad */
@@ -279,10 +291,13 @@ input[type="button"] {
   background: #ddd url(../images/button.png) repeat-x;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
   background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%); */
-  border: 1px solid;
-  border-color: #ddd #bbb #999;
+  background-color: #000;
+  border: 0;
+  color: #fff;
   cursor: pointer;
-  font: bold 12px/1.3 "PT Serif", serif;
+  font-family: 'PT Serif', serif;
+  font-size: 16px;
+  line-height: 24px;
   outline: 0;
   overflow: visible;
   padding: 3px 10px;
@@ -325,12 +340,11 @@ input[type="week"] {
   -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #fff;
-  border: 1px solid;
-  border-color: #848484 #c1c1c1 #e1e1e1;
+  border: 1px solid #000;
   color: #000;
   outline: 0;
-  padding: 2px 3px;
-  font-size: 13px;
+  padding: 2px 10px;
+  font-size: 16px;
   /*
     Leaving out Helvetica Neue, to not throw off size="..."
     on inputs. Arial is more reliable, on Windows and OS X.
@@ -536,7 +550,7 @@ optgroup {
   border-color: #848484 #c1c1c1 #e1e1e1;
   color: #000;
   padding: 2px 3px 1px;
-  font-size: 13px;
+  font-size: 16px;
   font-family: Arial, sans-serif;
   vertical-align: top;
 }
@@ -556,10 +570,6 @@ optgroup {
 }
 
 /* Theme-Specific Form Elements */
-legend {
-  font-size: 1.25em;
-}
-
 fieldset {
   display: block;
   clear: both;
@@ -567,7 +577,7 @@ fieldset {
 
 #advanced-search-form label, #advanced-search-form .label {
   clear: left;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: normal;
   margin: 40px 0 10px 0;
   display: inline-block;
@@ -584,7 +594,7 @@ fieldset {
   width: inherit;
 }
 #advanced-search-form #submit_search_advanced {
-  font-size: 1em;
+  font-size: 16px;
   margin: 40px 0;
 }
 #advanced-search-form .add_search {
@@ -605,7 +615,7 @@ fieldset {
   }
   #advanced-search-form .field {
     border-bottom: 1px solid #ccc;
-    font-size: 1em;
+    font-size: 16px;
     width: 100%;
     overflow: auto;
     padding: 0;
@@ -617,7 +627,7 @@ fieldset {
     clear: none;
     float: right;
     width: 69%;
-    margin: 15px 0 20px 0;
+    margin: 0 0 40px 0;
   }
   #advanced-search-form .field input {
     width: 97%;
@@ -655,13 +665,13 @@ fieldset {
 }
 
 ul.items-list, ul.collections-list, ul.title-list {
-  font-size: 1em;
+  font-size: 16px;
   list-style: none;
   margin-left: 0;
 }
 
 .title-list li {
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.33333em;
   margin-bottom: 1.33333em;
 }
@@ -679,7 +689,7 @@ textarea#rights {
 }
 
 div.error {
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.33333em;
   margin: 1.33333em 0;
 }
@@ -793,14 +803,14 @@ div.error {
   }
 
   #home #primary {
-    width: 43.03797%;
+    width: 36.70886%;
     float: left;
     margin-right: 1.26582%;
-    padding-left: 6.32911%;
+    padding-left: 0%;
   }
 
   #home #secondary {
-    width: 30.37975%;
+    width: 36.70886%;
     float: right;
     margin-right: 0;
     padding-left: 0%;
@@ -821,12 +831,32 @@ header:after {
 
 #site-title {
   margin-bottom: 0;
-  font-size: 2em;
+  font-size: 32px;
   margin-left: 20px;
   padding: 1em 0;
 }
 #site-title a {
   border-bottom: 0;
+}
+
+#search-form {
+  overflow: auto;
+  margin-bottom: 1.5em;
+  margin-top: 0.75em;
+}
+#search-form #query {
+  margin-bottom: 1.5em;
+}
+
+#advanced-form {
+  margin-bottom: 1.5em;
+}
+#advanced-form label {
+  font-size: 16px;
+  line-height: 24px;
+}
+#advanced-form input[type="radio"] {
+  margin: 3px 10px 3px 0;
 }
 
 /* == Navigation == */
@@ -839,65 +869,85 @@ header:after {
   margin-bottom: 0;
 }
 
-#primary-nav .active {
-  font-weight: bold;
-  background-color: #ccc;
-}
-#primary-nav .active a:visited, #primary-nav .active a:link, #primary-nav .active a:hover, #primary-nav .active a:active {
-  color: #333;
-}
-@media (min-width: 50em) {
-  #primary-nav .active {
-    background-color: transparent;
-  }
-}
 #primary-nav ul {
+  border-top: 1px solid #ccc;
   margin: 40px 0;
-  font-size: 1.25em;
+  font-size: 20px;
   line-height: 1em;
-  border: solid #ccc;
-  border-width: 0 1px 1px 1px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media (min-width: 50em) {
   #primary-nav ul {
-    border-width: 0 0 1px 0;
     margin: 20px 0;
   }
 }
-#primary-nav li {
-  font-size: 1em;
+#primary-nav ul li {
+  font-size: 16px;
   display: block;
-  border-top: 1px solid #ccc;
-  padding: 0 1em;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
 }
 @media (min-width: 50em) {
-  #primary-nav li {
+  #primary-nav ul li {
     padding: 0;
   }
 }
-#primary-nav li a {
+#primary-nav ul li a {
   border-bottom: 0;
   display: block;
-  padding: 1em 0;
+  padding: 0.75em;
 }
-#primary-nav li a:before {
+#primary-nav ul li a:before {
   content: "\BB\20";
   display: inline;
+}
+#primary-nav ul li:hover {
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+#primary-nav ul li:hover ul {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#primary-nav ul ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  border-top: 0;
+}
+#primary-nav ul ul li {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 20px;
+  margin: 0;
+  border-bottom: 0;
 }
 
 #secondary-nav {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 0;
-  padding: 0.4em 0.5em;
   font-size: 1.125em;
+  margin-bottom: 20px;
 }
 #secondary-nav a {
   padding: 0.5em 1em 0.5em;
   color: #666;
   border-bottom: 0;
 }
+#secondary-nav ul {
+  margin: 0 0 -1px 0;
+}
 #secondary-nav li {
+  display: inline-block;
   padding: 0.5em 0;
+  border: 1px solid #ccc;
+  border-bottom-color: #fff;
 }
 #secondary-nav .current a {
   background: #fff;
@@ -909,7 +959,10 @@ header:after {
   border-bottom-color: #fff;
 }
 
-.pagination .pagination_current {
+.pagination_list {
+  margin-left: 0;
+}
+.pagination_list .pagination_current {
   border: 1px solid #ccc;
   display: inline-block;
   padding: .3125em;
@@ -918,32 +971,32 @@ header:after {
   color: #444;
   font-weight: bold;
 }
-.pagination .next {
+.pagination_list .next {
   border-left: 1px solid #ccc;
   padding-left: 1em;
 }
-.pagination .previous {
+.pagination_list .previous {
   border-right: 1px solid #ccc;
   padding-right: 1em;
 }
-.pagination:first-child {
+.pagination_list:first-child {
   border-bottom: 1px solid #ccc;
 }
-.pagination ul {
+.pagination_list ul {
   text-align: left;
   line-height: 1em;
   padding: .5em 0;
   margin: .625em 0;
 }
-.pagination li {
+.pagination_list li {
   display: inline-block;
   margin-left: .3125em;
   margin-bottom: 0;
 }
-.pagination li:first-child {
+.pagination_list li:first-child {
   margin-left: 0;
 }
-.pagination li a {
+.pagination_list li a {
   border: 1px solid #ccc;
   display: inline-block;
   padding: .3125em;
@@ -974,6 +1027,7 @@ header:after {
 }
 
 #simple-search {
+  width: 100%;
   display: inline-block;
   margin: 0 10px 10px 0;
 }
@@ -994,10 +1048,25 @@ header:after {
   display: none;
 }
 #search-wrap input[type=text], #search-wrap input[type=submit] {
+  height: 30px;
+  font-size: 16px;
+  line-height: 24px;
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#search-wrap input[type=submit] {
+  width: 30%;
+  border: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 5px;
 }
 #search-wrap input[type=text] {
-  margin: 0 5px 0 0;
+  width: 70%;
+  border: 1px solid #000;
+  padding: 5px 10px;
 }
 
 #submit_search {
@@ -1055,7 +1124,7 @@ header:after {
 }
 
 #items {
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.5em;
 }
 #items .element {
@@ -1079,13 +1148,23 @@ header:after {
   margin-bottom: 20px;
   float: left;
 }
-#featured-item h3 {
+#featured-item h3, #featured-item legend {
   clear: both;
 }
 
 .items-list li {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.33333em;
+}
+
+.item-file {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1.5em;
+}
+
+#collection {
+  clear: both;
 }
 
 .collection {
@@ -1098,8 +1177,8 @@ header:after {
 }
 
 .element-div {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 1.5em;
 }
 
