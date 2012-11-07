@@ -38,8 +38,7 @@
                 <nav id="primary-nav">
                     <div id="search-wrap">
                         <h2>Search</h2>
-                        <?php echo search_form(); ?>
-                        <?php echo link_to_item_search(); ?>
+                        <?php echo search_form(array('show_advanced' => true)); ?>
                     </div>
                     <?php echo public_nav_main(); ?>
                 </nav>
