@@ -130,10 +130,6 @@ p, ul, ol, dl {
   margin-bottom: 1.5em;
 }
 
-ol, ul {
-  margin-left: 1.3333em;
-}
-
 ul ul, ul ol, ol ul, ol ol {
   font-size: 16px;
   margin: 0;
@@ -588,69 +584,70 @@ fieldset {
 #advanced-search-form input, #advanced-search-form select {
   width: 100%;
   display: block;
-  margin: 10px 0;
+  margin-bottom: 1.5em;
 }
 #advanced-search-form input[type=submit], #advanced-search-form button {
-  width: inherit;
+  clear: both;
+  width: auto;
 }
-#advanced-search-form #submit_search_advanced {
+#advanced-search-form .submit {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+#advanced-search-form .field {
+  border-bottom: 1px solid #ccc;
   font-size: 16px;
-  margin: 40px 0;
+  width: 100%;
+  overflow: auto;
+  padding: 1.5em 0;
 }
-#advanced-search-form .add_search {
-  margin: 20px 0 0 0;
+#advanced-search-form .field .inputs {
+  width: 100%;
 }
-#advanced-search-form div:first-of-type label {
-  margin-top: 0;
+#advanced-search-form .field label {
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+#advanced-search-form .field div.field:last-of-type {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+#advanced-search-form .field div :only-child {
+  margin-bottom: 0;
+}
+#advanced-search-form .field .remove_search {
+  margin-bottom: 1.5em;
 }
 @media (min-width: 50em) {
   #advanced-search-form {
     margin-bottom: 40px;
   }
-  #advanced-search-form button, #advanced-search-form input {
+  #advanced-search-form button {
     clear: both;
     float: right;
-    margin: 10px 2% 10px 0;
     width: auto;
+    margin: 0;
   }
   #advanced-search-form .field {
     border-bottom: 1px solid #ccc;
     font-size: 16px;
     width: 100%;
     overflow: auto;
-    padding: 0;
-  }
-  #advanced-search-form .field .add_search {
-    margin: 0 1% 20px 0;
+    padding: 1.5em 0;
   }
   #advanced-search-form .field .inputs {
     clear: none;
     float: right;
     width: 69%;
-    margin: 0 0 40px 0;
   }
-  #advanced-search-form .field input {
-    width: 97%;
-    margin: 10px 10px 10px 0;
-  }
-  #advanced-search-form .field input:first-of-type, #advanced-search-form .field input:only-child {
-    margin: 5px 10px 10px 0;
-  }
-  #advanced-search-form .field input.submitinput {
-    margin-top: 1em;
-  }
-  #advanced-search-form .field label, #advanced-search-form .field .label {
-    width: 29%;
-    float: left;
-    margin: 20px 0 0 10px;
-  }
-  #advanced-search-form .field select {
+  #advanced-search-form .field input, #advanced-search-form .field input[type=text], #advanced-search-form .field select {
     width: 97%;
     float: right;
-    margin: 10px 10px 10px 0;
   }
-  #advanced-search-form .field select:first-of-type, #advanced-search-form .field select:only-child {
-    margin: 5px 10px 10px 0;
+  #advanced-search-form .field label {
+    width: 29%;
+    float: left;
+    margin: 0;
   }
   #advanced-search-form .field div.field:last-of-type {
     display: inline-block;
@@ -659,8 +656,8 @@ fieldset {
   #advanced-search-form .field div :only-child {
     margin-bottom: 0;
   }
-  #advanced-search-form #submit_search_advanced {
-    margin: 20px 1% 20px 0;
+  #advanced-search-form .submit {
+    float: right;
   }
 }
 
@@ -884,6 +881,12 @@ header:after {
     margin: 20px 0;
   }
 }
+#primary-nav ul .active {
+  font-weight: bold;
+}
+#primary-nav ul .active ul {
+  display: block;
+}
 #primary-nav ul li {
   font-size: 16px;
   display: block;
@@ -931,36 +934,58 @@ header:after {
 }
 
 #secondary-nav {
-  border-bottom: 1px solid #ccc;
-  font-size: 1.125em;
-  margin-bottom: 20px;
-}
-#secondary-nav a {
-  padding: 0.5em 1em 0.5em;
-  color: #666;
-  border-bottom: 0;
-}
-#secondary-nav ul {
-  margin: 0 0 -1px 0;
+  border-top: 1px solid #ccc;
 }
 #secondary-nav li {
-  display: inline-block;
-  padding: 0.5em 0;
-  border: 1px solid #ccc;
-  border-bottom-color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
 }
-#secondary-nav .current a {
-  background: #fff;
-  color: #333;
-  font-weight: bold;
-  border-color: #ccc;
-  border-width: 1px;
-  border-style: solid;
-  border-bottom-color: #fff;
+#secondary-nav li a {
+  border-bottom: 0;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  display: block;
+}
+@media (min-width: 50em) {
+  #secondary-nav {
+    border-top: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.125em;
+  }
+  #secondary-nav a {
+    padding: 0.5em 1em 0.5em;
+    color: #666;
+    border-bottom: 0;
+  }
+  #secondary-nav ul {
+    margin: 0 0 -1px 0;
+  }
+  #secondary-nav li {
+    display: inline-block;
+    padding: 0;
+    border: 1px solid #ccc;
+  }
+  #secondary-nav .active {
+    border-bottom-color: #fff;
+  }
+  #secondary-nav .current a {
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: #fff;
+  }
 }
 
 .pagination_list {
-  margin-left: 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 .pagination_list .pagination_current {
   border: 1px solid #ccc;
@@ -1108,7 +1133,8 @@ header:after {
 .browse .item {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
-  padding-top: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 .browse .item:last-of-type {
   border-bottom: 0;
@@ -1118,7 +1144,7 @@ header:after {
   height: 100px;
   float: left;
   display: block;
-  margin: 0 2em 2em 0;
+  margin: 0 1em 0 0;
   padding: 6px;
   border: 1px solid #ccc;
 }
@@ -1210,7 +1236,10 @@ footer li {
 /* == Exhibit Builder == */
 #exhibits .exhibit {
   border-top: 1px solid #ccc;
-  padding-top: 2em;
+  padding-top: 1.5em;
+}
+#exhibits div:first-child {
+  border-top: 0;
 }
 
 #exhibit #primary h2 {
