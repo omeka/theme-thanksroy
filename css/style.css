@@ -837,12 +837,18 @@ header:after {
 }
 
 #search-form {
-  overflow: auto;
   margin-bottom: 1.5em;
   margin-top: 0.75em;
 }
 #search-form #query {
   margin-bottom: 1.5em;
+}
+#search-form:after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  clear: both;
 }
 
 #advanced-form {
