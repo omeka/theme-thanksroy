@@ -14,6 +14,7 @@
     <?php fire_plugin_hook('public head'); ?>
 
     <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <?php
     queue_css_file('style');
     echo head_css(); 
@@ -23,21 +24,20 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body'); ?>
-    	<div id="wrap">
-    
-    		<div id="header">
-    		<?php fire_plugin_hook('public_header'); ?>
-    		<div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
-    		</div>
-    		
-    		<div id="content">
-    		    <?php fire_plugin_hook('public_content_top'); ?>
-    			<div id="primary-nav">
-    				<div id="search-wrap">
-    				    <h2>Search</h2>
-    				    <?php echo search_form(); ?>
-        			</div>
-        			
-        			    <?php echo public_nav_main(); ?>
 
-    			</div>
+            <header>
+                <?php fire_plugin_hook('public_header'); ?>
+                <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+            </header>
+
+
+        <div id="wrap">                
+            <div id="content">
+                <?php fire_plugin_hook('public_content_top'); ?>
+                <nav id="primary-nav">
+                    <div id="search-wrap">
+                        <h2>Search</h2>
+                        <?php echo search_form(array('show_advanced' => true)); ?>
+                    </div>
+                    <?php echo public_nav_main(); ?>
+                </nav>

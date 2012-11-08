@@ -6,10 +6,23 @@
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
     <div id="featured-item">
-        <?php echo random_featured_items(1); ?>
+        <?php echo thanksroy_random_featured_item(); ?>
     </div><!--end featured-item-->	
     <?php endif; ?>
+    <?php if (get_theme_option('Display Featured Collection')): ?>
+    <!-- Featured Collection -->
+    <div id="featured-collection">
+        <?php echo random_featured_collection(); ?>
+    </div><!-- end featured collection -->
+    <?php endif; ?>	
+    <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+    <!-- Featured Exhibit -->
+    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+    <?php endif; ?>
 
+</div><!-- end primary -->
+
+<div id="secondary">
     <!-- Recent Items -->		
     <div id="recent-items">
         <h2><?php echo __('Recently Added Items'); ?></h2>
@@ -33,18 +46,6 @@
         <?php endif; ?>
         <p class="view-items-link"><?php echo link_to_items_browse(__('View All Items')); ?></p>
     </div><!-- end recent-items -->
-</div><!-- end primary -->
-<div id="secondary">
-    <?php if (get_theme_option('Display Featured Collection')): ?>
-    <!-- Featured Collection -->
-    <div id="featured-collection">
-        <?php echo random_featured_collection(); ?>
-    </div><!-- end featured collection -->
-    <?php endif; ?>	
-    <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-    <!-- Featured Exhibit -->
-    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-    <?php endif; ?>
-    </div><!-- end recent-collections -->
+    
 </div><!-- end secondary -->
 <?php echo foot(); ?>
