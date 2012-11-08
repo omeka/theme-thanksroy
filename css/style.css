@@ -950,9 +950,9 @@ header:after {
 }
 #secondary-nav li a {
   border-bottom: 0;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  display: block;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+  display: inline-block;
 }
 @media (min-width: 50em) {
   #secondary-nav {
@@ -996,8 +996,8 @@ header:after {
 .pagination_list .pagination_current {
   border: 1px solid #ccc;
   display: inline-block;
-  padding: .3125em;
-  line-height: 1em;
+  padding: 0.375em 10px;
+  vertical-align: top;
   background-color: #ccc;
   color: #444;
   font-weight: bold;
@@ -1030,8 +1030,8 @@ header:after {
 .pagination_list li a {
   border: 1px solid #ccc;
   display: inline-block;
-  padding: .3125em;
-  line-height: 1em;
+  padding: 0.375em 10px;
+  vertical-align: top;
 }
 
 .item-pagination {

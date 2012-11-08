@@ -944,9 +944,9 @@ header {
         
         a { 
             border-bottom: 0; 
-            @include padding-leader(.5);
-            @include padding-trailer(.5);
-            display: block;
+            @include padding-leader(.25);
+            @include padding-trailer(.25);
+            display: inline-block;
         }
     }
 
@@ -997,8 +997,8 @@ header {
     @mixin pagination-item { 
         border: 1px solid #ccc;
         display: inline-block; 
-        padding: .3125em;
-        line-height: 1em;
+        padding: rhythm(.25) 10px;
+        vertical-align: top;
     }
     
     .pagination_current { 
