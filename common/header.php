@@ -11,12 +11,12 @@
     <?php echo auto_discovery_link_tags(); ?>
 
     <!-- Plugin Stuff -->
-    <?php fire_plugin_hook('public_theme_header'); ?>
+    <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
     <!-- Stylesheets -->
-    <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <?php
     queue_css_file('style');
+    queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
     ?>
 
@@ -24,7 +24,7 @@
     <?php echo head_js(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <?php fire_plugin_hook('public_theme_body'); ?>
+    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
             <header>
                 <?php fire_plugin_hook('public_theme_page_header'); ?>
