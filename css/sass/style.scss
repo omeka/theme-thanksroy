@@ -293,7 +293,7 @@ input[type="checkbox"] {
   }
 }
 
-button,
+.button, button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
@@ -821,7 +821,7 @@ header {
 
 #search-form {
     @include trailer();
-    @include margin-leader(.5);
+    @include margin-leader(.25);
     
     #query {
         @include trailer();
@@ -838,6 +838,7 @@ header {
 
 #advanced-form {
     @include trailer();
+    @include box-sizing(border-box);
     
     label {
         font-size: $base-font-size;
@@ -1065,51 +1066,97 @@ header {
 
 #content { padding: 40px 0; }
 
-    #simple-search {
-        width: 100%;
-        display: inline-block; 
-        margin: 0 10px 10px 0;
-        
-        @include at-breakpoint($break) { display: block; }
-    }
+#simple-search {
+    width: 100%;
+    display: inline-block; 
+    margin: 0 10px 10px 0;
+    
+    @include at-breakpoint($break) { display: block; }
+}
 
-    #search-wrap {
-        a {
-            font-size:.875em;
-            margin-top:.25em;
-            text-decoration:none;
-            display: inline-block;
-            clear: both;
-        }
-        
-        h2 {display:none;}
-        
-        input[type=text], input[type=submit] { 
-            height: 30px;
-            font-size: $base-font-size;
-            line-height: $base-line-height;
-            float: left; 
-            @include box-sizing(border-box);
-        }
-        
-        input[type=submit] {
-            width: 30%;
-            border: 0;
-            background-color: #000;
-            color: #fff;
-            padding: 3px 5px;
-        }
-        
-        input[type=text] { 
-            width: 70%;
-            border: 1px solid #000;
-            padding: 5px 10px;
-        }
+#search-form {
+    position: relative;
+    @include box-sizing(border-box);
+}
+
+#advanced-search {
+    width: 10%;
+    text-indent: -9999px;
+    display: inline-block;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 90%;
+    font-weight: bold;
+    @include box-sizing(border-box);
+
+    
+    &:link, &:hover, &:active, &:visited { color: #fff; }
+}
+
+#advanced-search:after {
+    content: "+";
+    display: block;
+    text-indent: 0;
+    text-align: center;
+    margin-top: -1.75em;
+}
+
+#search-wrap {
+    a {
+        font-size:.875em;
+        text-decoration:none;
+        display: inline-block;
+        clear: both;
     }
     
-    #submit_search { margin: -1px 0 0 5px; }
+    h2 {display:none;}
     
-    #submit_search_advanced {margin-top:5px;margin-bottom:5px;}
+    input[type=text], input[type=submit] { 
+        height: 30px;
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+        float: left; 
+        @include box-sizing(border-box);
+    }
+    
+    input[type=submit] {
+        width: 30%;
+        border: 0;
+        background-color: #000;
+        color: #fff;
+        padding: 3px 5px;
+    }
+    
+    input[type=text] { 
+        width: 70%;
+        border: 1px solid #000;
+        padding: 5px 10px;
+    }
+}
+
+#advanced-form {
+    display: none;
+    background-color: #fff;
+    overflow: auto;
+    clear: both;
+    z-index: 1001;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    padding: rhythm(1) $gutter-width;
+    @include box-sizing(border-box);
+}
+
+#submit_search { margin: -1px 0 0 5px; }
+
+#submit_search_advanced {margin-top:5px;margin-bottom:5px;}
+
+#search-filters {
+    padding-left: 1.25em;
+}
     
 
 /* = Page-specific == */

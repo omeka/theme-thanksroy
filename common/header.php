@@ -23,6 +23,7 @@
 
     ?>
     <!-- JavaScripts -->
+    <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>

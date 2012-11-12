@@ -16,6 +16,12 @@
         <?php fire_plugin_hook('public_theme_footer'); ?>
 
     </footer><!-- end footer -->
-    
+
+    <script type="text/javascript">
+    jQuery(document).ready(function () {
+        Omeka.showAdvancedForm();
+    });
+    </script>
+
 </body>
 </html>
