@@ -1160,6 +1160,10 @@ header:after {
   margin-bottom: 5px;
 }
 
+#search-filters {
+  padding-left: 1.25em;
+}
+
 /* = Page-specific == */
 #home #primary div {
   margin-bottom: 40px;
@@ -1240,14 +1244,21 @@ header:after {
   margin-bottom: 1.33333em;
 }
 
+#itemfiles {
+  overflow: auto;
+}
+#itemfiles:after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  clear: both;
+}
+
 .item-file {
   float: left;
   margin-right: 1em;
   margin-bottom: 1.5em;
-}
-
-#collection {
-  clear: both;
 }
 
 .collection {

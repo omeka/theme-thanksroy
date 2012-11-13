@@ -1222,15 +1222,23 @@ header {
 
 .items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
 
+#itemfiles {
+    overflow: auto;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        width: 100%;
+        clear: both;
+    }
+}
+
 .item-file {
     float: left;
     margin-right: $gutter-width;
     @include trailer();
     
 }
-
-#collection { clear: both; }
-
 .collection {border-top:1px solid #ccc;padding-top:1.33333em;}
 
 .collection .element {margin-bottom:0;}
