@@ -1061,6 +1061,26 @@ header {
     }
 }
 
+#sort-links {
+    border-bottom: 1px solid #ccc;
+    @include leader();
+    @include trailer();
+    
+    span { 
+        font-weight: bold;
+        margin-right: $gutter-width; 
+    }
+}
+
+#sort-links-list {
+    list-style: none;
+    display: inline-block;
+    li { 
+        display: inline-block; 
+        margin-right: $gutter-width;
+    }
+}
+
 
 /* == Content == */
 
@@ -1156,6 +1176,16 @@ header {
 
 #search-filters {
     padding-left: 1.25em;
+    
+    ul li ul { 
+        display: inline-block;
+        li { 
+            list-style-type: none; 
+            display: inline-block; 
+            &:after { content: ", "; }
+            &:last-child:after { content: ""; }
+        }
+    }
 }
     
 

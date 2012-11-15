@@ -1055,6 +1055,25 @@ header:after {
   text-align: right;
 }
 
+#sort-links {
+  border-bottom: 1px solid #ccc;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+#sort-links span {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+#sort-links-list {
+  list-style: none;
+  display: inline-block;
+}
+#sort-links-list li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
 /* == Content == */
 #content {
   padding: 40px 0;
@@ -1162,6 +1181,19 @@ header:after {
 
 #search-filters {
   padding-left: 1.25em;
+}
+#search-filters ul li ul {
+  display: inline-block;
+}
+#search-filters ul li ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+#search-filters ul li ul li:after {
+  content: ", ";
+}
+#search-filters ul li ul li:last-child:after {
+  content: "";
 }
 
 /* = Page-specific == */
