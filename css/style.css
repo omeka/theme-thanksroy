@@ -786,6 +786,13 @@ div.error {
 }
 
 @media (min-width: 50em) {
+  #content {
+    width: 74.68354%;
+    float: right;
+    margin-right: 0;
+    padding: 40px 0;
+  }
+
   #primary-nav {
     width: 24.05063%;
     float: left;
@@ -793,9 +800,6 @@ div.error {
   }
 
   #primary {
-    width: 74.68354%;
-    float: right;
-    margin-right: 0;
     padding-left: 0%;
   }
 
@@ -875,9 +879,11 @@ header:after {
   margin-bottom: 0;
 }
 
+#primary-nav {
+  margin-top: 2.625em;
+}
 #primary-nav ul {
   border-top: 1px solid #ccc;
-  margin: 40px 0;
   font-size: 20px;
   line-height: 1em;
   position: relative;
@@ -1075,10 +1081,6 @@ header:after {
 }
 
 /* == Content == */
-#content {
-  padding: 40px 0;
-}
-
 #simple-search {
   width: 100%;
   display: inline-block;

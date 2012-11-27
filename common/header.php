@@ -36,12 +36,12 @@
 
 
         <div id="wrap">                
+            <nav id="primary-nav">
+                <div id="search-wrap">
+                    <h2>Search</h2>
+                    <?php echo search_form(array('show_advanced' => true)); ?>
+                </div>
+                <?php echo public_nav_main(); ?>
+            </nav>
             <div id="content">
                 <?php fire_plugin_hook('public_content_top'); ?>
-                <nav id="primary-nav">
-                    <div id="search-wrap">
-                        <h2>Search</h2>
-                        <?php echo search_form(array('show_advanced' => true)); ?>
-                    </div>
-                    <?php echo public_nav_main(); ?>
-                </nav>

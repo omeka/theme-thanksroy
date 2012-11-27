@@ -776,10 +776,16 @@ div.error {
 }
 
 @include at-breakpoint($break) {
-    #primary-nav { @include span-columns(4 alpha,16); }
+    #content { 
+        @include span-columns(12 omega, 16); 
+        padding: 40px 0; 
+    }
+    
+    #primary-nav { 
+        @include span-columns(4 alpha,16); 
+    }
 
     #primary { 
-        @include span-columns(12 omega,16); 
         @include prefix(0);
     }
     
@@ -859,11 +865,11 @@ header {
 
 .bottom ul { margin-bottom:0; }
 
-#primary-nav {
-                    
+#primary-nav { 
+    @include leader(1.75);
+                   
     ul {
         border-top: 1px solid #ccc;
-        margin: 40px 0;
         font-size: 1.25 * $base-font-size; 
         line-height:1em;
         position: relative;
@@ -1083,8 +1089,6 @@ header {
 
 
 /* == Content == */
-
-#content { padding: 40px 0; }
 
 #simple-search {
     width: 100%;
