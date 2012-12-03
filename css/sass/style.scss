@@ -790,13 +790,14 @@ div.error {
     }
     
     #home #primary { 
-        @include span-columns(6 alpha,16); 
-        @include prefix(0); 
+        @include span-columns(7 alpha,16); 
+        @include prefix(1); 
     }
     
     #home #secondary { 
-        @include span-columns(6 omega,16); 
+        @include span-columns(7 omega,16); 
         @include prefix(0);
+        @include suffix(1);
     }
 }
 
@@ -810,7 +811,7 @@ header {
         content: "";
         height: 5px;
         width: 100%;
-        display: inline-block;
+        display: block;
         margin-bottom: 3px;
         background-color: #000;
     }
@@ -819,10 +820,15 @@ header {
 #site-title {
     margin-bottom:0; 
     font-size: 2 * $base-font-size; 
-    margin-left:20px;
-    padding:1em 0;
+    padding: 0;
+    width: 100%;
 
     a { border-bottom: 0; }
+    a img { 
+        vertical-align: bottom; 
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 #search-form {
@@ -892,6 +898,7 @@ header {
             display:block;  
             padding: 0;
             border-bottom: 1px solid #ccc;
+            list-style-type: none;
             
             @include at-breakpoint($break) {
                 padding: 0;
@@ -1192,6 +1199,10 @@ header {
     }
 }
     
+.element-text {
+    @include trailer();
+}
+    
 
 /* = Page-specific == */
 
@@ -1272,6 +1283,9 @@ header {
     margin-right: $gutter-width;
     @include trailer();
     
+    img {
+        border: 1px solid #ccc;
+    }
 }
 .collection {border-top:1px solid #ccc;padding-top:1.33333em;}
 
