@@ -23,6 +23,9 @@
 
     ?>
     <!-- JavaScripts -->
+    <?php queue_js_file('modernizr'); ?>
+    <?php queue_js_file('selectivizr-min'); ?>
+    <?php queue_js_file('respond.min'); ?>
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
