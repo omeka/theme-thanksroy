@@ -1,7 +1,7 @@
 @import 'susy';
-@import 'compass/css3/box-sizing';
-@import "compass/typography/vertical_rhythm";
-@import "compass/css3/box-shadow";
+@import 'compass/css3';
+@import 'compass/typography';
+@import "compass/reset";
 
 /* == Variables == */
 
@@ -23,57 +23,10 @@ $break          : 50em 16;
     margin-bottom:1.5em;
 }
 
-/* == Reset == */
-/* http://meyerweb.com/eric/tools/css/reset/ */
-/* v1.0 | 20080212 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-body {
-    line-height: 1;
-    @include body-copy;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-/* remember to define focus styles! */
-:focus {
-    outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-    text-decoration: none;
-}
-del {
-    text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+@mixin boxsizing($bs) {
+    $bs: unquote($bs);
+    @include experimental(box-sizing, $bs, -moz, -webkit, not -o, not -ms, not -khtml, official);
+    *behavior: url('../javascripts/boxsizing.htc');
 }
 
 /* == Generic styles ======== */
@@ -591,6 +544,7 @@ optgroup {
   background: #eee;
 }
 
+
 /* Theme-Specific Form Elements */
 
 legend { @extend h3; }
@@ -772,7 +726,7 @@ div.error {
     @include container($total-columns, $break);
     margin: 0;
     
-    * { box-sizing: border-box; }
+    * { @include boxsizing(border-box); }
 }
 
 @include at-breakpoint($break) {
@@ -818,10 +772,11 @@ header {
 }
 
 #site-title {
-    margin-bottom:0; 
     font-size: 2 * $base-font-size; 
-    padding: 0;
     width: 100%;
+    @include trailer();
+    @include leader();
+    margin-left: 16px;
 
     a { border-bottom: 0; }
     a img { 
@@ -850,7 +805,7 @@ header {
 
 #advanced-form {
     @include trailer();
-    @include box-sizing(border-box);
+    @include boxsizing(border-box);
     
     label {
         font-size: $base-font-size;
@@ -879,8 +834,8 @@ header {
         font-size: 1.25 * $base-font-size; 
         line-height:1em;
         position: relative;
-        @include box-sizing(border-box);
-        
+        @include boxsizing(border-box);
+
         @include at-breakpoint($break) {
             margin: 20px 0;
         }
@@ -926,6 +881,7 @@ header {
                 top: 0;
                 left: 0;
                 width: 100%;
+                overflow: hidden;
             }
         }
 
@@ -937,7 +893,7 @@ header {
 
             li {
                 width: 100%;
-                @include box-sizing(border-box);
+                @include boxsizing(border-box);
                 padding: 0 0 0 20px;
                 margin: 0;
                 border-bottom: 0;
@@ -1107,19 +1063,18 @@ header {
 
 #search-form {
     position: relative;
-    @include box-sizing(border-box);
+    @include boxsizing(border-box);
 }
 
 #advanced-search {
     width: 10%;
     text-indent: -9999px;
     display: inline-block;
-    float: left;
     position: absolute;
     top: 0;
     left: 90%;
     font-weight: bold;
-    @include box-sizing(border-box);
+    @include boxsizing(border-box);
 
     
     &:link, &:hover, &:active, &:visited { color: #fff; }
@@ -1134,6 +1089,8 @@ header {
 }
 
 #search-wrap {
+    position: relative;
+
     a {
         font-size:.875em;
         text-decoration:none;
@@ -1147,8 +1104,7 @@ header {
         height: 30px;
         font-size: $base-font-size;
         line-height: $base-line-height;
-        float: left; 
-        @include box-sizing(border-box);
+        @include has-layout-zoom();
     }
     
     input[type=submit] {
@@ -1156,6 +1112,9 @@ header {
         border: 0;
         background-color: #000;
         color: #fff;
+        position: absolute;
+        top: 0;
+        left: 60%;
         padding: 3px 5px;
     }
     
@@ -1178,7 +1137,7 @@ header {
     border: 1px solid #e7e7e7;
     width: 100%;
     padding: rhythm(1) $gutter-width;
-    @include box-sizing(border-box);
+    @include boxsizing(border-box);
 }
 
 #submit_search { margin: -1px 0 0 5px; }

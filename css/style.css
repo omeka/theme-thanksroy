@@ -1,63 +1,61 @@
-/* == Variables == */
-/* == Mixins == */
-/* == Reset == */
-/* http://meyerweb.com/eric/tools/css/reset/ */
-/* v1.0 | 20080212 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, legend, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
+  font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
 }
 
-body {
+html {
   line-height: 1;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 1.5em;
 }
 
-blockquote, q {
-  quotes: none;
+ol, ul {
+  list-style: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-/* remember to define focus styles! */
-:focus {
-  outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-  text-decoration: none;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* == Variables == */
+/* == Mixins == */
 /* == Generic styles ======== */
 body {
   color: #444;
@@ -782,7 +780,10 @@ div.error {
   }
 }
 #wrap * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 
 @media (min-width: 50em) {
@@ -832,10 +833,11 @@ header:after {
 }
 
 #site-title {
-  margin-bottom: 0;
   font-size: 32px;
-  padding: 0;
   width: 100%;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  margin-left: 16px;
 }
 #site-title a {
   border-bottom: 0;
@@ -866,6 +868,7 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 #advanced-form label {
   font-size: 16px;
@@ -896,6 +899,7 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 @media (min-width: 50em) {
   #primary-nav ul {
@@ -938,6 +942,7 @@ header:after {
   top: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
 }
 #primary-nav ul ul {
   margin: 0;
@@ -950,6 +955,7 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
   padding: 0 0 0 20px;
   margin: 0;
   border-bottom: 0;
@@ -1104,13 +1110,13 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 
 #advanced-search {
   width: 10%;
   text-indent: -9999px;
   display: inline-block;
-  float: left;
   position: absolute;
   top: 0;
   left: 90%;
@@ -1118,6 +1124,7 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 #advanced-search:link, #advanced-search:hover, #advanced-search:active, #advanced-search:visited {
   color: #fff;
@@ -1131,6 +1138,9 @@ header:after {
   margin-top: -1.75em;
 }
 
+#search-wrap {
+  position: relative;
+}
 #search-wrap a {
   font-size: .875em;
   text-decoration: none;
@@ -1144,16 +1154,16 @@ header:after {
   height: 30px;
   font-size: 16px;
   line-height: 24px;
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  *zoom: 1;
 }
 #search-wrap input[type=submit] {
   width: 30%;
   border: 0;
   background-color: #000;
   color: #fff;
+  position: absolute;
+  top: 0;
+  left: 60%;
   padding: 3px 5px;
 }
 #search-wrap input[type=text] {
@@ -1177,6 +1187,7 @@ header:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
 
 #submit_search {
