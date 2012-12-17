@@ -21,6 +21,7 @@
     queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 
+    echo theme_header_background();
     ?>
     <!-- JavaScripts -->
     <?php queue_js_file('modernizr'); ?>
