@@ -773,7 +773,6 @@ header {
 
 #site-title {
     font-size: 2 * $base-font-size; 
-    width: 100%;
     @include trailer();
     @include leader();
     margin-left: 16px;
