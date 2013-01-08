@@ -760,6 +760,8 @@ div.error {
 
 header { 
     border-bottom: 1px solid #000; 
+    background-size: auto !important; 
+    background-position-x: right !important;    
 
     &:after {
         content: "";
@@ -771,10 +773,14 @@ header {
     }
 }
 
+    @include at-breakpoint($break) {
+        header { background-size: cover !important; }
+    }
+
 #site-title {
     font-size: 2 * $base-font-size; 
-    @include trailer();
-    @include leader();
+    @include padding-trailer();
+    @include padding-leader();
     margin-left: 16px;
 
     a { border-bottom: 0; }

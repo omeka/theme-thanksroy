@@ -822,6 +822,8 @@ div.error {
 /* == Header == */
 header {
   border-bottom: 1px solid #000;
+  background-size: auto !important;
+  background-position-x: right !important;
 }
 header:after {
   content: "";
@@ -832,10 +834,15 @@ header:after {
   background-color: #000;
 }
 
+@media (min-width: 50em) {
+  header {
+    background-size: cover !important;
+  }
+}
 #site-title {
   font-size: 32px;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
   margin-left: 16px;
 }
 #site-title a {
