@@ -5,7 +5,7 @@
     <?php if ( $description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
-`   <?php
+    <?php
     if (isset($title)) {
         $titleParts[] = strip_formatting($title);
     }
