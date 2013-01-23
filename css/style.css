@@ -118,8 +118,9 @@ a:active {
   color: #777;
 }
 a img {
-  border-bottom: 0;
-  vertical-align: bottom;
+  margin-bottom: -2px;
+  vertical-align: sub;
+  border: none;
 }
 
 p, ul, ol, dl {

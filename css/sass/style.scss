@@ -86,8 +86,9 @@ a {
     &:active { color:#777; }
     
     img {
-        border-bottom: 0;
-        vertical-align: bottom;
+        margin-bottom: -2px; 
+        vertical-align: sub; 
+        border: none;
     }
 }
 
