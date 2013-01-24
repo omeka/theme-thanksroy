@@ -61,6 +61,7 @@ body {
   color: #444;
   font-family: "PT Serif", Times, serif;
   word-break: break-word;
+  font-size: 16px;
 }
 
 h1 {
@@ -130,7 +131,6 @@ p, ul, ol, dl {
 }
 
 ul ul, ul ol, ol ul, ol ol {
-  font-size: 16px;
   margin: 0;
 }
 
@@ -147,7 +147,6 @@ table {
   width: 100%;
   border: 1px solid #ccc;
   border-width: 1px 1px 0 0;
-  font-size: 16px;
   margin-bottom: 1.3333em;
 }
 
@@ -572,7 +571,6 @@ fieldset {
 
 #advanced-search-form label, #advanced-search-form .label {
   clear: left;
-  font-size: 16px;
   font-weight: normal;
   margin: 40px 0 10px 0;
   display: inline-block;
@@ -595,7 +593,6 @@ fieldset {
 }
 #advanced-search-form .field {
   border-bottom: 1px solid #ccc;
-  font-size: 16px;
   width: 100%;
   overflow: auto;
   padding: 1.5em 0;
@@ -629,7 +626,6 @@ fieldset {
   }
   #advanced-search-form .field {
     border-bottom: 1px solid #ccc;
-    font-size: 16px;
     width: 100%;
     overflow: auto;
     padding: 1.5em 0;
@@ -661,13 +657,11 @@ fieldset {
 }
 
 ul.items-list, ul.collections-list, ul.title-list {
-  font-size: 16px;
   list-style: none;
   margin-left: 0;
 }
 
 .title-list li {
-  font-size: 16px;
   line-height: 1.33333em;
   margin-bottom: 1.33333em;
 }
@@ -685,7 +679,6 @@ textarea#rights {
 }
 
 div.error {
-  font-size: 16px;
   line-height: 1.33333em;
   margin: 1.33333em 0;
 }
@@ -878,7 +871,6 @@ header:after {
   *behavior: url("../javascripts/boxsizing.htc");
 }
 #advanced-form label {
-  font-size: 16px;
   line-height: 24px;
 }
 #advanced-form input[type="radio"] {
@@ -900,7 +892,6 @@ header:after {
 }
 #primary-nav ul {
   border-top: 1px solid #ccc;
-  font-size: 20px;
   line-height: 1em;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -920,7 +911,6 @@ header:after {
   display: block;
 }
 #primary-nav ul li {
-  font-size: 16px;
   display: block;
   padding: 0;
   border-bottom: 1px solid #ccc;
@@ -1274,7 +1264,6 @@ header:after {
 }
 
 #items {
-  font-size: 16px;
   line-height: 1.5em;
 }
 #items .element {
@@ -1376,58 +1365,82 @@ footer li {
   border-top: 0;
 }
 
-#exhibit #primary h2 {
-  font-weight: normal;
-  margin-top: .5em;
+.summary #exhibit-pages ul {
+  font-size: 20px;
+  line-height: 30px;
+  list-style-type: square;
+  padding-left: .25em;
 }
 
-.exhibit-section-nav {
-  list-style: none;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ccc;
-  margin: 0;
-  padding: 0.4em 0.5em;
-  font-size: 1.5em;
+.show #exhibit-pages a {
+  border-bottom: 0;
 }
-
-.exhibit-section-nav li {
-  padding: 0.5em 0;
-  display: inline;
+.show #exhibit-pages ul {
+  margin-left: 0;
 }
-
-.exhibit-section-nav li a {
-  padding: 0.5em 1em 0.5em;
-  color: #666;
-  text-decoration: none;
+.show #exhibit-pages li {
+  display: inline-block;
+  margin-right: 10px;
 }
-
-.exhibit-section-nav .current a {
-  border-top: 1px solid #ccc;
-  background: #fff;
-  color: #333;
+.show #exhibit-pages .current {
   font-weight: bold;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #fff;
+}
+.show #exhibit-pages > ul > li {
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+}
+.show #exhibit-pages > ul a {
+  padding: 0.375em 10px;
+}
+.show #exhibit-pages > ul > li:first-of-type {
+  margin-top: 0;
+}
+@media (min-width: 50em) {
+  .show #exhibit-pages > ul > li:first-of-type {
+    float: left;
+  }
+}
+.show #exhibit-pages > ul > li:first-of-type a:after {
+  content: ":";
+}
+.show #exhibit-pages > ul > li:nth-child(2) {
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.show #exhibit-pages > ul > li:nth-child(2) .current a {
+  border: 1px solid #ccc;
+  border-bottom: 3px solid #fff;
+  background: #fff;
+}
+.show #exhibit-pages > ul > li:nth-child(3) {
+  display: block;
+  clear: both;
+  margin-top: -3px;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+}
+.show #exhibit-pages > ul > li:nth-child(3) ul {
+  padding-top: 3px;
+}
+.show #exhibit-pages > ul > li:nth-child(4) {
+  display: block;
+  border-top: 1px dotted #ccc;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
 }
 
-.exhibit-page-nav {
-  padding: 15px 0 15px 40px;
-  margin: 0;
-  border-top: 1px solid #ccc;
-}
-
-.exhibit-page-nav li {
-  font-size: 1.1em;
-  display: inline;
+.show .exhibit-child-nav li {
+  display: inline-block;
   margin-right: 10px;
 }
 
-.exhibit-page-nav li a {
-  text-decoration: none;
+.exhibit-item-caption p {
+  font-size: 12px;
+  margin-top: 1.5em;
 }
 
-.exhibit-page-nav .current a {
-  color: #333;
-  font-weight: bold;
+#exhibit-page-navigation {
+  border-top: 1px solid #ccc;
+  line-height: 24px;
+  padding-top: 1.5em;
 }

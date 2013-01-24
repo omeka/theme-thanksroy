@@ -35,6 +35,7 @@ body {
     color:#444;
     font-family: "PT Serif", Times, serif;
     word-break: break-word;
+    font-size: $base-font-size;
 }
 
 h1 { margin:0; }
@@ -98,7 +99,6 @@ p,ul,ol,dl {
 
 ul, ol{
     ul, ol {
-        font-size: $base-font-size;
         margin:0;
     }
 }
@@ -114,7 +114,6 @@ table {
     width:100%; 
     border: 1px solid #ccc;
     border-width: 1px 1px 0 0;
-    font-size: $base-font-size;
     margin-bottom:1.3333em;
 }
 
@@ -555,7 +554,6 @@ fieldset { display:block; clear:both; }
 #advanced-search-form {
     label, .label {
         clear:left; 
-        font-size: $base-font-size;
         font-weight:normal;
         margin: 40px 0 10px 0;
         display: inline-block;
@@ -583,7 +581,6 @@ fieldset { display:block; clear:both; }
         
     .field {
         border-bottom:1px solid #ccc;
-        font-size: $base-font-size;
         width:100%;
         overflow: auto;
         padding: rhythm(1) 0;
@@ -616,7 +613,6 @@ fieldset { display:block; clear:both; }
 
             .field {
                 border-bottom:1px solid #ccc;
-                font-size: $base-font-size;
                 width:100%;
                 overflow: auto;
                 padding: rhythm(1) 0;
@@ -650,13 +646,11 @@ fieldset { display:block; clear:both; }
 }
 
 ul.items-list, ul.collections-list, ul.title-list {
-    font-size: $base-font-size;
     list-style:none; 
     margin-left:0;
 }
 
 .title-list li {
-    font-size: $base-font-size;
     line-height:1.33333em; 
     margin-bottom:1.33333em;
 }
@@ -674,7 +668,6 @@ textarea#rights {
 }
 
 div.error {
-    font-size: $base-font-size;
     line-height:1.33333em; 
     margin:1.33333em 0;
 }
@@ -814,7 +807,6 @@ header {
     @include boxsizing(border-box);
     
     label {
-        font-size: $base-font-size;
         line-height: $base-line-height;
     }
     
@@ -837,7 +829,6 @@ header {
                    
     ul {
         border-top: 1px solid #ccc;
-        font-size: 1.25 * $base-font-size; 
         line-height:1em;
         position: relative;
         @include boxsizing(border-box);
@@ -855,7 +846,6 @@ header {
         }
 
         li {
-            font-size: $base-font-size;
             display:block;  
             padding: 0;
             border-bottom: 1px solid #ccc;
@@ -1214,7 +1204,6 @@ header {
 }
 
 #items {
-    font-size: $base-font-size;
     line-height: 1.5em;
     
     .element { margin-bottom: 20px; }
@@ -1288,13 +1277,88 @@ footer {
     }
 }
 
-#exhibit #primary h2 {font-weight:normal;margin-top:.5em;}
-.exhibit-section-nav {list-style:none;margin-bottom:1em; border-bottom:1px solid #ccc;margin:0;padding:0.4em 0.5em; font-size:1.5em;}
-.exhibit-section-nav li {padding:0.5em 0;display:inline;}
-.exhibit-section-nav li a {padding:0.5em 1em 0.5em; color:#666;text-decoration:none;}
-.exhibit-section-nav .current a{border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+.summary #exhibit-pages ul {
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.25 * $base-line-height;
+    list-style-type: square;
+    padding-left: .25em;
+}
 
-.exhibit-page-nav {padding:15px 0 15px 40px;margin:0;border-top:1px solid #ccc;}
-.exhibit-page-nav li {font-size:1.1em;display:inline;margin-right:10px;}
-.exhibit-page-nav li a {text-decoration:none;}
-.exhibit-page-nav .current a {color:#333; font-weight:bold;}
+.show #exhibit-pages {
+    
+    a { border-bottom: 0; }
+
+    ul { 
+        margin-left: 0; 
+    }
+
+    li { 
+        display: inline-block; 
+        margin-right: 10px;
+    }
+    
+    .current { font-weight: bold; }
+
+    & > ul { 
+    
+        & > li {
+            @include padding-leader(.25);
+            @include padding-trailer(.25);
+        }
+        
+        a {
+            padding: rhythm(.25) 10px;
+        }
+                
+        & > li:first-of-type { 
+            @include at-breakpoint($break) { float: left; }
+            margin-top: 0;
+            
+            a:after { content: ":" }
+        }
+        
+        & > li:nth-child(2) {            
+            display: block;
+            border-bottom: 1px solid #ccc;
+
+            .current a { 
+                border: 1px solid #ccc; 
+                border-bottom: 3px solid #fff;
+                background: #fff;
+            }
+        }
+        
+        & > li:nth-child(3) {
+            display: block;
+            clear: both; 
+            margin-top: -3px;
+            @include padding-leader(.25);
+            @include padding-trailer(.25);
+            
+            ul { padding-top: 3px; }
+        }
+        
+        & > li:nth-child(4) {
+            display: block;
+            border-top: 1px dotted #ccc;
+            @include padding-leader(.25);
+            @include padding-trailer(.25);
+        }
+    }
+}
+
+.show .exhibit-child-nav li { 
+    display: inline-block; 
+    margin-right: 10px;
+}
+
+.exhibit-item-caption p { 
+    font-size: .75 * $base-font-size; 
+    @include leader();
+}
+
+#exhibit-page-navigation { 
+    border-top: 1px solid #ccc; 
+    line-height: $base-line-height;
+    @include padding-leader();
+}
