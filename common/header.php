@@ -29,9 +29,9 @@
     echo theme_header_background();
     ?>
     <!-- JavaScripts -->
-    <?php queue_js_file('modernizr'); ?>
-    <?php queue_js_file('selectivizr-min'); ?>
-    <?php queue_js_file('respond.min'); ?>
+    <?php queue_js_file('vendor/modernizr'); ?>
+    <?php queue_js_file('vendor/selectivizr'); ?>
+    <?php queue_js_file('vendor/respond'); ?>
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
