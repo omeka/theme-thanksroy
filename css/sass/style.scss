@@ -18,7 +18,6 @@ $break          : 50em 16;
 /* == Mixins == */
 
 @mixin body-copy {
-    font-size: $base-font-size;
     line-height: $base-line-height;
     margin-bottom:1.5em;
 }
