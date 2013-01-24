@@ -125,7 +125,6 @@ a img {
 }
 
 p, ul, ol, dl {
-  font-size: 16px;
   line-height: 24px;
   margin-bottom: 1.5em;
 }
@@ -1326,7 +1325,6 @@ header:after {
 }
 
 .element-div {
-  font-size: 16px;
   line-height: 24px;
   margin-bottom: 1.5em;
 }

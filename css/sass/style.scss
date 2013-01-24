@@ -19,7 +19,7 @@ $break          : 50em 16;
 
 @mixin body-copy {
     line-height: $base-line-height;
-    margin-bottom:1.5em;
+    @include trailer();
 }
 
 @mixin boxsizing($bs) {
