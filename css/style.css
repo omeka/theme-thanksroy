@@ -124,6 +124,14 @@ a img {
   border: none;
 }
 
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
 p, ul, ol, dl {
   line-height: 24px;
   margin-bottom: 1.5em;

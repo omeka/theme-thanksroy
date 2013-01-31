@@ -92,6 +92,10 @@ a {
     }
 }
 
+strong, b { font-weight: bold; }
+
+em, i { font-style: italic; }
+
 p,ul,ol,dl {
     @include body-copy;
 }
