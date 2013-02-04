@@ -1271,7 +1271,7 @@ nav.pagination:nth-of-type(3n) ul {
   *behavior: url("../javascripts/boxsizing.htc");
 }
 #itemfiles a img {
-  width: 100%;
+  min-width: 100%;
   border: 1px solid #ccc;
 }
 
