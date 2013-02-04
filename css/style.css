@@ -8,26 +8,25 @@ body {
   font-size: 16px;
 }
 
-h1 {
-  margin: 0;
+h1, h2, h3, legend, h4, h5, h6 {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
 }
 
 h1 {
   font-size: 32px;
   line-height: 48px;
-  margin-bottom: 0.666667em;
+  margin-bottom: 0.75em;
 }
 
 h2 {
   font-size: 24px;
   line-height: 36px;
-  margin-bottom: .75em;
 }
 
 h3, legend {
   font-size: 20px;
   line-height: 30px;
-  margin-bottom: .25em;
 }
 
 h4 {
@@ -66,14 +65,6 @@ a img {
   margin-bottom: -2px;
   vertical-align: sub;
   border: none;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-em, i {
-  font-style: italic;
 }
 
 p, ul, ol, dl {
@@ -829,6 +820,10 @@ header:after {
 }
 
 /* == Navigation == */
+nav ul {
+  padding-left: 0;
+}
+
 .top ul {
   border: solid #ccc;
   border-width: 0 0 1px 0;
@@ -957,6 +952,11 @@ header:after {
   }
 }
 
+nav.pagination:nth-of-type(3n) ul {
+  border-top: 1px solid #ccc;
+  border-bottom: 0;
+}
+
 .pagination_list {
   margin: 0;
   border-bottom: 1px solid #ccc;
@@ -1024,7 +1024,6 @@ header:after {
 
 #sort-links {
   border-bottom: 1px solid #ccc;
-  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 #sort-links span {
@@ -1177,6 +1176,9 @@ header:after {
   margin-bottom: 40px;
   overflow: hidden;
 }
+#home #recent-items ul {
+  padding: 0;
+}
 
 #collections .element {
   margin-bottom: 20px;
@@ -1257,13 +1259,19 @@ header:after {
   width: 100%;
   clear: both;
 }
-
-.item-file {
+#itemfiles a {
   float: left;
   margin-right: 1em;
+  overflow: visible;
+  border-bottom: 0;
   margin-bottom: 1.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url("../javascripts/boxsizing.htc");
 }
-.item-file img {
+#itemfiles a img {
+  width: 100%;
   border: 1px solid #ccc;
 }
 
@@ -1307,11 +1315,11 @@ footer li {
 }
 
 /* == Exhibit Builder == */
-#exhibits .exhibit {
+#exhibit .exhibit {
   border-top: 1px solid #ccc;
   padding-top: 1.5em;
 }
-#exhibits div:first-child {
+#exhibit .pagination + .exhibit {
   border-top: 0;
 }
 

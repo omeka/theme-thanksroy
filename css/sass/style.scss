@@ -2,6 +2,7 @@
 @import 'compass/css3';
 @import 'compass/typography';
 
+
 /* == Variables == */
 
 $base-font-size: 16px;
@@ -36,24 +37,25 @@ body {
     font-size: $base-font-size;
 }
 
-h1 { margin:0; }
+h1, h2, h3, h4, h5, h6 { 
+    @include leader(0); 
+    @include trailer(); 
+}
 
 h1 {
     font-size: 2 * $base-font-size;
     line-height: 2 * $base-line-height;
-    margin-bottom:0.666667em; 
+    @include trailer(.5);
 }
 
 h2 {
     font-size:1.5 * $base-font-size; 
     line-height: 1.5 * $base-line-height;
-    margin-bottom:.75em; 
 }
 
 h3 {
     font-size: 1.25 * $base-font-size; 
     line-height: 1.25 * $base-line-height;
-    margin-bottom:.25em;
 }
 
 h4 { 
@@ -90,10 +92,6 @@ a {
         border: none;
     }
 }
-
-strong, b { font-weight: bold; }
-
-em, i { font-style: italic; }
 
 p,ul,ol,dl {
     @include body-copy;
@@ -819,6 +817,8 @@ header {
 
 /* == Navigation == */
 
+nav ul { padding-left: 0; }
+
 .top ul {
     border: solid #ccc; 
     border-width: 0 0 1px 0;
@@ -956,6 +956,11 @@ header {
 
 }
 
+nav.pagination:nth-of-type(3n) ul { 
+    border-top: 1px solid #ccc;
+    border-bottom: 0; 
+}
+
 .pagination_list {
     margin: 0;
     border-bottom: 1px solid #ccc;
@@ -1030,7 +1035,6 @@ header {
 
 #sort-links {
     border-bottom: 1px solid #ccc;
-    @include leader();
     @include trailer();
     
     span { 
@@ -1096,7 +1100,7 @@ header {
         clear: both;
     }
     
-    h2 {display:none;}
+    h2 { display:none; }
     
     input[type=text], input[type=submit] { 
         height: 30px;
@@ -1167,6 +1171,8 @@ header {
     #primary div { margin-bottom: 40px; overflow: hidden; }
     
     #secondary div { margin-bottom: 40px; overflow: hidden; }
+    
+    #recent-items ul { padding: 0; }
 }
 
 #collections .element { margin-bottom: 20px; }
@@ -1232,17 +1238,22 @@ header {
         width: 100%;
         clear: both;
     }
-}
 
-.item-file {
-    float: left;
-    margin-right: $gutter-width;
-    @include trailer();
-    
-    img {
-        border: 1px solid #ccc;
+    a {
+        float: left;
+        margin-right: $gutter-width;
+        overflow: visible;
+        border-bottom: 0;
+        @include trailer();
+        @include boxsizing(border-box);
+        
+        img {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
     }
 }
+
 .collection {border-top:1px solid #ccc;padding-top:1.33333em;}
 
 .collection .element {margin-bottom:0;}
@@ -1268,15 +1279,14 @@ footer {
 }
         
 /* == Exhibit Builder == */
-#exhibits  {
+#exhibit  {
     .exhibit {
         border-top:1px solid #ccc; 
         @include padding-leader(1);
+        
     }
     
-    div:first-child {
-        border-top: 0;
-    }
+    .pagination + .exhibit { border-top: 0; }
 }
 
 .summary #exhibit-pages ul {
