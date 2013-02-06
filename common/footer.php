@@ -19,9 +19,9 @@
 
     <script type="text/javascript">
     jQuery(document).ready(function () {
-        Omeka.showAdvancedForm();
-        
-        jQuery("[role='navigation']").flexNav();
+        Omeka.showAdvancedForm();        
+        Omeka.moveNavOnResize();        
+        Omeka.mobileMenu();        
     });
     </script>
 

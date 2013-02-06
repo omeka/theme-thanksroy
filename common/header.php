@@ -23,7 +23,6 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file('flexnav');
     queue_css_file('style');
     queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
@@ -35,7 +34,6 @@
     queue_js_file('vendor/modernizr');
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
-    queue_js_file('vendor/jquery.flexnav');
     queue_js_file('globals');
     echo head_js(); 
     ?>
@@ -43,20 +41,20 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-            <header>
-                <?php fire_plugin_hook('public_header'); ?>
-                <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
-            </header>
-
-
+        <header>
+            <?php fire_plugin_hook('public_header'); ?>
+            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+        </header>
+            
         <div class="menu-button">Menu</div>
+            
         <div id="wrap">
             <nav id="primary-nav">
+                <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-wrap">
                     <h2>Search</h2>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                 </div>
-                <?php echo public_nav_main(array('role' => 'navigation')); ?>
             </nav>
             <div id="content">
                 <?php fire_plugin_hook('public_content_top'); ?>

@@ -26,12 +26,32 @@
 
 /* == Header == */
 
-header { background-size: cover !important; }
+header { 
+    background-size: cover !important; 
+    border-bottom: 20px solid #000; 
+}
+
+.menu-button { display: none; }
 
 #primary-nav { 
     @include leader(1.75);
 
-    ul { @include leader(); }
+    .active ul {
+        display: block;
+    }
+  
+    ul { 
+        @include leader(0); 
+        @include trailer(2);
+    }
+    
+    a:hover {
+        background-color: #f7f7f7;            
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }
 
 #search-form {
