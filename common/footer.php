@@ -20,6 +20,8 @@
     <script type="text/javascript">
     jQuery(document).ready(function () {
         Omeka.showAdvancedForm();
+        
+        jQuery("[role='navigation']").flexNav();
     });
     </script>
 

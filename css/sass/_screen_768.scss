@@ -1,0 +1,78 @@
+/* == Grid == */
+
+#content { 
+    @include span-columns(12 omega, 16); 
+    padding: 40px 0; 
+}
+
+#primary-nav { 
+    @include span-columns(4 alpha,16); 
+}
+
+#primary { 
+    @include prefix(0);
+}
+
+#home #primary { 
+    @include span-columns(7 alpha,16); 
+    @include prefix(1); 
+}
+
+#home #secondary { 
+    @include span-columns(7 omega,16); 
+    @include prefix(0);
+    @include suffix(1);
+}
+
+/* == Header == */
+
+header { background-size: cover !important; }
+
+#primary-nav { 
+    @include leader(1.75);
+
+    ul { @include leader(); }
+}
+
+#search-form {
+    @include trailer();
+}
+
+#query {
+    @include trailer();
+}
+
+#secondary-nav {
+    border-bottom:1px solid #ccc;
+    font-size:1.125em; 
+    
+    a {
+        padding: 0.5em 1em 0.5em; 
+        color: #666;
+        border-bottom: 0;
+    }
+    
+    ul { margin: 0 0 -1px 0; }
+    
+    li { 
+        display: inline-block;
+        padding: 0; 
+        border: 1px solid #ccc;
+    }
+    
+    .active {
+        border-bottom-color: #fff;
+    }
+    
+    .current a {
+        background:#fff;
+        color:#333; 
+        font-weight:bold;
+        border: {
+            color: #ccc;
+            width: 1px;
+            style: solid;
+            bottom: { color: #fff; }; 
+        }
+    }
+}

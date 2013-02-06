@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <?php if ( $description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php endif; ?>
     <?php
     if (isset($title)) {
@@ -22,7 +23,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file('normalize');
+    queue_css_file('flexnav');
     queue_css_file('style');
     queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
@@ -30,11 +31,14 @@
     echo theme_header_background();
     ?>
     <!-- JavaScripts -->
-    <?php queue_js_file('vendor/modernizr'); ?>
-    <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
-    <?php queue_js_file('vendor/respond'); ?>
-    <?php queue_js_file('globals'); ?>
-    <?php echo head_js(); ?>
+    <?php 
+    queue_js_file('vendor/modernizr');
+    queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
+    queue_js_file('vendor/respond');
+    queue_js_file('vendor/jquery.flexnav');
+    queue_js_file('globals');
+    echo head_js(); 
+    ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
@@ -45,13 +49,14 @@
             </header>
 
 
-        <div id="wrap">                
+        <div class="menu-button">Menu</div>
+        <div id="wrap">
             <nav id="primary-nav">
                 <div id="search-wrap">
                     <h2>Search</h2>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                 </div>
-                <?php echo public_nav_main(); ?>
+                <?php echo public_nav_main(array('role' => 'navigation')); ?>
             </nav>
             <div id="content">
                 <?php fire_plugin_hook('public_content_top'); ?>
