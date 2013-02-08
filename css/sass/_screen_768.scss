@@ -45,12 +45,8 @@ header {
         @include trailer(2);
     }
     
-    a:hover {
-        background-color: #f7f7f7;            
-
-        &:hover {
-            font-weight: bold;
-        }
+    a:hover {           
+        font-weight: bold;
     }
 }
 

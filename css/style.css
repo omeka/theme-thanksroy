@@ -989,7 +989,6 @@ table {
 
   #primary-nav ul.navigation, .mobile {
     border-top: 1px solid #ccc;
-    line-height: 1em;
     position: relative;
     margin-top: 0em;
     margin-bottom: 0em;
@@ -1008,7 +1007,13 @@ table {
     *behavior: url("../javascripts/boxsizing.htc");
     margin: 0;
   }
-  #primary-nav ul.navigation li:hover > ul, #primary-nav ul.navigation li.hover > ul, .mobile li:hover > ul, .mobile li.hover > ul {
+  #primary-nav ul.navigation ul li a, .mobile ul li a {
+    padding-left: 2.5em;
+  }
+  #primary-nav ul.navigation ul li ul li a, .mobile ul li ul li a {
+    padding-left: 4em;
+  }
+  #primary-nav ul.navigation li:hover > ul, .mobile li:hover > ul {
     display: block;
     top: 0;
     left: 0;
@@ -1028,6 +1033,45 @@ table {
   #primary-nav ul.navigation > li a:before, .mobile > li a:before {
     content: "\BB\20";
     display: inline;
+  }
+
+  .mobile {
+    border-top: 0;
+  }
+  .mobile ul {
+    display: block;
+  }
+  .mobile li {
+    background-color: #4d4d4d;
+  }
+  .mobile li a {
+    border-bottom: 0;
+  }
+  .mobile li a:before {
+    content: "";
+  }
+  .mobile li.parent > a:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/white_arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    display: inline-block;
+    opacity: .5;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    float: right;
+  }
+  .mobile li:hover ul {
+    display: block;
+  }
+  .mobile ul li {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #secondary-nav ul {
@@ -1684,9 +1728,6 @@ table {
     margin-bottom: 3em;
   }
   #primary-nav a:hover {
-    background-color: #f7f7f7;
-  }
-  #primary-nav a:hover:hover {
     font-weight: bold;
   }
 

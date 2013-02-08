@@ -68,7 +68,7 @@ if (!Omeka) {
                 $(primaryNavUl).insertBefore('#wrap');
                 $(primaryNavUl).addClass('mobile');
             } else {
-                primaryNavUl = $('ul.navigation').first().detach();
+                primaryNavUl = $('.menu-button + ul.navigation').detach();
                 $(primaryNavUl).prependTo('#primary-nav');
                 $(primaryNavUl).removeClass('mobile');
             }
@@ -81,11 +81,9 @@ if (!Omeka) {
     };
     
     Omeka.mobileMenu = function() {
-        var windowWidth = $(window).width();
-        
         $('.navigation li a').each( function() {
             if ($(this).next().length > 0) {
-                $(this).addClass('parent');
+                $(this).parent().addClass('parent');
             }
         });
         
@@ -93,18 +91,6 @@ if (!Omeka) {
             e.preventDefault();
             $('.mobile').toggle();
         });
-        
-        if (windowWidth > 768) {
-            $('.mobile li a').click(function() {
-                $(this).parent('li').toggleClass('hover');
-            });
-        } else {
-            $('.mobile li').hover(function() {
-                $(this).addClass('hover');
-            }, function() {
-                $(this).removeClass('hover');
-            });
-        }
     };
     
 })(jQuery);

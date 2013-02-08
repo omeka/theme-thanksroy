@@ -679,7 +679,6 @@ ul.navigation { padding-left: 0; }
 
 #primary-nav ul.navigation, .mobile {
     border-top: 1px solid #ccc;
-    line-height:1em;
     position: relative;
     @include leader(0);
     @include trailer(0);
@@ -689,15 +688,19 @@ ul.navigation { padding-left: 0; }
         padding: 0;
         display: none;
         border-top: 0;
-  
+
         li {
             width: 100%;
             @include boxsizing(border-box);
             margin: 0;
+            
+            a { padding-left: 2.5em; }
+            
+            ul li a { padding-left: 4em; }
         }
     }
 
-    li:hover > ul, li.hover > ul {
+    li:hover > ul {
         display: block;
         top: 0;
         left: 0;
@@ -724,6 +727,42 @@ ul.navigation { padding-left: 0; }
                 display: inline;
             }
         }
+    }
+}
+
+.mobile {
+    border-top: 0; 
+    
+    ul { display: block; }
+
+    li { 
+        background-color: #4d4d4d;
+                
+        a { 
+            border-bottom: 0; 
+            
+            &:before { content: ""; }
+        }
+        
+        &.parent > a:after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background-image: url('../images/white_arrow.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right center;
+            display: inline-block;
+            opacity: .5;
+            @include rotate(90deg);
+            float: right;
+        }
+        
+        &:hover ul { display: block; }
+    }
+        
+    ul li { 
+        background-color: rgba(0,0,0,.5); 
     }
 }
 
