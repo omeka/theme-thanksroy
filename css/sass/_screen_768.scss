@@ -92,3 +92,36 @@ header {
         }
     }
 }
+
+/* == Browse Items == */
+
+.pagination {
+    overflow: auto;
+    float: left;
+    @include padding-trailer();
+}
+
+.pagination_list {
+    @include leader(.75);
+    float: left;
+}
+
+.pagination_list a, li.pagination_current { 
+    border: 1px solid #ccc;
+    display: inline-block; 
+    padding: rhythm(.25) 10px;
+    vertical-align: top;
+    margin-right: 10px; 
+}
+
+#sort-links  {
+    float: right;
+    ul { 
+        @include leader(.75); 
+        @include padding-leader(.5);
+    }
+    span, li {
+        padding: rhythm(.25) 0 rhythm(.25) 20px;
+        margin-right: 0;
+    }
+}

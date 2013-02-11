@@ -29,6 +29,12 @@
 
     echo theme_header_background();
     ?>
+    <style>
+        #site-title a:link, #site-title a:visited,
+        #site-title a:active, #site-title a:hover {
+            color: <?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#FFFFFF"; ?>;
+        }
+    </style>
     <!-- JavaScripts -->
     <?php 
     queue_js_file('vendor/modernizr');
