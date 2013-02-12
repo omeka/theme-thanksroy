@@ -1,7 +1,13 @@
 @import 'susy';
 @import 'compass/css3';
 @import 'compass/typography';
+@import "compass/support";
+@import "rgbapng";
 @import 'normalize';
+
+/* == Support == */
+
+$legacy-support-for-ie8: true;
 
 /* == Variables == */
 

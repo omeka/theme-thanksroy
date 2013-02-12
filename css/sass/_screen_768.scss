@@ -28,6 +28,7 @@
 
 header { 
     background-size: cover !important; 
+    -ms-behavior: url('../javascripts/backgroundsize.min.htc');
     border-bottom: 20px solid #000; 
 }
 

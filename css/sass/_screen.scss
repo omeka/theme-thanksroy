@@ -444,7 +444,12 @@ optgroup {
 
 legend { @extend h3; }
 
-fieldset { display:block; clear:both; }
+fieldset { 
+    display:block; 
+    clear:both; 
+    border: 0;
+    margin: 0;
+}
 
 #advanced-search-form {
     label, .label {
@@ -624,7 +629,13 @@ div.error {
 
 header { 
     background-size: auto !important; 
+    -ms-behavior: url('../javascripts/backgroundsize.min.htc');
     background-position-x: right !important;    
+}
+
+.no-textshadow #site-title a { 
+    background-color: #000; 
+    padding: rhythm(.25);
 }
 
 #site-title {
@@ -690,6 +701,8 @@ ul.navigation { padding-left: 0; }
     margin-left: 10px;
 }
 
+.no-backgroundsize .menu-button:after { background-image: url('../images/menu_ie.png'); }
+
 .mobile { display: none; }
 
 #primary-nav ul.navigation, .mobile {
@@ -748,15 +761,25 @@ ul.navigation { padding-left: 0; }
 .mobile {
     border-top: 0; 
     
-    ul { display: block; }
+    ul { 
+        margin-top: 0;
+        padding-top: 0;
+        display: block; 
+    }
 
     li { 
         background-color: #4d4d4d;
+        padding-top: 0;
                 
         a { 
             border-bottom: 0; 
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
             
-            &:before { content: ""; }
+            &:before { 
+                content: ""; 
+            }
         }
         
         &.parent > a:after {
@@ -768,18 +791,18 @@ ul.navigation { padding-left: 0; }
             background-size: contain;
             background-position: right center;
             display: inline-block;
-            opacity: .5;
-            @include rotate(90deg);
             float: right;
         }
         
         &:hover ul { display: block; }
-    }
         
-    ul li { 
-        background-color: rgba(0,0,0,.5); 
+        ul li { background-color: #333; }
+        
+        ul li ul li { background-color: #000; }
     }
 }
+
+.no-backgroundsize .mobile li.parent > a:after { background-image: url('../images/white_arrow_ie.png'); }
 
 #secondary-nav ul { margin: 0; }
 
@@ -800,6 +823,11 @@ ul.navigation { padding-left: 0; }
     }
 }
 
+nav.pagination { 
+    width: 47%; 
+    overflow: hidden;
+}
+
 nav.pagination:nth-of-type(3n) ul { 
     border-top: 1px solid #ccc;
     border-bottom: 0; 
@@ -809,7 +837,8 @@ nav.pagination:nth-of-type(3n) ul {
 
 .pagination_list {
     margin: 0;
-    overflow: auto;
+    width: 100%;
+    overflow: hidden;
     list-style-type: none;
     @include adjust-font-size-to(14px);
     @include padding-leader(.5);
