@@ -32,7 +32,7 @@
     <style>
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
-            color: <?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#FFFFFF"; ?>;
+            color: #<?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#FFFFFF"; ?>;
         }
     </style>
     <!-- JavaScripts -->
