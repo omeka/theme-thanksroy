@@ -96,8 +96,9 @@ header {
 
 /* == Browse Items == */
 
-.pagination {
-    overflow: auto;
+nav.pagination { 
+    width: 47%; 
+    overflow: hidden;
     float: left;
     @include padding-trailer();
 }

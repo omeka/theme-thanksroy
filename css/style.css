@@ -1128,11 +1128,6 @@ table {
     display: inline-block;
   }
 
-  nav.pagination {
-    width: 47%;
-    overflow: hidden;
-  }
-
   nav.pagination:nth-of-type(3n) ul {
     border-top: 1px solid #ccc;
     border-bottom: 0;
@@ -1811,8 +1806,9 @@ table {
   }
 
   /* == Browse Items == */
-  .pagination {
-    overflow: auto;
+  nav.pagination {
+    width: 47%;
+    overflow: hidden;
     float: left;
     padding-bottom: 1.5em;
   }
