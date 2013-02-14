@@ -32,7 +32,10 @@
     <style>
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
-            color: #<?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#FFFFFF"; ?>;
+            color: #<?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "000000"; ?>;
+            <?php if (get_theme_option('header_background')): ?>
+            text-shadow: 0px 0px 20px #000;
+            <?php endif; ?>
         }
     </style>
     <!-- JavaScripts -->
