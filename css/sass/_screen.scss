@@ -1050,7 +1050,7 @@ nav.pagination:nth-of-type(3n) ul {
     #recent-items ul { padding: 0; }
 }
 
-#collections .element { margin-bottom: 20px; }
+.collections .element { margin-bottom: 20px; }
 
 #collection-items {
     .item { 
@@ -1086,7 +1086,7 @@ nav.pagination:nth-of-type(3n) ul {
     }
 }
 
-#items {
+.items {
     line-height: 1.5em;
     
     .element { margin-bottom: 20px; }

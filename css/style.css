@@ -1364,7 +1364,7 @@ table {
     padding: 0;
   }
 
-  #collections .element {
+  .collections .element {
     margin-bottom: 20px;
   }
 
@@ -1400,10 +1400,10 @@ table {
     border: 1px solid #ccc;
   }
 
-  #items {
+  .items {
     line-height: 1.5em;
   }
-  #items .element {
+  .items .element {
     margin-bottom: 20px;
   }
 
