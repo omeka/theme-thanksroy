@@ -1494,12 +1494,14 @@ table {
   }
 
   /* == Exhibit Builder == */
-  #exhibit .exhibit {
+  .exhibit {
     border-top: 1px solid #ccc;
     padding-top: 1.5em;
   }
-  #exhibit .pagination + .exhibit {
+
+  .exhibits .pagination + .exhibit {
     border-top: 0;
+    clear: both;
   }
 
   .summary #exhibit-pages ul {

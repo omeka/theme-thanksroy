@@ -1154,14 +1154,15 @@ footer {
 }
         
 /* == Exhibit Builder == */
-#exhibit  {
-    .exhibit {
-        border-top:1px solid #ccc; 
-        @include padding-leader(1);
-        
-    }
+.exhibit {
+    border-top:1px solid #ccc; 
+    @include padding-leader(1);
     
-    .pagination + .exhibit { border-top: 0; }
+}
+
+.exhibits .pagination + .exhibit { 
+    border-top: 0; 
+    clear: both;
 }
 
 .summary #exhibit-pages ul {
