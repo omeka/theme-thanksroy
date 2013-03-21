@@ -51,7 +51,7 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
         <header>
-            <?php fire_plugin_hook('public_header'); ?>
+            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
         </header>
             
@@ -66,4 +66,4 @@
                 </div>
             </nav>
             <div id="content">
-                <?php fire_plugin_hook('public_content_top'); ?>
+                <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
