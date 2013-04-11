@@ -18,7 +18,7 @@
     @include prefix(1); 
 }
 
-#home #secondary { 
+#home .secondary { 
     @include span-columns(7 omega,16); 
     @include prefix(0);
     @include suffix(1);
@@ -59,7 +59,7 @@ header {
     @include trailer();
 }
 
-#secondary-nav {
+.secondary-nav {
     border-bottom:1px solid #ccc;
     font-size:1.125em; 
     
@@ -117,6 +117,7 @@ nav.pagination {
 }
 
 #sort-links  {
+    clear: none;
     float: right;
     ul { 
         @include leader(.75); 

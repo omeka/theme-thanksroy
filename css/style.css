@@ -914,10 +914,10 @@ table {
     *zoom: 1;
     max-width: 53em;
     _width: 53em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
     margin: 0;
   }
   #wrap:after {
@@ -1105,11 +1105,11 @@ table {
     background-image: url("../images/white_arrow_ie.png");
   }
 
-  #secondary-nav ul {
+  .secondary-nav ul {
     margin: 0;
   }
 
-  #secondary-nav li {
+  .secondary-nav li {
     display: inline-block;
     margin: 0 10px 0 0;
     padding: 0;
@@ -1117,61 +1117,51 @@ table {
     font-size: 0.875em;
     line-height: 1.5em;
   }
-  #secondary-nav li:last-of-type {
+  .secondary-nav li:last-of-type {
     border-bottom: 0;
   }
-  #secondary-nav li a {
+  .secondary-nav li a {
     border-bottom: 0;
     padding-top: 0.375em;
     padding-bottom: 0.375em;
     display: inline-block;
   }
 
-  nav.pagination:nth-of-type(3n) ul {
-    border-top: 1px solid #ccc;
-    border-bottom: 0;
-    padding-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
-
-  .pagination_list {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-    list-style-type: none;
-    font-size: 0.875em;
-    line-height: 1.5em;
-    padding-top: 0.75em;
-  }
-  .pagination_list .pagination_current {
-    background-color: #ccc;
-    color: #444;
-    font-weight: bold;
-  }
-  .pagination_list .next {
-    border-left: 1px solid #ccc;
-    padding-left: 1em;
-  }
-  .pagination_list .previous {
-    border-right: 1px solid #ccc;
-    padding-right: 1em;
-  }
-  .pagination_list li {
+  .pagination {
+    padding-left: 0;
     float: left;
-    margin: 0;
+    margin: 12px 0;
+    height: 48px;
+    display: block;
+    overflow: auto;
+    line-height: 48px;
   }
-  .pagination_list li:last-child a {
-    border-right-width: 1px;
-  }
-  .pagination_list .pagination_previous, .pagination_list .pagination_next {
-    display: none;
-  }
-  .pagination_list .pagination_current, .pagination_list a {
-    border: solid #ccc;
+  .pagination li {
+    list-style-type: none;
+    line-height: 24px;
+    height: 24px;
     display: inline-block;
-    padding: 0.375em 10px;
+    float: left;
+    margin: 12px 10px 12px 0;
+  }
+  .pagination input[type=text] {
+    width: 5em;
+    margin-right: 5px;
     vertical-align: top;
-    border-width: 1px 0 1px 1px;
+    height: 24px;
+    border-style: solid;
+    border-width: 0.0625em;
+    padding: -0.0625em;
+  }
+  .pagination .pagination_next, .pagination .pagination_previous {
+    background-color: #000;
+    height: 24px;
+    overflow: auto;
+  }
+  .pagination .pagination_next a, .pagination .pagination_previous a {
+    font-weight: bold;
+    border-bottom: 0;
+    padding: 0 10px;
   }
 
   .item-pagination {
@@ -1195,6 +1185,7 @@ table {
   #sort-links {
     font-size: 0.875em;
     line-height: 1.5em;
+    clear: both;
   }
   #sort-links span {
     font-weight: bold;
@@ -1620,7 +1611,7 @@ table {
     border: 1px solid;
     border-color: #747474 #5e5e5e #4f4f4f;
     color: #fff;
-    font: 11px/1 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
     padding: 15px 15px 17px;
     text-shadow: #000 0 0 1px;
   }
@@ -1709,7 +1700,7 @@ table {
     width: 74.73684%;
     float: right;
     margin-right: 0;
-    #margin-left: -1em;
+    *margin-left: -1em;
     display: inline;
     padding: 40px 0;
   }
@@ -1733,11 +1724,11 @@ table {
     padding-left: 11.32075%;
   }
 
-  #home #secondary {
+  #home .secondary {
     width: 43.15789%;
     float: right;
     margin-right: 0;
-    #margin-left: -1em;
+    *margin-left: -1em;
     display: inline;
     padding-left: 0%;
     padding-right: 11.32075%;
@@ -1776,27 +1767,27 @@ table {
     margin-bottom: 1.5em;
   }
 
-  #secondary-nav {
+  .secondary-nav {
     border-bottom: 1px solid #ccc;
     font-size: 1.125em;
   }
-  #secondary-nav a {
+  .secondary-nav a {
     padding: 0.5em 1em 0.5em;
     color: #666;
     border-bottom: 0;
   }
-  #secondary-nav ul {
+  .secondary-nav ul {
     margin: 0 0 -1px 0;
   }
-  #secondary-nav li {
+  .secondary-nav li {
     display: inline-block;
     padding: 0;
     border: 1px solid #ccc;
   }
-  #secondary-nav .active {
+  .secondary-nav .active {
     border-bottom-color: #fff;
   }
-  #secondary-nav .current a {
+  .secondary-nav .current a {
     background: #fff;
     color: #333;
     font-weight: bold;
@@ -1828,6 +1819,7 @@ table {
   }
 
   #sort-links {
+    clear: none;
     float: right;
   }
   #sort-links ul {

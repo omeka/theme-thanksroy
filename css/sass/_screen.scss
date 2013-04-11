@@ -803,9 +803,9 @@ ul.navigation { padding-left: 0; }
 
 .no-backgroundsize .mobile li.parent > a:after { background-image: url('../images/white_arrow_ie.png'); }
 
-#secondary-nav ul { margin: 0; }
+.secondary-nav ul { margin: 0; }
 
-#secondary-nav li {
+.secondary-nav li {
     display: inline-block;
     margin: 0 10px 0 0;
     padding: 0;
@@ -822,53 +822,42 @@ ul.navigation { padding-left: 0; }
     }
 }
 
-nav.pagination:nth-of-type(3n) ul { 
-    border-top: 1px solid #ccc;
-    border-bottom: 0; 
-    @include padding-leader();
-    @include trailer();
-}
+.pagination {
+    padding-left: 0;
+    float: left;
+    margin: (.5 * $base-line-height) 0;
+    height: 2 * $base-line-height;
+    display: block;
+    overflow: auto;
+    line-height: 2 * $base-line-height;
 
-.pagination_list {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-    list-style-type: none;
-    @include adjust-font-size-to(14px);
-    @include padding-leader(.5);
-    
-    .pagination_current { 
-        background-color: #ccc;
-        color: #444;
-        font-weight: bold;
-    }
-
-    .next {
-        border-left:1px solid #ccc; 
-        padding-left:1em;
-    }
-    
-    .previous {
-        border-right:1px solid #ccc; 
-        padding-right:1em;
-    }
-        
     li {
+        list-style-type: none;
+        line-height: $base-line-height;
+        height: $base-line-height;
+        display: inline-block;
         float: left;
-        margin: 0; 
-        
-        &:last-child a { border-right-width: 1px; }
+        margin: $base-line-height/2 10px $base-line-height/2 0;
     }
     
-    .pagination_previous, .pagination_next { display: none; }
+    input[type=text] {
+        width: 5em;
+        margin-right: 5px;
+		vertical-align: top;
+        height: $base-line-height;
+        @include rhythm-borders(1px, 0, $base-font-size, solid);
+    }
     
-    .pagination_current, a {
-        border: solid #ccc;
-        display: inline-block; 
-        padding: rhythm(.25) 10px;
-        vertical-align: top;
-        border-width: 1px 0 1px 1px;
+    .pagination_next, .pagination_previous {
+        background-color: #000;
+        height: $base-line-height;
+        overflow: auto;
         
+        a { 
+            font-weight: bold;
+            border-bottom: 0;
+            padding: 0 10px;
+        }
     }
 }
 
@@ -894,6 +883,7 @@ nav.pagination:nth-of-type(3n) ul {
 
 #sort-links {
     @include adjust-font-size-to(14px);
+    clear: both;
     
     span { 
         font-weight: bold;
