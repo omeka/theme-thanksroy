@@ -935,6 +935,7 @@ table {
   .no-textshadow #site-title a {
     background-color: #000;
     padding: 0.375em;
+    color: #fff;
   }
 
   #site-title {
@@ -1521,6 +1522,7 @@ table {
   }
 
   .collection {
+    clear: both;
     border-top: 1px solid #ccc;
     padding-top: 1.33333em;
   }

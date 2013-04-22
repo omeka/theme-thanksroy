@@ -636,6 +636,7 @@ header {
 .no-textshadow #site-title a { 
     background-color: #000; 
     padding: rhythm(.25);
+    color: #fff;
 }
 
 #site-title {
@@ -1189,7 +1190,11 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.collection {border-top:1px solid #ccc;padding-top:1.33333em;}
+.collection {
+	clear: both;
+	border-top:1px solid #ccc;
+	padding-top:1.33333em;
+}
 
 .collection .element {margin-bottom:0;}
 
