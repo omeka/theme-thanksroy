@@ -803,9 +803,9 @@ ul.navigation { padding-left: 0; }
 
 .no-backgroundsize .mobile li.parent > a:after { background-image: url('../images/white_arrow_ie.png'); }
 
-.secondary-nav ul { margin: 0; }
+.secondary-nav ul, #secondary-nav ul { margin: 0; }
 
-.secondary-nav li {
+.secondary-nav li, #secondary-nav li {
     display: inline-block;
     margin: 0 10px 0 0;
     padding: 0;
@@ -861,11 +861,32 @@ ul.navigation { padding-left: 0; }
     }
 }
 
-nav.pagination:nth-of-type(3n) ul {
+nav.pagination { 
+	overflow: visible; 
+
+	.pagination_list { padding-top: 0; }
+	
+	.pagination_list li { height: auto; }
+}
+
+nav.pagination:nth-of-type(3), #content > .pagination:nth-of-type(2) {
+	width: 100%;
+	height: 96px;
+}
+
+nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 	border-top: 1px solid #ccc;
 	border-bottom: 0;
 	@include padding-leader();
 	@include trailer();
+}
+
+#content > nav.pagination:nth-of-type(2) { 
+	width: 47%; 
+	height: auto;
+	padding-top: 0;
+	margin-bottom: 0;
+	border-top: 0;
 }
 
 .pagination_list {

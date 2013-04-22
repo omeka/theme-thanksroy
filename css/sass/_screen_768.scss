@@ -59,7 +59,7 @@ header {
     @include trailer();
 }
 
-.secondary-nav {
+.secondary-nav, #secondary-nav {
     border-bottom:1px solid #ccc;
     font-size:1.125em; 
     
@@ -96,11 +96,15 @@ header {
 
 /* == Browse Items == */
 
-nav.pagination { 
+.pagination { 
     width: 47%; 
     overflow: hidden;
     float: left;
     @include padding-trailer();
+}
+
+nav.pagination {
+	overflow: visible;
 }
 
 .pagination_list {
