@@ -935,6 +935,8 @@ table {
   .no-textshadow #site-title a {
     background-color: #000;
     padding: 0.375em;
+  }
+  .no-textshadow #site-title a:link, .no-textshadow #site-title a:visited, .no-textshadow #site-title a:active, .no-textshadow #site-title a:hover {
     color: #fff;
   }
 

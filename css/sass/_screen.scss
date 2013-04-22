@@ -636,7 +636,8 @@ header {
 .no-textshadow #site-title a { 
     background-color: #000; 
     padding: rhythm(.25);
-    color: #fff;
+    
+    &:link, &:visited, &:active, &:hover { color: #fff; }
 }
 
 #site-title {
