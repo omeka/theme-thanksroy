@@ -1187,7 +1187,7 @@ table {
   }
 
   #content > nav.pagination:nth-of-type(2) {
-    width: 47%;
+    width: 100%;
     height: auto;
     padding-top: 0;
     margin-bottom: 0;
@@ -1877,6 +1877,10 @@ table {
 
   nav.pagination {
     overflow: visible;
+  }
+
+  #content > nav.pagination:nth-of-type(2) {
+    width: 47%;
   }
 
   .pagination_list {
