@@ -845,7 +845,7 @@ ul.navigation { padding-left: 0; }
     input[type=text] {
         width: 5em;
         margin-right: 5px;
-		vertical-align: top;
+        vertical-align: top;
         height: $base-line-height;
         @include rhythm-borders(1px, 0, $base-font-size, solid);
     }
@@ -864,31 +864,31 @@ ul.navigation { padding-left: 0; }
 }
 
 nav.pagination { 
-	overflow: visible; 
+    overflow: visible; 
 
-	.pagination_list { padding-top: 0; }
-	
-	.pagination_list li { height: auto; }
+    .pagination_list { padding-top: 0; }
+    
+    .pagination_list li { height: auto; }
 }
 
 nav.pagination:nth-of-type(3), #content > .pagination:nth-of-type(2) {
-	width: 100%;
-	height: 96px;
+    width: 100%;
+    height: 96px;
 }
 
 nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
-	border-top: 1px solid #ccc;
-	border-bottom: 0;
-	@include padding-leader();
-	@include trailer();
+    border-top: 1px solid #ccc;
+    border-bottom: 0;
+    @include padding-leader();
+    margin: 0 0 rhythm(1) 0;
 }
 
 #content > nav.pagination:nth-of-type(2) { 
-	width: 100%; 
-	height: auto;
-	padding-top: 0;
-	margin-bottom: 0;
-	border-top: 0;
+    width: 100%; 
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-top: 0;
 }
 
 .pagination_list {
@@ -1083,8 +1083,27 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #submit_search_advanced {margin-top:5px;margin-bottom:5px;}
 
-#search-filters {
-    padding-left: 1.25em;
+#search-filters, #item-filters {
+
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+        display: inline-block;
+        margin: rhythm(1) 0 0 0;
+    }
+    
+    li { 
+        display: inline; 
+        
+        &:after {
+            content: " \00B7";
+            margin: 0 10px 0 5px;
+        }
+        
+        &:last-child:after {
+            content: "\00A0";
+        }
+    }
     
     ul li ul { 
         display: inline-block;
@@ -1130,7 +1149,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 .browse {
     .item {
         overflow:hidden; 
-        border-bottom:1px solid #ccc;
+        border-top:1px solid #ccc;
         @include padding-leader(1);
         @include padding-trailer(1);
         
@@ -1192,9 +1211,9 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .collection {
-	clear: both;
-	border-top:1px solid #ccc;
-	padding-top:1.33333em;
+    clear: both;
+    border-top:1px solid #ccc;
+    padding-top:1.33333em;
 }
 
 .collection .element {margin-bottom:0;}

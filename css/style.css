@@ -1186,7 +1186,7 @@ table {
     border-top: 1px solid #ccc;
     border-bottom: 0;
     padding-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 0 0 1.5em 0;
   }
 
   #content > nav.pagination:nth-of-type(2) {
@@ -1394,20 +1394,33 @@ table {
     margin-bottom: 5px;
   }
 
-  #search-filters {
-    padding-left: 1.25em;
+  #search-filters ul, #item-filters ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: inline-block;
+    margin: 1.5em 0 0 0;
   }
-  #search-filters ul li ul {
+  #search-filters li, #item-filters li {
+    display: inline;
+  }
+  #search-filters li:after, #item-filters li:after {
+    content: " \00B7";
+    margin: 0 10px 0 5px;
+  }
+  #search-filters li:last-child:after, #item-filters li:last-child:after {
+    content: "\00A0";
+  }
+  #search-filters ul li ul, #item-filters ul li ul {
     display: inline-block;
   }
-  #search-filters ul li ul li {
+  #search-filters ul li ul li, #item-filters ul li ul li {
     list-style-type: none;
     display: inline-block;
   }
-  #search-filters ul li ul li:after {
+  #search-filters ul li ul li:after, #item-filters ul li ul li:after {
     content: ", ";
   }
-  #search-filters ul li ul li:last-child:after {
+  #search-filters ul li ul li:last-child:after, #item-filters ul li ul li:last-child:after {
     content: "";
   }
 
@@ -1447,7 +1460,7 @@ table {
 
   .browse .item {
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
