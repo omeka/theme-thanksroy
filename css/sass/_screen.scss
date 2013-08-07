@@ -1262,26 +1262,30 @@ footer {
     a { border-bottom: 0; }
 
     ul { 
-        margin-left: 0; 
+        margin: 0;
     }
 
     li { 
         display: inline-block; 
         margin-right: 10px;
+        border: 0;
+    }
+    
+    li ul {
+        border-bottom: 1px solid #ccc;
     }
     
     .current { font-weight: bold; }
 
     & > ul { 
-    
-        & > li {
-            @include padding-leader(.25);
-            @include padding-trailer(.25);
-        }
-        
+        border-bottom: 0;
+        margin: 0 0 rhythm(1) 0;
+
         a {
             padding: rhythm(.25) 10px;
         }
+        
+        li { margin-bottom: -2px;}
                 
         & > li:first-of-type { 
             @include at-breakpoint($break) { float: left; }
@@ -1292,7 +1296,6 @@ footer {
         
         & > li:nth-child(2) {            
             display: block;
-            border-bottom: 1px solid #ccc;
 
             .current a { 
                 border: 1px solid #ccc; 
@@ -1313,7 +1316,6 @@ footer {
         
         & > li:nth-child(4) {
             display: block;
-            border-top: 1px dotted #ccc;
             @include padding-leader(.25);
             @include padding-trailer(.25);
         }
@@ -1330,7 +1332,7 @@ footer {
     @include leader();
 }
 
-#exhibit-page-navigation { 
+#exhibit-page-nav { 
     border-top: 1px solid #ccc; 
     line-height: $base-line-height;
     @include padding-leader();
