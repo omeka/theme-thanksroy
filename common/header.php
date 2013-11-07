@@ -24,7 +24,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
-    queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
+    queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 
     echo theme_header_background();
