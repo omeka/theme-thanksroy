@@ -29,7 +29,20 @@
 
     echo theme_header_background();
     ?>
+
+    <?php
+    if (!($backgroundColor = get_theme_option('background_color'))):
+        $backgroundColor = '#FFFFFF';
+    endif;
+    if (!($textColor = get_theme_option('text_color'))):
+        $textColor = '#444444';
+    endif;
+    ?>
     <style>
+        body {
+            background-color: <?php echo $backgroundColor; ?>;
+            color: <?php echo $textColor; ?>;
+        }
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
             color: <?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#000000"; ?>;
