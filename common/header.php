@@ -31,12 +31,10 @@
     ?>
 
     <?php
-    if (!($backgroundColor = get_theme_option('background_color'))):
-        $backgroundColor = '#FFFFFF';
-    endif;
-    if (!($textColor = get_theme_option('text_color'))):
-        $textColor = '#444444';
-    endif;
+    ($backgroundColor = get_theme_option('background_color')) ? $backgroundColor : "#FFFFFF";
+    ($textColor = get_theme_option('text_color')) ? $textColor : "#444444";
+    ($linkColor = get_theme_option('link_color')) ? $linkColor : "#888888";
+    ($buttonColor = get_theme_option('button_color')) ? $buttonColor : "#000000";
     ?>
     <style>
         body {
@@ -49,6 +47,41 @@
             <?php if (get_theme_option('header_background')): ?>
             text-shadow: 0px 0px 20px #000;
             <?php endif; ?>
+        }
+        a:link {
+            color: <?php echo $linkColor; ?>;
+        }
+        a:visited {
+            color: <?php echo thanksroy_brighten($linkColor, 40); ?>;
+        }
+        a:hover, a:active {
+            color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
+        }
+        
+        .button, button,
+        input[type="reset"],
+        input[type="submit"],
+        input[type="button"],
+        .pagination_next, 
+        .pagination_previous {
+          background-color: <?php echo $buttonColor; ?>;
+          color: #fff;
+        }
+        
+        #search-form input[type="text"] {
+            border-color: <?php echo $buttonColor; ?>
+        }
+        
+        .mobile li { 
+            background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
+        }
+        
+        .mobile li ul li {
+            background-color: <?php echo thanksroy_brighten($buttonColor, 20); ?>;
+        }
+        
+        .mobile li li li {
+            background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
         }
     </style>
     <!-- JavaScripts -->
