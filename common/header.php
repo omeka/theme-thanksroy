@@ -31,10 +31,11 @@
     ?>
 
     <?php
-    ($backgroundColor = get_theme_option('background_color')) ? $backgroundColor : "#FFFFFF";
-    ($textColor = get_theme_option('text_color')) ? $textColor : "#444444";
-    ($linkColor = get_theme_option('link_color')) ? $linkColor : "#888888";
-    ($buttonColor = get_theme_option('button_color')) ? $buttonColor : "#000000";
+    ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#FFFFFF");
+    ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
+    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
+    ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
+    ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");
     ?>
     <style>
         body {
@@ -43,7 +44,7 @@
         }
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
-            color: <?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "#000000"; ?>;
+            color: <?php echo $titleColor; ?>;
             <?php if (get_theme_option('header_background')): ?>
             text-shadow: 0px 0px 20px #000;
             <?php endif; ?>
