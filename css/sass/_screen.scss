@@ -1,7 +1,6 @@
-/* == Generic styles ======== */
+/* @group ----- Generic styles ----- */
 
 body {
-    color:#444;
     font-family: "PT Serif", Times, serif;
     word-break: break-word;
     font-size: $base-font-size;
@@ -43,19 +42,12 @@ h6 {
     font-style:italic; 
 }
 
-a { 
+
+a {
     border-bottom: 1px dotted;
     text-decoration: none;
     overflow: auto;
-    
-    &:link { color:#888; }
-    
-    &:visited { color:#999; }
-    
-    &:hover { color:#777; }
-    
-    &:active { color:#777; }
-    
+
     img {
         margin-bottom: -2px; 
         vertical-align: sub; 
@@ -106,19 +98,15 @@ blockquote {
     }
 }
 
-/* Reusable classes */
-.hide {
-    text-indent: -1000em; 
-    width: 0; 
-    height: 0; 
-    overflow: hidden;
-}
+/* @end */
+
+/* @group ----- Reusable classes ----- */
 
 .active { font-weight: bold; }
 
+/* @end */
 
-
-/* == Formalize Styles == */
+/* @group ----- Formalize Styles -----  */
 /* == http://formalize.me == */
 
 /* `Widths
@@ -225,9 +213,7 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  background-color: #000;
   border:0;
-  color: #fff;
   cursor: pointer;
   font-family:'PT Serif', serif;
   font-size: $base-font-size;
@@ -235,7 +221,6 @@ input[type="button"] {
   outline: 0;
   overflow: visible;
   padding: 3px 10px;
-  /* text-shadow: #fff 0 1px 1px; */
   width: auto;
 
   /* IE7 */
@@ -439,8 +424,9 @@ optgroup {
   font-weight: normal;
 }
 
+/* @end */
 
-/* Theme-Specific Form Elements */
+/* @group ----- Theme-Specific Form Elements ----- */
 
 legend { @extend h3; }
 
@@ -614,8 +600,9 @@ div.error {
 .vvvvvvv-popular a, .vvvvvvv-popular a:visited,
 .vvvvvvvv-popular a, .vvvvvvvv-popular a:visited {color: #5D2E5D;}
 
+/* @end */
 
-/* == Susy grid styles == */
+/* @group ----- Susy grid styles ----- */
 
 * { @include boxsizing(border-box); }
 
@@ -625,7 +612,9 @@ div.error {
     margin: 0;    
 }
 
-/* == Header == */
+/* @end */
+
+/* @group ----- Header ----- */
 
 header { 
     background-size: auto !important; 
@@ -670,7 +659,9 @@ header {
     }
 }
 
-/* == Navigation == */
+/* @end */
+
+/* @group ----- Navigation -----  */
 
 nav ul { padding-left: 0; }
 
@@ -684,11 +675,9 @@ ul.navigation { padding-left: 0; }
 .bottom ul { margin-bottom:0; }
 
 .menu-button { 
-    background-color: #222;
     cursor: pointer;
     padding: .75em 1em;
     display: block;
-    color: #fff;
     text-transform: uppercase;
 }
 
@@ -769,7 +758,6 @@ ul.navigation { padding-left: 0; }
     }
 
     li { 
-        background-color: #4d4d4d;
         padding-top: 0;
                 
         a { 
@@ -796,10 +784,6 @@ ul.navigation { padding-left: 0; }
         }
         
         &:hover ul { display: block; }
-        
-        ul li { background-color: #333; }
-        
-        ul li ul li { background-color: #000; }
     }
 }
 
@@ -849,19 +833,19 @@ ul.navigation { padding-left: 0; }
         height: $base-line-height;
         @include rhythm-borders(1px, 0, $base-font-size, solid);
     }
+}
+
+.pagination_next, .pagination_previous {
+    height: $base-line-height;
+    overflow: auto;
     
-    .pagination_next, .pagination_previous {
-        background-color: #000;
-        height: $base-line-height;
-        overflow: auto;
-        
-        a { 
-            font-weight: bold;
-            border-bottom: 0;
-            padding: 0 10px;
-        }
+    a { 
+        font-weight: bold;
+        border-bottom: 0;
+        padding: 0 10px;
     }
 }
+
 
 nav.pagination { 
     overflow: visible; 
@@ -978,8 +962,9 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     clear: both;
 }
 
+/* @end */
 
-/* == Content == */
+/* @group ----- Content ----- */
 
 #simple-search {
     width: 100%;
@@ -1048,7 +1033,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     input[type=submit] {
         width: 30%;
         border: 0;
-        background-color: #000;
         color: #fff;
         position: absolute;
         top: 0;
@@ -1220,8 +1204,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .element-div { @include body-copy; }
 
+/* @end */
 
-/* == Footer == */
+/* @group ----- Footer ----- */
+
 footer {
     clear:both; 
     overflow:hidden; 
@@ -1237,8 +1223,11 @@ footer {
     ul {float:right; width:60%; margin:0 0 0 60px;text-align:right;}
     li {margin-left:12px;}
 }
+
+/* @end */
         
-/* == Exhibit Builder == */
+/* @group ----- Exhibit Builder ----- */
+
 .exhibit {
     border-top:1px solid #ccc; 
     @include padding-leader(1);
@@ -1337,3 +1326,47 @@ footer {
     line-height: $base-line-height;
     @include padding-leader();
 }
+
+/* @end */
+
+/* @group ----- Colors ----- */
+
+body {
+    color:#444;
+}
+
+header {
+    border-color: #000;
+}
+
+a { 
+    &:link { color:#888; }
+    
+    &:visited { color:#999; }
+    
+    &:hover { color:#777; }
+    
+    &:active { color:#777; }
+}
+
+.button, button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+.pagination_next, 
+.pagination_previous {
+  background-color: #000;
+  color: #fff;
+}
+
+.mobile {
+    li { 
+        background-color: #4d4d4d;
+
+        ul li { background-color: #333; }
+        
+        ul li ul li { background-color: #000; }
+    }
+}
+
+/* @end */

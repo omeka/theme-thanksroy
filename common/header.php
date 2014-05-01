@@ -29,13 +29,60 @@
 
     echo theme_header_background();
     ?>
+
+    <?php
+    ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#FFFFFF");
+    ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
+    ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
+    ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
+    ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");
+    ?>
     <style>
+        body {
+            background-color: <?php echo $backgroundColor; ?>;
+            color: <?php echo $textColor; ?>;
+        }
         #site-title a:link, #site-title a:visited,
         #site-title a:active, #site-title a:hover {
-            color: #<?php echo ($titleColor = get_theme_option('header_title_color')) ? $titleColor : "000000"; ?>;
+            color: <?php echo $titleColor; ?>;
             <?php if (get_theme_option('header_background')): ?>
             text-shadow: 0px 0px 20px #000;
             <?php endif; ?>
+        }
+        a:link {
+            color: <?php echo $linkColor; ?>;
+        }
+        a:visited {
+            color: <?php echo thanksroy_brighten($linkColor, 40); ?>;
+        }
+        a:hover, a:active {
+            color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
+        }
+        
+        .button, button,
+        input[type="reset"],
+        input[type="submit"],
+        input[type="button"],
+        .pagination_next, 
+        .pagination_previous {
+          background-color: <?php echo $buttonColor; ?>;
+          color: #fff;
+        }
+        
+        #search-form input[type="text"] {
+            border-color: <?php echo $buttonColor; ?>
+        }
+        
+        .mobile li { 
+            background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
+        }
+        
+        .mobile li ul li {
+            background-color: <?php echo thanksroy_brighten($buttonColor, 20); ?>;
+        }
+        
+        .mobile li li li {
+            background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
         }
     </style>
     <!-- JavaScripts -->
@@ -55,7 +102,7 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
         </header>
             
-        <div class="menu-button">Menu</div>
+        <div class="menu-button button">Menu</div>
             
         <div id="wrap">
             <nav id="primary-nav">

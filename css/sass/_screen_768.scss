@@ -29,7 +29,8 @@
 header { 
     background-size: cover !important; 
     -ms-behavior: url('../javascripts/backgroundsize.min.htc');
-    border-bottom: 20px solid #000; 
+    border-width: 0 0 20px 0;
+    border-style: solid;
 }
 
 .menu-button { display: none; }
