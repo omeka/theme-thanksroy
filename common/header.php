@@ -35,6 +35,7 @@
     ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
     ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
     ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
+    ($buttonTextColor = get_theme_option('button_text_color')) || ($buttonTextColor = "#FFFFFF");
     ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");
     ?>
     <style>
@@ -63,10 +64,10 @@
         input[type="reset"],
         input[type="submit"],
         input[type="button"],
-        .pagination_next, 
-        .pagination_previous {
+        .pagination_next a, 
+        .pagination_previous a {
           background-color: <?php echo $buttonColor; ?>;
-          color: #fff;
+          color: <?php echo $buttonTextColor; ?> !important;
         }
         
         #search-form input[type="text"] {
