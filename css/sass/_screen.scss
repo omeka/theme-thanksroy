@@ -104,6 +104,16 @@ blockquote {
 
 .active { font-weight: bold; }
 
+.item img {
+    width:100px; 
+    height:100px; 
+    float:left; 
+    display:block; 
+    margin: 0 $gutter-width 0 0;
+    padding:6px; 
+    border:1px solid #ccc;
+}
+
 /* @end */
 
 /* @group ----- Formalize Styles -----  */
@@ -1135,13 +1145,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     #secondary div { margin-bottom: 40px; overflow: hidden; }
 }
 
-#recent-items img {
-    max-width: 25%;
-    height: auto;
-    float: left;
-    margin: 0 rhythm() rhythm() 0;
-}
-
 .collections .element { margin-bottom: 20px; }
 
 #collection-items {
@@ -1165,16 +1168,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         @include padding-trailer(1);
         
         &:last-of-type { border-bottom: 0; }
-    }
-
-    .item-img img {
-        width:100px; 
-        height:100px; 
-        float:left; 
-        display:block; 
-        margin: 0 $gutter-width 0 0;
-        padding:6px; 
-        border:1px solid #ccc;
     }
 }
 
