@@ -1499,6 +1499,12 @@ table {
     clear: both;
   }
 
+  #featured-collection .collection {
+    border-top-style: solid;
+    border-top-width: 0em;
+    padding-top: 0em;
+  }
+
   .items-list li {
     border-bottom: 1px solid #ccc;
     margin-bottom: 1.33333em;
@@ -1532,8 +1538,10 @@ table {
 
   .collection {
     clear: both;
-    border-top: 1px solid #ccc;
-    padding-top: 1.33333em;
+    border-color: #ccc;
+    border-top-style: solid;
+    border-top-width: 0.0625em;
+    padding-top: 1.4375em;
   }
 
   .collection .element {

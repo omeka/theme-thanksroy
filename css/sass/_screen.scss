@@ -1187,6 +1187,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     h3 { clear: both; }
 }
 
+#featured-collection .collection {
+    @include leading-border(0px, 0, $base-font-size, solid);
+}
+
 .items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
 
 #itemfiles {
@@ -1216,8 +1220,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .collection {
     clear: both;
-    border-top:1px solid #ccc;
-    padding-top:1.33333em;
+    border-color: #ccc;
+    @include leading-border(1px, 1, $base-font-size, solid);
 }
 
 .collection .element {margin-bottom:0;}
