@@ -1135,7 +1135,6 @@ table {
     height: 24px;
   }
   .pagination_next a, .pagination_previous a {
-    font-weight: bold;
     border-bottom: 0;
     padding: 0 10px;
     text-indent: -9999px;
@@ -1147,17 +1146,17 @@ table {
     top: 0;
     left: 0;
     text-indent: 0;
-    font-size: 9px;
     text-align: center;
     width: 100%;
+    line-height: 21px;
   }
 
   .pagination_next a:before {
-    content: "\25B6";
+    content: "\bb";
   }
 
   .pagination_previous a:before {
-    content: "\25C0";
+    content: "\ab";
   }
 
   nav.pagination {
