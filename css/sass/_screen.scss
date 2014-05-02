@@ -821,7 +821,7 @@ ul.navigation { padding-left: 0; }
         list-style-type: none;
         line-height: $base-line-height;
         height: $base-line-height;
-        display: inline-block;
+        display: block;
         float: left;
         margin: $base-line-height/2 10px $base-line-height/2 0;
     }
@@ -837,15 +837,34 @@ ul.navigation { padding-left: 0; }
 
 .pagination_next, .pagination_previous {
     height: $base-line-height;
-    overflow: auto;
     
     a { 
         font-weight: bold;
         border-bottom: 0;
         padding: 0 10px;
+        text-indent: -9999px;
+        position: relative;
+        display: block;
+        
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-indent: 0;
+            font-size: 9px;
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 
+.pagination_next a:before {
+    content: "\25B6";
+}
+
+.pagination_previous a:before {
+    content: "\25C0";
+}
 
 nav.pagination { 
     overflow: visible; 
@@ -1004,7 +1023,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 #advanced-search:after {
-    content: "+";
+    content: "\2026";
     display: block;
     text-indent: 0;
     text-align: center;
@@ -1105,14 +1124,23 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
     
 
+#outputs {
+    clear: both;
+}
+
 /* = Page-specific == */
 
 #home {
     #primary div { margin-bottom: 40px; overflow: hidden; }
     
     #secondary div { margin-bottom: 40px; overflow: hidden; }
-    
-    #recent-items ul { padding: 0; }
+}
+
+#recent-items img {
+    max-width: 25%;
+    height: auto;
+    float: left;
+    margin: 0 rhythm() rhythm() 0;
 }
 
 .collections .element { margin-bottom: 20px; }
@@ -1353,8 +1381,8 @@ a {
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
-.pagination_next, 
-.pagination_previous {
+.pagination_next a, 
+.pagination_previous a {
   background-color: #000;
   color: #fff;
 }

@@ -1117,7 +1117,7 @@ table {
     list-style-type: none;
     line-height: 24px;
     height: 24px;
-    display: inline-block;
+    display: block;
     float: left;
     margin: 12px 10px 12px 0;
   }
@@ -1133,12 +1133,31 @@ table {
 
   .pagination_next, .pagination_previous {
     height: 24px;
-    overflow: auto;
   }
   .pagination_next a, .pagination_previous a {
     font-weight: bold;
     border-bottom: 0;
     padding: 0 10px;
+    text-indent: -9999px;
+    position: relative;
+    display: block;
+  }
+  .pagination_next a:before, .pagination_previous a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+    font-size: 9px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pagination_next a:before {
+    content: "\25B6";
+  }
+
+  .pagination_previous a:before {
+    content: "\25C0";
   }
 
   nav.pagination {
@@ -1296,7 +1315,7 @@ table {
   }
 
   #advanced-search:after {
-    content: "+";
+    content: "\2026";
     display: block;
     text-indent: 0;
     text-align: center;
@@ -1402,6 +1421,10 @@ table {
     margin-bottom: 1.5em;
   }
 
+  #outputs {
+    clear: both;
+  }
+
   /* = Page-specific == */
   #home #primary div {
     margin-bottom: 40px;
@@ -1411,8 +1434,12 @@ table {
     margin-bottom: 40px;
     overflow: hidden;
   }
-  #home #recent-items ul {
-    padding: 0;
+
+  #recent-items img {
+    max-width: 25%;
+    height: auto;
+    float: left;
+    margin: 0 1.5em 1.5em 0;
   }
 
   .collections .element {
@@ -1665,8 +1692,8 @@ table {
   input[type="reset"],
   input[type="submit"],
   input[type="button"],
-  .pagination_next,
-  .pagination_previous {
+  .pagination_next a,
+  .pagination_previous a {
     background-color: #000;
     color: #fff;
   }
