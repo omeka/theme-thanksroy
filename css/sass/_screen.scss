@@ -8,33 +8,36 @@ body {
 
 h1, h2, h3, h4, h5, h6 { 
     @include leader(0); 
-    @include trailer(); 
 }
 
 h1 {
     font-size: 2 * $base-font-size;
     line-height: 2 * $base-line-height;
-    @include trailer(.25);
+    @include trailer(1, 2 * $base-line-height);
 }
 
 h2 {
     font-size:1.5 * $base-font-size; 
     line-height: 1.5 * $base-line-height;
+    @include trailer(1, 1.5 * $base-line-height);
 }
 
 h3 {
     font-size: 1.25 * $base-font-size; 
     line-height: 1.25 * $base-line-height;
+    @include trailer(1, 1.25 * $base-line-height);
 }
 
 h4 { 
     font-size: 1.125 * $base-font-size;
     line-height: 1.125 * $base-line-height; 
+    @include trailer(1, 1.125 * $base-line-height);
 }
 
 h5, h6 {
     font-size: $base-font-size;
     line-height: $base-line-height;
+    @include trailer();
 }
 
 h6 {
@@ -990,9 +993,41 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     clear: both;
 }
 
+.desc a:after, .asc a:after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    margin: 0 0 3px 3px;
+}
+
+.desc a:after {
+    border-left: .25em solid transparent;
+    border-right: .25em solid transparent;
+    border-top: .5em solid;
+}
+
+.asc a:after {
+    border-left: .25em solid transparent;
+    border-right: .25em solid transparent;
+    border-bottom: .5em solid;
+}
+
 /* @end */
 
 /* @group ----- Content ----- */
+
+#featured-item,
+#featured-collection,
+#featured-exhibit {
+    background-color: rgba(0,0,0,.03);
+    padding: rhythm(.5) gutter() rhythm();
+    @include trailer();
+    
+    *:last-child  {
+        margin-bottom: 0;
+    }
+}
 
 #simple-search {
     width: 100%;
@@ -1138,12 +1173,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 /* = Page-specific == */
-
-#home {
-    #primary div { margin-bottom: 40px; overflow: hidden; }
-    
-    #secondary div { margin-bottom: 40px; overflow: hidden; }
-}
 
 .collections .element { margin-bottom: 20px; }
 

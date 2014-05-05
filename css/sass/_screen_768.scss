@@ -14,14 +14,13 @@
 }
 
 #home #primary { 
-    @include span-columns(7 alpha,16); 
-    @include prefix(1); 
+    @include span-columns(6 alpha,12); 
+    padding: 0 0 0 gutter();
 }
 
-#home .secondary { 
-    @include span-columns(7 omega,16); 
-    @include prefix(0);
-    @include suffix(1);
+#home #secondary { 
+    @include span-columns(6 omega,12); 
+    padding: 0 gutter();
 }
 
 /* == Header == */

@@ -12,7 +12,7 @@ $legacy-support-for-ie8: true;
 
 $base-font-size: 16px;
 $base-line-height: 24px;
-$relative-font-sizing: false;
+$relative-font-sizing: true;
 
 $total-columns  : 9;
 $column-width   : 5em;
@@ -24,7 +24,7 @@ $break          : 48em 16;
 
 @mixin body-copy {
     line-height: $base-line-height;
-    @include trailer();
+    @include trailer(1, $base-font-size);
 }
 
 @mixin boxsizing($bs) {
