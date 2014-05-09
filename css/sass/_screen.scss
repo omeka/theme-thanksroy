@@ -448,6 +448,7 @@ fieldset {
     clear:both; 
     border: 0;
     margin: 0;
+    padding: 0;
 }
 
 #advanced-search-form {
@@ -1050,16 +1051,21 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
       width: 100%;
       clear: both;
     }
+    
+    &.with-advanced button {
+        right: 30px;
+    }
 }
 
 #advanced-search {
-    width: 10%;
+    width: 30px;
     text-indent: -9999px;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 90%;
+    right: 0;
     font-weight: bold;
+    border-left: 1px solid rgba(255,255,255,.3);
     @include boxsizing(border-box);
 
     
@@ -1086,29 +1092,47 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     
     h2 { display:none; }
     
-    input[type=text], input[type=submit] { 
+    input[type=text], button { 
         height: 30px;
         font-size: $base-font-size;
         line-height: $base-line-height;
         @include has-layout-zoom();
     }
     
-    input[type=submit] {
-        width: 30%;
+    button {
+        width: 30px;
         border: 0;
         color: #fff;
         position: absolute;
         top: 0;
-        left: 60%;
+        right: 0;
         padding: 3px 5px;
         @include border-radius(0);
+        text-indent: -9999px;
+        
+        &:after {
+            font-family: "FontAwesome";
+            content: "\f002";
+            text-indent: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
     }
     
     input[type=text] { 
-        width: 70%;
+        width: 100%;
         border: 1px solid #000;
-        padding: 5px 10px;
+        padding: 5px 40px 5px 10px;
     }
+}
+
+#search-form.with-advanced input[type=text] {
+    padding: 5px 70px 5px 10px;
 }
 
 #advanced-form {
@@ -1122,13 +1146,14 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     left: 0;
     border: 1px solid #e7e7e7;
     width: 100%;
-    padding: rhythm(1) $gutter-width;
+    padding: 0 $gutter-width;
     @include boxsizing(border-box);
 }
 
-#submit_search { margin: -1px 0 0 5px; }
-
-#submit_search_advanced {margin-top:5px;margin-bottom:5px;}
+#submit_search_advanced {
+    margin-top:5px;
+    margin-bottom:5px;
+}
 
 #search-filters, #item-filters {
 

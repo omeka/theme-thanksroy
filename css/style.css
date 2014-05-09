@@ -747,6 +747,7 @@ table {
     clear: both;
     border: 0;
     margin: 0;
+    padding: 0;
   }
 
   #advanced-search-form label, #advanced-search-form .label {
@@ -1341,15 +1342,19 @@ table {
     width: 100%;
     clear: both;
   }
+  #search-form.with-advanced button {
+    right: 30px;
+  }
 
   #advanced-search {
-    width: 10%;
+    width: 30px;
     text-indent: -9999px;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 90%;
+    right: 0;
     font-weight: bold;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1379,30 +1384,47 @@ table {
   #search-wrap h2 {
     display: none;
   }
-  #search-wrap input[type=text], #search-wrap input[type=submit] {
+  #search-wrap input[type=text], #search-wrap button {
     height: 30px;
     font-size: 16px;
     line-height: 24px;
     *zoom: 1;
   }
-  #search-wrap input[type=submit] {
-    width: 30%;
+  #search-wrap button {
+    width: 30px;
     border: 0;
     color: #fff;
     position: absolute;
     top: 0;
-    left: 60%;
+    right: 0;
     padding: 3px 5px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
+    text-indent: -9999px;
+  }
+  #search-wrap button:after {
+    font-family: "FontAwesome";
+    content: "\f002";
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
   }
   #search-wrap input[type=text] {
-    width: 70%;
+    width: 100%;
     border: 1px solid #000;
-    padding: 5px 10px;
+    padding: 5px 40px 5px 10px;
+  }
+
+  #search-form.with-advanced input[type=text] {
+    padding: 5px 70px 5px 10px;
   }
 
   #advanced-form {
@@ -1416,15 +1438,11 @@ table {
     left: 0;
     border: 1px solid #e7e7e7;
     width: 100%;
-    padding: 1.5em 1em;
+    padding: 0 1em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     *behavior: url("../javascripts/boxsizing.htc");
-  }
-
-  #submit_search {
-    margin: -1px 0 0 5px;
   }
 
   #submit_search_advanced {
