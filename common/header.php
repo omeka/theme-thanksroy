@@ -109,8 +109,11 @@
             <nav id="primary-nav">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-wrap">
-                    <h2>Search</h2>
+                    <?php if (get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
+                    <?php else: ?>
+                    <?Php echo search_form(); ?>
+                    <?php endif; ?>
                 </div>
             </nav>
             <div id="content">

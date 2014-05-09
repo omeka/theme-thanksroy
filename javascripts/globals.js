@@ -36,7 +36,7 @@ if (!Omeka) {
         var advancedForm = $('#advanced-form');
         var searchTextbox = $('#search-form input[type=text]');
         var searchSubmit = $('#search-form button');
-        if (advancedForm) {
+        if (advancedForm.length > 0) {
             advancedForm.css("display", "none");
             $('#search-form').addClass("with-advanced");
             advancedForm.before('<a href="#" id="advanced-search" class="button">Advanced Search</a>');
