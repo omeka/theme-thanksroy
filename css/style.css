@@ -484,6 +484,25 @@ table {
     margin: 0 1em 0 0;
     padding: 6px;
     border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  .collection.record-image {
+    float: left;
+    display: block;
+    margin: 0 1.5em 1.5em 6px;
+    height: 100px;
+    border-bottom: 0;
+    overflow: visible;
+    -webkit-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+  }
+  .collection.record-image img {
+    height: 100%;
+    width: auto;
+    padding: 6px;
+    border: 1px solid #ccc;
   }
 
   /* @end */
@@ -1544,7 +1563,7 @@ table {
     clear: both;
   }
 
-  #featured-collection .collection {
+  #featured-collection .collection:not(.record-image) {
     border-top-style: solid;
     border-top-width: 0em;
     padding-top: 0em;
@@ -1581,7 +1600,7 @@ table {
     border: 1px solid #ccc;
   }
 
-  .collection {
+  .collection:not(.record-image) {
     clear: both;
     border-color: #ccc;
     border-top-style: solid;
