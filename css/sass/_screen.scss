@@ -1284,7 +1284,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         @include boxsizing(border-box);
         
         img {
-            min-width: 100%;
             border: 1px solid #ccc;
         }
     }

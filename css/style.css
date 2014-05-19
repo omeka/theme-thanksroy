@@ -1596,7 +1596,6 @@ table {
     *behavior: url("../javascripts/boxsizing.htc");
   }
   #itemfiles a img {
-    min-width: 100%;
     border: 1px solid #ccc;
   }
 
