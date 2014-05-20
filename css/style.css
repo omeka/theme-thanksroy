@@ -420,7 +420,6 @@ table {
   a {
     border-bottom: 1px dotted;
     text-decoration: none;
-    overflow: auto;
   }
   a img {
     margin-bottom: -2px;
