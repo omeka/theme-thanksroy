@@ -1636,6 +1636,33 @@ table {
   }
 
   /* @end */
+  /* @group ----- Search Results ----- */
+  #search-filters {
+    margin-bottom: 1.5em;
+  }
+
+  #search-filters ul {
+    margin: 0;
+  }
+
+  #search-filters li li {
+    text-transform: lowercase;
+  }
+  #search-filters li li:after {
+    margin: 0 .1em 0 0;
+  }
+
+  #search-results td,
+  #search-results th {
+    vertical-align: top;
+    padding: 0.75em;
+  }
+
+  #search-results .image {
+    margin: 0 0.75em 0 0;
+  }
+
+  /* @end */
   /* @group ----- Exhibit Builder ----- */
   .exhibit {
     border-color: #ccc;

@@ -1318,6 +1318,36 @@ footer {
 }
 
 /* @end */
+
+/* @group ----- Search Results ----- */
+
+#search-filters {
+    @include trailer();
+}
+
+#search-filters ul {
+    margin: 0;
+}
+
+#search-filters li li {
+    text-transform: lowercase;
+    
+    &:after {
+        margin: 0 .1em 0 0;
+    }
+}
+
+#search-results td,
+#search-results th {
+    vertical-align: top;
+    padding: rhythm(.5);
+}
+
+#search-results .image {
+    margin: 0 rhythm(.5) 0 0;
+}
+
+/* @end */
         
 /* @group ----- Exhibit Builder ----- */
 
