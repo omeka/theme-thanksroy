@@ -106,32 +106,29 @@ blockquote {
 
 .active { font-weight: bold; }
 
-.item img {
-    width:100px; 
-    height:100px; 
-    float:left; 
-    display:block; 
-    margin: 0 $gutter-width 0 0;
-    padding:6px; 
-    border:1px solid #ccc;
-    background-color: #fff;
-}
-
-.collection.record-image {
+.item-img,
+.image {
     float: left;
     display: block;
-    margin: 0 rhythm() rhythm() 6px;
+    margin: 0 rhythm() rhythm() 0;
     height: 100px;
     border-bottom: 0;
     overflow: visible;
+}
+
+.item img,
+.image img {
+    height: 100%;
+    width: auto;
+    border-color: #ccc;
+    @include rhythm-borders(1px, .25, $base-font-size, solid);
+    background-color: #fff;
+}
+
+.collection .image,
+.exhibit .image {
     @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
-    
-    img {
-        height: 100%;
-        width: auto;
-        padding: 6px;
-        border: 1px solid #ccc;
-    }
+    margin-left: 6px;
 }
 
 /* @end */
@@ -1039,12 +1036,17 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 #featured-collection,
 #featured-exhibit {
     background-color: rgba(0,0,0,.03);
-    padding: rhythm(.5) gutter() rhythm();
+    padding: 0 gutter();
     @include trailer();
+    overflow: auto;
     
-    *:last-child  {
-        margin-bottom: 0;
+    h2 {
+        @include leader(1, 1.5 * $base-line-height);
     }
+}
+
+#recent-items .item {
+    clear: both;
 }
 
 #simple-search {
@@ -1252,13 +1254,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #item-content img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
 
-#featured-item {
-    img { padding:8px; border:1px solid #ccc; margin-right:20px; margin-bottom:20px;float:left;}
-    
-    h3 { clear: both; }
-}
+#featured-item h3 { clear: both; }
 
-#featured-collection .collection:not(.record-image) {
+#featured-collection .collection,
+#featured-exhibit .exhibit {
     @include leading-border(0px, 0, $base-font-size, solid);
 }
 
@@ -1288,7 +1287,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.collection:not(.record-image) {
+.collection {
     clear: both;
     border-color: #ccc;
     @include leading-border(1px, 1, $base-font-size, solid);
@@ -1323,9 +1322,8 @@ footer {
 /* @group ----- Exhibit Builder ----- */
 
 .exhibit {
-    border-top:1px solid #ccc; 
-    @include padding-leader(1);
-    
+    border-color: #ccc;
+    @include leading-border(1px, 1, $base-font-size, solid);
 }
 
 .exhibits .pagination + .exhibit { 
