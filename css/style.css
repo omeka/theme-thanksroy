@@ -504,6 +504,14 @@ table {
     margin-left: 6px;
   }
 
+  .record {
+    clear: both;
+  }
+
+  .secondary-nav + .record {
+    margin-top: -1px;
+  }
+
   /* @end */
   /* @group ----- Formalize Styles -----  */
   /* == http://formalize.me == */
@@ -768,12 +776,16 @@ table {
     padding: 0;
   }
 
-  #advanced-search-form label, #advanced-search-form .label {
-    clear: left;
-    font-weight: normal;
-    margin: 40px 0 10px 0;
-    display: inline-block;
+  .search-entry {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.75em 2%;
+    margin-bottom: 1.5em;
+    overflow: auto;
   }
+  .search-entry *:last-child {
+    margin-bottom: 0;
+  }
+
   #advanced-search-form .inputs {
     clear: both;
   }
@@ -816,7 +828,7 @@ table {
     margin-bottom: 0;
   }
   #advanced-search-form .field .remove_search {
-    margin-bottom: 1.5em;
+    margin: 0 0 1.5em 0;
   }
   ul.items-list, ul.collections-list, ul.title-list {
     list-style: none;
@@ -1862,9 +1874,8 @@ table {
   }
   #advanced-search-form button {
     clear: both;
-    float: right;
     width: auto;
-    margin: 0;
+    margin-left: 31%;
   }
   #advanced-search-form .field {
     border-bottom: 1px solid #ccc;
@@ -1878,10 +1889,10 @@ table {
     width: 69%;
   }
   #advanced-search-form .field input, #advanced-search-form .field input[type=text], #advanced-search-form .field select {
-    width: 97%;
+    width: 100%;
     float: right;
   }
-  #advanced-search-form .field label {
+  #advanced-search-form .field label, #advanced-search-form .field .label {
     width: 29%;
     float: left;
     margin: 0;

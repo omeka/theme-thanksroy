@@ -131,6 +131,14 @@ blockquote {
     margin-left: 6px;
 }
 
+.record {
+    clear: both;
+}
+
+.secondary-nav + .record {
+    margin-top: -1px;
+}
+
 /* @end */
 
 /* @group ----- Formalize Styles -----  */
@@ -465,14 +473,18 @@ fieldset {
     padding: 0;
 }
 
-#advanced-search-form {
-    label, .label {
-        clear:left; 
-        font-weight:normal;
-        margin: 40px 0 10px 0;
-        display: inline-block;
-    }
+.search-entry {
+    background-color: rgba(0,0,0,.05);
+    padding: rhythm(.5) 2%;
+    @include trailer();
+    overflow: auto;
     
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#advanced-search-form {
     .inputs {
         clear: both;
     }
@@ -513,7 +525,9 @@ fieldset {
         
         div :only-child { margin-bottom: 0; }
         
-        .remove_search { @include trailer(); }
+        .remove_search { 
+            margin: 0 0 rhythm() 0;
+        }
     }
     
     @include at-breakpoint($break) {
@@ -521,9 +535,8 @@ fieldset {
             
             button { 
                 clear: both;
-                float: right;
                 width: auto;
-                margin: 0;
+                margin-left: 31%;
             }
 
             .field {
@@ -539,12 +552,12 @@ fieldset {
                 }
         
                 input, input[type=text], select { 
-                    width: 97%; 
+                    width: 100%; 
                     float: right;
                 }
                 
         
-                label {
+                label, .label {
                     width: 29%;
                     float: left;
                     margin: 0;
