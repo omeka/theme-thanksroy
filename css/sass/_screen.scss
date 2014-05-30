@@ -478,10 +478,6 @@ fieldset {
     padding: rhythm(.5) 2%;
     @include trailer();
     overflow: auto;
-    
-    *:last-child {
-        margin-bottom: 0;
-    }
 }
 
 #advanced-search-form {
@@ -505,6 +501,14 @@ fieldset {
         @include leader();
         @include trailer();
     }
+    
+    .search-entry input[type=text] {
+        margin-bottom: 0;
+    }
+
+    #search-narrow-by-fields .inputs {
+        @include trailer();
+    }
         
     .field {
         border-bottom:1px solid #ccc;
@@ -523,10 +527,10 @@ fieldset {
                 
         div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
         
-        div :only-child { margin-bottom: 0; }
+        div:only-child { margin-bottom: 0; }
         
         .remove_search { 
-            margin: 0 0 rhythm() 0;
+            margin: rhythm() 0 0;
         }
     }
     
@@ -1022,23 +1026,16 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .desc a:after, .asc a:after {
-    content: "";
+    font-family: "FontAwesome";
     display: inline-block;
-    height: 0;
-    width: 0;
-    margin: 0 0 3px 3px;
 }
 
 .desc a:after {
-    border-left: .25em solid transparent;
-    border-right: .25em solid transparent;
-    border-top: .5em solid;
+    content: "\00a0\f0d8";
 }
 
 .asc a:after {
-    border-left: .25em solid transparent;
-    border-right: .25em solid transparent;
-    border-bottom: .5em solid;
+    content: "\00a0\f0d7";
 }
 
 /* @end */
