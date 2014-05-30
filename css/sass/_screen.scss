@@ -480,6 +480,25 @@ fieldset {
     overflow: auto;
 }
 
+.remove_search {
+    text-indent: -9999px;
+    width: 1.25 * $base-line-height;
+    position: relative;
+    height: 1.25 * $base-line-height;
+    
+    &:after {
+        content: "\f00d";
+        font-family: "FontAwesome";
+        text-indent: 0;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        line-height: 1.25 * $base-line-height;
+    }
+}
+
 #advanced-search-form {
     .inputs {
         clear: both;
@@ -490,6 +509,13 @@ fieldset {
         display: block;
         @include trailer();
     }
+
+    .search-entry select,
+    .search-entry input[type="text"] {
+        width: 100%;
+        display: block;
+    }
+
     
     input[type=submit], button {
         clear: both;
@@ -533,48 +559,6 @@ fieldset {
             margin: rhythm() 0 0;
         }
     }
-    
-    @include at-breakpoint($break) {
-            margin-bottom: 40px;
-            
-            button { 
-                clear: both;
-                width: auto;
-                margin-left: 31%;
-            }
-
-            .field {
-                border-bottom:1px solid #ccc;
-                width:100%;
-                overflow: auto;
-                padding: rhythm(1) 0;
-
-                .inputs { 
-                    clear: none;
-                    float: right;
-                    width: 69%; 
-                }
-        
-                input, input[type=text], select { 
-                    width: 100%; 
-                    float: right;
-                }
-                
-        
-                label, .label {
-                    width: 29%;
-                    float: left;
-                    margin: 0;
-                }
-                        
-                div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
-                
-                div :only-child { margin-bottom: 0; }
-                
-            }
-                .submit { float: right; }
-}
-
 }
 
 ul.items-list, ul.collections-list, ul.title-list {

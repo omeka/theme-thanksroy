@@ -783,6 +783,24 @@ table {
     overflow: auto;
   }
 
+  .remove_search {
+    text-indent: -9999px;
+    width: 30px;
+    position: relative;
+    height: 30px;
+  }
+  .remove_search:after {
+    content: "\f00d";
+    font-family: "FontAwesome";
+    text-indent: 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    line-height: 30px;
+  }
+
   #advanced-search-form .inputs {
     clear: both;
   }
@@ -790,6 +808,11 @@ table {
     width: 100%;
     display: block;
     margin-bottom: 1.5em;
+  }
+  #advanced-search-form .search-entry select,
+  #advanced-search-form .search-entry input[type="text"] {
+    width: 100%;
+    display: block;
   }
   #advanced-search-form input[type=submit], #advanced-search-form button {
     clear: both;
@@ -833,6 +856,7 @@ table {
   #advanced-search-form .field .remove_search {
     margin: 1.5em 0 0;
   }
+
   ul.items-list, ul.collections-list, ul.title-list {
     list-style: none;
     margin-left: 0;
@@ -1865,47 +1889,6 @@ table {
   }
 }
 @media screen and (min-width: 48em) {
-  #advanced-search-form {
-    margin-bottom: 40px;
-  }
-  #advanced-search-form button {
-    clear: both;
-    width: auto;
-    margin-left: 31%;
-  }
-  #advanced-search-form .field {
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    overflow: auto;
-    padding: 1.5em 0;
-  }
-  #advanced-search-form .field .inputs {
-    clear: none;
-    float: right;
-    width: 69%;
-  }
-  #advanced-search-form .field input, #advanced-search-form .field input[type=text], #advanced-search-form .field select {
-    width: 100%;
-    float: right;
-  }
-  #advanced-search-form .field label, #advanced-search-form .field .label {
-    width: 29%;
-    float: left;
-    margin: 0;
-  }
-  #advanced-search-form .field div.field:last-of-type {
-    display: inline-block;
-    margin-bottom: 1em;
-  }
-  #advanced-search-form .field div :only-child {
-    margin-bottom: 0;
-  }
-  #advanced-search-form .submit {
-    float: right;
-  }
-}
-
-@media screen and (min-width: 48em) {
   #wrap {
     max-width: 95em;
   }
@@ -2075,5 +2058,57 @@ table {
   #sort-links span, #sort-links li {
     padding: 0.375em 0 0.375em 20px;
     margin-right: 0;
+  }
+
+  /* = Advanced Search Form = */
+  #advanced-search-form {
+    margin-bottom: 40px;
+  }
+  #advanced-search-form button {
+    clear: both;
+    width: auto;
+    margin-left: 31%;
+  }
+  #advanced-search-form .field {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    overflow: auto;
+    padding: 1.5em 0;
+  }
+  #advanced-search-form .field .inputs {
+    clear: none;
+    float: right;
+    width: 69%;
+  }
+  #advanced-search-form .field input, #advanced-search-form .field input[type=text], #advanced-search-form .field select {
+    width: 100%;
+    float: right;
+  }
+  #advanced-search-form .field .search-entry input[type=text],
+  #advanced-search-form .field .search-entry select {
+    width: 28%;
+    display: inline-block;
+    float: left;
+    margin: 0 3px 0 0;
+  }
+  #advanced-search-form .field .remove_search {
+    margin-top: 0;
+    float: right;
+    clear: none;
+  }
+  #advanced-search-form .field label, #advanced-search-form .field .label {
+    width: 29%;
+    float: left;
+    margin: 0;
+  }
+  #advanced-search-form .field div.field:last-of-type {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  #advanced-search-form .field div :only-child {
+    margin-bottom: 0;
+  }
+  #advanced-search-form .submit {
+    float: right;
   }
 }

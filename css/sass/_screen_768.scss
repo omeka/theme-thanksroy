@@ -136,3 +136,61 @@ nav.pagination {
         margin-right: 0;
     }
 }
+
+/* = Advanced Search Form = */
+
+#advanced-search-form {
+    margin-bottom: 40px;
+    
+    button { 
+        clear: both;
+        width: auto;
+        margin-left: 31%;
+    }
+
+    .field {
+        border-bottom:1px solid #ccc;
+        width:100%;
+        overflow: auto;
+        padding: rhythm(1) 0;
+
+        .inputs { 
+            clear: none;
+            float: right;
+            width: 69%; 
+        }
+
+        input, input[type=text], select { 
+            width: 100%; 
+            float: right;
+        }
+        
+        .search-entry input[type=text],
+        .search-entry select {
+            width: 28%;
+            display: inline-block;
+            float: left;
+            margin: 0 3px 0 0;
+        }
+        
+        .remove_search {
+            margin-top: 0;
+            float: right;
+            clear: none;
+        }
+        
+
+        label, .label {
+            width: 29%;
+            float: left;
+            margin: 0;
+        }
+                
+        div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
+        
+        div :only-child { margin-bottom: 0; }
+        
+    }
+    
+    .submit { float: right; }
+}
