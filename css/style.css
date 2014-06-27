@@ -1624,6 +1624,7 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     *behavior: url("../javascripts/boxsizing.htc");
+    height: 7.5em;
   }
   #itemfiles a img {
     border: 1px solid #ccc;

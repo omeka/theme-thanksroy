@@ -1274,6 +1274,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         border-bottom: 0;
         @include trailer();
         @include boxsizing(border-box);
+        height: rhythm(5);
         
         img {
             border: 1px solid #ccc;
