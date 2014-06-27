@@ -1348,6 +1348,7 @@ footer {
 .exhibit {
     border-color: #ccc;
     @include leading-border(1px, 1, $base-font-size, solid);
+    overflow: hidden;
 }
 
 .exhibits .pagination + .exhibit { 

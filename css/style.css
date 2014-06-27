@@ -1701,6 +1701,7 @@ table {
     border-top-style: solid;
     border-top-width: 0.0625em;
     padding-top: 1.4375em;
+    overflow: hidden;
   }
 
   .exhibits .pagination + .exhibit {
