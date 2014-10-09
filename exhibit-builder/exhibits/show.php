@@ -15,6 +15,8 @@ echo head(array(
     </ul>
 </nav>
 
+<?php set_current_record('Exhibit Page', get_record_by_id('Exhibit Page', $currentPageId)); ?>
+
 <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
 
 <div id="primary">
