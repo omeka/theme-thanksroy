@@ -1724,7 +1724,7 @@ table {
     padding-right: 0.6875em;
     border-color: #ccc;
     width: 100%;
-    margin: 0 0 1.5em 1.88679%;
+    margin: 0 0 1.5em;
   }
   #exhibit-pages h4, #exhibit-pages > ul:first-child > li:first-of-type {
     margin-left: -0.66667em;
@@ -1780,7 +1780,7 @@ table {
   }
 
   .show .exhibit-block:first-child {
-    clear: left;
+    clear: none;
   }
 
   .show .exhibit-child-nav li {
@@ -2119,6 +2119,15 @@ table {
   }
 
   /* = Exhibit Builder = */
+  .exhibits.show #primary,
+  .exhibits.summary #primary,
+  #exhibit-page-navigation {
+    width: 74.64789%;
+    float: left;
+    margin-right: 1.40845%;
+    display: inline;
+  }
+
   #exhibit-pages {
     width: 23.94366%;
     float: right;

@@ -1367,7 +1367,7 @@ footer {
     @include apply-side-rhythm-border(right, 1px, .5, $base-font-size, solid);
     border-color: #ccc;
     width: 100%;
-    margin: 0 0 rhythm() gutter();
+    margin: 0 0 rhythm();
     
     h4,
     & > ul:first-child > li:first-of-type {
@@ -1427,7 +1427,7 @@ footer {
 }
 
 .show .exhibit-block:first-child {
-    clear: left;
+    clear: none;
 }
 
 .show .exhibit-child-nav li { 
