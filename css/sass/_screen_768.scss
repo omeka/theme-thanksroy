@@ -194,3 +194,9 @@ nav.pagination {
     
     .submit { float: right; }
 }
+
+/* = Exhibit Builder = */
+
+#exhibit-pages {
+    @include span-columns (3 omega, 12);
+}

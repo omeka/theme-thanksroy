@@ -1357,76 +1357,77 @@ footer {
     clear: both;
 }
 
-.summary #exhibit-pages ul {
-    font-size: 1.25 * $base-font-size;
-    line-height: 1.25 * $base-line-height;
-    list-style-type: square;
-    padding-left: .25em;
+.summary #exhibit-pages {
+    @include padding-leader(0);
 }
 
-.show #exhibit-pages {
+#exhibit-pages {
+    float: right;
+    @include apply-side-rhythm-border(left, 1px, .5, $base-font-size, solid);
+    @include apply-side-rhythm-border(right, 1px, .5, $base-font-size, solid);
+    border-color: #ccc;
+    width: 100%;
+    margin: 0 0 rhythm() gutter();
     
-    a { border-bottom: 0; }
+    h4,
+    & > ul:first-child > li:first-of-type {
+        @include bleed(rhythm(.5, 1.125 * $base-font-size));
+        @include leading-border(1px, .5, $base-font-size, solid);
+    }
+    
+    h4,
+    & > ul > li {
+        @include trailing-border(1px, .5, $base-font-size, solid);
+        border-color: #ccc;
+        margin-bottom: 0;
+        position: relative;
+    }
+    
+    & > ul > li {
+        @include bleed(rhythm(.5));
+        @include padding-leader(.25);
+    }
+    
+    & > ul > li.parent:before,
+    & > ul > li.current:before {
+        content: "";
+        height: 100%;
+        width: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ccc;
+    }
 
-    ul { 
+    ul {
+        list-style-type: none;
         margin: 0;
     }
-
-    li { 
-        display: inline-block; 
-        margin-right: 10px;
-        border: 0;
+    
+    ul ul {
+        margin-left: 1.5em;
     }
     
-    li ul {
-        border-bottom: 1px solid #ccc;
+    .current {
+        font-weight: bold;
+        
+        & > *:not(a) {
+            font-weight: normal;
+        }
     }
     
-    .current { font-weight: bold; }
-
-    & > ul { 
-        border-bottom: 0;
-        margin: 0 0 rhythm(1) 0;
-
-        a {
-            padding: rhythm(.25) 10px;
-        }
-        
-        li { margin-bottom: -2px;}
-                
-        & > li:first-of-type { 
-            @include at-breakpoint($break) { float: left; }
-            margin-top: 0;
-            
-            a:after { content: ":" }
-        }
-        
-        & > li:nth-child(2) {            
-            display: block;
-
-            .current a { 
-                border: 1px solid #ccc; 
-                border-bottom: 3px solid #fff;
-                background: #fff;
-            }
-        }
-        
-        & > li:nth-child(3) {
-            display: block;
-            clear: both; 
-            margin-top: -3px;
-            @include padding-leader(.25);
-            @include padding-trailer(.25);
-            
-            ul { padding-top: 3px; }
-        }
-        
-        & > li:nth-child(4) {
-            display: block;
-            @include padding-leader(.25);
-            @include padding-trailer(.25);
-        }
+    & > ul > li:not(.parent) ul {
+        display: none;
     }
+
+    & > ul > li.current ul {
+        display: block;
+    }
+    
+}
+
+.show .exhibit-block:first-child {
+    clear: left;
 }
 
 .show .exhibit-child-nav li { 

@@ -1710,68 +1710,77 @@ table {
     clear: both;
   }
 
-  .summary #exhibit-pages ul {
-    font-size: 20px;
-    line-height: 30px;
-    list-style-type: square;
-    padding-left: .25em;
+  .summary #exhibit-pages {
+    padding-top: 0em;
   }
 
-  .show #exhibit-pages a {
-    border-bottom: 0;
+  #exhibit-pages {
+    float: right;
+    border-left-style: solid;
+    border-left-width: 0.0625em;
+    padding-left: 0.6875em;
+    border-right-style: solid;
+    border-right-width: 0.0625em;
+    padding-right: 0.6875em;
+    border-color: #ccc;
+    width: 100%;
+    margin: 0 0 1.5em 1.88679%;
   }
-  .show #exhibit-pages ul {
+  #exhibit-pages h4, #exhibit-pages > ul:first-child > li:first-of-type {
+    margin-left: -0.66667em;
+    padding-left: 0.66667em;
+    margin-right: -0.66667em;
+    padding-right: 0.66667em;
+    border-top-style: solid;
+    border-top-width: 0.0625em;
+    padding-top: 0.6875em;
+  }
+  #exhibit-pages h4, #exhibit-pages > ul > li {
+    border-bottom-style: solid;
+    border-bottom-width: 0.0625em;
+    padding-bottom: 0.6875em;
+    border-color: #ccc;
+    margin-bottom: 0;
+    position: relative;
+  }
+  #exhibit-pages > ul > li {
+    margin-left: -0.75em;
+    padding-left: 0.75em;
+    margin-right: -0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.375em;
+  }
+  #exhibit-pages > ul > li.parent:before, #exhibit-pages > ul > li.current:before {
+    content: "";
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+  }
+  #exhibit-pages ul {
+    list-style-type: none;
     margin: 0;
   }
-  .show #exhibit-pages li {
-    display: inline-block;
-    margin-right: 10px;
-    border: 0;
+  #exhibit-pages ul ul {
+    margin-left: 1.5em;
   }
-  .show #exhibit-pages li ul {
-    border-bottom: 1px solid #ccc;
-  }
-  .show #exhibit-pages .current {
+  #exhibit-pages .current {
     font-weight: bold;
   }
-  .show #exhibit-pages > ul {
-    border-bottom: 0;
-    margin: 0 0 1.5em 0;
+  #exhibit-pages .current > *:not(a) {
+    font-weight: normal;
   }
-  .show #exhibit-pages > ul a {
-    padding: 0.375em 10px;
+  #exhibit-pages > ul > li:not(.parent) ul {
+    display: none;
   }
-  .show #exhibit-pages > ul li {
-    margin-bottom: -2px;
-  }
-  .show #exhibit-pages > ul > li:first-of-type {
-    margin-top: 0;
-  }
-  .show #exhibit-pages > ul > li:first-of-type a:after {
-    content: ":";
-  }
-  .show #exhibit-pages > ul > li:nth-child(2) {
+  #exhibit-pages > ul > li.current ul {
     display: block;
   }
-  .show #exhibit-pages > ul > li:nth-child(2) .current a {
-    border: 1px solid #ccc;
-    border-bottom: 3px solid #fff;
-    background: #fff;
-  }
-  .show #exhibit-pages > ul > li:nth-child(3) {
-    display: block;
-    clear: both;
-    margin-top: -3px;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
-  }
-  .show #exhibit-pages > ul > li:nth-child(3) ul {
-    padding-top: 3px;
-  }
-  .show #exhibit-pages > ul > li:nth-child(4) {
-    display: block;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
+
+  .show .exhibit-block:first-child {
+    clear: left;
   }
 
   .show .exhibit-child-nav li {
@@ -1910,11 +1919,6 @@ table {
 @media screen and (min-width: 48em) {
   footer p {
     width: 30%;
-  }
-}
-@media screen and (min-width: 48em) {
-  .show #exhibit-pages > ul > li:first-of-type {
-    float: left;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2112,5 +2116,14 @@ table {
   }
   #advanced-search-form .submit {
     float: right;
+  }
+
+  /* = Exhibit Builder = */
+  #exhibit-pages {
+    width: 23.94366%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
   }
 }
