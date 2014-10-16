@@ -490,16 +490,16 @@ table {
     height: 100%;
     width: auto;
     border-color: #ccc;
-    border-style: solid;
     border-width: 0.0625em;
+    border-style: solid;
     padding: 0.3125em;
     background-color: #fff;
   }
 
   .collection .image,
   .exhibit .image {
-    -webkit-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
     box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
     margin-left: 6px;
   }
@@ -586,8 +586,35 @@ table {
   }
 
   /* iPad */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 2px;
+  }
+}
+@media screen {
   /* iPhone 3 */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+@media screen {
   /* iPhone 4 */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+@media screen {
   .button, button,
   input[type="reset"],
   input[type="submit"],
@@ -753,6 +780,42 @@ table {
   }
 
   /* Tweaks for Safari + Chrome. */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    padding: 0;
+  }
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #000));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: #fff;
+    font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    padding: 15px 15px 17px;
+    text-shadow: #000 0 0 1px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666;
+    border: 0;
+  }
+}
+@media screen {
   textarea {
     min-height: 40px;
     overflow: auto;
@@ -817,10 +880,8 @@ table {
   #advanced-search-form input[type=submit], #advanced-search-form button {
     clear: both;
     width: auto;
-    -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius: 0;
     border-radius: 0;
   }
   #advanced-search-form .submit {
@@ -977,6 +1038,24 @@ table {
     display: table;
     clear: both;
   }
+}
+@media screen and (min-width: 48em) {
+  #wrap {
+    *zoom: 1;
+    max-width: 95em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #wrap:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media screen {
   /* @end */
   /* @group ----- Header ----- */
   header {
@@ -1104,6 +1183,13 @@ table {
     list-style-type: none;
     width: 100%;
   }
+}
+@media screen and (min-width: 48em) {
+  #primary-nav ul.navigation > li, .mobile > li {
+    padding: 0;
+  }
+}
+@media screen {
   #primary-nav ul.navigation > li a, .mobile > li a {
     border-bottom: 1px solid #ccc;
     display: block;
@@ -1197,8 +1283,8 @@ table {
     margin-right: 5px;
     vertical-align: top;
     height: 24px;
-    border-style: solid;
     border-width: 0.0625em;
+    border-style: solid;
     padding: -0.0625em;
   }
 
@@ -1381,6 +1467,14 @@ table {
     display: inline-block;
     margin: 0 10px 10px 0;
   }
+}
+@media screen and (min-width: 48em) {
+  #simple-search {
+    display: block;
+  }
+}
+
+@media screen {
   #search-form {
     position: relative;
     -webkit-box-sizing: border-box;
@@ -1453,10 +1547,8 @@ table {
     top: 0;
     right: 0;
     padding: 3px 5px;
-    -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius: 0;
     border-radius: 0;
     text-indent: -9999px;
   }
@@ -1594,8 +1686,8 @@ table {
 
   #featured-collection .collection,
   #featured-exhibit .exhibit {
-    border-top-style: solid;
     border-top-width: 0em;
+    border-top-style: solid;
     padding-top: 0em;
   }
 
@@ -1633,8 +1725,8 @@ table {
   .collection {
     clear: both;
     border-color: #ccc;
-    border-top-style: solid;
     border-top-width: 0.0625em;
+    border-top-style: solid;
     padding-top: 1.4375em;
   }
 
@@ -1658,6 +1750,13 @@ table {
   footer p {
     float: left;
   }
+}
+@media screen and (min-width: 48em) {
+  footer p {
+    width: 30%;
+  }
+}
+@media screen {
   footer ul {
     float: right;
     width: 60%;
@@ -1699,8 +1798,8 @@ table {
   /* @group ----- Exhibit Builder ----- */
   .exhibit {
     border-color: #ccc;
-    border-top-style: solid;
     border-top-width: 0.0625em;
+    border-top-style: solid;
     padding-top: 1.4375em;
     overflow: hidden;
   }
@@ -1716,11 +1815,11 @@ table {
 
   #exhibit-pages {
     float: right;
-    border-left-style: solid;
     border-left-width: 0.0625em;
+    border-left-style: solid;
     padding-left: 0.6875em;
-    border-right-style: solid;
     border-right-width: 0.0625em;
+    border-right-style: solid;
     padding-right: 0.6875em;
     border-color: #ccc;
     width: 100%;
@@ -1731,13 +1830,13 @@ table {
     padding-left: 0.66667em;
     margin-right: -0.66667em;
     padding-right: 0.66667em;
-    border-top-style: solid;
     border-top-width: 0.0625em;
+    border-top-style: solid;
     padding-top: 0.6875em;
   }
   #exhibit-pages h4, #exhibit-pages > ul > li {
-    border-bottom-style: solid;
     border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
     padding-bottom: 0.6875em;
     border-color: #ccc;
     margin-bottom: 0;
@@ -1843,83 +1942,12 @@ table {
   }
 
   /* @end */
-}
-@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 2px;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select {
-    background-image: url(../images/select_arrow.gif);
-    background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 20px;
+  /* @group ----- Other Plugins ----- */
+  #recaptcha_area input {
+    height: intrinsic;
   }
 
-  select[size],
-  select[multiple] {
-    background-image: none;
-    padding: 0;
-  }
-
-  ::-webkit-validation-bubble-message {
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
-    border: 1px solid;
-    border-color: #747474 #5e5e5e #4f4f4f;
-    color: #fff;
-    font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
-    padding: 15px 15px 17px;
-    text-shadow: #000 0 0 1px;
-  }
-
-  ::-webkit-validation-bubble-arrow,
-  ::-webkit-validation-bubble-top-outer-arrow,
-  ::-webkit-validation-bubble-top-inner-arrow {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: #666;
-    border: 0;
-  }
-}
-@media screen and (min-width: 48em) {
-  #wrap {
-    max-width: 95em;
-  }
-}
-
-@media screen and (min-width: 48em) {
-  #primary-nav ul.navigation > li, .mobile > li {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 48em) {
-  #simple-search {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 48em) {
-  footer p {
-    width: 30%;
-  }
+  /* @end */
 }
 @media screen and (min-width: 768px) {
   /* == Grid == */
