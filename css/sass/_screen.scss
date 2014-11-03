@@ -119,7 +119,6 @@ blockquote {
 .item img,
 .image img {
     height: 100%;
-    width: auto;
     border-color: #ccc;
     @include rhythm-borders(1px, .25, $base-font-size, solid);
     background-color: #fff;

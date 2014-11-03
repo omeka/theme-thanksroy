@@ -488,7 +488,6 @@ table {
   .item img,
   .image img {
     height: 100%;
-    width: auto;
     border-color: #ccc;
     border-width: 0.0625em;
     border-style: solid;
