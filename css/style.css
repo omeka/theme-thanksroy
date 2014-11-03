@@ -1945,7 +1945,6 @@ table {
   /* @group ----- Other Plugins ----- */
   #recaptcha_area input {
     height: auto;
-    display: inline-block !important;
   }
 
   /* @end */
