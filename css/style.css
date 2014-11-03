@@ -1944,7 +1944,8 @@ table {
   /* @end */
   /* @group ----- Other Plugins ----- */
   #recaptcha_area input {
-    height: intrinsic;
+    height: auto;
+    display: inline-block !important;
   }
 
   /* @end */
