@@ -1361,7 +1361,6 @@ footer {
 }
 
 #exhibit-pages {
-    float: right;
     @include apply-side-rhythm-border(left, 1px, .5, $base-font-size, solid);
     @include apply-side-rhythm-border(right, 1px, .5, $base-font-size, solid);
     border-color: #ccc;

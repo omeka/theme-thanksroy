@@ -197,12 +197,23 @@ nav.pagination {
 
 /* = Exhibit Builder = */
 
-.exhibits.show #primary,
+#content nav + .exhibit {
+    clear: both;
+}
+
+#exhibit-blocks,
 .exhibits.summary #primary,
 #exhibit-page-navigation {
     @include span-columns(9 alpha, 12);
+    float: left;
+}
+
+#exhibit-page-navigation {
+    clear: none;
 }
 
 #exhibit-pages {
-    @include span-columns (3 omega, 12);
+    @include span-columns(3 omega, 12);
+    display: inline-block;
+    float: none;
 }
