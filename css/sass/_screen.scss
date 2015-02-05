@@ -1444,6 +1444,20 @@ footer {
     @include padding-leader();
 }
 
+.exhibit-block {
+    overflow: hidden;
+}
+
+.exhibit-block > *:last-child {
+    margin-bottom: 0;
+}
+
+.exhibit-block > *:first-child,
+.gallery + p,
+.exhibit-items + p {
+    margin-top: 0;
+}
+
 /* @end */
 
 /* @group ----- Colors ----- */
