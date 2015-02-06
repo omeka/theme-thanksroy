@@ -22,6 +22,7 @@
         Omeka.showAdvancedForm();
         Omeka.moveNavOnResize();
         Omeka.mobileMenu();
+        Omeka.skipnav();
     });
     </script>
 

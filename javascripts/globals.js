@@ -3,31 +3,31 @@ if (!Omeka) {
 }
 
 (function($,sr){
- 
+
   // debouncing function from John Hann
   // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
   var debounce = function (func, threshold, execAsap) {
       var timeout;
- 
+
       return function debounced () {
           var obj = this, args = arguments;
           function delayed () {
               if (!execAsap)
                   func.apply(obj, args);
-              timeout = null; 
+              timeout = null;
           };
- 
+
           if (timeout)
               clearTimeout(timeout);
           else if (execAsap)
               func.apply(obj, args);
- 
-          timeout = setTimeout(delayed, threshold || 100); 
+
+          timeout = setTimeout(delayed, threshold || 100);
       };
   }
-	// smartresize 
+	// smartresize
 	jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
- 
+
 })(jQuery,'smartresize');
 
 (function ($) {
@@ -57,7 +57,7 @@ if (!Omeka) {
             });
         }
     };
-    
+
     Omeka.moveNavOnResize = function() {
         var primaryNavUl;
         var moveNav = function () {
@@ -72,23 +72,36 @@ if (!Omeka) {
             }
         }
         moveNav();
-        
+
         $(window).smartresize(function() {
             moveNav();
         });
     };
-    
+
     Omeka.mobileMenu = function() {
         $('.navigation li a').each( function() {
             if ($(this).next().length > 0) {
                 $(this).parent().addClass('parent');
             }
         });
-        
+
         $('.menu-button').click( function(e) {
             e.preventDefault();
             $('.mobile').toggle();
         });
     };
-    
+
+    Omeka.skipnav = function() {
+      $("a[href^='#']").click(function() {
+      // get the href attribute of the internal link
+      // then strip the first character off it (#)
+      // leaving the corresponding id attribute
+      $("#"+$(this).attr("href").slice(1)+"")
+        // give that id focus (for browsers that didn't already do so)
+        .focus()
+        // add a highlight effect to that id (comment out if not using)
+        //.effect("highlight", {}, 3000);
+      });
+    };
+
 })(jQuery);
