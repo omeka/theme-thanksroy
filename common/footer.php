@@ -3,7 +3,7 @@
     </div><!-- end wrap -->
 
 
-    <footer>
+    <footer role="contentinfo">
 
         <div id="footer-text">
             <?php echo get_theme_option('Footer Text'); ?>

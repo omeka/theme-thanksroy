@@ -99,7 +99,7 @@
     <a href="#content" id="skipnav">Skip to main content</a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-        <header>
+        <header role="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
         </header>
@@ -107,9 +107,9 @@
         <div class="menu-button button">Menu</div>
 
         <div id="wrap">
-            <nav id="primary-nav">
+            <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap">
+                <div id="search-wrap" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>
@@ -117,5 +117,5 @@
                     <?php endif; ?>
                 </div>
             </nav>
-            <div id="content" tabindex="-1">
+            <div id="content" role="main" tabindex="-1">
                 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
