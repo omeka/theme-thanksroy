@@ -511,6 +511,11 @@ table {
     margin-top: -1px;
   }
 
+  .columns.alpha,
+  .field label {
+    font-weight: bold;
+  }
+
   /* @end */
   /* @group ----- Formalize Styles -----  */
   /* == http://formalize.me == */
@@ -898,6 +903,7 @@ table {
     width: 100%;
     overflow: auto;
     padding: 1.5em 0;
+    margin-bottom: 0em;
   }
   #advanced-search-form .field .inputs {
     width: 100%;
@@ -1962,7 +1968,7 @@ table {
   /* @end */
 }
 @media screen and (min-width: 768px) {
-  /* == Grid == */
+  /* @group ----- Grid ----- */
   #content {
     width: 74.73684%;
     float: right;
@@ -2000,7 +2006,8 @@ table {
     padding: 0 1.88679%;
   }
 
-  /* == Header == */
+  /* @end */
+  /* @group ----- Header ----- */
   header {
     background-size: cover !important;
     -ms-behavior: url("../javascripts/backgroundsize.min.htc");
@@ -2106,7 +2113,57 @@ table {
     margin-right: 0;
   }
 
-  /* = Advanced Search Form = */
+  /* @end */
+  /* @group ----- Forms ----- */
+  .field {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    overflow: auto;
+    padding: 1.5em 0;
+  }
+  .field .inputs,
+  .field .columns.omega {
+    clear: none;
+    float: right;
+    width: 69%;
+  }
+  .field input, .field input[type=text], .field select {
+    width: 100%;
+    float: right;
+  }
+  .field .search-entry input[type=text],
+  .field .search-entry select {
+    width: 28%;
+    display: inline-block;
+    float: left;
+    margin: 0 3px 0 0;
+  }
+  .field .remove_search {
+    margin-top: 0;
+    float: right;
+    clear: none;
+  }
+  .field label,
+  .field .label,
+  .field .columns.alpha {
+    width: 29%;
+    float: left;
+    margin: 0;
+  }
+  .field .columns.alpha label,
+  .field .columns.alpha .label {
+    width: 100%;
+  }
+  .field div.field:last-of-type {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  .field div :only-child {
+    margin-bottom: 0;
+  }
+
+  /* @end */
+  /* @group ----- Advanced Search Form ----- */
   #advanced-search-form {
     margin-bottom: 40px;
   }
@@ -2115,50 +2172,12 @@ table {
     width: auto;
     margin-left: 31%;
   }
-  #advanced-search-form .field {
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    overflow: auto;
-    padding: 1.5em 0;
-  }
-  #advanced-search-form .field .inputs {
-    clear: none;
-    float: right;
-    width: 69%;
-  }
-  #advanced-search-form .field input, #advanced-search-form .field input[type=text], #advanced-search-form .field select {
-    width: 100%;
-    float: right;
-  }
-  #advanced-search-form .field .search-entry input[type=text],
-  #advanced-search-form .field .search-entry select {
-    width: 28%;
-    display: inline-block;
-    float: left;
-    margin: 0 3px 0 0;
-  }
-  #advanced-search-form .field .remove_search {
-    margin-top: 0;
-    float: right;
-    clear: none;
-  }
-  #advanced-search-form .field label, #advanced-search-form .field .label {
-    width: 29%;
-    float: left;
-    margin: 0;
-  }
-  #advanced-search-form .field div.field:last-of-type {
-    display: inline-block;
-    margin-bottom: 1em;
-  }
-  #advanced-search-form .field div :only-child {
-    margin-bottom: 0;
-  }
   #advanced-search-form .submit {
     float: right;
   }
 
-  /* = Exhibit Builder = */
+  /* @end */
+  /* @group ----- Exhibit Builder ----- */
   #content nav + .exhibit {
     clear: both;
   }
@@ -2186,4 +2205,6 @@ table {
     display: inline-block;
     float: none;
   }
+
+  /* @end */
 }

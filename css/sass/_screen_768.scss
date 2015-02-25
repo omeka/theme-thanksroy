@@ -1,4 +1,4 @@
-/* == Grid == */
+/* @group ----- Grid ----- */
 
 #content { 
     @include span-columns(12 omega, 16); 
@@ -23,7 +23,9 @@
     padding: 0 gutter();
 }
 
-/* == Header == */
+/* @end */
+
+/* @group ----- Header ----- */
 
 header { 
     background-size: cover !important; 
@@ -137,7 +139,64 @@ nav.pagination {
     }
 }
 
-/* = Advanced Search Form = */
+/* @end */
+
+/* @group ----- Forms ----- */
+    
+.field {
+    border-bottom:1px solid #ccc;
+    width:100%;
+    overflow: auto;
+    padding: rhythm(1) 0;
+
+    .inputs,
+    .columns.omega { 
+        clear: none;
+        float: right;
+        width: 69%; 
+    }
+
+    input, input[type=text], select { 
+        width: 100%; 
+        float: right;
+    }
+    
+    .search-entry input[type=text],
+    .search-entry select {
+        width: 28%;
+        display: inline-block;
+        float: left;
+        margin: 0 3px 0 0;
+    }
+    
+    .remove_search {
+        margin-top: 0;
+        float: right;
+        clear: none;
+    }
+    
+    label, 
+    .label,
+    .columns.alpha {
+        width: 29%;
+        float: left;
+        margin: 0;
+    }
+    
+    .columns.alpha label,
+    .columns.alpha .label {
+        width: 100%;
+    }
+
+    div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
+    
+    div :only-child { margin-bottom: 0; }
+    
+}
+    
+/* @end */
+
+/* @group ----- Advanced Search Form ----- */
 
 #advanced-search-form {
     margin-bottom: 40px;
@@ -147,55 +206,13 @@ nav.pagination {
         width: auto;
         margin-left: 31%;
     }
-
-    .field {
-        border-bottom:1px solid #ccc;
-        width:100%;
-        overflow: auto;
-        padding: rhythm(1) 0;
-
-        .inputs { 
-            clear: none;
-            float: right;
-            width: 69%; 
-        }
-
-        input, input[type=text], select { 
-            width: 100%; 
-            float: right;
-        }
-        
-        .search-entry input[type=text],
-        .search-entry select {
-            width: 28%;
-            display: inline-block;
-            float: left;
-            margin: 0 3px 0 0;
-        }
-        
-        .remove_search {
-            margin-top: 0;
-            float: right;
-            clear: none;
-        }
-        
-
-        label, .label {
-            width: 29%;
-            float: left;
-            margin: 0;
-        }
-                
-        div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
-        
-        div :only-child { margin-bottom: 0; }
-        
-    }
     
     .submit { float: right; }
 }
 
-/* = Exhibit Builder = */
+/* @end */
+
+/* @group ----- Exhibit Builder ----- */
 
 #content nav + .exhibit {
     clear: both;
@@ -217,3 +234,5 @@ nav.pagination {
     display: inline-block;
     float: none;
 }
+
+/* @end */

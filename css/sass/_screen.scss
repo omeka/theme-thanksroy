@@ -138,6 +138,12 @@ blockquote {
     margin-top: -1px;
 }
 
+.columns.alpha,
+.field label {
+    font-weight: bold;
+}
+
+
 /* @end */
 
 /* @group ----- Formalize Styles -----  */
@@ -540,6 +546,7 @@ fieldset {
         width:100%;
         overflow: auto;
         padding: rhythm(1) 0;
+        @include trailer(0);
 
         .inputs { 
             width: 100%;
