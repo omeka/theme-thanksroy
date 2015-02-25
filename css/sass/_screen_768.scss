@@ -142,6 +142,12 @@ nav.pagination {
 /* @end */
 
 /* @group ----- Forms ----- */
+
+div#contribution-type-form div.inputs {
+    clear: none;
+    float: right;
+    width: 69%; 
+}    
     
 .field {
     border-bottom:1px solid #ccc;
