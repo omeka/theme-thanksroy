@@ -59,56 +59,57 @@
         a:hover, a:active {
             color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
         }
-        
+
         .button, button,
         input[type="reset"],
         input[type="submit"],
         input[type="button"],
-        .pagination_next a, 
+        .pagination_next a,
         .pagination_previous a {
           background-color: <?php echo $buttonColor; ?>;
           color: <?php echo $buttonTextColor; ?> !important;
         }
-        
+
         #search-form input[type="text"] {
             border-color: <?php echo $buttonColor; ?>
         }
-        
-        .mobile li { 
+
+        .mobile li {
             background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
         }
-        
+
         .mobile li ul li {
             background-color: <?php echo thanksroy_brighten($buttonColor, 20); ?>;
         }
-        
+
         .mobile li li li {
             background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
         }
     </style>
     <!-- JavaScripts -->
-    <?php 
+    <?php
     queue_js_file('vendor/modernizr');
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
     queue_js_file('globals');
-    echo head_js(); 
+    echo head_js();
     ?>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-        <header>
+        <header role="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
         </header>
-            
+
         <div class="menu-button button">Menu</div>
-            
+
         <div id="wrap">
-            <nav id="primary-nav">
+            <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap">
+                <div id="search-wrap" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>
@@ -116,5 +117,5 @@
                     <?php endif; ?>
                 </div>
             </nav>
-            <div id="content">
+            <div id="content" role="main" tabindex="-1">
                 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
