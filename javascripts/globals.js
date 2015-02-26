@@ -91,4 +91,10 @@ if (!Omeka) {
         });
     };
     
+    Omeka.skipnav = function() {
+        $("#skipnav").click(function() {
+            $("#content").focus()
+        });
+    };
+    
 })(jQuery);
