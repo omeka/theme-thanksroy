@@ -23,6 +23,7 @@
         Omeka.moveNavOnResize();
         Omeka.mobileMenu();
         Omeka.skipnav();
+        Omeka.megaMenu();
     });
     </script>
 

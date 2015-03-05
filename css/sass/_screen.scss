@@ -758,7 +758,6 @@ ul.navigation { padding-left: 0; }
     ul {
         margin: 0;
         padding: 0;
-        display: none;
         border-top: 0;
 
         li {
@@ -771,8 +770,11 @@ ul.navigation { padding-left: 0; }
             ul li a { padding-left: 4em; }
         }
     }
+    .sub-nav {
+        display: none;
+    }
 
-    li:hover > ul {
+    li:hover > ul, .sub-nav.open {
         display: block;
         top: 0;
         left: 0;
@@ -797,6 +799,9 @@ ul.navigation { padding-left: 0; }
             &:before {
                 content: "\BB\20";
                 display: inline;
+            }
+            &:focus {
+              border: 1px dotted #ccc;
             }
         }
     }

@@ -56,7 +56,7 @@
         a:visited {
             color: <?php echo thanksroy_brighten($linkColor, 40); ?>;
         }
-        a:hover, a:active {
+        a:hover, a:active, a:focus {
             color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
         }
         
@@ -92,6 +92,7 @@
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
     queue_js_file('globals');
+    queue_js_file('jquery-accessibleMegaMenu');
     echo head_js(); 
     ?>
 </head>
