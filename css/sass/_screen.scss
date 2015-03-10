@@ -792,6 +792,19 @@ ul.navigation { padding-left: 0; }
             }
         }
     }
+
+    [aria-haspopup="true"]:after {
+        font-family: "FontAwesome";
+        content: "\f055";
+        font-size: 14px;
+        float: right;
+        @include transition-property(transform);
+        @include transition(.5s ease);
+    }
+
+    [aria-haspopup="true"].open:after {
+        @include transform(rotate(405deg));
+    }
 }
 
 .mobile {

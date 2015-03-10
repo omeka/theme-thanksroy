@@ -1245,6 +1245,26 @@ th {
   #primary-nav ul.navigation > li a:focus, .mobile > li a:focus {
     border: 1px dotted #ccc;
   }
+  #primary-nav ul.navigation [aria-haspopup="true"]:after, .mobile [aria-haspopup="true"]:after {
+    font-family: "FontAwesome";
+    content: "\f055";
+    font-size: 14px;
+    float: right;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -moz-transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+    -webkit-transition: ease 0.5s;
+    transition: ease 0.5s;
+  }
+  #primary-nav ul.navigation [aria-haspopup="true"].open:after, .mobile [aria-haspopup="true"].open:after {
+    -moz-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
 
   .mobile {
     border-top: 0;
