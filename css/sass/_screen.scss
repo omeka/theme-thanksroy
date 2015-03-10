@@ -700,19 +700,6 @@ header {
     }
 }
 
-#advanced-form {
-    @include trailer();
-    @include boxsizing(border-box);
-    
-    label {
-        line-height: $base-line-height;
-    }
-    
-    input[type="radio"] {
-        margin: 3px 10px 3px 0;
-    }
-}
-
 /* @end */
 
 /* @group ----- Navigation -----  */
@@ -1081,7 +1068,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     @include at-breakpoint($break) { display: block; }
 }
 
-#search-form {
+#search-container {
     position: relative;
     @include boxsizing(border-box);
     @include leader();
@@ -1095,12 +1082,12 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
       clear: both;
     }
     
-    &.with-advanced button {
+    &.with-advanced .button {
         right: 30px;
     }
 }
 
-#advanced-search {
+.show-advanced.button {
     width: 30px;
     text-indent: -9999px;
     display: inline-block;
@@ -1115,7 +1102,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     &:link, &:hover, &:active, &:visited { color: #fff; }
 }
 
-#advanced-search:after {
+.show-advanced.button:after {
     content: "\2026";
     display: block;
     text-indent: 0;
@@ -1123,7 +1110,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     margin-top: -1.75em;
 }
 
-#search-wrap {
+#search-container {
     position: relative;
 
     a {
@@ -1135,7 +1122,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     
     h2 { display:none; }
     
-    input[type=text], button { 
+    input[type=text], .button { 
         height: 30px;
         font-size: $base-font-size;
         line-height: $base-line-height;
@@ -1179,7 +1166,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 #advanced-form {
-    display: none;
     background-color: #fff;
     overflow: auto;
     clear: both;
@@ -1191,6 +1177,28 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     width: 100%;
     padding: 0 $gutter-width;
     @include boxsizing(border-box);
+    @include trailer();
+   
+    &.closed {
+        display: none;
+    }
+    
+    label {
+        line-height: $base-line-height;
+        vertical-align: top;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: 3px 10px 3px 0;
+    }
+    
+    legend {
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+        @include padding-leader();
+        margin-bottom: 0;
+    }
 }
 
 #submit_search_advanced {

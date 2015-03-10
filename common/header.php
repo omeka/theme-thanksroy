@@ -91,8 +91,9 @@
     queue_js_file('vendor/modernizr');
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
+    queue_js_file('vendor/jquery-accessibleMegaMenu');
     queue_js_file('globals');
-    queue_js_file('jquery-accessibleMegaMenu');
+    queue_js_file('default');
     echo head_js(); 
     ?>
 </head>
@@ -110,7 +111,7 @@
         <div id="wrap">
             <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
-                <div id="search-wrap" role="search">
+                <div id="search-container" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                     <?php echo search_form(array('show_advanced' => true)); ?>
                     <?php else: ?>

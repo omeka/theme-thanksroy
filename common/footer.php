@@ -20,10 +20,10 @@
     <script type="text/javascript">
     jQuery(document).ready(function () {
         Omeka.showAdvancedForm();
-        Omeka.moveNavOnResize();
-        Omeka.mobileMenu();
-        Omeka.skipnav();
+        Omeka.skipNav();
         Omeka.megaMenu();
+        ThanksRoy.moveNavOnResize();
+        ThanksRoy.mobileMenu();
     });
     </script>
 
