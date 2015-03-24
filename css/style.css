@@ -535,7 +535,7 @@ th {
     overflow: visible;
   }
 
-  .item img,
+  .item:not(body) img,
   .image img {
     height: 100%;
     border-color: #ccc;
