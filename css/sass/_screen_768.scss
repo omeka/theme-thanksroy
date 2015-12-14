@@ -1,25 +1,25 @@
 /* @group ----- Grid ----- */
 
-#content { 
-    @include span-columns(12 omega, 16); 
-    padding: 40px 0; 
+#content {
+    @include span-columns(12 omega, 16);
+    padding: 40px 0;
 }
 
-#primary-nav { 
-    @include span-columns(4 alpha,16); 
+#primary-nav {
+    @include span-columns(4 alpha,16);
 }
 
-#primary { 
+#primary {
     @include prefix(0);
 }
 
-#home #primary { 
-    @include span-columns(6 alpha,12); 
+#home #primary {
+    @include span-columns(6 alpha,12);
     padding: 0 0 0 gutter();
 }
 
-#home #secondary { 
-    @include span-columns(6 omega,12); 
+#home #secondary {
+    @include span-columns(6 omega,12);
     padding: 0 gutter();
 }
 
@@ -27,8 +27,8 @@
 
 /* @group ----- Header ----- */
 
-header { 
-    background-size: cover !important; 
+header {
+    background-size: cover !important;
     -ms-behavior: url('../javascripts/backgroundsize.min.htc');
     border-width: 0 0 20px 0;
     border-style: solid;
@@ -36,19 +36,19 @@ header {
 
 .menu-button { display: none; }
 
-#primary-nav { 
+#primary-nav {
     @include leader(1.75);
 
     .active ul {
         display: block;
     }
-  
-    ul { 
-        @include leader(0); 
+
+    ul {
+        @include leader(0);
         @include trailer(2);
     }
-    
-    a:hover {           
+
+    a:hover {
         font-weight: bold;
     }
 }
@@ -63,43 +63,43 @@ header {
 
 .secondary-nav, #secondary-nav {
     border-bottom:1px solid #ccc;
-    font-size:1.125em; 
-    
+    font-size:1.125em;
+
     a {
-        padding: 0.5em 1em 0.5em; 
+        padding: 0.5em 1em 0.5em;
         color: #666;
         border-bottom: 0;
     }
-    
+
     ul { margin: 0 0 -1px 0; }
-    
-    li { 
+
+    li {
         display: inline-block;
-        padding: 0; 
+        padding: 0;
         border: 1px solid #ccc;
     }
-    
+
     .active {
         border-bottom-color: #fff;
     }
-    
+
     .current a {
         background:#fff;
-        color:#333; 
+        color:#333;
         font-weight:bold;
         border: {
             color: #ccc;
             width: 1px;
             style: solid;
-            bottom: { color: #fff; }; 
+            bottom: { color: #fff; };
         }
     }
 }
 
 /* == Browse Items == */
 
-.pagination { 
-    width: 47%; 
+.pagination {
+    width: 47%;
     overflow: hidden;
     float: left;
     @include padding-trailer();
@@ -109,8 +109,8 @@ nav.pagination {
 	overflow: visible;
 }
 
-#content > nav.pagination:nth-of-type(2) { 
-	width: 47%; 
+#content > nav.pagination:nth-of-type(2) {
+	width: 47%;
 }
 
 .pagination_list {
@@ -118,19 +118,19 @@ nav.pagination {
     float: left;
 }
 
-.pagination_list a, li.pagination_current { 
+.pagination_list a, li.pagination_current {
     border: 1px solid #ccc;
-    display: inline-block; 
+    display: inline-block;
     padding: rhythm(.25) 10px;
     vertical-align: top;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 #sort-links  {
     clear: none;
     float: right;
-    ul { 
-        @include leader(.75); 
+    ul {
+        @include leader(.75);
         @include padding-leader(.5);
     }
     span, li {
@@ -146,9 +146,9 @@ nav.pagination {
 div#contribution-type-form div.inputs {
     clear: none;
     float: right;
-    width: 69%; 
-}    
-    
+    width: 69%;
+}
+
 .field {
     border-bottom:1px solid #ccc;
     width:100%;
@@ -156,64 +156,71 @@ div#contribution-type-form div.inputs {
     padding: rhythm(1) 0;
 
     .inputs,
-    .columns.omega { 
+    .columns.omega {
         clear: none;
         float: right;
-        width: 69%; 
+        width: 69%;
     }
 
-    input, input[type=text], select { 
-        width: 100%; 
+    input, input[type=text], select {
+        width: 100%;
         float: right;
     }
-    
-    .search-entry input[type=text],
-    .search-entry select {
-        width: 28%;
-        display: inline-block;
-        float: left;
-        margin: 0 3px 0 0;
-    }
-    
-    .remove_search {
-        margin-top: 0;
-        float: right;
-        clear: none;
-    }
-    
-    label, 
+
+    label,
     .label,
     .columns.alpha {
         width: 29%;
         float: left;
         margin: 0;
     }
-    
+
     .columns.alpha label,
     .columns.alpha .label {
         width: 100%;
     }
 
     div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
-    
+
     div :only-child { margin-bottom: 0; }
-    
 }
-    
+
 /* @end */
 
 /* @group ----- Advanced Search Form ----- */
 
 #advanced-search-form {
     margin-bottom: 40px;
-    
-    button { 
-        clear: both;
-        width: auto;
-        margin-left: 31%;
-    }
-    
+
     .submit { float: right; }
+}
+
+#advanced-search-form .search-entry input[type=text],
+#advanced-search-form .search-entry select {
+    width: calc((100% - #{rhythm(1.75)}) / 3);
+    display: inline-block;
+    margin: 0 3px 0 0;
+    float: none;
+}
+
+#advanced-search-form .field .remove_search {
+    text-indent: -9999px;
+    margin-top: 0;
+    width: rhythm(1.25);
+    float: right;
+    clear: none;
+
+    &:after {
+        content: "\f00d";
+        font-family: "FontAwesome";
+        text-indent: 0;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        line-height: 1.25 * $base-line-height;
+    }
 }
 
 /* @end */
