@@ -1515,7 +1515,8 @@ th {
     margin-top: 0.66667em;
   }
 
-  #recent-items .item {
+  #recent-items .item,
+  #recent-items .view-items-link {
     clear: both;
   }
 

@@ -1059,7 +1059,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-#recent-items .item {
+#recent-items .item,
+#recent-items .view-items-link {
     clear: both;
 }
 
