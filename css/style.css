@@ -1205,7 +1205,7 @@ th {
   #primary-nav ul.navigation .sub-nav, .mobile .sub-nav {
     display: none;
   }
-  #primary-nav ul.navigation li:hover > ul, #primary-nav ul.navigation .sub-nav.open, .mobile li:hover > ul, .mobile .sub-nav.open {
+  #primary-nav ul.navigation .open + ul, #primary-nav ul.navigation .sub-nav.open, .mobile .open + ul, .mobile .sub-nav.open {
     display: block;
     top: 0;
     left: 0;
@@ -1276,24 +1276,6 @@ th {
   }
   .mobile li a:before {
     content: "";
-  }
-  .mobile li.parent > a:after {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-image: url("../images/white_arrow.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-    display: inline-block;
-    float: right;
-  }
-  .mobile li:hover ul {
-    display: block;
-  }
-
-  .no-backgroundsize .mobile li.parent > a:after {
-    background-image: url("../images/white_arrow_ie.png");
   }
 
   .secondary-nav ul, #secondary-nav ul {

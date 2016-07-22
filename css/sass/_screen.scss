@@ -751,7 +751,7 @@ ul.navigation { padding-left: 0; }
         display: none;
     }
 
-    li:hover > ul, .sub-nav.open {
+    .open + ul, .sub-nav.open {
         display: block;
         top: 0;
         left: 0;
@@ -819,24 +819,8 @@ ul.navigation { padding-left: 0; }
                 content: "";
             }
         }
-
-        &.parent > a:after {
-            content: "";
-            width: 16px;
-            height: 16px;
-            background-image: url('../images/white_arrow.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: right center;
-            display: inline-block;
-            float: right;
-        }
-
-        &:hover ul { display: block; }
     }
 }
-
-.no-backgroundsize .mobile li.parent > a:after { background-image: url('../images/white_arrow_ie.png'); }
 
 .secondary-nav ul, #secondary-nav ul { margin: 0; }
 
