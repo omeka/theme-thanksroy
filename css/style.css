@@ -1502,6 +1502,14 @@ th {
     clear: both;
   }
 
+    /* Customization Recent items */
+   #recent-items .item.record a, 
+   #recent-items .item.record a:link {
+    font-size: 16px;
+    border-bottom-style: none;
+  }
+
+
   #simple-search {
     width: 100%;
     display: inline-block;
