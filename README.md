@@ -1,6 +1,7 @@
-# theme-thanksroy
-A tribute to Roy Rosenzweig.
+# Fork of Thanks Roy theme (Omeka)
 
-Fork:
+Used on [http://josticeetplet.huma-num.fr/](http://josticeetplet.huma-num.fr/)
+
+### Style.css
 - Added output formats for Item
 - Customization Recent Items 
