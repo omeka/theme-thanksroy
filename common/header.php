@@ -74,16 +74,18 @@
             border-color: <?php echo $buttonColor; ?>
         }
 
-        .mobile li {
-            background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
-        }
+        @media (max-width:768px) {
+            #primary-nav li {
+                background-color: <?php echo thanksroy_brighten($buttonColor, 40); ?>;
+            }
 
-        .mobile li ul li {
-            background-color: <?php echo thanksroy_brighten($buttonColor, 20); ?>;
-        }
+            #primary-nav li ul li {
+                background-color: <?php echo thanksroy_brighten($buttonColor, 20); ?>;
+            }
 
-        .mobile li li li {
-            background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
+            #primary-nav li li li {
+                background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
+            }
         }
     </style>
     <!-- JavaScripts -->
