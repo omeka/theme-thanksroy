@@ -710,6 +710,7 @@ ul.navigation { padding-left: 0; }
     padding: .75em 1em;
     display: block;
     text-transform: uppercase;
+    margin: 0 -1em;
 }
 
 .menu-button:after {
@@ -724,13 +725,11 @@ ul.navigation { padding-left: 0; }
 
 .no-backgroundsize .menu-button:after { background-image: url('../images/menu_ie.png'); }
 
-.mobile { display: none; }
-
-#primary-nav ul.navigation, .mobile {
+#primary-nav ul.navigation {
     border-top: 1px solid #ccc;
     position: relative;
-    @include leader(0);
-    @include trailer(0);
+    margin: 0 -1em;
+    display: none;
 
     ul {
         margin: 0;
@@ -747,11 +746,12 @@ ul.navigation { padding-left: 0; }
             ul li a { padding-left: 4em; }
         }
     }
-    .sub-nav {
+
+    ul.sub-nav {
         display: none;
     }
 
-    .open + ul, .sub-nav.open {
+    .open > ul, .sub-nav.open {
         display: block;
         top: 0;
         left: 0;
@@ -771,7 +771,7 @@ ul.navigation { padding-left: 0; }
         a {
             border-bottom: 1px solid #ccc;
             display:block;
-            padding: rhythm(.5) rhythm(.65);
+            padding: rhythm(.5) 1em;
 
             &:before {
                 content: "\BB\20";
@@ -783,6 +783,11 @@ ul.navigation { padding-left: 0; }
         }
     }
 
+    .parent {
+        position: relative;
+    }
+
+    .sub-nav-toggle:after,
     [aria-haspopup="true"]:after {
         font-family: "FontAwesome";
         content: "\f055";
@@ -792,32 +797,21 @@ ul.navigation { padding-left: 0; }
         @include transition(.5s ease);
     }
 
+    .open .sub-nav-toggle:after,
     [aria-haspopup="true"].open:after {
         @include transform(rotate(405deg));
     }
-}
 
-.mobile {
-    border-top: 0;
+    .sub-nav-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: rhythm(2);
+        width: rhythm(2);
 
-    ul {
-        margin-top: 0;
-        padding-top: 0;
-        display: block;
-    }
-
-    li {
-        padding-top: 0;
-
-        a {
-            border-bottom: 0;
-            display: inline-block;
-            vertical-align: top;
-            width: 100%;
-
-            &:before {
-                content: "";
-            }
+        &:after {
+            float: none;
+            text-align: center;
         }
     }
 }
@@ -1517,7 +1511,7 @@ input[type="button"],
   color: #fff;
 }
 
-.mobile {
+#primary-nav {
     li {
         background-color: #4d4d4d;
 

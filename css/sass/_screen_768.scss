@@ -39,6 +39,11 @@ header {
 #primary-nav {
     @include leader(1.75);
 
+    ul.navigation {
+        display: block;
+        margin: 0;
+    }
+
     .active ul {
         display: block;
     }
@@ -46,6 +51,14 @@ header {
     ul {
         @include leader(0);
         @include trailer(2);
+    }
+
+    li {
+        background-color: #fff;
+
+        ul li { background-color: #fff; }
+
+        ul li ul li { background-color: #fff; }
     }
 
     a:hover {
