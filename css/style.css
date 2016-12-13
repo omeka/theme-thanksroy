@@ -922,6 +922,9 @@ th {
     width: 100%;
     display: block;
   }
+  #advanced-search-form .search-entry:first-child .advanced-search-joiner {
+    display: none;
+  }
   #advanced-search-form input[type=submit], #advanced-search-form button {
     clear: both;
     width: auto;
@@ -2224,10 +2227,15 @@ th {
 
   #advanced-search-form .search-entry input[type=text],
   #advanced-search-form .search-entry select {
-    width: calc((100% - 2.625em) / 3);
+    width: calc((100% - 2.625em) / 4);
     display: inline-block;
     margin: 0 3px 0 0;
     float: none;
+  }
+
+  #advanced-search-form .search-entry:first-child input[type="text"],
+  #advanced-search-form .search-entry:first-child select {
+    width: calc((100% - 2.625em) / 3);
   }
 
   #advanced-search-form .field .remove_search {

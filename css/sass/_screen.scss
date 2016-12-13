@@ -530,6 +530,9 @@ fieldset {
         display: block;
     }
 
+    .search-entry:first-child .advanced-search-joiner {
+        display: none;
+    }
 
     input[type=submit], button {
         clear: both;

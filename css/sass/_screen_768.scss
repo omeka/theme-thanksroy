@@ -210,10 +210,15 @@ div#contribution-type-form div.inputs {
 
 #advanced-search-form .search-entry input[type=text],
 #advanced-search-form .search-entry select {
-    width: calc((100% - #{rhythm(1.75)}) / 3);
+    width: calc((100% - #{rhythm(1.75)}) / 4);
     display: inline-block;
     margin: 0 3px 0 0;
     float: none;
+}
+
+#advanced-search-form .search-entry:first-child input[type="text"],
+#advanced-search-form .search-entry:first-child select {
+    width: calc((100% - #{rhythm(1.75)}) / 3);
 }
 
 #advanced-search-form .field .remove_search {
