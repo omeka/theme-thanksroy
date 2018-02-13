@@ -1,12 +1,21 @@
 /* @group ----- Grid ----- */
 
+#wrap {
+    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
+    padding: 0 gutter();
+    margin: 0;
+}
+
+
 #content {
-    @include span-columns(12 omega, 16);
+    @include span(12 of 16);
+    margin-right: 0;
     padding: 40px 0;
 }
 
 #primary-nav {
-    @include span-columns(4 alpha,16);
+    @include span(4 of 16);
+    margin-left: 0;
 }
 
 #primary {
@@ -14,12 +23,14 @@
 }
 
 #home #primary {
-    @include span-columns(6 alpha,12);
+    @include span(6 of 12);
+    margin-left: 0;
     padding: 0 0 0 gutter();
 }
 
 #home #secondary {
-    @include span-columns(6 omega,12);
+    @include span(6 of 12);
+    margin-right: 0;
     padding: 0 gutter();
 }
 
@@ -34,10 +45,10 @@ header {
     border-style: solid;
 }
 
-.menu-button { display: none; }
+.button.menu-button { display: none; }
 
 #primary-nav {
-    @include leader(1.75);
+    margin-top: 1.75 * $spacing-unit;
 
     ul.navigation {
         display: block;
@@ -49,8 +60,8 @@ header {
     }
 
     ul {
-        @include leader(0);
-        @include trailer(2);
+        margin-top: 0;
+        margin-bottom: 2 * $spacing-unit;
     }
 
     li {
@@ -66,12 +77,16 @@ header {
     }
 }
 
+#search-container {
+    margin: $spacing-unit 0;
+}
+
 #search-form {
-    @include trailer();
+    margin-bottom: $spacing-unit;
 }
 
 #query {
-    @include trailer();
+    margin-bottom: $spacing-unit;
 }
 
 .secondary-nav, #secondary-nav {
@@ -115,7 +130,7 @@ header {
     width: 47%;
     overflow: hidden;
     float: left;
-    @include padding-trailer();
+    padding-bottom: $spacing-unit;
 }
 
 nav.pagination {
@@ -127,14 +142,14 @@ nav.pagination {
 }
 
 .pagination_list {
-    @include leader(.75);
+    margin-top: .75 * $spacing-unit;
     float: left;
 }
 
 .pagination_list a, li.pagination_current {
     border: 1px solid #ccc;
     display: inline-block;
-    padding: rhythm(.25) 10px;
+    padding: (.25 * $spacing-unit) 10px;
     vertical-align: top;
     margin-right: 10px;
 }
@@ -143,11 +158,11 @@ nav.pagination {
     clear: none;
     float: right;
     ul {
-        @include leader(.75);
-        @include padding-leader(.5);
+        margin-top: .75 * $spacing-unit;
+        padding-top: .5 * $spacing-unit;
     }
     span, li {
-        padding: rhythm(.25) 0 rhythm(.25) 20px;
+        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
         margin-right: 0;
     }
 }
@@ -166,7 +181,7 @@ div#contribution-type-form div.inputs {
     border-bottom:1px solid #ccc;
     width:100%;
     overflow: auto;
-    padding: rhythm(1) 0;
+    padding: (1 * $spacing-unit) 0;
 
     .inputs,
     .columns.omega {
@@ -210,7 +225,7 @@ div#contribution-type-form div.inputs {
 
 #advanced-search-form .search-entry input[type=text],
 #advanced-search-form .search-entry select {
-    width: calc((100% - #{rhythm(1.75)}) / 4);
+    width: calc((100% - #{(1.75 * $spacing-unit)}) / 4);
     display: inline-block;
     margin: 0 3px 0 0;
     float: none;
@@ -218,13 +233,13 @@ div#contribution-type-form div.inputs {
 
 #advanced-search-form .search-entry:first-child input[type="text"],
 #advanced-search-form .search-entry:first-child select {
-    width: calc((100% - #{rhythm(1.75)}) / 3);
+    width: calc((100% - #{(1.75 * $spacing-unit)}) / 3);
 }
 
 #advanced-search-form .field .remove_search {
     text-indent: -9999px;
     margin-top: 0;
-    width: rhythm(1.25);
+    width: (1.25 * $spacing-unit);
     float: right;
     clear: none;
 
@@ -252,7 +267,8 @@ div#contribution-type-form div.inputs {
 #exhibit-blocks,
 .exhibits.summary #primary,
 #exhibit-page-navigation {
-    @include span-columns(9 alpha, 12);
+    @include span(9 of 12);
+    margin-left: 0;
     float: left;
 }
 
@@ -261,7 +277,8 @@ div#contribution-type-form div.inputs {
 }
 
 #exhibit-pages {
-    @include span-columns(3 omega, 12);
+    @include span(3 of 12);
+    margin-right: 0;
     display: inline-block;
     float: none;
 }
