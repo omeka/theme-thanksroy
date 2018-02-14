@@ -1235,6 +1235,15 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 
     .item-description { line-height: 1.5em; }
+
+    a.view-items-link {
+        margin: $spacing-unit 0;
+        display: inline-block;
+        background-color: #000;
+        color: #fff;
+        padding: (.25 * $spacing-unit);
+        border-bottom: 0;
+    }
 }
 
 .browse {

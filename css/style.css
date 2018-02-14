@@ -1244,6 +1244,13 @@ th {
       border-bottom: 0; }
   #collection-items .item-description {
     line-height: 1.5em; }
+  #collection-items a.view-items-link {
+    margin: 24px 0;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 6px;
+    border-bottom: 0; }
   .browse .item {
     overflow: hidden;
     border-top: 1px solid #ccc;
