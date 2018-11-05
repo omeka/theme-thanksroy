@@ -1268,11 +1268,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #featured-item h3 { clear: both; }
 
-#featured-collection .collection,
-#featured-exhibit .exhibit {
-    border-top: 0;
-}
-
 .items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
 
 #itemfiles {
@@ -1300,7 +1295,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.collection {
+.browse .collection {
     clear: both;
     border-top: 1px solid #ccc;
     padding-top: $spacing-unit - 1px;
@@ -1364,7 +1359,7 @@ footer {
 
 /* @group ----- Exhibit Builder ----- */
 
-.exhibit {
+.browse .exhibit {
     border-top: 1px solid #ccc;
     padding-top: ($spacing-unit - 1px);
     overflow: hidden;
