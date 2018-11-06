@@ -1299,6 +1299,11 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     clear: both;
     border-top: 1px solid #ccc;
     padding-top: $spacing-unit - 1px;
+
+    .view-items-link {
+        display: inline-block;
+        margin-bottom: $spacing-unit;
+    }
 }
 
 .collection .element {margin-bottom:0;}

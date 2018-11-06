@@ -1296,6 +1296,9 @@ th {
     clear: both;
     border-top: 1px solid #ccc;
     padding-top: 23px; }
+    .browse .collection .view-items-link {
+      display: inline-block;
+      margin-bottom: 24px; }
   .collection .element {
     margin-bottom: 0; }
   .element-div {
