@@ -665,7 +665,6 @@ th {
   textarea[disabled] {
     box-shadow: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
     -ms-user-select: none;
         user-select: none;
     color: #888;
