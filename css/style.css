@@ -843,7 +843,7 @@ th {
       color: #fff; }
   #site-title {
     font-size: 32px;
-    margin-left: 16px;
+    margin: 0 16px;
     padding: 24px 0; }
     #site-title a {
       border-bottom: 0; }
