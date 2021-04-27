@@ -665,8 +665,7 @@ th {
   textarea[disabled] {
     box-shadow: none;
     -webkit-user-select: none;
-    -ms-user-select: none;
-        user-select: none;
+    user-select: none;
     color: #888;
     cursor: default; }
   textarea,
@@ -843,7 +842,7 @@ th {
       color: #fff; }
   #site-title {
     font-size: 32px;
-    margin: 0 16px;
+    margin-left: 16px;
     padding: 24px 0; }
     #site-title a {
       border-bottom: 0; }
@@ -1354,25 +1353,17 @@ th {
   #exhibit-pages {
     border: 1px solid #ccc;
     border-width: 0 1px;
-    padding: 0 12px;
     width: 100%;
     margin: 0 0 24px; }
     #exhibit-pages h4,
     #exhibit-pages > ul:first-child > li:first-of-type {
-      margin: -12px;
-      padding: 12px;
-      border-top: 1px solid;
-      padding-top: 23px; }
+      border-top: 1px solid #ccc; }
     #exhibit-pages h4,
     #exhibit-pages > ul > li {
       border-bottom: 1px solid #ccc;
-      padding-bottom: 23px;
       margin-bottom: 0;
-      position: relative; }
-    #exhibit-pages > ul > li {
-      margin: -12px;
-      padding: 12px;
-      padding-top: 6px; }
+      position: relative;
+      padding: 12px; }
     #exhibit-pages > ul > li.parent:before,
     #exhibit-pages > ul > li.current:before {
       content: "";

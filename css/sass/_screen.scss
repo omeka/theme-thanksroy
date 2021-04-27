@@ -670,7 +670,7 @@ header {
 
 #site-title {
     font-size: 2 * $base-font-size;
-    margin: 0 16px;
+    margin-left: 16px;
     padding: $spacing-unit 0;
 
     a {
@@ -1382,28 +1382,23 @@ footer {
 #exhibit-pages {
     border: 1px solid #ccc;
     border-width: 0 1px;
-    padding: 0 (.5 * $spacing-unit);
     width: 100%;
     margin: 0 0 $spacing-unit;
 
     h4,
     & > ul:first-child > li:first-of-type {
-        @include bleed(.5 * $spacing-unit);
-        border-top: 1px solid;
-        padding-top: ($spacing-unit - 1px);
+        border-top: 1px solid #ccc;
     }
 
     h4,
     & > ul > li {
         border-bottom: 1px solid #ccc;
-        padding-bottom: ($spacing-unit - 1px);
         margin-bottom: 0;
         position: relative;
+        padding: .5 * $spacing-unit;
     }
 
     & > ul > li {
-        @include bleed(.5 * $spacing-unit);
-        padding-top: .25 * $spacing-unit;
     }
 
     & > ul > li.parent:before,
