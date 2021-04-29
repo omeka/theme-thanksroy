@@ -92,6 +92,10 @@
             #primary-nav li li li {
                 background-color: <?php echo thanksroy_brighten($buttonColor, -20); ?>;
             }
+
+            #primary-nav li a {
+                color: <?php echo $buttonTextColor; ?>;
+            }
         }
     </style>
     <!-- JavaScripts -->
