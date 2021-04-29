@@ -1486,13 +1486,13 @@ header {
 }
 
 a {
-    &:link { color:#888; }
+    &:link { color:#555; }
 
-    &:visited { color:#999; }
+    &:visited { color:#7d7d7d; }
 
-    &:hover { color:#777; }
+    &:hover { color:#2d2d2d; }
 
-    &:active { color:#777; }
+    &:active { color:#2d2d2d; }
 }
 
 .button, button,

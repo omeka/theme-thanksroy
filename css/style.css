@@ -1413,13 +1413,13 @@ th {
   header {
     border-color: #000; }
   a:link {
-    color: #888; }
+    color: #555; }
   a:visited {
-    color: #999; }
+    color: #7d7d7d; }
   a:hover {
-    color: #777; }
+    color: #2d2d2d; }
   a:active {
-    color: #777; }
+    color: #2d2d2d; }
   .button, button,
   input[type="reset"],
   input[type="submit"],
