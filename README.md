@@ -1,4 +1,4 @@
-# theme-thanksroy
+# Thanks, Roy
 A tribute to Roy Rosenzweig. A serif theme for Omeka Classic.
 
 Thanks, Roy is Copyright © 2018-present Corporation for Digital Scholarship, Vienna, Virginia, USA http://digitalscholar.org
