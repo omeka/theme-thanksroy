@@ -133,16 +133,21 @@ blockquote {
 .image {
     float: left;
     display: block;
-    margin: 0 $spacing-unit $spacing-unit 0;
+    margin: 0 $spacing-unit (.5 * $spacing-unit) 0;
     height: 100px;
     border-bottom: 0;
     overflow: visible;
+
+    a {
+        display: block;
+    }
 }
 
 #content .item img,
 .item #content img,
 .image img {
     height: 100%;
+    vertical-align: bottom;
     border: 1px solid #ccc;
     padding: ((.25 * $spacing-unit) - 1px);
     background-color: #fff;
