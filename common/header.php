@@ -83,7 +83,7 @@
 
         <?php if ($useOriginalThumbnailSize == "1"): ?>
         .item-img,
-        .image
+        .image,
         #content .item img,
         .item #content img,
         .image img {

@@ -456,7 +456,7 @@ th {
   #content .item img,
   .item #content img,
   .image img {
-    height: 100%;
+    height: 100px;
     vertical-align: bottom;
     border: 1px solid #ccc;
     padding: 5px;
