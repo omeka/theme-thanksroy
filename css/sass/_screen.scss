@@ -787,8 +787,9 @@ ul.navigation { padding-left: 0; }
 
     .sub-nav-toggle:after,
     [aria-haspopup="true"]:after {
-        font-family: "FontAwesome";
+        font-family: "Font Awesome 5 Free";
         content: "\f055";
+        font-weight: 900;
         font-size: 14px;
         float: right;
         transition-property: transform;
@@ -1005,7 +1006,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .desc a:after, .asc a:after {
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     display: inline-block;
 }
 
@@ -1118,8 +1120,9 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         text-indent: -9999px;
 
         &:after {
-            font-family: "FontAwesome";
+            font-family: "Font Awesome 5 Free";
             content: "\f002";
+            font-weight: 900;
             text-indent: 0;
             position: absolute;
             top: 0;
