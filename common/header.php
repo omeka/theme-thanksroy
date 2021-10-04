@@ -81,11 +81,13 @@
             border-color: <?php echo $buttonColor; ?>
         }
 
+        #collection-items .item img,
         .browse .item-img,
         .browse .image,
         .browse #content .item img,
         .browse .item #content img,
-        .browse .image img {
+        .browse .image img,
+        #home .image img {
             height: <?php echo ($useOriginalThumbnailSize == "1") ? 'auto' : '100px' ?>;
         }
 
