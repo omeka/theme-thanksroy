@@ -134,7 +134,6 @@ blockquote {
     float: left;
     display: block;
     margin: 0 $spacing-unit (.5 * $spacing-unit) 0;
-    height: 100px;
     border-bottom: 0;
     overflow: visible;
 
@@ -150,12 +149,7 @@ blockquote {
     border: 1px solid #ccc;
     padding: ((.25 * $spacing-unit) - 1px);
     background-color: #fff;
-}
-
-.browse #content .item img,
-.browse.item #content img,
-.browse .image img {
-    max-height: 100px;
+    max-height: 100%;
 }
 
 .collection .image,

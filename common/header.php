@@ -81,15 +81,13 @@
             border-color: <?php echo $buttonColor; ?>
         }
 
-        <?php if ($useOriginalThumbnailSize == "1"): ?>
         .browse .item-img,
         .browse .image,
         .browse #content .item img,
         .browse .item #content img,
         .browse .image img {
-            height: auto;
+            height: <?php echo ($useOriginalThumbnailSize == "1") ? 'auto' : '100px' ?>;
         }
-        <?php endif; ?>
 
         @media (max-width:768px) {
             #primary-nav li {
