@@ -146,11 +146,16 @@ blockquote {
 #content .item img,
 .item #content img,
 .image img {
-    height: 100px;
     vertical-align: bottom;
     border: 1px solid #ccc;
     padding: ((.25 * $spacing-unit) - 1px);
     background-color: #fff;
+}
+
+.browse #content .item img,
+.browse.item #content img,
+.browse .image img {
+    max-height: 100px;
 }
 
 .collection .image,
@@ -1299,6 +1304,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
         img {
             border: 1px solid #ccc;
+            max-height: 100%;
         }
     }
 }

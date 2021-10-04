@@ -82,11 +82,11 @@
         }
 
         <?php if ($useOriginalThumbnailSize == "1"): ?>
-        .item-img,
-        .image,
-        #content .item img,
-        .item #content img,
-        .image img {
+        .browse .item-img,
+        .browse .image,
+        .browse #content .item img,
+        .browse .item #content img,
+        .browse .image img {
             height: auto;
         }
         <?php endif; ?>
