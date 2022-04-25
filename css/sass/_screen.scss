@@ -149,7 +149,11 @@ blockquote {
     border: 1px solid #ccc;
     padding: ((.25 * $spacing-unit) - 1px);
     background-color: #fff;
-    max-height: 100%;
+}
+
+#content img {
+    max-width: 100%;
+    height: auto;
 }
 
 .collection .image,
