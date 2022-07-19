@@ -119,6 +119,14 @@ blockquote {
     border:1px blue dashed;
 }
 
+@media screen and (max-width: 840px) {
+    #skipnav:focus {
+        display: block;
+        width: 100%;
+        position: static;
+    }
+}
+
 #content {
     padding: 0 gutter();
 }
@@ -712,7 +720,9 @@ ul.navigation { padding-left: 0; }
     cursor: pointer;
     padding: (.5 * $spacing-unit) gutter();
     display: block;
+    width: 100%;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .button.menu-button:after {

@@ -130,7 +130,7 @@
         </header>
 
         <div id="wrap">
-            <div class="menu-button button">Menu</div>
+            <button type="button" class="menu-button button">Menu</button>
             <nav id="primary-nav" role="navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-container" role="search">

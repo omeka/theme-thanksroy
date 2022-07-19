@@ -518,135 +518,22 @@ th {
     border: 1px blue dashed;
   }
 
-  #content {
-    padding: 0 5.2631578947%;
-  }
-
   /* @end */
   /* @group ----- Reusable classes ----- */
-  .active {
-    font-weight: bold;
-  }
-
-  .item-img,
-.image {
-    float: left;
-    display: block;
-    margin: 0 24px 12px 0;
-    border-bottom: 0;
-    overflow: visible;
-  }
-  .item-img a,
-.image a {
-    display: block;
-  }
-
-  #content .item img,
-.item #content img,
-.image img {
-    vertical-align: bottom;
-    border: 1px solid #ccc;
-    padding: 5px;
-    background-color: #fff;
-  }
-
-  #content img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .collection .image,
-.exhibit .image {
-    box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
-    margin-left: 6px;
-  }
-
-  .record {
-    clear: both;
-  }
-
-  .secondary-nav + .exhibit {
-    margin-top: -1px;
-  }
-
-  .columns.alpha,
-.field label,
-.field .label {
-    font-weight: bold;
-  }
 
   /* @end */
   /* @group ----- Formalize Styles -----  */
   /* == http://formalize.me == */
   /* `Widths
   ----------------------------------------------------------------------------------------------------*/
-  .input_tiny {
-    width: 50px;
-  }
-
-  .input_small {
-    width: 100px;
-  }
-
-  .input_medium {
-    width: 150px;
-  }
-
-  .input_large {
-    width: 200px;
-  }
-
-  .input_xlarge {
-    width: 250px;
-  }
-
-  .input_xxlarge {
-    width: 300px;
-  }
-
-  .input_full {
-    width: 100%;
-  }
 
   /*
     Added via JS to <textarea> and class="input_full".
     Applies only to IE7. Other browsers don't need it.
   */
-  .input_full_wrap {
-    display: block;
-    padding-right: 8px;
-  }
 
   /* `UI Consistency
   ----------------------------------------------------------------------------------------------------*/
-  ::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-
-  input[type=search]::-webkit-search-decoration {
-    display: none;
-  }
-
-  input,
-button,
-select,
-textarea {
-    margin: 0;
-    vertical-align: middle;
-  }
-
-  input[type=radio],
-input[type=checkbox] {
-    position: relative;
-    vertical-align: top;
-    top: 3px;
-    /* IE8, IE9, IE10 */
-    top: 0\0 ;
-    /* IE7 */
-    *top: -3px;
-    margin-right: 10px;
-  }
 
   /* iPad */
   /* iPhone 3 */
@@ -692,6 +579,151 @@ input[type=checkbox] {
   /* @group ----- Other Plugins ----- */
 
   /* @end */
+}
+@media screen and (max-width: 840px) {
+  #skipnav:focus {
+    display: block;
+    width: 100%;
+    position: static;
+  }
+}
+@media screen {
+  #content {
+    padding: 0 5.2631578947%;
+  }
+}
+@media screen {
+  .active {
+    font-weight: bold;
+  }
+}
+@media screen {
+  .item-img,
+.image {
+    float: left;
+    display: block;
+    margin: 0 24px 12px 0;
+    border-bottom: 0;
+    overflow: visible;
+  }
+  .item-img a,
+.image a {
+    display: block;
+  }
+}
+@media screen {
+  #content .item img,
+.item #content img,
+.image img {
+    vertical-align: bottom;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+  }
+}
+@media screen {
+  #content img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media screen {
+  .collection .image,
+.exhibit .image {
+    box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+    margin-left: 6px;
+  }
+}
+@media screen {
+  .record {
+    clear: both;
+  }
+}
+@media screen {
+  .secondary-nav + .exhibit {
+    margin-top: -1px;
+  }
+}
+@media screen {
+  .columns.alpha,
+.field label,
+.field .label {
+    font-weight: bold;
+  }
+}
+@media screen {
+  .input_tiny {
+    width: 50px;
+  }
+}
+@media screen {
+  .input_small {
+    width: 100px;
+  }
+}
+@media screen {
+  .input_medium {
+    width: 150px;
+  }
+}
+@media screen {
+  .input_large {
+    width: 200px;
+  }
+}
+@media screen {
+  .input_xlarge {
+    width: 250px;
+  }
+}
+@media screen {
+  .input_xxlarge {
+    width: 300px;
+  }
+}
+@media screen {
+  .input_full {
+    width: 100%;
+  }
+}
+@media screen {
+  .input_full_wrap {
+    display: block;
+    padding-right: 8px;
+  }
+}
+@media screen {
+  ::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+@media screen {
+  input[type=search]::-webkit-search-decoration {
+    display: none;
+  }
+}
+@media screen {
+  input,
+button,
+select,
+textarea {
+    margin: 0;
+    vertical-align: middle;
+  }
+}
+@media screen {
+  input[type=radio],
+input[type=checkbox] {
+    position: relative;
+    vertical-align: top;
+    top: 3px;
+    /* IE8, IE9, IE10 */
+    top: 0\0 ;
+    /* IE7 */
+    *top: -3px;
+    margin-right: 10px;
+  }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
   input[type=radio],
@@ -1172,7 +1204,9 @@ select[multiple] {
     cursor: pointer;
     padding: 12px 5.2631578947%;
     display: block;
+    width: 100%;
     text-transform: uppercase;
+    text-align: left;
   }
 }
 @media screen {
