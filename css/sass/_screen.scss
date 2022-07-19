@@ -381,6 +381,7 @@ textarea.placeholder_text {
   box-shadow: none;
 }
 
+a.button:focus,
 button:focus,
 button:active,
 input:focus,
@@ -1080,6 +1081,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     font-weight: bold;
     border-left: 1px solid rgba(255,255,255,.3);
     box-sizing: border-box;
+    padding: (.25 * $spacing-unit) 0;
 
 
     &:link, &:hover, &:active, &:visited { color: #fff; }

@@ -809,7 +809,8 @@ textarea.placeholder_text {
   }
 }
 @media screen {
-  button:focus,
+  a.button:focus,
+button:focus,
 button:active,
 input:focus,
 input:active,
@@ -1561,6 +1562,7 @@ select[multiple] {
     font-weight: bold;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
+    padding: 6px 0;
   }
   .show-advanced.button:link, .show-advanced.button:hover, .show-advanced.button:active, .show-advanced.button:visited {
     color: #fff;
