@@ -87,7 +87,7 @@
         .browse #content .item img,
         .browse .item #content img,
         .browse .image img,
-        #home .image img {
+        #home img.image {
             height: <?php echo ($useOriginalThumbnailSize == "1") ? 'auto' : '100px' ?>;
         }
 

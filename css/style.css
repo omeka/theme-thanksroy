@@ -410,7 +410,9 @@ th {
     line-height: 24px;
   }
 
-  h1, h2, h3, legend, h4, h5, h6 {
+  h1, h2, .recent-title, #featured-item .featured-title,
+#featured-collection .featured-title,
+#featured-exhibit .featured-title, h3, .record .title, legend, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 24px;
   }
@@ -420,12 +422,14 @@ th {
     line-height: 48px;
   }
 
-  h2 {
+  h2, .recent-title, #featured-item .featured-title,
+#featured-collection .featured-title,
+#featured-exhibit .featured-title {
     font-size: 24px;
     line-height: 36px;
   }
 
-  h3, legend {
+  h3, .record .title, legend {
     font-size: 20px;
     line-height: 30px;
   }
@@ -614,7 +618,8 @@ th {
 @media screen {
   #content .item img,
 .item #content img,
-.image img {
+.image img,
+img.image {
     vertical-align: bottom;
     border: 1px solid #ccc;
     padding: 5px;
@@ -1150,7 +1155,6 @@ select[multiple] {
 @media screen {
   header {
     background-size: auto !important;
-    -ms-behavior: url("../javascripts/backgroundsize.min.htc");
     background-position-x: right !important;
   }
 }
@@ -1544,9 +1548,21 @@ select[multiple] {
     margin-bottom: 24px;
     overflow: auto;
   }
-  #featured-item h2,
-#featured-collection h2,
-#featured-exhibit h2 {
+  #featured-item .featured-title,
+#featured-collection .featured-title,
+#featured-exhibit .featured-title {
+    margin-top: 24px;
+    font-weight: bold;
+  }
+}
+@media screen {
+  .record .title {
+    font-weight: bold;
+  }
+}
+@media screen {
+  .recent-title {
+    font-weight: bold;
     margin-top: 24px;
   }
 }
@@ -1621,7 +1637,11 @@ select[multiple] {
     display: inline-block;
     clear: both;
   }
-  #search-container h2 {
+  #search-container h2, #search-container #featured-item .featured-title, #featured-item #search-container .featured-title,
+#search-container #featured-collection .featured-title,
+#featured-collection #search-container .featured-title,
+#search-container #featured-exhibit .featured-title,
+#featured-exhibit #search-container .featured-title, #search-container .recent-title {
     display: none;
   }
   #search-container input[type=text], #search-container .button {
@@ -1802,7 +1822,7 @@ select[multiple] {
   }
 }
 @media screen {
-  #featured-item h3, #featured-item legend {
+  #featured-item h3, #featured-item legend, #featured-item .record .title, .record #featured-item .title {
     clear: both;
   }
 }
