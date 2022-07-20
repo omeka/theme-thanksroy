@@ -35,5 +35,6 @@
   "browserslist": [
     "> 5%",
     "> 1% in US"
-  ]
+  ],
+  "dependencies": {}
 }
