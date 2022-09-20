@@ -1349,7 +1349,7 @@ select[multiple] {
   .pagination {
     padding-left: 0;
     float: left;
-    margin: 12px 0;
+    margin: 0;
     height: 48px;
     display: block;
     overflow: auto;
@@ -1498,7 +1498,6 @@ select[multiple] {
 @media screen {
   #sort-links {
     font-size: 14px;
-    clear: both;
   }
   #sort-links span {
     font-weight: bold;
@@ -1506,12 +1505,12 @@ select[multiple] {
   }
 }
 @media screen {
-  #sort-links-list {
+  .sort-links-list {
     list-style: none;
     display: inline-block;
     padding-left: 0;
   }
-  #sort-links-list li {
+  .sort-links-list li {
     display: inline-block;
     margin-right: 1em;
   }
@@ -2219,11 +2218,10 @@ input[type=button],
   }
 
   /* == Browse Items == */
-  .pagination {
+  .pagination-nav {
     width: 47%;
     overflow: hidden;
     float: left;
-    padding-bottom: 24px;
   }
 
   nav.pagination {
@@ -2232,11 +2230,6 @@ input[type=button],
 
   #content > nav.pagination:nth-of-type(2) {
     width: 47%;
-  }
-
-  .pagination_list {
-    margin-top: 18px;
-    float: left;
   }
 
   .pagination_list a, li.pagination_current {
@@ -2252,8 +2245,8 @@ input[type=button],
     float: right;
   }
   #sort-links ul {
-    margin-top: 18px;
-    padding-top: 12px;
+    margin: 6px 0 0;
+    padding: 0;
   }
   #sort-links span, #sort-links li {
     padding: 6px 0 6px 20px;

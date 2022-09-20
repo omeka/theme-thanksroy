@@ -850,7 +850,7 @@ ul.navigation { padding-left: 0; }
 .pagination {
     padding-left: 0;
     float: left;
-    margin: (.5 * $base-line-height) 0;
+    margin: 0;
     height: 2 * $base-line-height;
     display: block;
     overflow: auto;
@@ -996,7 +996,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #sort-links {
     font-size: .875 * $base-font-size;
-    clear: both;
 
     span {
         font-weight: bold;
@@ -1004,7 +1003,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-#sort-links-list {
+.sort-links-list {
     list-style: none;
     display: inline-block;
     padding-left: 0;

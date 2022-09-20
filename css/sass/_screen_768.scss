@@ -126,11 +126,10 @@ header {
 
 /* == Browse Items == */
 
-.pagination {
+.pagination-nav {
     width: 47%;
     overflow: hidden;
     float: left;
-    padding-bottom: $spacing-unit;
 }
 
 nav.pagination {
@@ -139,11 +138,6 @@ nav.pagination {
 
 #content > nav.pagination:nth-of-type(2) {
 	width: 47%;
-}
-
-.pagination_list {
-    margin-top: .75 * $spacing-unit;
-    float: left;
 }
 
 .pagination_list a, li.pagination_current {
@@ -158,8 +152,8 @@ nav.pagination {
     clear: none;
     float: right;
     ul {
-        margin-top: .75 * $spacing-unit;
-        padding-top: .5 * $spacing-unit;
+        margin: (.25 * $spacing-unit) 0 0;
+        padding: 0;
     }
     span, li {
         padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
