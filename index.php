@@ -1,8 +1,12 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-<div id="primary">
-    <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
+
+<?php if ($homepageText = get_theme_option('Homepage Text')): ?>
+<div id="intro">
     <?php echo $homepageText; ?>
-    <?php endif; ?>
+</div>
+<?php endif; ?>
+
+<div id="primary">
     <?php if (get_theme_option('Display Featured Item') == 1): ?>
     <!-- Featured Item -->
     <div id="featured-item">

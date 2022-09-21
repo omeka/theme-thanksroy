@@ -593,7 +593,7 @@ th {
 }
 @media screen {
   #content {
-    padding: 0 5.2631578947%;
+    padding: 0 1em;
   }
 }
 @media screen {
@@ -1206,7 +1206,7 @@ select[multiple] {
 @media screen {
   .button.menu-button {
     cursor: pointer;
-    padding: 12px 5.2631578947%;
+    padding: 12px 1em;
     display: block;
     width: 100%;
     text-transform: uppercase;
@@ -1247,7 +1247,7 @@ select[multiple] {
     margin: 0;
   }
   #primary-nav ul.navigation ul li a {
-    padding: 12px 5.2631578947% 12px 11.1111111111%;
+    padding: 12px 1em 12px 11.1111111111%;
   }
   #primary-nav ul.navigation ul li ul li a {
     padding-left: 4em;
@@ -1277,7 +1277,7 @@ select[multiple] {
   #primary-nav ul.navigation > li a {
     border-bottom: 1px solid #ccc;
     display: block;
-    padding: 12px 5.2631578947%;
+    padding: 12px 1em;
   }
   #primary-nav ul.navigation > li a:before {
     content: "» ";
@@ -1539,11 +1539,20 @@ select[multiple] {
   }
 }
 @media screen {
+  #intro {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+@media screen {
   #featured-item,
 #featured-collection,
 #featured-exhibit {
     background-color: rgba(0, 0, 0, 0.03);
-    padding: 0 5.2631578947%;
+    padding: 0 1em;
     margin-bottom: 24px;
     overflow: auto;
   }
@@ -1587,7 +1596,7 @@ select[multiple] {
   #search-container {
     position: relative;
     box-sizing: border-box;
-    margin: 24px 5.2631578947%;
+    margin: 24px 1em;
   }
   #search-container:after {
     content: "";
@@ -2096,7 +2105,7 @@ input[type=button],
   /* @group ----- Grid ----- */
   #wrap {
     max-width: 95em;
-    padding: 0 5.2631578947%;
+    padding: 0 1em;
     margin: 0;
   }
 
@@ -2124,7 +2133,7 @@ input[type=button],
     float: left;
     margin-right: 1.6949152542%;
     margin-left: 0;
-    padding: 0 0 0 5.2631578947%;
+    padding: 0 0 0 1em;
   }
 
   #home #secondary {
@@ -2132,14 +2141,13 @@ input[type=button],
     float: left;
     margin-right: 1.6949152542%;
     margin-right: 0;
-    padding: 0 5.2631578947%;
+    padding: 0 1em;
   }
 
   /* @end */
   /* @group ----- Header ----- */
   header {
     background-size: cover !important;
-    -ms-behavior: url("../javascripts/backgroundsize.min.htc");
     border-width: 0 0 20px 0;
     border-style: solid;
   }

@@ -128,7 +128,7 @@ blockquote {
 }
 
 #content {
-    padding: 0 gutter();
+    padding: 0 $gutter-width;
 }
 
 /* @end */
@@ -718,7 +718,7 @@ ul.navigation { padding-left: 0; }
 
 .button.menu-button {
     cursor: pointer;
-    padding: (.5 * $spacing-unit) gutter();
+    padding: (.5 * $spacing-unit) $gutter-width;
     display: block;
     width: 100%;
     text-transform: uppercase;
@@ -753,7 +753,7 @@ ul.navigation { padding-left: 0; }
             box-sizing: border-box;
             margin: 0;
 
-            a { padding: (.5 * $spacing-unit) gutter() (.5 * $spacing-unit) gutter(2); }
+            a { padding: (.5 * $spacing-unit) $gutter-width (.5 * $spacing-unit) gutter(2); }
 
             ul li a { padding-left: 4em; }
         }
@@ -783,7 +783,7 @@ ul.navigation { padding-left: 0; }
         a {
             border-bottom: 1px solid #ccc;
             display:block;
-            padding: (.5 * $spacing-unit) gutter();
+            padding: (.5 * $spacing-unit) $gutter-width;
 
             &:before {
                 content: "\BB\20";
@@ -1036,11 +1036,19 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 /* @group ----- Content ----- */
 
+#intro {
+    margin-bottom: $spacing-unit;
+    padding: $spacing-unit;
+    background-color: $gray;
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
+}
+
 #featured-item,
 #featured-collection,
 #featured-exhibit {
     background-color: rgba(0,0,0,.03);
-    padding: 0 gutter();
+    padding: 0 $gutter-width;
     margin-bottom: $spacing-unit;
     overflow: auto;
 
@@ -1084,7 +1092,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 #search-container {
     position: relative;
     box-sizing: border-box;
-    margin: $spacing-unit gutter();
+    margin: $spacing-unit $gutter-width;
 
     &:after {
       content: "";

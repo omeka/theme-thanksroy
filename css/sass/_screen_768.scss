@@ -2,7 +2,7 @@
 
 #wrap {
     max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
-    padding: 0 gutter();
+    padding: 0 $gutter-width;
     margin: 0;
 }
 
@@ -25,13 +25,13 @@
 #home #primary {
     @include span(6 of 12);
     margin-left: 0;
-    padding: 0 0 0 gutter();
+    padding: 0 0 0 $gutter-width;
 }
 
 #home #secondary {
     @include span(6 of 12);
     margin-right: 0;
-    padding: 0 gutter();
+    padding: 0 $gutter-width;
 }
 
 /* @end */
@@ -40,7 +40,6 @@
 
 header {
     background-size: cover !important;
-    -ms-behavior: url('../javascripts/backgroundsize.min.htc');
     border-width: 0 0 20px 0;
     border-style: solid;
 }
