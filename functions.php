@@ -32,17 +32,20 @@ function thanksroy_brighten($color, $steps) {
  *
  * @return string
  */
-function thanksroy_exhibit_builder_display_random_featured_exhibit()
+function thanksroy_exhibit_builder_display_random_featured_exhibit($count = 2, $hasImage = null)
 {
-    $html = '<div id="featured-exhibit">';
-    $featuredExhibit = exhibit_builder_random_featured_exhibit();
-    $html .= '<div class="featured-title">' . __('Featured Exhibit') . '</div>';
-    if ($featuredExhibit) {
-        $html .= get_view()->partial('exhibit-builder/exhibits/single.php', array('exhibit' => $featuredExhibit));
+    $exhibits = get_records('Exhibit', array('featured' => 1,
+                                     'sort_field' => 'random',
+                                     'hasImage' => $hasImage), $count);;
+    if ($exhibits) {
+        $html = '';
+        foreach ($exhibits as $exhibit) {
+            $html .= get_view()->partial('exhibit-builder/exhibits/single.php', array('exhibit' => $exhibit));
+            release_object($exhibit);
+        }
     } else {
         $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
     }
-    $html .= '</div>';
     $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
     return $html;
 }
