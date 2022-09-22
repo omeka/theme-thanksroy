@@ -1044,21 +1044,28 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     line-height: 1.5 * $base-line-height;
 }
 
-#featured-item,
-#featured-collection,
-#featured-exhibit {
-    background-color: rgba(0,0,0,.03);
-    padding: 0 $gutter-width;
+.subtitle {
+    display: none;
+}
+
+#home #featured-records .record {
+    padding: $spacing-unit;
     margin-bottom: $spacing-unit;
     overflow: auto;
 
-    .featured-title {
-        @extend h2;
+    .subtitle {
+        display: block;
+        font-weight: none;
+        font-size: $base-font-size;
     }
 
-    .featured-title {
-        margin-top: $spacing-unit;
-        font-weight: bold;
+    .title {
+        margin-bottom: .5 * $spacing-unit;
+    }
+
+    img {
+        display: block;
+        float: none;
     }
 }
 
@@ -1076,9 +1083,26 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     margin-top: $spacing-unit;
 }
 
+#recent-items .item {
+    border-bottom: 1px solid #000;
+    padding-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit;
+
+    .title,
+    img.image {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
 #recent-items .item,
 #recent-items .view-items-link {
     clear: both;
+}
+
+#recent-items .image {
+    float: right;
+    margin: 0 0 0 d$spacing-unit;
 }
 
 #simple-search {

@@ -410,9 +410,7 @@ th {
     line-height: 24px;
   }
 
-  h1, h2, .recent-title, #featured-item .featured-title,
-#featured-collection .featured-title,
-#featured-exhibit .featured-title, h3, .record .title, legend, h4, h5, h6 {
+  h1, h2, .recent-title, h3, .record .title, legend, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 24px;
   }
@@ -422,9 +420,7 @@ th {
     line-height: 48px;
   }
 
-  h2, .recent-title, #featured-item .featured-title,
-#featured-collection .featured-title,
-#featured-exhibit .featured-title {
+  h2, .recent-title {
     font-size: 24px;
     line-height: 36px;
   }
@@ -1548,19 +1544,27 @@ select[multiple] {
   }
 }
 @media screen {
-  #featured-item,
-#featured-collection,
-#featured-exhibit {
-    background-color: rgba(0, 0, 0, 0.03);
-    padding: 0 1em;
+  .subtitle {
+    display: none;
+  }
+}
+@media screen {
+  #home #featured-records .record {
+    padding: 24px;
     margin-bottom: 24px;
     overflow: auto;
   }
-  #featured-item .featured-title,
-#featured-collection .featured-title,
-#featured-exhibit .featured-title {
-    margin-top: 24px;
-    font-weight: bold;
+  #home #featured-records .record .subtitle {
+    display: block;
+    font-weight: none;
+    font-size: 16px;
+  }
+  #home #featured-records .record .title {
+    margin-bottom: 12px;
+  }
+  #home #featured-records .record img {
+    display: block;
+    float: none;
   }
 }
 @media screen {
@@ -1575,9 +1579,27 @@ select[multiple] {
   }
 }
 @media screen {
+  #recent-items .item {
+    border-bottom: 1px solid #000;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  #recent-items .item .title,
+#recent-items .item img.image {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+@media screen {
   #recent-items .item,
 #recent-items .view-items-link {
     clear: both;
+  }
+}
+@media screen {
+  #recent-items .image {
+    float: right;
+    margin: 0 0 0 d 24px;
   }
 }
 @media screen {
@@ -1645,11 +1667,7 @@ select[multiple] {
     display: inline-block;
     clear: both;
   }
-  #search-container h2, #search-container #featured-item .featured-title, #featured-item #search-container .featured-title,
-#search-container #featured-collection .featured-title,
-#featured-collection #search-container .featured-title,
-#search-container #featured-exhibit .featured-title,
-#featured-exhibit #search-container .featured-title, #search-container .recent-title {
+  #search-container h2, #search-container .recent-title {
     display: none;
   }
   #search-container input[type=text], #search-container .button {
@@ -2102,7 +2120,7 @@ input[type=button],
   }
 }
 @media screen and (min-width: 768px) {
-  /* @group ----- Grid ----- */
+  /* ----- Grid ----- */
   #wrap {
     max-width: 95em;
     padding: 0 1em;
@@ -2128,24 +2146,7 @@ input[type=button],
     padding-left: 0%;
   }
 
-  #home #primary {
-    width: 49.1525423729%;
-    float: left;
-    margin-right: 1.6949152542%;
-    margin-left: 0;
-    padding: 0 0 0 1em;
-  }
-
-  #home #secondary {
-    width: 49.1525423729%;
-    float: left;
-    margin-right: 1.6949152542%;
-    margin-right: 0;
-    padding: 0 1em;
-  }
-
-  /* @end */
-  /* @group ----- Header ----- */
+  /* ----- Header ----- */
   header {
     background-size: cover !important;
     border-width: 0 0 20px 0;
@@ -2225,7 +2226,32 @@ input[type=button],
     border-bottom-color: #fff;
   }
 
-  /* == Browse Items == */
+  /* ----- Home ----- */
+  #home #featured-records {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #home #featured-records .record {
+    width: 50%;
+  }
+
+  #recent-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #recent-items .item {
+    width: calc(50% - 48px);
+    margin: 0 24px 24px;
+  }
+
+  #recent-items .recent-title,
+#recent-items .view-items-link {
+    width: 100%;
+  }
+
+  /* ----- Browse Items ----- */
   .pagination-nav {
     width: 47%;
     overflow: hidden;
@@ -2261,8 +2287,7 @@ input[type=button],
     margin-right: 0;
   }
 
-  /* @end */
-  /* @group ----- Forms ----- */
+  /* ----- Forms ----- */
   div#contribution-type-form div.inputs {
     clear: none;
     float: right;
@@ -2304,8 +2329,7 @@ input[type=button],
     margin-bottom: 0;
   }
 
-  /* @end */
-  /* @group ----- Advanced Search Form ----- */
+  /* ----- Advanced Search Form ----- */
   #advanced-search-form {
     margin-bottom: 40px;
   }
@@ -2346,8 +2370,7 @@ input[type=button],
     line-height: 30px;
   }
 
-  /* @end */
-  /* @group ----- Exhibit Builder ----- */
+  /* ----- Exhibit Builder ----- */
   #content nav + .exhibit {
     clear: both;
   }
@@ -2374,6 +2397,4 @@ input[type=button],
     display: inline-block;
     float: none;
   }
-
-  /* @end */
 }

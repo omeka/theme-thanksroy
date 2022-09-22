@@ -1,4 +1,4 @@
-/* @group ----- Grid ----- */
+/* ----- Grid ----- */
 
 #wrap {
     max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
@@ -22,21 +22,9 @@
     @include prefix(0);
 }
 
-#home #primary {
-    @include span(6 of 12);
-    margin-left: 0;
-    padding: 0 0 0 $gutter-width;
-}
 
-#home #secondary {
-    @include span(6 of 12);
-    margin-right: 0;
-    padding: 0 $gutter-width;
-}
 
-/* @end */
-
-/* @group ----- Header ----- */
+/* ----- Header ----- */
 
 header {
     background-size: cover !important;
@@ -123,7 +111,34 @@ header {
     }
 }
 
-/* == Browse Items == */
+/* ----- Home ----- */
+
+#home #featured-records {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .record {
+        width: 50%;
+    }
+}
+
+#recent-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#recent-items .item {
+    width: calc(50% - #{2 * $spacing-unit});
+    margin: 0 $spacing-unit $spacing-unit;
+}
+
+#recent-items .recent-title,
+#recent-items .view-items-link {
+    width: 100%;
+}
+
+/* ----- Browse Items ----- */
 
 .pagination-nav {
     width: 47%;
@@ -160,9 +175,7 @@ nav.pagination {
     }
 }
 
-/* @end */
-
-/* @group ----- Forms ----- */
+/* ----- Forms ----- */
 
 div#contribution-type-form div.inputs {
     clear: none;
@@ -206,9 +219,9 @@ div#contribution-type-form div.inputs {
     div :only-child { margin-bottom: 0; }
 }
 
-/* @end */
 
-/* @group ----- Advanced Search Form ----- */
+
+/* ----- Advanced Search Form ----- */
 
 #advanced-search-form {
     margin-bottom: 40px;
@@ -250,9 +263,9 @@ div#contribution-type-form div.inputs {
     }
 }
 
-/* @end */
 
-/* @group ----- Exhibit Builder ----- */
+
+/* ----- Exhibit Builder ----- */
 
 #content nav + .exhibit {
     clear: both;
@@ -277,4 +290,3 @@ div#contribution-type-form div.inputs {
     float: none;
 }
 
-/* @end */
