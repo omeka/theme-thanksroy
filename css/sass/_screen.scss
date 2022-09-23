@@ -798,8 +798,11 @@ ul.navigation { padding-left: 0; }
             padding: (.5 * $spacing-unit) $gutter-width;
 
             &:before {
-                content: "\BB\20";
-                display: inline;
+                content: "\f0da";
+                display: inline-block;
+                margin-right: .25 * $spacing-unit;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
             }
             &:focus {
               border: 1px dotted #ccc;

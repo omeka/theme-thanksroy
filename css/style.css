@@ -967,7 +967,7 @@ select[multiple] {
   .search-entry {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 12px 2%;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     overflow: auto;
     margin-top: 12px;
   }
@@ -986,7 +986,12 @@ select[multiple] {
   #advanced-search-form input, #advanced-search-form select {
     width: 100%;
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 0;
+  }
+  #advanced-search-form input[type=checkbox],
+#advanced-search-form input[type=radio] {
+    width: initial;
+    float: none;
   }
   #advanced-search-form .search-entry select,
 #advanced-search-form .search-entry input[type=text] {
@@ -1012,17 +1017,18 @@ select[multiple] {
     margin-bottom: 24px;
   }
   #advanced-search-form .field {
-    border-bottom: 1px solid #ccc;
     width: 100%;
-    overflow: auto;
-    padding: 24px 0;
+    padding: 24px 0 0;
     margin-bottom: 0;
   }
   #advanced-search-form .field .inputs {
     width: 100%;
   }
   #advanced-search-form .field label {
+    display: block;
     margin: 0;
+  }
+  #advanced-search-form .field label:not(:last-of-type) {
     margin-bottom: 24px;
   }
   #advanced-search-form .field div.field:last-of-type {
@@ -1031,6 +1037,9 @@ select[multiple] {
   }
   #advanced-search-form .field div:only-child {
     margin-bottom: 0;
+  }
+  #advanced-search-form .field .add_search {
+    margin-bottom: 24px;
   }
   #advanced-search-form .field .remove_search {
     margin: 24px 0 0;
@@ -1276,8 +1285,11 @@ select[multiple] {
     padding: 12px 1em;
   }
   #primary-nav ul.navigation > li a:before {
-    content: "» ";
-    display: inline;
+    content: "";
+    display: inline-block;
+    margin-right: 6px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
   }
   #primary-nav ul.navigation > li a:focus {
     border: 1px dotted #ccc;
@@ -2300,12 +2312,6 @@ input[type=button],
     overflow: auto;
     padding: 24px 0;
   }
-  .field .inputs,
-.field .columns.omega {
-    clear: none;
-    float: right;
-    width: 69%;
-  }
   .field input, .field input[type=text], .field select {
     width: 100%;
     float: right;
@@ -2313,12 +2319,7 @@ input[type=button],
   .field label,
 .field .label,
 .field .columns.alpha {
-    width: 29%;
-    float: left;
     margin: 0;
-  }
-  .field .columns.alpha label,
-.field .columns.alpha .label {
     width: 100%;
   }
   .field div.field:last-of-type {
@@ -2336,18 +2337,25 @@ input[type=button],
   #advanced-search-form .submit {
     float: right;
   }
-
-  #advanced-search-form .search-entry input[type=text],
-#advanced-search-form .search-entry select {
-    width: calc((100% - 42px) / 4);
-    display: inline-block;
-    margin: 0 3px 0 0;
-    float: none;
+  #advanced-search-form .field {
+    padding-bottom: 24px;
   }
 
-  #advanced-search-form .search-entry:first-child input[type=text],
-#advanced-search-form .search-entry:first-child select {
-    width: calc((100% - 42px) / 3);
+  #advanced-search-form .search-entry label {
+    width: calc((100% - 72px) / 4);
+    display: inline-block;
+    margin: 0 3px 0 0 !important;
+    float: none;
+    vertical-align: top;
+  }
+
+  #advanced-search-form .search-entry:first-child label {
+    width: calc((100% - 72px) / 3);
+  }
+
+  #advanced-search-form .field .add_search,
+#advanced-search-form .search-entry select {
+    margin-bottom: 0;
   }
 
   #advanced-search-form .field .remove_search {
