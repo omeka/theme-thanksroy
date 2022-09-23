@@ -524,7 +524,7 @@ fieldset {
 .search-entry {
     background-color: rgba(0,0,0,.05);
     padding: (.5 * $spacing-unit) 2%;
-    margin-bottom: $spacing-unit;
+    margin-bottom: .5 * $spacing-unit;
     overflow: auto;
     margin-top: (.5 * $spacing-unit);
 }
@@ -543,7 +543,13 @@ fieldset {
     input, select {
         width: 100%;
         display: block;
-        margin-bottom: $spacing-unit;
+        margin-bottom: 0;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: initial;
+        float: none;
     }
 
     .search-entry select,
@@ -576,10 +582,8 @@ fieldset {
     }
 
     .field {
-        border-bottom:1px solid #ccc;
         width:100%;
-        overflow: auto;
-        padding: $spacing-unit 0;
+        padding: $spacing-unit 0 0;
         margin-bottom: 0;
 
         .inputs {
@@ -587,13 +591,21 @@ fieldset {
         }
 
         label {
+            display: block;
             margin: 0;
+        }
+
+        label:not(:last-of-type) {
             margin-bottom: $spacing-unit;
         }
 
         div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
 
         div:only-child { margin-bottom: 0; }
+
+        .add_search {
+            margin-bottom: $spacing-unit;
+        }
 
         .remove_search {
             margin: $spacing-unit 0 0;

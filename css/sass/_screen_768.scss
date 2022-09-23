@@ -187,14 +187,7 @@ div#contribution-type-form div.inputs {
     border-bottom:1px solid #ccc;
     width:100%;
     overflow: auto;
-    padding: (1 * $spacing-unit) 0;
-
-    .inputs,
-    .columns.omega {
-        clear: none;
-        float: right;
-        width: 69%;
-    }
+    padding: $spacing-unit 0;
 
     input, input[type=text], select {
         width: 100%;
@@ -204,13 +197,7 @@ div#contribution-type-form div.inputs {
     label,
     .label,
     .columns.alpha {
-        width: 29%;
-        float: left;
         margin: 0;
-    }
-
-    .columns.alpha label,
-    .columns.alpha .label {
         width: 100%;
     }
 
@@ -227,19 +214,27 @@ div#contribution-type-form div.inputs {
     margin-bottom: 40px;
 
     .submit { float: right; }
+
+    .field {
+        padding-bottom: $spacing-unit;
+    }
 }
 
-#advanced-search-form .search-entry input[type=text],
-#advanced-search-form .search-entry select {
-    width: calc((100% - #{(1.75 * $spacing-unit)}) / 4);
+#advanced-search-form .search-entry label {
+    width: calc((100% - #{(3 * $spacing-unit)}) / 4);
     display: inline-block;
-    margin: 0 3px 0 0;
+    margin: 0 3px 0 0 !important;
     float: none;
+    vertical-align: top;
 }
 
-#advanced-search-form .search-entry:first-child input[type="text"],
-#advanced-search-form .search-entry:first-child select {
-    width: calc((100% - #{(1.75 * $spacing-unit)}) / 3);
+#advanced-search-form .search-entry:first-child label {
+    width: calc((100% - #{(3 * $spacing-unit)}) / 3);
+}
+
+#advanced-search-form .field .add_search,
+#advanced-search-form .search-entry select {
+    margin-bottom: 0;
 }
 
 #advanced-search-form .field .remove_search {
