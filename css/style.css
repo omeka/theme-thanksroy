@@ -2244,7 +2244,7 @@ input[type=button],
     flex-wrap: wrap;
     align-items: center;
   }
-  #home #featured-records .record {
+  #home #featured-records .record, #home #featured-records > p {
     width: 50%;
   }
 

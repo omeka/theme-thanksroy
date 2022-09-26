@@ -118,7 +118,8 @@ header {
     flex-wrap: wrap;
     align-items: center;
 
-    .record {
+    .record,
+    & > p {
         width: 50%;
     }
 }
