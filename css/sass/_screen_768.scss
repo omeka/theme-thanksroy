@@ -171,8 +171,12 @@ nav.pagination {
         padding: 0;
     }
     span, li {
-        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
+        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit);
         margin-right: 0;
+    }
+
+    li {
+        padding-left: $spacing-unit;
     }
 }
 

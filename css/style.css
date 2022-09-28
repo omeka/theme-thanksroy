@@ -1530,19 +1530,19 @@ select[multiple] {
   }
 }
 @media screen {
-  .desc a:after, .asc a:after {
+  .desc [role=tooltip]:after, .asc [role=tooltip]:after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: inline-block;
   }
 }
 @media screen {
-  .desc a:after {
+  .desc [role=tooltip]:after {
     content: " ";
   }
 }
 @media screen {
-  .asc a:after {
+  .asc [role=tooltip]:after {
     content: " ";
   }
 }
@@ -1834,9 +1834,15 @@ select[multiple] {
     overflow: hidden;
     border-top: 1px solid #ccc;
     padding: 24px 0;
+    width: 100%;
   }
   .browse .item:last-of-type {
     border-bottom: 0;
+  }
+}
+@media screen {
+  #browse-results {
+    width: 100%;
   }
 }
 @media screen {
@@ -2295,8 +2301,11 @@ input[type=button],
     padding: 0;
   }
   #sort-links span, #sort-links li {
-    padding: 6px 0 6px 20px;
+    padding: 6px 0 6px;
     margin-right: 0;
+  }
+  #sort-links li {
+    padding-left: 24px;
   }
 
   /* ----- Forms ----- */
