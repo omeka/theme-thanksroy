@@ -2350,16 +2350,18 @@ input[type=button],
     padding-bottom: 24px;
   }
 
-  #advanced-search-form .search-entry label {
+  #advanced-search-form .search-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  #advanced-search-form .search-entry .input {
     width: calc((100% - 72px) / 4);
     display: inline-block;
     margin: 0 3px 0 0 !important;
     float: none;
     vertical-align: top;
-  }
-
-  #advanced-search-form .search-entry:first-child label {
-    width: calc((100% - 72px) / 3);
   }
 
   #advanced-search-form .field .add_search,
