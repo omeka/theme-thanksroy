@@ -1659,18 +1659,22 @@ select[multiple] {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     padding: 6px 0;
+    overflow: hidden;
   }
   .show-advanced.button:link, .show-advanced.button:hover, .show-advanced.button:active, .show-advanced.button:visited {
     color: #fff;
   }
 }
 @media screen {
-  .show-advanced.button:after {
+  .show-advanced .icon:after {
     content: "…";
     display: block;
     text-indent: 0;
     text-align: center;
-    margin-top: -1.75em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 @media screen {
@@ -1691,7 +1695,7 @@ select[multiple] {
     font-size: 16px;
     line-height: 24px;
   }
-  #search-container button {
+  #search-container #submit_search {
     width: 30px;
     border: 0;
     color: #fff;
@@ -1702,7 +1706,7 @@ select[multiple] {
     border-radius: 0;
     text-indent: -9999px;
   }
-  #search-container button:after {
+  #search-container #submit_search .icon:after {
     font-family: "Font Awesome 5 Free";
     content: "";
     font-weight: 900;
