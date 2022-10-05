@@ -498,6 +498,10 @@ th {
   }
 
   #skipnav {
+    height: 0;
+  }
+
+  #skipnav a {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -508,7 +512,7 @@ th {
     width: 1px;
   }
 
-  #skipnav:focus {
+  #skipnav a:focus {
     top: 0;
     z-index: 9999;
     clip: initial;
