@@ -1162,17 +1162,21 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     border-left: 1px solid rgba(255,255,255,.3);
     box-sizing: border-box;
     padding: (.25 * $spacing-unit) 0;
+    overflow: hidden;
 
 
     &:link, &:hover, &:active, &:visited { color: #fff; }
 }
 
-.show-advanced.button:after {
+.show-advanced .icon:after {
     content: "\2026";
     display: block;
     text-indent: 0;
     text-align: center;
-    margin-top: -1.75em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #search-container {
@@ -1193,7 +1197,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         line-height: $base-line-height;
     }
 
-    button {
+    #submit_search {
         width: 30px;
         border: 0;
         color: #fff;
@@ -1204,7 +1208,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         border-radius: 0;
         text-indent: -9999px;
 
-        &:after {
+        .icon:after {
             font-family: "Font Awesome 5 Free";
             content: "\f002";
             font-weight: 900;
