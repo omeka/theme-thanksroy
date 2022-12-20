@@ -1145,10 +1145,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
       width: 100%;
       clear: both;
     }
-
-    &.with-advanced .button {
-        right: 30px;
-    }
 }
 
 .show-advanced.button {
@@ -1157,7 +1153,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 30px;
     font-weight: bold;
     border-left: 1px solid rgba(255,255,255,.3);
     box-sizing: border-box;

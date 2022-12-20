@@ -1643,9 +1643,6 @@ select[multiple] {
     width: 100%;
     clear: both;
   }
-  #search-container.with-advanced .button {
-    right: 30px;
-  }
 }
 @media screen {
   .show-advanced.button {
@@ -1654,7 +1651,7 @@ select[multiple] {
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 30px;
     font-weight: bold;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
