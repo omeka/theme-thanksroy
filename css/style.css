@@ -1586,6 +1586,10 @@ select[multiple] {
 @media screen {
   .record .title {
     font-weight: bold;
+    overflow: hidden;
+  }
+  .record .title a:focus {
+    outline-offset: -2px;
   }
 }
 @media screen {
