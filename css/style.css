@@ -1510,6 +1510,7 @@ select[multiple] {
 @media screen {
   #sort-links {
     font-size: 14px;
+    clear: both;
   }
   #sort-links span {
     font-weight: bold;

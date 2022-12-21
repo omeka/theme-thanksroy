@@ -1016,6 +1016,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #sort-links {
     font-size: .875 * $base-font-size;
+    clear: both;
 
     span {
         font-weight: bold;
