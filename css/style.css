@@ -1535,19 +1535,19 @@ select[multiple] {
   }
 }
 @media screen {
-  .desc [role=tooltip]:after, .asc [role=tooltip]:after {
+  .desc span:after, .asc span:after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: inline-block;
   }
 }
 @media screen {
-  .desc [role=tooltip]:after {
+  .desc span:after {
     content: " ";
   }
 }
 @media screen {
-  .asc [role=tooltip]:after {
+  .asc span:after {
     content: " ";
   }
 }
