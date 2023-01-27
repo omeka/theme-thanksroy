@@ -34,7 +34,7 @@ function thanksroy_brighten($color, $steps) {
  */
 function thanksroy_display_random_featured_records($type = null, $count = 2, $hasImage = null)
 {
-    $records = get_records(strtoupper($type), array('featured' => 1,
+    $records = get_records(ucfirst($type), array('featured' => 1,
                                      'sort_field' => 'random',
                                      'hasImage' => $hasImage), $count);
 
