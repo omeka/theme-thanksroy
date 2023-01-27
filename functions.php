@@ -43,8 +43,8 @@ function thanksroy_display_random_featured_records($type = null, $count = 2, $ha
         'exhibit' => 'exhibit-builder/exhibits/',
         'item' => 'items/'
     ];
+    $html = '';
     if ($records) {
-        $html = '';
         foreach ($records as $record) {
             $html .= get_view()->partial($recordPaths[$type] . 'single.php', array($type => $record));
             release_object($record);
