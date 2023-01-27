@@ -52,8 +52,6 @@ function thanksroy_display_random_featured_records($type = null, $count = 2, $ha
         if ($type == 'exhibits') {
             $html = apply_filters('exhibit_builder_display_random_featured_exhibit', $html);
         }
-    } else {
-        $html .= '<p>' . __('You have no featured exhibits.') . '</p>';
     }
     return $html;
 }
