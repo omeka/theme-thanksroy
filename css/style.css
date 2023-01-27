@@ -1050,6 +1050,11 @@ select[multiple] {
   }
 }
 @media screen {
+  #search-narrow-by-fields-remove-field {
+    display: none;
+  }
+}
+@media screen {
   ul.items-list, ul.collections-list, ul.title-list {
     list-style: none;
     margin-left: 0;
@@ -2319,12 +2324,6 @@ input[type=button],
   }
 
   /* ----- Forms ----- */
-  div#contribution-type-form div.inputs {
-    clear: none;
-    float: right;
-    width: 69%;
-  }
-
   .field {
     border-bottom: 1px solid #ccc;
     width: 100%;

@@ -182,12 +182,6 @@ nav.pagination {
 
 /* ----- Forms ----- */
 
-div#contribution-type-form div.inputs {
-    clear: none;
-    float: right;
-    width: 69%;
-}
-
 .field {
     border-bottom:1px solid #ccc;
     width:100%;
@@ -264,7 +258,6 @@ div#contribution-type-form div.inputs {
         line-height: 1.25 * $base-line-height;
     }
 }
-
 
 
 /* ----- Exhibit Builder ----- */
