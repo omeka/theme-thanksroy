@@ -2363,6 +2363,7 @@ input[type=button],
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: flex-start;
   }
 
   #advanced-search-form .search-entry .input {
