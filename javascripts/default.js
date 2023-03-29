@@ -17,7 +17,14 @@ if (!ThanksRoy) {
 
         $('.menu-button').click( function(e) {
             e.preventDefault();
-            $('#primary-nav ul.navigation').toggle();
+            var toggle = $(this);
+            var navigation = $('#primary-nav ul.navigation');
+            navigation.toggleClass('open');
+            if (navigation.hasClass('open')) {
+                toggle.attr('aria-expanded', 'true');
+            } else {
+                toggle.attr('aria-expanded', 'false')
+            }
         });
     };
 

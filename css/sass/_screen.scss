@@ -764,6 +764,10 @@ ul.navigation { padding-left: 0; }
     display: none;
     margin-top: 0;
 
+    &.open {
+        display: block;
+    }
+
     ul {
         margin: 0;
         padding: 0;

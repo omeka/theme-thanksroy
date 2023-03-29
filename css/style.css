@@ -1250,6 +1250,9 @@ select[multiple] {
     display: none;
     margin-top: 0;
   }
+  #primary-nav ul.navigation.open {
+    display: block;
+  }
   #primary-nav ul.navigation ul {
     margin: 0;
     padding: 0;
