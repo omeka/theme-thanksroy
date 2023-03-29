@@ -818,7 +818,7 @@ ul.navigation { padding-left: 0; }
                 font-weight: 900;
             }
             &:focus {
-              border: 1px dotted #ccc;
+              outline: 1px dotted;
             }
         }
     }

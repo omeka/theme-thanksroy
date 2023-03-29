@@ -1304,7 +1304,7 @@ select[multiple] {
     font-weight: 900;
   }
   #primary-nav ul.navigation > li a:focus {
-    border: 1px dotted #ccc;
+    outline: 1px dotted;
   }
 }
 @media screen {
