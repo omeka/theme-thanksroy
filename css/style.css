@@ -602,21 +602,21 @@ th {
   }
 }
 @media screen {
-  .item-img,
+  .permalink img,
 .image {
-    float: left;
+    float: right;
     display: block;
-    margin: 0 24px 12px 0;
+    margin: 0 0 12px 24px;
     border-bottom: 0;
     overflow: visible;
   }
-  .item-img a,
+  .permalink img a,
 .image a {
     display: block;
   }
 }
 @media screen {
-  #content .item img,
+  #content .hentry img,
 .item #content img,
 .image img,
 img.image {

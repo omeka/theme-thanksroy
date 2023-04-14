@@ -142,11 +142,11 @@ blockquote {
 
 .active { font-weight: bold; }
 
-.item-img,
+.permalink img,
 .image {
-    float: left;
+    float: right;
     display: block;
-    margin: 0 $spacing-unit (.5 * $spacing-unit) 0;
+    margin: 0 0 (.5 * $spacing-unit) $spacing-unit;
     border-bottom: 0;
     overflow: visible;
 
@@ -155,7 +155,7 @@ blockquote {
     }
 }
 
-#content .item img,
+#content .hentry img,
 .item #content img,
 .image img,
 img.image {
