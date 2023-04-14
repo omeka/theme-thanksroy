@@ -1090,6 +1090,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     .title {
         margin-bottom: .5 * $spacing-unit;
+        overflow: visible;
     }
 
     img {
