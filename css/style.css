@@ -2233,6 +2233,7 @@ input[type=button],
   .secondary-nav, #secondary-nav {
     border-bottom: 1px solid #ccc;
     font-size: 1.125em;
+    padding-bottom: 24px;
   }
   .secondary-nav a, #secondary-nav a {
     padding: 0.5em 1em 0.5em;
@@ -2245,7 +2246,8 @@ input[type=button],
   .secondary-nav li, #secondary-nav li {
     display: inline-block;
     padding: 0;
-    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 24px;
   }
   .secondary-nav .active, #secondary-nav .active {
     border-bottom-color: #fff;

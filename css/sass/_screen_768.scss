@@ -79,6 +79,7 @@ header {
 .secondary-nav, #secondary-nav {
     border-bottom:1px solid #ccc;
     font-size:1.125em;
+    padding-bottom: $spacing-unit;
 
     a {
         padding: 0.5em 1em 0.5em;
@@ -91,7 +92,8 @@ header {
     li {
         display: inline-block;
         padding: 0;
-        border: 1px solid #ccc;
+        background-color: $gray;
+        border-radius: $spacing-unit;
     }
 
     .active {
