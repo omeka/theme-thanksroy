@@ -60,9 +60,7 @@
         a:link {
             color: <?php echo $linkColor; ?>;
         }
-        a:visited {
-            color: <?php echo thanksroy_brighten($linkColor, 40); ?>;
-        }
+
         a:hover, a:active, a:focus {
             color: <?php echo thanksroy_brighten($linkColor, -40); ?>;
         }
