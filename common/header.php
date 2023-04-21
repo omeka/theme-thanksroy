@@ -79,7 +79,7 @@
             border-color: <?php echo $buttonColor; ?>
         }
 
-        #collection-items .item img,
+        .record img,
         .browse .item-img,
         .browse .image,
         .browse #content .item img,

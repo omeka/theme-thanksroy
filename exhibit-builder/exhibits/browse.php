@@ -1,5 +1,6 @@
 <?php
 $title = __('Browse Exhibits');
+$thumbnailSetting = (option('use_square_thumbnail')) ? 'square_thumbnail' : 'fullsize';
 echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 ?>
 <h1><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
@@ -23,15 +24,19 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 <?php $exhibitCount = 0; ?>
 <?php foreach (loop('exhibit') as $exhibit): ?>
     <?php $exhibitCount++; ?>
-    <div class="exhibit hentry <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
-    <?php
-        $linkContent = metadata($exhibit, 'title', array('no_escape' => true));
-        $linkContent .= (record_image('exhibit')) ? record_image('exhibit') : '';
-    ?>
-    <h2><?php echo link_to_exhibit($linkContent, array('class' => 'permalink')); ?></h2>
+    <div class="exhibit record <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
+        <?php
+            $linkContent = metadata($exhibit, 'title', array('no_escape' => true));
+            if (record_image('exhibit')) {
+                $exhibitImageFile = $exhibit->getFile();
+                $exhibitImageTitle = metadata($exhibitImageFile, 'rich_title', array('no_escape' => true));
+                $linkContent .= (record_image('exhibit')) ? record_image('exhibit', $thumbnailSetting, array('alt' => '', 'title' => $exhibitImageTitle)) : '';
+            }
+        ?>
+        <div class="title"><?php echo link_to_exhibit($linkContent, array('class' => 'permalink')); ?></div>
 
         <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
-        <div class="description"><?php echo $exhibitDescription; ?></div>
+        <p class="description"><?php echo $exhibitDescription; ?></p>
         <?php endif; ?>
         <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
         <p class="tags"><?php echo $exhibitTags; ?></p>

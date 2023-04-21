@@ -155,7 +155,7 @@ blockquote {
     }
 }
 
-#content .hentry img,
+#content .record img,
 .item #content img,
 .image img,
 img.image {
@@ -1096,13 +1096,13 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     img {
         display: block;
         float: none;
+        height: auto;
     }
 }
 
 .record .title {
     @extend h3;
     font-weight: bold;
-    overflow: hidden;
 
     a:focus {
         outline-offset: -2px;

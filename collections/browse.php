@@ -1,6 +1,7 @@
 _fil<?php
 $pageTitle = __('Browse Collections');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
+$thumbnailSetting = (option('use_square_thumbnail')) ? 'square_thumbnail' : 'fullsize';
 ?>
 
 <h1><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
@@ -16,16 +17,20 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php foreach (loop('collections') as $collection): ?>
 
-<div class="collection hentry">
+<div class="collection record">
 
     <?php
         $linkContent = metadata($collection, 'rich_title', array('no_escape' => true));
-        $linkContent .= (record_image('collection')) ? record_image('collection') : '';
+        $collectionImageFile = $collection->getFile();
+        if ($collectionImageFile) {
+            $collectionImageTitle = metadata($collectionImageFile, 'rich_title', array('no_escape' => true));
+            $linkContent .= ($collectionImageFile) ? record_image('collection', $thumbnailSetting, array('alt' => '', 'title' => $collectionImageTitle)) : '';
+        }
     ?>
-    <h2><?php echo link_to_collection($linkContent, array('class' => 'permalink')); ?></h2>
+    <div class="title"><?php echo link_to_collection($linkContent, array('class' => 'permalink')); ?></div>
 
     <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
-    <div class="collection-description">
+    <div class="description">
         <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet' => 150))); ?>
     </div>
     <?php endif; ?>
