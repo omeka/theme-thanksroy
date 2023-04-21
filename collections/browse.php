@@ -21,8 +21,8 @@ $sortLinks[__('Date Added')] = 'added';
 
     <?php
         $linkContent = metadata($collection, 'rich_title', array('no_escape' => true));
-        $collectionImageFile = $collection->getFile();
-        if ($collectionImageFile) {
+        if (record_image('collection')) {
+            $collectionImageFile = $collection->getFile();
             $collectionImageTitle = metadata($collectionImageFile, 'rich_title', array('no_escape' => true));
             $linkContent .= ($collectionImageFile) ? record_image('collection', $thumbnailSetting, array('alt' => '', 'title' => $collectionImageTitle)) : '';
         }
