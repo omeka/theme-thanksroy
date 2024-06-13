@@ -109,7 +109,6 @@
     </style>
     <!-- JavaScripts -->
     <?php
-    queue_js_file('vendor/modernizr');
     queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
     queue_js_file('vendor/respond');
     queue_js_file('vendor/jquery-accessibleMegaMenu');
