@@ -1,6 +1,6 @@
 {
   "name": "thanksroy",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "\"A tribute to Roy Rosenzweig, with updated typography and responsive styles.\"",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -35,6 +35,5 @@
   "browserslist": [
     "> 5%",
     "> 1% in US"
-  ],
-  "dependencies": {}
+  ]
 }
