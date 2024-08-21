@@ -132,7 +132,7 @@
 
         <div id="wrap">
             <button type="button" class="menu-button button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-            <nav id="primary-nav" role="navigation">
+            <nav id="primary-nav" role="navigation" aria-label="Main navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-container" role="search">
                     <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
