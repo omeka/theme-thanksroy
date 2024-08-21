@@ -798,7 +798,6 @@ input[type=week] {
     border-radius: 0;
     box-sizing: border-box;
     -moz-background-clip: padding;
-    -webkit-background-clip: padding;
     background-clip: padding-box;
     background-color: #fff;
     border: 1px solid #000;
@@ -1771,7 +1770,8 @@ select[multiple] {
     padding-left: 0;
     list-style-type: none;
     display: inline-block;
-    margin: 24px 0 0 0;
+    margin: 12px 0 0 0;
+    font-weight: bold;
   }
   #search-filters li, #item-filters li {
     display: inline;
@@ -1907,12 +1907,12 @@ select[multiple] {
   }
 }
 @media screen {
-  .browse .collection {
+  .browse .collection.record {
     clear: both;
     border-top: 1px solid #ccc;
     padding-top: 23px;
   }
-  .browse .collection .view-items-link {
+  .browse .collection.record .view-items-link {
     display: inline-block;
     margin-bottom: 24px;
   }

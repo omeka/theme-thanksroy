@@ -1283,7 +1283,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         padding-left: 0;
         list-style-type: none;
         display: inline-block;
-        margin: $spacing-unit 0 0 0;
+        margin: (.5 * $spacing-unit) 0 0 0;
+        font-weight: bold;
     }
 
     li {
@@ -1400,7 +1401,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.browse .collection {
+.browse .collection.record {
     clear: both;
     border-top: 1px solid #ccc;
     padding-top: $spacing-unit - 1px;
