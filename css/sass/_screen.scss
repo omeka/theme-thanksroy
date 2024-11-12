@@ -1269,7 +1269,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.open #advanced-form {
+.open ~ #advanced-form {
     display: block;
 }
 
