@@ -1758,7 +1758,7 @@ select[multiple] {
   }
 }
 @media screen {
-  .open ~ #advanced-form {
+  #advanced-form.open {
     display: block;
   }
 }
