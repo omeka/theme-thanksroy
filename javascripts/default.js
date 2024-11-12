@@ -28,8 +28,4 @@ if (!ThanksRoy) {
         });
     };
 
-    $(document).ready(function() {
-        $('#advanced-form').addClass('closed');
-    });
-
 })(jQuery);

@@ -1740,8 +1740,6 @@ select[multiple] {
     padding: 0 1em;
     box-sizing: border-box;
     margin-bottom: 24px;
-  }
-  #advanced-form.closed {
     display: none;
   }
   #advanced-form label {
@@ -1757,6 +1755,11 @@ select[multiple] {
     line-height: 24px;
     padding-top: 24px;
     margin-bottom: 0;
+  }
+}
+@media screen {
+  .open #advanced-form {
+    display: block;
   }
 }
 @media screen {
