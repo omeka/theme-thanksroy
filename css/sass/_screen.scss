@@ -112,6 +112,7 @@ blockquote {
     padding: 0;
     position: absolute;
     width: 1px;
+    background-color: #fff;
 }
 
 #skipnav a:focus {
@@ -739,13 +740,11 @@ ul.navigation { padding-left: 0; }
     text-align: left;
 }
 
-.button.menu-button:after {
-    content: "";
+.button.menu-button .menu-icon:after {
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-image: url('../images/menu.png');
-    background-size: contain;
     margin-left: 10px;
 }
 
@@ -769,7 +768,7 @@ ul.navigation { padding-left: 0; }
             box-sizing: border-box;
             margin: 0;
 
-            a { padding: (.5 * $spacing-unit) $gutter-width (.5 * $spacing-unit) gutter(2); }
+            a { padding: (.5 * $spacing-unit) $gutter-width (.5 * $spacing-unit) (2 * $gutter-width); }
 
             ul li a { padding-left: 4em; }
         }
@@ -784,7 +783,7 @@ ul.navigation { padding-left: 0; }
         top: 0;
         left: 0;
         width: 100%;
-        overflow: hidden;
+        list-style: none;
     }
 
     & > li {
@@ -801,13 +800,6 @@ ul.navigation { padding-left: 0; }
             display:block;
             padding: (.5 * $spacing-unit) $gutter-width;
 
-            &:before {
-                content: "\f0da";
-                display: inline-block;
-                margin-right: .25 * $spacing-unit;
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-            }
             &:focus {
               outline: 1px dotted;
             }
@@ -818,8 +810,7 @@ ul.navigation { padding-left: 0; }
         position: relative;
     }
 
-    .sub-nav-toggle:after,
-    [aria-haspopup="true"]:after {
+    .sub-nav-toggle:after {
         font-family: "Font Awesome 5 Free";
         content: "\f055";
         font-weight: 900;
@@ -829,8 +820,7 @@ ul.navigation { padding-left: 0; }
         transition: .5s ease;
     }
 
-    .open .sub-nav-toggle:after,
-    [aria-haspopup="true"].open:after {
+    .open .sub-nav-toggle:after {
         transform: rotate(405deg);
     }
 
@@ -840,10 +830,12 @@ ul.navigation { padding-left: 0; }
         right: 0;
         height: (2 * $spacing-unit);
         width: (2 * $spacing-unit);
+        background-color: transparent;
 
         &:after {
             float: none;
             text-align: center;
+            display: block;
         }
     }
 }

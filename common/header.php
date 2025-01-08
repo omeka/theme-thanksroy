@@ -131,7 +131,7 @@
         </header>
 
         <div id="wrap">
-            <button type="button" class="menu-button button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+            <button type="button" class="menu-button button" aria-expanded="false" aria-controls="primary-nav"><?php echo __('Menu'); ?> <span class="menu-icon" aria-hidden="true"></span></button>
             <nav id="primary-nav" role="navigation" aria-label="Main navigation">
                 <?php echo public_nav_main(array('role' => 'navigation')); ?>
                 <div id="search-container" role="search">

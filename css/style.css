@@ -510,6 +510,7 @@ th {
     padding: 0;
     position: absolute;
     width: 1px;
+    background-color: #fff;
   }
 
   #skipnav a:focus {
@@ -1218,13 +1219,11 @@ select[multiple] {
   }
 }
 @media screen {
-  .button.menu-button:after {
-    content: "";
+  .button.menu-button .menu-icon:after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-image: url("../images/menu.png");
-    background-size: contain;
     margin-left: 10px;
   }
 }
@@ -1249,7 +1248,7 @@ select[multiple] {
     margin: 0;
   }
   #primary-nav ul.navigation ul li a {
-    padding: 12px 1em 12px 11.1111111111%;
+    padding: 12px 1em 12px 2em;
   }
   #primary-nav ul.navigation ul li ul li a {
     padding-left: 4em;
@@ -1262,7 +1261,7 @@ select[multiple] {
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
+    list-style: none;
   }
   #primary-nav ul.navigation > li {
     padding: 0;
@@ -1281,13 +1280,6 @@ select[multiple] {
     display: block;
     padding: 12px 1em;
   }
-  #primary-nav ul.navigation > li a:before {
-    content: "";
-    display: inline-block;
-    margin-right: 6px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-  }
   #primary-nav ul.navigation > li a:focus {
     outline: 1px dotted;
   }
@@ -1298,8 +1290,7 @@ select[multiple] {
   }
 }
 @media screen {
-  #primary-nav ul.navigation .sub-nav-toggle:after,
-#primary-nav ul.navigation [aria-haspopup=true]:after {
+  #primary-nav ul.navigation .sub-nav-toggle:after {
     font-family: "Font Awesome 5 Free";
     content: "";
     font-weight: 900;
@@ -1310,8 +1301,7 @@ select[multiple] {
   }
 }
 @media screen {
-  #primary-nav ul.navigation .open .sub-nav-toggle:after,
-#primary-nav ul.navigation [aria-haspopup=true].open:after {
+  #primary-nav ul.navigation .open .sub-nav-toggle:after {
     transform: rotate(405deg);
   }
 }
@@ -1322,10 +1312,12 @@ select[multiple] {
     right: 0;
     height: 48px;
     width: 48px;
+    background-color: transparent;
   }
   #primary-nav ul.navigation .sub-nav-toggle:after {
     float: none;
     text-align: center;
+    display: block;
   }
 }
 @media screen {
