@@ -1321,25 +1321,45 @@ select[multiple] {
   }
 }
 @media screen {
-  .secondary-nav ul, #secondary-nav ul {
-    margin: 0;
+  .secondary-nav {
+    border-bottom: 1px solid #ccc;
+    font-size: 1.125em;
+    padding-bottom: 24px;
+    margin-top: -12px;
   }
-}
-@media screen {
-  .secondary-nav li, #secondary-nav li {
+  .secondary-nav a {
+    padding: 0.5em 1em 0.5em;
+    color: #666;
+    border-bottom: 0;
+  }
+  .secondary-nav ul {
+    margin: 0 0 -1px 0;
+  }
+  .secondary-nav li {
     display: inline-block;
-    margin: 0 10px 0 0;
     padding: 0;
+    background-color: #f7f7f7;
+    margin: 0 10px 0 0;
+    border-radius: 24px;
     list-style-type: none;
     font-size: 14px;
   }
-  .secondary-nav li:last-of-type, #secondary-nav li:last-of-type {
-    border-bottom: 0;
+  .secondary-nav .active {
+    border-bottom-color: #fff;
   }
-  .secondary-nav li a, #secondary-nav li a {
+  .secondary-nav a {
     border-bottom: 0;
     padding: 6px 12px;
     display: inline-block;
+  }
+  .secondary-nav .current a {
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: #fff;
   }
 }
 @media screen {
@@ -1854,7 +1874,7 @@ select[multiple] {
   }
 }
 @media screen {
-  .tags li {
+  .hTagcloud li {
     display: inline;
   }
 }
@@ -2209,38 +2229,6 @@ input[type=button],
 
   #query {
     margin-bottom: 24px;
-  }
-
-  .secondary-nav, #secondary-nav {
-    border-bottom: 1px solid #ccc;
-    font-size: 1.125em;
-    padding-bottom: 24px;
-  }
-  .secondary-nav a, #secondary-nav a {
-    padding: 0.5em 1em 0.5em;
-    color: #666;
-    border-bottom: 0;
-  }
-  .secondary-nav ul, #secondary-nav ul {
-    margin: 0 0 -1px 0;
-  }
-  .secondary-nav li, #secondary-nav li {
-    display: inline-block;
-    padding: 0;
-    background-color: #f7f7f7;
-    border-radius: 24px;
-  }
-  .secondary-nav .active, #secondary-nav .active {
-    border-bottom-color: #fff;
-  }
-  .secondary-nav .current a, #secondary-nav .current a {
-    background: #fff;
-    color: #333;
-    font-weight: bold;
-    border-color: #ccc;
-    border-width: 1px;
-    border-style: solid;
-    border-bottom-color: #fff;
   }
 
   /* ----- Home ----- */

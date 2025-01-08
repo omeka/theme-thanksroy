@@ -76,43 +76,6 @@ header {
     margin-bottom: $spacing-unit;
 }
 
-.secondary-nav, #secondary-nav {
-    border-bottom:1px solid #ccc;
-    font-size:1.125em;
-    padding-bottom: $spacing-unit;
-
-    a {
-        padding: 0.5em 1em 0.5em;
-        color: #666;
-        border-bottom: 0;
-    }
-
-    ul { margin: 0 0 -1px 0; }
-
-    li {
-        display: inline-block;
-        padding: 0;
-        background-color: $gray;
-        border-radius: $spacing-unit;
-    }
-
-    .active {
-        border-bottom-color: #fff;
-    }
-
-    .current a {
-        background:#fff;
-        color:#333;
-        font-weight:bold;
-        border: {
-            color: #ccc;
-            width: 1px;
-            style: solid;
-            bottom: { color: #fff; };
-        }
-    }
-}
-
 /* ----- Home ----- */
 
 #home #featured-records {
