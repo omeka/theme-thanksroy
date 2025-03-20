@@ -18,6 +18,10 @@
     margin-left: 0;
 }
 
+#primary-nav ul.navigation .sub-nav-toggle:focus {
+    outline: 1px dotted var(--black);
+}
+
 #primary {
     @include prefix(0);
 }
