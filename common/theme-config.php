@@ -20,7 +20,7 @@
         text-shadow: 0px 0px 20px #000;
         <?php endif; ?>
     }
-    a:link {
+    a {
         color: var(--link-color);
     }
 
