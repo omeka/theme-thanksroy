@@ -2119,24 +2119,8 @@ select[multiple] {
   }
 }
 @media screen {
-  body {
-    color: #444;
-  }
-}
-@media screen {
   header {
     border-color: var(--black);
-  }
-}
-@media screen {
-  a:link {
-    color: #555;
-  }
-  a:hover {
-    color: #2d2d2d;
-  }
-  a:active {
-    color: #2d2d2d;
   }
 }
 @media screen {

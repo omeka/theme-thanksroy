@@ -1615,20 +1615,9 @@ footer {
 
 /* @group ----- Colors ----- */
 
-body {
-    color:#444;
-}
 
 header {
     border-color: var(--black);
-}
-
-a {
-    &:link { color:#555; }
-
-    &:hover { color:#2d2d2d; }
-
-    &:active { color:#2d2d2d; }
 }
 
 .button, button,
