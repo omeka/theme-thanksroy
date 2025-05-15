@@ -1153,27 +1153,6 @@ select[multiple] {
   }
 }
 @media screen {
-  .popular a, .popular a:visited,
-.v-popular a, .v-popular a:visited,
-.vv-popular a, .vv-popular a:visited {
-    color: #714271;
-  }
-}
-@media screen {
-  .vvv-popular a, .vvv-popular a:visited,
-.vvvv-popular a, .vvvv-popular a:visited {
-    color: #636;
-  }
-}
-@media screen {
-  .vvvvv-popular a, .vvvvv-popular a:visited,
-.vvvvvv-popular a, .vvvvvv-popular a:visited,
-.vvvvvvv-popular a, .vvvvvvv-popular a:visited,
-.vvvvvvvv-popular a, .vvvvvvvv-popular a:visited {
-    color: #5D2E5D;
-  }
-}
-@media screen {
   header {
     background-size: auto !important;
     background-position-x: right !important;
@@ -1855,8 +1834,6 @@ select[multiple] {
   #collection-items a.view-items-link {
     margin: 24px 0;
     display: inline-block;
-    background-color: var(--black);
-    color: var(--white);
     padding: 6px;
     border-bottom: 0;
   }

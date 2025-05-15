@@ -15,7 +15,7 @@ $totalItems = metadata('collection', 'total_items');
         foreach (loop('items') as $item) {
             echo $this->partial('items/single.php', array('item' => $item));
         }
-        echo link_to_items_browse(__(plural('View item', 'View all %s items', $totalItems), $totalItems), array('collection' => metadata('collection', 'id')), array('class' => 'view-items-link'));
+        echo link_to_items_browse(__(plural('View item', 'View all %s items', $totalItems), $totalItems), array('collection' => metadata('collection', 'id')), array('class' => 'view-items-link button'));
     } else {
         echo '<p>' . __("There are currently no items within this collection.") . '</p>';
     }

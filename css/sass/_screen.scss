@@ -686,18 +686,6 @@ div.error {
 .vvvvvvv-popular {font-size:340%;}
 .vvvvvvvv-popular {font-size:360%;}
 
-.popular a, .popular a:visited,
-.v-popular a, .v-popular a:visited,
-.vv-popular a, .vv-popular a:visited { color: #714271; }
-
-.vvv-popular a, .vvv-popular a:visited,
-.vvvv-popular a, .vvvv-popular a:visited {color: #636;}
-
-.vvvvv-popular a, .vvvvv-popular a:visited,
-.vvvvvv-popular a, .vvvvvv-popular a:visited,
-.vvvvvvv-popular a, .vvvvvvv-popular a:visited,
-.vvvvvvvv-popular a, .vvvvvvvv-popular a:visited {color: #5D2E5D;}
-
 /* @end */
 
 /* @group ----- Header ----- */
@@ -1374,8 +1362,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     a.view-items-link {
         margin: $spacing-unit 0;
         display: inline-block;
-        background-color: var(--black);
-        color: var(--white);
         padding: (.25 * $spacing-unit);
         border-bottom: 0;
     }
