@@ -1,4 +1,4 @@
-_fil<?php
+<?php
 $pageTitle = __('Browse Collections');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'collections browse'));
 $thumbnailSetting = (option('use_square_thumbnail')) ? 'square_thumbnail' : 'fullsize';
