@@ -1,4 +1,3 @@
-@import 'susy';
 @import 'normalize';
 
 /* == Support == */
@@ -15,8 +14,8 @@ $spacing-unit: $base-line-height;
 
 $total-columns  : 16;
 $column-width   : 5em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
+$spacing-unit   : 1em;
+$grid-padding   : $spacing-unit;
 $break          : 48em 16;
 
 /* == Mixins == */

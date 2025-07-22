@@ -141,7 +141,7 @@ blockquote {
 }
 
 #content {
-    padding: 0 $gutter-width;
+    padding: 0 $spacing-unit;
 }
 
 /* @end */
@@ -169,7 +169,7 @@ blockquote {
 img.image {
     vertical-align: bottom;
     border: 1px solid var(--border-color);
-    padding: ((.25 * $spacing-unit) - 1px);
+    padding: (.1875 * $spacing-unit);
     background-color: var(--white);
 }
 
@@ -728,7 +728,7 @@ ul.navigation { padding-left: 0; }
 
 .button.menu-button {
     cursor: pointer;
-    padding: (.5 * $spacing-unit) $gutter-width;
+    padding: (.5 * $spacing-unit) $spacing-unit;
     display: block;
     width: 100%;
     text-transform: uppercase;
@@ -763,7 +763,7 @@ ul.navigation { padding-left: 0; }
             box-sizing: border-box;
             margin: 0;
 
-            a { padding: (.5 * $spacing-unit) $gutter-width (.5 * $spacing-unit) (2 * $gutter-width); }
+            a { padding: (.5 * $spacing-unit) $spacing-unit (.5 * $spacing-unit) (2 * $spacing-unit); }
 
             ul li a { padding-left: 4em; }
         }
@@ -793,7 +793,7 @@ ul.navigation { padding-left: 0; }
 
         a {
             display:block;
-            padding: (.5 * $spacing-unit) $gutter-width;
+            padding: (.5 * $spacing-unit) $spacing-unit;
             border-bottom: 0;
 
             &:focus {
@@ -1042,7 +1042,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     span {
         font-weight: bold;
-        margin-right: $gutter-width;
+        margin-right: $spacing-unit;
     }
 }
 
@@ -1052,7 +1052,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     padding-left: 0;
     li {
         display: inline-block;
-        margin-right: $gutter-width;
+        margin-right: $spacing-unit;
     }
 }
 
@@ -1165,7 +1165,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 #search-container {
     position: relative;
     box-sizing: border-box;
-    margin: $spacing-unit $gutter-width;
+    margin: $spacing-unit $spacing-unit;
 
     &:after {
       content: "";
@@ -1268,7 +1268,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     left: 0;
     border: 1px solid #e7e7e7;
     width: 100%;
-    padding: 0 $gutter-width;
+    padding: 0 $spacing-unit;
     box-sizing: border-box;
     margin-bottom: $spacing-unit;
     display: none;
@@ -1408,7 +1408,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     a {
         float: left;
-        margin-right: $gutter-width;
+        margin-right: $spacing-unit;
         overflow: visible;
         border-bottom: 0;
         margin-bottom: $spacing-unit;
@@ -1425,7 +1425,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 .browse .collection.record {
     clear: both;
     border-top: 1px solid var(--border-color);
-    padding-top: $spacing-unit - 1px;
+    padding-top: .9375 * $spacing-unit;
 
     .view-items-link {
         display: inline-block;
@@ -1446,12 +1446,6 @@ footer {
     overflow:hidden;
     padding:20px;
     border-top:1px solid var(--black);
-
-    p {
-        float:left;
-
-        @media screen and (max-width: $break) { width: 30%; }
-    }
 
     ul {float:right; width:60%; margin:0 0 0 60px;text-align:right;}
     li {margin-left:12px;}
@@ -1493,7 +1487,7 @@ footer {
 
 .browse .exhibit {
     border-top: 1px solid var(--border-color);
-    padding-top: ($spacing-unit - 1px);
+    padding-top: 0.9375 * $spacing-unit;
     overflow: hidden;
 }
 

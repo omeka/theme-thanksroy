@@ -1,31 +1,29 @@
 /* ----- Grid ----- */
 
 #wrap {
-    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
-    padding: 0 $gutter-width;
+    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $spacing-unit));
+    padding: 0 $spacing-unit;
     margin: 0;
 }
 
 
 #content {
-    @include span(12 of 16);
+    width: 75%;
     margin-right: 0;
-    padding: 40px 0;
+    padding: (2 * $spacing-unit) $spacing-unit (2 * $spacing-unit) 0;
+    float: left;
 }
 
 #primary-nav {
-    @include span(4 of 16);
+    width: 25%;
+    float: left;
+    padding-right: $spacing-unit;
     margin-left: 0;
 }
 
 #primary-nav ul.navigation .sub-nav-toggle:focus {
     outline: 1px dotted var(--black);
 }
-
-#primary {
-    @include prefix(0);
-}
-
 
 
 /* ----- Header ----- */
@@ -239,7 +237,8 @@ nav.pagination {
 #exhibit-blocks,
 .exhibits.summary #primary,
 #exhibit-page-navigation {
-    @include span(9 of 12);
+    width: 75%;
+    padding-right: $spacing-unit;
     margin-left: 0;
     float: left;
 }
@@ -249,9 +248,7 @@ nav.pagination {
 }
 
 #exhibit-pages {
-    @include span(3 of 12);
-    margin-right: 0;
+    width: 25%;
     display: inline-block;
-    float: none;
 }
 
