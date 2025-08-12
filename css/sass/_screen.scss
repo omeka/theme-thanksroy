@@ -1091,10 +1091,15 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     display: none;
 }
 
-#home #featured-records .record {
+#home #featured-records .record,
+#featured-item,
+#featured-collection,
+#featured-exhibit {
     padding: $spacing-unit;
     margin-bottom: $spacing-unit;
     overflow: auto;
+    width: 50%;
+    float: left;
 
     .subtitle {
         display: block;
@@ -1130,6 +1135,14 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 .recent-title {
     font-weight: bold;
     margin-top: $spacing-unit;
+}
+
+#recent-items {
+    clear: both;
+}
+
+#recent-items h2 {
+    width: 100%;
 }
 
 #recent-items .item {
