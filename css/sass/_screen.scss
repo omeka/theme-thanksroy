@@ -1092,7 +1092,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 #home #featured-records .record {
-    padding: $spacing-unit;
     margin-bottom: $spacing-unit;
     overflow: auto;
 
@@ -1111,6 +1110,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         display: block;
         float: none;
         height: auto;
+        margin: 0 0 (.5 * $spacing-unit);
     }
 }
 
@@ -1124,10 +1124,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .recent-title {
-    @extend h2;
-}
-
-.recent-title {
     font-weight: bold;
     margin-top: $spacing-unit;
 }
@@ -1136,6 +1132,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     border-bottom: 1px solid var(--black);
     padding-bottom: $spacing-unit;
     margin-bottom: $spacing-unit;
+    display: flow-root;
 
     .title,
     img.image {

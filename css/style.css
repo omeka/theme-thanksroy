@@ -417,7 +417,7 @@ th {
     line-height: 24px;
   }
 
-  h1, h2, .recent-title, h3, .record .title, legend, h4, h5, h6 {
+  h1, h2, h3, .record .title, legend, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 1em;
   }
@@ -427,7 +427,7 @@ th {
     line-height: 48px;
   }
 
-  h2, .recent-title {
+  h2 {
     font-size: 24px;
     line-height: 36px;
   }
@@ -1564,7 +1564,6 @@ select[multiple] {
 }
 @media screen {
   #home #featured-records .record {
-    padding: 1em;
     margin-bottom: 1em;
     overflow: auto;
   }
@@ -1581,6 +1580,7 @@ select[multiple] {
     display: block;
     float: none;
     height: auto;
+    margin: 0 0 0.5em;
   }
 }
 @media screen {
@@ -1602,6 +1602,7 @@ select[multiple] {
     border-bottom: 1px solid var(--black);
     padding-bottom: 1em;
     margin-bottom: 1em;
+    display: flow-root;
   }
   #recent-items .item .title,
 #recent-items .item img.image {
@@ -1687,7 +1688,7 @@ select[multiple] {
     display: inline-block;
     clear: both;
   }
-  #search-container h2, #search-container .recent-title {
+  #search-container h2 {
     display: none;
   }
   #search-container input[type=text], #search-container .button {
@@ -2181,28 +2182,21 @@ input[type=button],
   }
 
   /* ----- Home ----- */
-  #home #featured-records {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  #home #featured-records .record, #home #featured-records > p {
-    width: 50%;
+  #home #featured-records,
+#recent-items {
+    display: grid;
+    grid-gap: 1em 2em;
+    grid-template-columns: 1fr 1fr;
   }
 
-  #recent-items {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #recent-items .item {
-    width: calc(50% - 2em);
-    margin: 0 1em 1em;
+  #home #featured-records .record {
+    padding: 0;
+    margin: 0;
   }
 
   #recent-items .recent-title,
 #recent-items .view-items-link {
-    width: 100%;
+    grid-column: span 2;
   }
 
   /* ----- Browse Items ----- */

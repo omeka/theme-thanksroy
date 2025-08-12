@@ -80,30 +80,21 @@ header {
 
 /* ----- Home ----- */
 
-#home #featured-records {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .record,
-    & > p {
-        width: 50%;
-    }
-}
-
+#home #featured-records,
 #recent-items {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: $spacing-unit (2 * $spacing-unit);
+    grid-template-columns: 1fr 1fr;
 }
 
-#recent-items .item {
-    width: calc(50% - #{2 * $spacing-unit});
-    margin: 0 $spacing-unit $spacing-unit;
+#home #featured-records .record {
+    padding: 0;
+    margin: 0;
 }
 
 #recent-items .recent-title,
 #recent-items .view-items-link {
-    width: 100%;
+    grid-column: span 2;
 }
 
 /* ----- Browse Items ----- */
