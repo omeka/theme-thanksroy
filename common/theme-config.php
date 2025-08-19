@@ -2,7 +2,7 @@
     :root {
         --background-color: <?php echo (get_theme_option('background_color')) ? get_theme_option('background_color') : "#FFFFFF"; ?>;
         --text-color: <?php echo (get_theme_option('text_color')) ? get_theme_option('text_color') : "#393939"; ?>;
-        --link-color: <?php echo (get_theme_option('link_color')) ? get_theme_option('link_color') : "#888888"; ?>;
+        --link-color: <?php echo (get_theme_option('link_color')) ? get_theme_option('link_color') : "#6c6c6c"; ?>;
         --button-color: <?php echo (get_theme_option('button_color')) ? get_theme_option('button_color') : "#000000"; ?>;
         --button-text-color: <?php echo (get_theme_option('button_text_color')) ? get_theme_option('button_text_color') : "#FFFFFF"; ?>;
         --title-color:  <?php echo (get_theme_option('header_title_color')) ? get_theme_option('header_title_color') : "#000000"; ?>;
