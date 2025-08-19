@@ -11,8 +11,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^5.0.0",
     "postcss": "^8.4.31",
-    "sass": "~1.32.13",
-    "susy": "^2.2.12"
+    "sass": "~1.32.13"
   },
   "scripts": {
     "test": "test"
