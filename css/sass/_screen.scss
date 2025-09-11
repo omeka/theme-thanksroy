@@ -154,7 +154,6 @@ blockquote {
 .image {
     float: right;
     display: block;
-    margin: 0 0 (.5 * $spacing-unit) $spacing-unit;
     border-bottom: 0;
     overflow: visible;
 
@@ -182,6 +181,8 @@ img.image {
 .exhibit .image {
     box-shadow: -3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1);
     margin-left: 6px;
+    margin-top: 6px;
+    max-width: calc(100% - 6px) !important;
 }
 
 .record {
@@ -398,34 +399,6 @@ textarea.placeholder_text {
     adds to form fields by default,
     even when user is still typing.
   */
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-a.button:focus,
-button:focus,
-button:active,
-input:focus,
-input:active,
-select:focus,
-select:active,
-textarea:focus,
-textarea:active {
-  -moz-box-shadow: #333 0 0 7px;
-  -webkit-box-shadow: #333 0 0 7px;
-  box-shadow: #333 0 0 7px;
-
-  /* for Opera */
-  z-index: 1;
-}
-
-input[type="file"]:focus,
-input[type="file"]:active,
-input[type="radio"]:focus,
-input[type="radio"]:active,
-input[type="checkbox"]:focus,
-input[type="checkbox"]:active {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -795,10 +768,6 @@ ul.navigation { padding-left: 0; }
             display:block;
             padding: (.5 * $spacing-unit) $spacing-unit;
             border-bottom: 0;
-
-            &:focus {
-              outline: 1px dotted;
-            }
         }
     }
 
@@ -833,11 +802,6 @@ ul.navigation { padding-left: 0; }
             float: none;
             text-align: center;
             display: block;
-        }
-
-        &:focus {
-            box-shadow: none;
-            outline: 2px dotted var(--white);
         }
     }
 }
@@ -1110,7 +1074,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         display: block;
         float: none;
         height: auto;
-        margin: 0 0 (.5 * $spacing-unit);
+        margin-bottom: .5 * $spacing-unit;
     }
 }
 
@@ -1372,6 +1336,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         width: 100%;
 
         &:last-of-type { border-bottom: 0; }
+    }
+
+    .permalink img {
+        margin: 0 0 $spacing-unit $spacing-unit;
     }
 }
 

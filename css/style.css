@@ -614,7 +614,6 @@ th {
 .image {
     float: right;
     display: block;
-    margin: 0 0 0.5em 1em;
     border-bottom: 0;
     overflow: visible;
   }
@@ -645,6 +644,8 @@ img.image {
 .exhibit .image {
     box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
     margin-left: 6px;
+    margin-top: 6px;
+    max-width: calc(100% - 6px) !important;
   }
 }
 @media screen {
@@ -849,31 +850,6 @@ textarea.placeholder_text {
       adds to form fields by default,
       even when user is still typing.
     */
-    box-shadow: none;
-  }
-}
-@media screen {
-  a.button:focus,
-button:focus,
-button:active,
-input:focus,
-input:active,
-select:focus,
-select:active,
-textarea:focus,
-textarea:active {
-    box-shadow: #333 0 0 7px;
-    /* for Opera */
-    z-index: 1;
-  }
-}
-@media screen {
-  input[type=file]:focus,
-input[type=file]:active,
-input[type=radio]:focus,
-input[type=radio]:active,
-input[type=checkbox]:focus,
-input[type=checkbox]:active {
     box-shadow: none;
   }
 }
@@ -1267,9 +1243,6 @@ select[multiple] {
     padding: 0.5em 1em;
     border-bottom: 0;
   }
-  #primary-nav ul.navigation > li a:focus {
-    outline: 1px dotted;
-  }
 }
 @media screen {
   #primary-nav ul.navigation .parent {
@@ -1306,10 +1279,6 @@ select[multiple] {
     float: none;
     text-align: center;
     display: block;
-  }
-  #primary-nav ul.navigation .sub-nav-toggle:focus {
-    box-shadow: none;
-    outline: 2px dotted var(--white);
   }
 }
 @media screen {
@@ -1580,7 +1549,7 @@ select[multiple] {
     display: block;
     float: none;
     height: auto;
-    margin: 0 0 0.5em;
+    margin-bottom: 0.5em;
   }
 }
 @media screen {
@@ -1848,6 +1817,9 @@ select[multiple] {
   }
   .browse .item:last-of-type {
     border-bottom: 0;
+  }
+  .browse .permalink img {
+    margin: 0 0 1em 1em;
   }
 }
 @media screen {
