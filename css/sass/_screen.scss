@@ -1583,4 +1583,17 @@ input[type="button"],
     height: auto;
 }
 
+.guest-user .field .columns.alpha {
+    width: 20%;
+}
+
+.guest-user .field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guest-user #submit {
+    margin-top: 1rem;
+}
+
 /* @end */

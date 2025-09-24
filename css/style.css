@@ -2077,6 +2077,22 @@ input[type=button],
     height: auto;
   }
 }
+@media screen {
+  .guest-user .field .columns.alpha {
+    width: 20%;
+  }
+}
+@media screen {
+  .guest-user .field {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen {
+  .guest-user #submit {
+    margin-top: 1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   /* ----- Grid ----- */
   #wrap {
