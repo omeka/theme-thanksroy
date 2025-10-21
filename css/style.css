@@ -1631,9 +1631,6 @@ select[multiple] {
     padding: 0.25em 0;
     overflow: hidden;
   }
-  .show-advanced.button:link, .show-advanced.button:hover, .show-advanced.button:active, .show-advanced.button:visited {
-    color: var(--white);
-  }
 }
 @media screen {
   .show-advanced .icon:after {
