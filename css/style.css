@@ -450,30 +450,25 @@ template {
     margin-right: 2.6667em;
   }
 
-  #skipnav {
-    height: 0;
+  #skipnav .spacer {
+    position: absolute;
   }
 
   #skipnav a {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    background-color: var(--white);
+    position: relative;
+    display: block;
+    z-index: -5;
+    height: 0;
+    text-align: center;
+    border-bottom-width: 0;
   }
-
   #skipnav a:focus {
-    top: 0;
-    z-index: 9999;
-    clip: initial;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 0.25em;
+    z-index: 1000;
     height: auto;
-    width: auto;
-    padding: 0.5em;
-    border: 1px blue dashed;
+    border-bottom-width: 1px;
   }
 
   /* @end */
@@ -2117,13 +2112,13 @@ input[type=button],
     margin-bottom: 2em;
   }
   #primary-nav li {
-    background-color: #fff;
+    background-color: var(--white);
   }
   #primary-nav li ul li {
-    background-color: #fff;
+    background-color: var(--white);
   }
   #primary-nav li ul li ul li {
-    background-color: #fff;
+    background-color: var(--white);
   }
   #primary-nav a:hover {
     font-weight: bold;
@@ -2175,7 +2170,7 @@ input[type=button],
   }
 
   .pagination_list a, li.pagination_current {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     display: inline-block;
     padding: 0.25em 10px;
     vertical-align: top;
@@ -2200,7 +2195,7 @@ input[type=button],
 
   /* ----- Forms ----- */
   .field {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
     overflow: auto;
     padding: 1em 0;

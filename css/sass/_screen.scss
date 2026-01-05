@@ -107,30 +107,26 @@ blockquote {
     }
 }
 
-#skipnav {
-    height: 0;
+#skipnav .spacer {
+    position: absolute;
 }
 
 #skipnav a {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  position: relative;
+  display: block;
+  z-index: -5;
+  height: 0;
+  text-align: center;
+  border-bottom-width: 0;
+  
+  &:focus {
     background-color: var(--white);
-}
-
-#skipnav a:focus {
-    top:0;
-    z-index:9999;
-    clip:initial;
-    height:auto;
-    width:auto;
-    padding:.5em;
-    border:1px blue dashed;
+    border: 1px solid var(--border-color);
+    padding: .25 * $spacing-unit;
+    z-index: 1000;
+    height: auto;
+    border-bottom-width: 1px;
+  }
 }
 
 @media screen and (max-width: 840px) {

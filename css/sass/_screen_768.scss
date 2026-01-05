@@ -54,11 +54,11 @@ header {
     }
 
     li {
-        background-color: #fff;
+        background-color: var(--white);
 
-        ul li { background-color: #fff; }
+        ul li { background-color: var(--white); }
 
-        ul li ul li { background-color: #fff; }
+        ul li ul li { background-color: var(--white); }
     }
 
     a:hover {
@@ -114,7 +114,7 @@ nav.pagination {
 }
 
 .pagination_list a, li.pagination_current {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     display: inline-block;
     padding: (.25 * $spacing-unit) 10px;
     vertical-align: top;
@@ -141,7 +141,7 @@ nav.pagination {
 /* ----- Forms ----- */
 
 .field {
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid var(--border-color);
     width:100%;
     overflow: auto;
     padding: $spacing-unit 0;
