@@ -1075,7 +1075,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     display: none;
 }
 
-#home #featured-records .record {
+#featured-records .record,
+#featured-item,
+#featured-collection,
+#featured-exhibit {
     margin-bottom: $spacing-unit;
     overflow: auto;
 

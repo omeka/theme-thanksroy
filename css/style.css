@@ -1494,20 +1494,32 @@ select[multiple] {
   }
 }
 @media screen {
-  #home #featured-records .record {
+  #featured-records .record,
+#featured-item,
+#featured-collection,
+#featured-exhibit {
     margin-bottom: 1em;
     overflow: auto;
   }
-  #home #featured-records .record .subtitle {
+  #featured-records .record .subtitle,
+#featured-item .subtitle,
+#featured-collection .subtitle,
+#featured-exhibit .subtitle {
     display: block;
     font-weight: none;
     font-size: 16px;
   }
-  #home #featured-records .record .title {
+  #featured-records .record .title,
+#featured-item .title,
+#featured-collection .title,
+#featured-exhibit .title {
     margin-bottom: 0.5em;
     overflow: visible;
   }
-  #home #featured-records .record img {
+  #featured-records .record img,
+#featured-item img,
+#featured-collection img,
+#featured-exhibit img {
     display: block;
     float: none;
     height: auto;
