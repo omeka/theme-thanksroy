@@ -720,6 +720,10 @@ ul.navigation { padding-left: 0; }
     width: 100%;
     text-transform: uppercase;
     text-align: left;
+
+    &:focus {
+        outline: auto;
+    }
 }
 
 .button.menu-button .menu-icon:after {
