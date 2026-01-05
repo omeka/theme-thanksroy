@@ -785,19 +785,21 @@ input[type=week] {
 }
 @media screen {
   ::-webkit-input-placeholder {
-    color: #888;
+    color: #595959;
+    font-style: italic;
   }
 }
 @media screen {
-  input:-moz-placeholder,
-textarea:-moz-placeholder {
-    color: #888;
+  ::placeholder {
+    color: #595959;
+    font-style: italic;
   }
 }
 @media screen {
   input.placeholder_text,
 textarea.placeholder_text {
-    color: #888;
+    color: #595959;
+    font-style: italic;
   }
 }
 @media screen {
