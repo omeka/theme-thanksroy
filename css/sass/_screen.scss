@@ -154,6 +154,7 @@ blockquote {
 .permalink img,
 .image {
     float: right;
+    margin-left: $spacing-unit;
     display: block;
     border-bottom: 0;
     overflow: visible;
@@ -191,7 +192,7 @@ img.image {
 .collection .image,
 .exhibit .image {
     box-shadow: -3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1);
-    margin-left: 6px;
+    margin-left: calc(#{$spacing-unit} + 6px);
     margin-top: 6px;
     max-width: calc(100% - 6px) !important;
 }
@@ -1135,7 +1136,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #recent-items .image {
     float: right;
-    margin: 0 0 0 d$spacing-unit;
+    margin: 0 0 0 $spacing-unit;
 }
 
 #simple-search {
@@ -1349,7 +1350,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .browse {
-    .item {
+    .record {
         overflow:hidden;
         border-top:1px solid var(--border-color);
         padding: $spacing-unit 0;

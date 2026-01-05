@@ -559,6 +559,7 @@ template {
   .permalink img,
 .image {
     float: right;
+    margin-left: 1em;
     display: block;
     border-bottom: 0;
     overflow: visible;
@@ -600,7 +601,7 @@ img.image {
   .collection .image,
 .exhibit .image {
     box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
-    margin-left: 6px;
+    margin-left: calc(1em + 6px);
     margin-top: 6px;
     max-width: calc(100% - 6px) !important;
   }
@@ -1562,7 +1563,7 @@ select[multiple] {
 @media screen {
   #recent-items .image {
     float: right;
-    margin: 0 0 0 d 1em;
+    margin: 0 0 0 1em;
   }
 }
 @media screen {
@@ -1780,13 +1781,13 @@ select[multiple] {
   }
 }
 @media screen {
-  .browse .item {
+  .browse .record {
     overflow: hidden;
     border-top: 1px solid var(--border-color);
     padding: 1em 0;
     width: 100%;
   }
-  .browse .item:last-of-type {
+  .browse .record:last-of-type {
     border-bottom: 0;
   }
   .browse .permalink img {
@@ -2082,7 +2083,7 @@ input[type=button],
   #primary-nav {
     width: 25%;
     float: left;
-    padding-right: 1em;
+    padding: 1em;
     margin-left: 0;
   }
 
@@ -2141,14 +2142,14 @@ input[type=button],
   }
 
   /* ----- Home ----- */
-  #home #featured-records,
+  #featured-records,
 #recent-items {
     display: grid;
     grid-gap: 1em 2em;
     grid-template-columns: 1fr 1fr;
   }
 
-  #home #featured-records .record {
+  #featured-records .record {
     padding: 0;
     margin: 0;
   }

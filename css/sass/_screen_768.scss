@@ -17,7 +17,7 @@
 #primary-nav {
     width: 25%;
     float: left;
-    padding-right: $spacing-unit;
+    padding: $spacing-unit;
     margin-left: 0;
 }
 
@@ -80,14 +80,14 @@ header {
 
 /* ----- Home ----- */
 
-#home #featured-records,
+#featured-records,
 #recent-items {
     display: grid;
     grid-gap: $spacing-unit (2 * $spacing-unit);
     grid-template-columns: 1fr 1fr;
 }
 
-#home #featured-records .record {
+#featured-records .record {
     padding: 0;
     margin: 0;
 }
