@@ -5,6 +5,7 @@
     --white: #fff;
     --black: #000;
     --border-color: #ccc;
+    --thumbnail-size: 100px;
 }
 
 * { box-sizing: border-box; }
@@ -170,6 +171,16 @@ img.image {
     border: 1px solid var(--border-color);
     padding: (.1875 * $spacing-unit);
     background-color: var(--white);
+}
+
+.record img, 
+.browse .item-img, 
+.browse .image, 
+.browse #content .item img, 
+.browse .item #content img, 
+.browse .image img, 
+#recent-items img.image {
+    height: var(--thumbnail-size);
 }
 
 #content img {

@@ -349,6 +349,7 @@ template {
     --white: #fff;
     --black: #000;
     --border-color: #ccc;
+    --thumbnail-size: 100px;
   }
 
   * {
@@ -576,6 +577,17 @@ img.image {
     border: 1px solid var(--border-color);
     padding: 0.1875em;
     background-color: var(--white);
+  }
+}
+@media screen {
+  .record img,
+.browse .item-img,
+.browse .image,
+.browse #content .item img,
+.browse .item #content img,
+.browse .image img,
+#recent-items img.image {
+    height: var(--thumbnail-size);
   }
 }
 @media screen {
