@@ -1415,20 +1415,16 @@ select[multiple] {
 @media screen {
   .item-pagination {
     border-top: 1px solid var(--border-color);
-    margin: 0 0 1.5em 0;
-    overflow: hidden;
+    margin: 0 0 1.5em;
+    display: flex;
+    justify-content: space-between;
     padding-top: 1.5em;
   }
-  .item-pagination li.previous {
-    width: 48%;
-    display: block;
-    float: left;
-  }
-  .item-pagination li.next {
-    width: 48%;
-    display: block;
-    float: right;
-    text-align: right;
+  .item-pagination a {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3px 10px;
   }
 }
 @media screen {

@@ -999,21 +999,16 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .item-pagination {
     border-top:1px solid var(--border-color);
-    margin: 0 0 1.5em 0;
-    overflow:hidden;
-    padding-top:1.5em;
+    margin: 0 0 (1.5 * $spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    padding-top: (1.5 * $spacing-unit);
 
-    li.previous {
-        width:48%;
-        display:block;
-        float:left;
-    }
-
-    li.next {
-        width: 48%;
-        display:block;
-        float:right;
-        text-align:right;
+    a {
+        display: inline-block;
+        background-color: var(--black);
+        color: var(--white);
+        padding: 3px 10px;
     }
 }
 
