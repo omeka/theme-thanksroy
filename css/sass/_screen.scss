@@ -897,36 +897,6 @@ ul.navigation { padding-left: 0; }
     }
 }
 
-.pagination_next, .pagination_previous {
-    height: $base-line-height;
-
-    a {
-        border-bottom: 0;
-        padding: 0 10px;
-        text-indent: -9999px;
-        position: relative;
-        display: block;
-
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-indent: 0;
-            text-align: center;
-            width: 100%;
-            line-height: 21px;
-        }
-    }
-}
-
-.pagination_next a:before {
-    content: "\bb";
-}
-
-.pagination_previous a:before {
-    content: "\ab";
-}
-
 nav.pagination {
     overflow: visible;
 
@@ -985,16 +955,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
         &:last-child a { border-right-width: 1px; }
     }
-
-    .pagination_previous, .pagination_next { display: none; }
-
-    .pagination_current, a {
-        border: solid var(--border-color);
-        display: inline-block;
-        padding: (.25 * $spacing-unit) 10px;
-        vertical-align: top;
-        border-width: 1px 0 1px 1px;
-    }
 }
 
 .item-pagination {
@@ -1003,6 +963,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     display: flex;
     justify-content: space-between;
     padding-top: (1.5 * $spacing-unit);
+
+    li {
+        list-style-type: none;
+    }
 
     a {
         display: inline-block;
@@ -1580,9 +1544,7 @@ header {
 .button, button,
 input[type="reset"],
 input[type="submit"],
-input[type="button"],
-.pagination_next a,
-.pagination_previous a {
+input[type="button"] {
   background-color: var(--black);
   color: var(--white);
 }

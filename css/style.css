@@ -1308,37 +1308,6 @@ select[multiple] {
   }
 }
 @media screen {
-  .pagination_next, .pagination_previous {
-    height: 24px;
-  }
-  .pagination_next a, .pagination_previous a {
-    border-bottom: 0;
-    padding: 0 10px;
-    text-indent: -9999px;
-    position: relative;
-    display: block;
-  }
-  .pagination_next a:before, .pagination_previous a:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-indent: 0;
-    text-align: center;
-    width: 100%;
-    line-height: 21px;
-  }
-}
-@media screen {
-  .pagination_next a:before {
-    content: "»";
-  }
-}
-@media screen {
-  .pagination_previous a:before {
-    content: "«";
-  }
-}
-@media screen {
   nav.pagination {
     overflow: visible;
   }
@@ -1401,16 +1370,6 @@ select[multiple] {
   .pagination_list li:last-child a {
     border-right-width: 1px;
   }
-  .pagination_list .pagination_previous, .pagination_list .pagination_next {
-    display: none;
-  }
-  .pagination_list .pagination_current, .pagination_list a {
-    border: solid var(--border-color);
-    display: inline-block;
-    padding: 0.25em 10px;
-    vertical-align: top;
-    border-width: 1px 0 1px 1px;
-  }
 }
 @media screen {
   .item-pagination {
@@ -1419,6 +1378,9 @@ select[multiple] {
     display: flex;
     justify-content: space-between;
     padding-top: 1.5em;
+  }
+  .item-pagination li {
+    list-style-type: none;
   }
   .item-pagination a {
     display: inline-block;
@@ -2028,9 +1990,7 @@ select[multiple] {
   .button, button,
 input[type=reset],
 input[type=submit],
-input[type=button],
-.pagination_next a,
-.pagination_previous a {
+input[type=button] {
     background-color: var(--black);
     color: var(--white);
   }
