@@ -1491,7 +1491,6 @@ select[multiple] {
 #featured-collection,
 #featured-exhibit {
     margin-bottom: 1em;
-    overflow: auto;
   }
   #featured-records .record .subtitle,
 #featured-item .subtitle,
@@ -1516,6 +1515,7 @@ select[multiple] {
     float: none;
     height: auto;
     margin-bottom: 0.5em;
+    margin-left: 0;
   }
 }
 @media screen {
