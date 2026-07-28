@@ -18,8 +18,9 @@ if (!ThanksRoy) {
 
         $('#primary-nav').on('click', '.sub-nav-toggle', function() {
             var subnavToggle = $(this);
-            subnavToggle.parent('.parent').toggleClass('open');
-            if (subnavToggle.attr('aria-expanded', 'false')) {
+            var parentMenu = subnavToggle.parent('.parent');
+            parentMenu.toggleClass('open');
+            if (parentMenu.hasClass('open')) {
                 subnavToggle.attr('aria-expanded', 'true');
             } else {
                 subnavToggle.attr('aria-expanded', 'false');
