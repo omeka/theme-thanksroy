@@ -746,7 +746,7 @@ ul.navigation { padding-left: 0; }
 }
 
 .button.menu-button .menu-icon:after {
-    content: "\f0c9";
+    content: "\f0c9" / "";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: inline-block;
@@ -814,7 +814,7 @@ ul.navigation { padding-left: 0; }
 
     .sub-nav-toggle:after {
         font-family: "Font Awesome 5 Free";
-        content: "\f055";
+        content: "\f055" / "";
         font-weight: 900;
         font-size: 14px;
         float: right;
@@ -1028,11 +1028,11 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .desc span:after {
-    content: "\00a0\f0d8";
+    content: "\00a0\f0d8" / "";
 }
 
 .asc span:after {
-    content: "\00a0\f0d7";
+    content: "\00a0\f0d7" / "";
 }
 
 /* @end */
@@ -1151,7 +1151,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .show-advanced .icon:after {
-    content: "\2026";
+    content: "\2026" / "";
     display: block;
     text-indent: 0;
     text-align: center;
@@ -1191,7 +1191,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
         .icon:after {
             font-family: "Font Awesome 5 Free";
-            content: "\f002";
+            content: "\f002" / "";
             font-weight: 900;
             text-indent: 0;
             position: absolute;
@@ -1271,12 +1271,12 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         display: inline;
 
         &:after {
-            content: " \00B7";
+            content: " \00B7" / "";
             margin: 0 10px 0 5px;
         }
 
         &:last-child:after {
-            content: "\00A0";
+            content: "\00A0" / "";
         }
     }
 

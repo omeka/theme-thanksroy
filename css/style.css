@@ -1168,7 +1168,7 @@ select[multiple] {
 }
 @media screen {
   .button.menu-button .menu-icon:after {
-    content: "";
+    content: ""/"";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: inline-block;
@@ -1238,7 +1238,7 @@ select[multiple] {
 @media screen {
   #primary-nav ul.navigation .sub-nav-toggle:after {
     font-family: "Font Awesome 5 Free";
-    content: "";
+    content: ""/"";
     font-weight: 900;
     font-size: 14px;
     float: right;
@@ -1453,12 +1453,12 @@ select[multiple] {
 }
 @media screen {
   .desc span:after {
-    content: " ";
+    content: " "/"";
   }
 }
 @media screen {
   .asc span:after {
-    content: " ";
+    content: " "/"";
   }
 }
 @media screen {
@@ -1590,7 +1590,7 @@ select[multiple] {
 }
 @media screen {
   .show-advanced .icon:after {
-    content: "…";
+    content: "…"/"";
     display: block;
     text-indent: 0;
     text-align: center;
@@ -1630,7 +1630,7 @@ select[multiple] {
   }
   #search-container #submit_search .icon:after {
     font-family: "Font Awesome 5 Free";
-    content: "";
+    content: ""/"";
     font-weight: 900;
     text-indent: 0;
     position: absolute;
@@ -1706,11 +1706,11 @@ select[multiple] {
     display: inline;
   }
   #search-filters li:after, #item-filters li:after {
-    content: " ·";
+    content: " ·"/"";
     margin: 0 10px 0 5px;
   }
   #search-filters li:last-child:after, #item-filters li:last-child:after {
-    content: " ";
+    content: " "/"";
   }
   #search-filters ul li ul, #item-filters ul li ul {
     display: inline-block;
