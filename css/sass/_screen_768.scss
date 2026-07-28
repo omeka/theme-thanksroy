@@ -205,7 +205,7 @@ nav.pagination {
     clear: none;
 
     &:after {
-        content: "\f00d";
+        content: "\f00d" / "";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         text-indent: 0;

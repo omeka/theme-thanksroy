@@ -2241,7 +2241,7 @@ input[type=button] {
     clear: none;
   }
   #advanced-search-form .field .remove_search:after {
-    content: "";
+    content: ""/"";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     text-indent: 0;
