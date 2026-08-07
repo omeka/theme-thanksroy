@@ -848,6 +848,7 @@ ul.navigation { padding-left: 0; }
     font-size:1.125em;
     padding-bottom: $spacing-unit;
     margin-top: -.5 * $spacing-unit;
+    width: 100%;
 
     a {
         padding: 0.5em 1em 0.5em;
@@ -893,19 +894,17 @@ ul.navigation { padding-left: 0; }
 .pagination {
     padding-left: 0;
     float: left;
-    margin: 0;
-    height: 2 * $base-line-height;
-    display: block;
-    overflow: auto;
+    margin: (.5 * $spacing-unit) 0;
     line-height: 2 * $base-line-height;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: (.5 * $spacing-unit) $spacing-unit;
 
     li {
         list-style-type: none;
         line-height: $base-line-height;
         height: $base-line-height;
-        display: block;
-        float: left;
-        margin: $base-line-height/2 10px $base-line-height/2 0;
     }
 
     input[type=text] {

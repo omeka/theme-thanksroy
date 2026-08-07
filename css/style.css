@@ -1273,6 +1273,7 @@ select[multiple] {
     font-size: 1.125em;
     padding-bottom: 1em;
     margin-top: -0.5em;
+    width: 100%;
   }
   .secondary-nav a {
     padding: 0.5em 1em 0.5em;
@@ -1313,19 +1314,17 @@ select[multiple] {
   .pagination {
     padding-left: 0;
     float: left;
-    margin: 0;
-    height: 48px;
-    display: block;
-    overflow: auto;
+    margin: 0.5em 0;
     line-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
   }
   .pagination li {
     list-style-type: none;
     line-height: 24px;
     height: 24px;
-    display: block;
-    float: left;
-    margin: 12px 10px 12px 0;
   }
   .pagination input[type=text] {
     width: 5em;
@@ -2059,6 +2058,11 @@ input[type=button] {
     float: left;
   }
 
+  .browse #content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   #primary-nav {
     width: 25%;
     float: left;
@@ -2140,9 +2144,10 @@ input[type=button] {
 
   /* ----- Browse Items ----- */
   .pagination-nav {
-    width: 47%;
-    overflow: hidden;
-    float: left;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: auto;
   }
 
   nav.pagination {
@@ -2162,8 +2167,7 @@ input[type=button] {
   }
 
   #sort-links {
-    clear: none;
-    float: right;
+    align-self: center;
   }
   #sort-links ul {
     margin: 0.25em 0 0;

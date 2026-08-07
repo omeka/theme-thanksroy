@@ -14,6 +14,11 @@
     float: left;
 }
 
+.browse #content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #primary-nav {
     width: 25%;
     float: left;
@@ -100,9 +105,10 @@ header {
 /* ----- Browse Items ----- */
 
 .pagination-nav {
-    width: 47%;
-    overflow: hidden;
-    float: left;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: auto;
 }
 
 nav.pagination {
@@ -122,8 +128,8 @@ nav.pagination {
 }
 
 #sort-links  {
-    clear: none;
-    float: right;
+    align-self: center;
+
     ul {
         margin: (.25 * $spacing-unit) 0 0;
         padding: 0;
