@@ -492,11 +492,9 @@ template {
   }
   #skipnav a:focus {
     background-color: var(--white);
-    border: 1px solid var(--border-color);
     padding: 0.25em;
     z-index: 1000;
     height: auto;
-    border-bottom-width: 1px;
   }
 
   /* @end */
