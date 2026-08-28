@@ -1,4 +1,4 @@
-<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
+<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 
 <h1><?php echo metadata('item','rich_title', array('no_escape' => true)); ?></h1>
 
