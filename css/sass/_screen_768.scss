@@ -27,7 +27,7 @@
 }
 
 #primary-nav ul.navigation .sub-nav-toggle:focus {
-    outline: 1px dotted var(--black);
+    outline: 2px solid AccentColor;
 }
 
 
@@ -201,27 +201,6 @@ nav.pagination {
 #advanced-search-form .field .add_search,
 #advanced-search-form .search-entry select {
     margin-bottom: 0;
-}
-
-#advanced-search-form .field .remove_search {
-    text-indent: -9999px;
-    margin-top: 0;
-    width: (1.25 * $spacing-unit);
-    float: right;
-    clear: none;
-
-    &:after {
-        content: "\f00d" / "";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        text-indent: 0;
-        text-align: center;
-        width: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-        line-height: 1.25 * $base-line-height;
-    }
 }
 
 

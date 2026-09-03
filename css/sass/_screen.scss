@@ -30,6 +30,11 @@
 
 * { box-sizing: border-box; }
 
+:focus {
+    position: relative;
+    z-index: 1;
+}
+
 body {
     font-family: "PT Serif", Times, serif;
     word-break: break-word;
@@ -215,7 +220,7 @@ img.image {
     clear: both;
 }
 
-.secondary-nav + .exhibit {
+#secondary-nav + .exhibit {
     margin-top: -1px;
 }
 
@@ -225,304 +230,6 @@ img.image {
     font-weight: bold;
 }
 
-
-/* @end */
-
-/* @group ----- Formalize Styles -----  */
-/* == http://formalize.me == */
-
-/* `Widths
-----------------------------------------------------------------------------------------------------*/
-
-.input_tiny {
-  width: 50px;
-}
-
-.input_small {
-  width: 100px;
-}
-
-.input_medium {
-  width: 150px;
-}
-
-.input_large {
-  width: 200px;
-}
-
-.input_xlarge {
-  width: 250px;
-}
-
-.input_xxlarge {
-  width: 300px;
-}
-
-.input_full {
-  width: 100%;
-}
-
-/*
-  Added via JS to <textarea> and class="input_full".
-  Applies only to IE7. Other browsers don't need it.
-*/
-.input_full_wrap {
-  display: block;
-  padding-right: 8px;
-}
-
-/* `UI Consistency
-----------------------------------------------------------------------------------------------------*/
-
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input[type="search"]::-webkit-search-decoration {
-  display: none;
-}
-
-input,
-button,
-select,
-textarea {
-  margin: 0;
-  vertical-align: middle;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  position: relative;
-  vertical-align: top;
-  top: 3px;
-  /* IE8, IE9, IE10 */
-  top: 0\0;
-  /* IE7 */
-  *top: -3px;
-  margin-right: 10px;
-}
-
-/* iPad */
-@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 2px;
-  }
-}
-
-/* iPhone 3 */
-@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-
-/* iPhone 4 */
-@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-
-.button, button,
-input[type="reset"],
-input[type="submit"],
-input[type="button"] {
-  -webkit-appearance: none;
-  appearance: none;
-  border:0;
-  cursor: pointer;
-  font-family:'PT Serif', serif;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  outline: 0;
-  overflow: visible;
-  padding: 3px 10px;
-  width: auto;
-
-  /* IE7 */
-  *padding-top: 2px;
-  *padding-bottom: 0px;
-}
-
-button {
-  /* IE7 */
-  *padding-top: 1px;
-  *padding-bottom: 1px;
-}
-
-textarea,
-select,
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
-  -webkit-appearance: none;
-  appearance: none;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  background-clip: padding-box;
-  background-color: var(--white);
-  border: 1px solid var(--black);
-  color: var(--black);
-  outline: 0;
-  padding: 2px 10px;
-  font-size: $base-font-size;
-  /*
-    Leaving out Helvetica Neue, to not throw off size="..."
-    on inputs. Arial is more reliable, on Windows and OS X.
-  */
-  font-family: "PT Serif", serif;
-  height: 1.8em;
-
-  /* IE7 */
-  *padding-top: 2px;
-  *padding-bottom: 1px;
-  *height: auto;
-}
-
-/*
-  Separate rule for Firefox.
-  Separate rule for IE, too.
-  Cannot stack with WebKit's.
-*/
-::-webkit-input-placeholder {
-  color: #595959;
-  font-style: italic;
-}
-
-::placeholder {
-
-  color: #595959;
-  font-style: italic;
-}
-
-input.placeholder_text,
-textarea.placeholder_text {
-  color: #595959;
-  font-style: italic;
-}
-
-:invalid {
-  /*
-    Suppress red glow that Firefox
-    adds to form fields by default,
-    even when user is still typing.
-  */
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-select[disabled],
-textarea[disabled],
-input[type="date"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
-input[type="password"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="text"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled] {
-  background-color: #eee;
-}
-
-button[disabled],
-input[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled] {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  color: #888;
-  cursor: default;
-}
-
-textarea,
-select[size],
-select[multiple] {
-  height: auto;
-}
-
-/* Tweaks for Safari + Chrome. */
-@media (-webkit-min-device-pixel-ratio: 0) {
-  select {
-    background-image: url(../images/select_arrow.gif);
-    background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 20px;
-  }
-
-  select[size],
-  select[multiple] {
-    background-image: none;
-    padding: 0;
-  }
-
-  ::-webkit-validation-bubble-message {
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, var(--black)));
-    border: 1px solid;
-    border-color: #747474 #5e5e5e #4f4f4f;
-    color: var(--white);
-    font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
-    padding: 15px 15px 17px;
-    text-shadow: var(--black) 0 0 1px;
-  }
-
-  ::-webkit-validation-bubble-arrow,
-  ::-webkit-validation-bubble-top-outer-arrow,
-  ::-webkit-validation-bubble-top-inner-arrow {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: #666;
-    border: 0;
-  }
-}
-
-textarea {
-  min-height: 40px;
-  overflow: auto;
-  resize: vertical;
-  width: 100%;
-}
-
-optgroup {
-  color: var(--black);
-  font-style: normal;
-  font-weight: normal;
-}
 
 /* @end */
 
@@ -538,18 +245,73 @@ fieldset {
     padding: 0;
 }
 
+.button:focus-visible, 
+button:focus-visible, 
+[type="reset"]:focus-visible, 
+[type="submit"]:focus-visible, 
+[type="button"]:focus-visible {
+    outline: 2px solid AccentColor;
+}
+
+.button,
+button,
+[type="reset"],
+[type="submit"],
+[type="button"],
+[type="text"],
+[type="date"],
+[type="number"],
+[type="password"],
+select {
+    appearance: none;
+    line-height: 1.5;
+    border: 1px solid var(--black);
+    padding: (.25 * $spacing-unit) (.5 * $spacing-unit);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+select {
+    background-color: var(--white);
+}
+
+.button,
+button,
+[type="reset"],
+[type="submit"],
+[type="button"] {
+    line-height: 1.5;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+select {
+    background-image: url(../images/select_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
 .search-entry {
     background-color: rgba(0,0,0,.05);
     padding: (.5 * $spacing-unit) 2%;
-    margin-bottom: .5 * $spacing-unit;
-    overflow: auto;
-    margin-top: (.5 * $spacing-unit);
+    gap: (.25 * $spacing-unit);
+}
+
+.search-entry .input {
+    margin-bottom: 0;
 }
 
 .remove_search {
-    width: 1.25 * $base-line-height;
     position: relative;
-    height: 1.25 * $base-line-height;
+    align-self: flex-end;
+}
+
+#search-form {
+    display: flex;
 }
 
 #advanced-search-form {
@@ -622,10 +384,6 @@ fieldset {
 
         .add_search {
             margin-bottom: $spacing-unit;
-        }
-
-        .remove_search {
-            margin: $spacing-unit 0 0;
         }
     }
 }
@@ -701,6 +459,7 @@ header {
 
 #site-title {
     font-size: 2 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
     margin-left: 16px;
     padding: $spacing-unit 0;
 
@@ -739,7 +498,8 @@ ul.navigation { padding-left: 0; }
     text-align: left;
 
     &:focus {
-        outline: auto;
+        outline: none;
+        box-shadow: 0 0 0 2px inset AccentColor;
     }
 }
 
@@ -804,6 +564,11 @@ ul.navigation { padding-left: 0; }
             padding: (.5 * $spacing-unit) $spacing-unit;
             border-bottom: 0;
         }
+
+        a:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px inset AccentColor;            
+        }
     }
 
     .parent {
@@ -829,9 +594,10 @@ ul.navigation { padding-left: 0; }
         position: absolute;
         top: 0;
         right: 0;
-        height: (2 * $spacing-unit);
+        height: (2.5 * $spacing-unit);
         width: (2 * $spacing-unit);
         background-color: transparent;
+        border: 0;
 
         &:after {
             float: none;
@@ -839,8 +605,14 @@ ul.navigation { padding-left: 0; }
             display: block;
         }
     }
+
+    a:focus {
+        position: relative;
+        z-index: 1;
+    }
 }
 
+#secondary-nav,
 .secondary-nav {
     border-bottom: 1px solid var(--border-color);
     font-size:1.125em;
@@ -1133,31 +905,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.show-advanced.button {
-    width: 30px;
-    text-indent: -9999px;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-weight: bold;
-    border-left: 1px solid rgba(255,255,255,.3);
-    box-sizing: border-box;
-    padding: (.25 * $spacing-unit) 0;
-    overflow: hidden;
-}
-
-.show-advanced .icon:after {
-    content: "\2026" / "";
-    display: block;
-    text-indent: 0;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 #search-container {
     position: relative;
 
@@ -1170,53 +917,47 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     h2 { display:none; }
 
+    input[type=text] {
+        width: 100%;
+    }
+
     input[type=text], .button {
         height: 30px;
         font-size: $base-font-size;
         line-height: $base-line-height;
-    }
-
-    #submit_search {
-        width: 30px;
-        border: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
         padding: 3px 5px;
-        border-radius: 0;
-        text-indent: -9999px;
-
-        .icon:after {
-            font-family: "Font Awesome 5 Free";
-            content: "\f002" / "";
-            font-weight: 900;
-            text-indent: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 30px;
-            text-align: center;
-            height: 30px;
-            line-height: 30px;
-        }
     }
 
-    input[type=text] {
-        width: 100%;
-        border: 1px solid var(--black);
-        padding: 5px 40px 5px 10px;
+    .button {
+        min-width: 30px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
-}
 
-#search-form.with-advanced input[type=text] {
-    padding: 5px 70px 5px 10px;
+    .button .icon:after {
+        font-family: "Font Awesome 5 Free";
+        text-indent: 0;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 900;
+        display: inline-block;
+    }
+
+    .show-advanced .icon:after {
+        content: "\2026" / "";
+    }
+
+    #submit_search .icon:after {
+        content: "\f002" / "";
+    }
 }
 
 #advanced-form {
     background-color: var(--white);
     overflow: auto;
     clear: both;
-    z-index: 1001;
     position: absolute;
     top: 30px;
     left: 0;
