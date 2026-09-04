@@ -1787,6 +1787,13 @@ input[type=button] {
     margin-top: 1rem;
   }
 }
+@media screen {
+  #map-links li.current {
+    background: transparent;
+    border: 1px solid;
+    box-shadow: inset 3px 0 0;
+  }
+}
 @media screen and (min-width: 768px) {
   /* ----- Grid ----- */
   #wrap {
