@@ -1427,7 +1427,7 @@ button,
   }
 }
 @media screen {
-  #advanced-form.open {
+  [aria-expanded=true] + #advanced-form {
     display: block;
   }
 }

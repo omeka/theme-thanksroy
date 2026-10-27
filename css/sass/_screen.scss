@@ -986,7 +986,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-#advanced-form.open {
+[aria-expanded="true"] + #advanced-form {
     display: block;
 }
 
