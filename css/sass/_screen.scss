@@ -139,7 +139,7 @@ blockquote {
 #skipnav a {
   position: relative;
   display: block;
-  z-index: -5;
+  overflow: hidden;
   height: 0;
   text-align: center;
   border-bottom-width: 0;
